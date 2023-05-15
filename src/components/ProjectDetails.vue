@@ -100,6 +100,9 @@ const closeProject = () => {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
+    @media screen and (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
   }
   &__image {
     position: relative;
@@ -115,6 +118,9 @@ const closeProject = () => {
       height: 100%;
       object-fit: cover;
       border-radius: 8px;
+    }
+    @media screen and (max-width: 767px) {
+      display: none;
     }
   }
   &__info {
