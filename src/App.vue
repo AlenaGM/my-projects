@@ -78,7 +78,7 @@ import { RouterLink, RouterView } from "vue-router";
     }
     &:last-of-type {
       right: 16px;
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1024px) {
         display: none;
       }
     }
@@ -100,7 +100,7 @@ import { RouterLink, RouterView } from "vue-router";
     &:first-of-type {
       font-size: 16px;
       left: 16px;
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1024px) {
         display: none;
       }
     }
@@ -119,7 +119,7 @@ import { RouterLink, RouterView } from "vue-router";
           }
         }
         &:last-of-type {
-          @media screen and (min-width: 769px) {
+          @media screen and (min-width: 1025px) {
             display: none;
           }
         }
