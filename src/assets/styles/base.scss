@@ -1,0 +1,24 @@
+:root {
+  --index: calc(1vw + 1vh);
+  --transition: 1.25s cubic-bezier(0.2, 0.6, 0, 1);
+  --color-background: #20262e;
+  --color-card: #2a323d;
+  --color-text: #ffffffde;
+  --color-hover: #00ffb9;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+}
+
+body {
+  height: 100vh;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-width: 320px;
+}
