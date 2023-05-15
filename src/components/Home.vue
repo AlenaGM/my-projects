@@ -226,12 +226,12 @@ let projectsQuantity = ref(projects.length);
 .slider {
   transform: rotate(12.5deg);
   overflow: visible;
-  //@media screen and (max-width: 1023px) {
-  //  &:nth-child(3),
-  //  &:nth-child(4) {
-  //    display: none;
-  //  }
-  //}
+  @media screen and (max-width: 1023px) {
+    &:nth-child(3),
+    &:nth-child(4) {
+      display: none;
+    }
+  }
   //@media screen and (max-width: 767px) {
   //  margin-top: 100px;
   //  &:nth-child(2) {
@@ -266,9 +266,9 @@ let projectsQuantity = ref(projects.length);
         color: var(--color-hover);
       }
     }
-    //@media screen and (max-width: 1023px) {
-    //  width: 42vw;
-    //}
+    @media screen and (max-width: 1023px) {
+      width: 42vw;
+    }
     //@media screen and (max-width: 767px) {
     //  width: 84vw;
     //}
