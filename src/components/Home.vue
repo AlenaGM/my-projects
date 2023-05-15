@@ -36,14 +36,6 @@ const clickOnButton = (e) => {
 };
 
 let projectsQuantity = ref(projects.length);
-
-if (window.innerWidth > 1024) {
-  projectsQuantity = projects.length;
-} else if (window.innerWidth < 1024 && window.innerWidth >= 768) {
-  projectsQuantity = projects.length * 2;
-} else {
-  projectsQuantity = projects.length * 4;
-}
 </script>
 
 <template>
@@ -234,28 +226,28 @@ if (window.innerWidth > 1024) {
 .slider {
   transform: rotate(12.5deg);
   overflow: visible;
-  @media screen and (max-width: 1023px) {
-    &:nth-child(3),
-    &:nth-child(4) {
-      display: none;
-    }
-  }
-  @media screen and (max-width: 767px) {
-    margin-top: 100px;
-    &:nth-child(2) {
-      display: none;
-    }
-  }
+  //@media screen and (max-width: 1023px) {
+  //  &:nth-child(3),
+  //  &:nth-child(4) {
+  //    display: none;
+  //  }
+  //}
+  //@media screen and (max-width: 767px) {
+  //  margin-top: 100px;
+  //  &:nth-child(2) {
+  //    display: none;
+  //  }
+  //}
   &:nth-child(odd) {
     transform: rotate(192.5deg);
-    @media screen and (max-width: 767px) {
-      transform: none;
-    }
+    //@media screen and (max-width: 767px) {
+    //  transform: none;
+    //}
     .slider__img {
       transform: rotate(-180deg);
-      @media screen and (max-width: 767px) {
-        transform: none;
-      }
+      //@media screen and (max-width: 767px) {
+      //  transform: none;
+      //}
     }
   }
   &__item {
@@ -274,12 +266,12 @@ if (window.innerWidth > 1024) {
         color: var(--color-hover);
       }
     }
-    @media screen and (max-width: 1023px) {
-      width: 42vw;
-    }
-    @media screen and (max-width: 767px) {
-      width: 84vw;
-    }
+    //@media screen and (max-width: 1023px) {
+    //  width: 42vw;
+    //}
+    //@media screen and (max-width: 767px) {
+    //  width: 84vw;
+    //}
   }
   &__img {
     width: 100%;
