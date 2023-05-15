@@ -232,22 +232,10 @@ let projectsQuantity = ref(projects.length);
       display: none;
     }
   }
-  //@media screen and (max-width: 767px) {
-  //  margin-top: 100px;
-  //  &:nth-child(2) {
-  //    display: none;
-  //  }
-  //}
   &:nth-child(odd) {
     transform: rotate(192.5deg);
-    //@media screen and (max-width: 767px) {
-    //  transform: none;
-    //}
     .slider__img {
       transform: rotate(-180deg);
-      //@media screen and (max-width: 767px) {
-      //  transform: none;
-      //}
     }
   }
   &__item {
@@ -269,9 +257,6 @@ let projectsQuantity = ref(projects.length);
     @media screen and (max-width: 1023px) {
       width: 42vw;
     }
-    //@media screen and (max-width: 767px) {
-    //  width: 84vw;
-    //}
   }
   &__img {
     width: 100%;

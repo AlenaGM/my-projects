@@ -37,6 +37,14 @@ import { RouterLink, RouterView } from "vue-router";
       >
         <font-awesome-icon icon="fa-brands fa-telegram" />
       </a>
+      <a
+        href="mailto:alena.guillaume4@gmail.com"
+        target="_blank"
+        rel="noreferrer noopener"
+        tabindex="6"
+      >
+        <font-awesome-icon icon="fa-solid fa-envelope" />
+      </a>
     </div>
   </footer>
 </template>
@@ -70,6 +78,9 @@ import { RouterLink, RouterView } from "vue-router";
     }
     &:last-of-type {
       right: 16px;
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
     }
     &:hover {
       transform: scale(1.1);
@@ -89,6 +100,9 @@ import { RouterLink, RouterView } from "vue-router";
     &:first-of-type {
       font-size: 16px;
       left: 16px;
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
     }
     &:last-of-type {
       font-size: 26px;
@@ -104,6 +118,11 @@ import { RouterLink, RouterView } from "vue-router";
             color: var(--color-hover);
           }
         }
+        &:last-of-type {
+          @media screen and (min-width: 768px) {
+            display: none;
+          }
+        }
       }
     }
   }
@@ -115,5 +134,8 @@ import { RouterLink, RouterView } from "vue-router";
   gap: var(--index);
   background-size: cover;
   background-position: center;
+  @media screen and (max-width: 1023px) {
+    gap: 0;
+  }
 }
 </style>
