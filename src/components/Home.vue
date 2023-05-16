@@ -47,7 +47,7 @@ let projectsQuantity = ref(projects.length);
     :direction="'vertical'"
     :breakpoints="{
       1023: { slidesPerView: 1.75, slidesOffsetBefore: -125 },
-      320: { slidesPerView: 2.75, slidesOffsetBefore: -75 },
+      320: { slidesPerView: 2.25, slidesOffsetBefore: -75 },
     }"
     :modules="[Mousewheel, FreeMode, Controller]"
     :controller="{ control: [secondSwiper, thirdSwiper, fourthSwiper] }"
@@ -91,7 +91,7 @@ let projectsQuantity = ref(projects.length);
     :direction="'vertical'"
     :breakpoints="{
       1023: { slidesPerView: 1.75, slidesOffsetBefore: -125 },
-      320: { slidesPerView: 2.75, slidesOffsetBefore: -75 },
+      320: { slidesPerView: 2.25, slidesOffsetBefore: -75 },
     }"
     :modules="[Mousewheel, FreeMode, Controller]"
     :controller="{ control: firstSwiper }"
@@ -135,7 +135,7 @@ let projectsQuantity = ref(projects.length);
     :direction="'vertical'"
     :breakpoints="{
       1023: { slidesPerView: 1.75, slidesOffsetBefore: -125 },
-      320: { slidesPerView: 2.75, slidesOffsetBefore: -75 },
+      320: { slidesPerView: 2.25, slidesOffsetBefore: -75 },
     }"
     :modules="[Mousewheel, FreeMode, Controller]"
     :controller="{ control: firstSwiper }"
@@ -179,7 +179,7 @@ let projectsQuantity = ref(projects.length);
     :direction="'vertical'"
     :breakpoints="{
       1023: { slidesPerView: 1.75, slidesOffsetBefore: -125 },
-      320: { slidesPerView: 2.75, slidesOffsetBefore: -75 },
+      320: { slidesPerView: 2.25, slidesOffsetBefore: -75 },
     }"
     :modules="[Mousewheel, FreeMode, Controller]"
     :controller="{ control: firstSwiper }"
@@ -219,12 +219,15 @@ let projectsQuantity = ref(projects.length);
   <teleport to="body">
     <ProjectPopUp
       v-if="isProjectOpen"
-      :title="projects[selectedProject - 1].title"
-      :info="projects[selectedProject - 1].info"
-      :tech="projects[selectedProject - 1].tech"
-      :image="projects[selectedProject - 1].image"
-      :demo="projects[selectedProject - 1].demo"
-      :code="projects[selectedProject - 1].code"
+      v-for="{ title, info, tech, image, demo, code } in projects.filter(
+        (item) => item.id === selectedProject
+      )"
+      :title="title"
+      :info="info"
+      :tech="tech"
+      :image="image"
+      :demo="demo"
+      :code="code"
       @click="isProjectOpen = false"
     />
   </teleport>

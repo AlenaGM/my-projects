@@ -75,6 +75,8 @@ import { RouterLink, RouterView } from "vue-router";
     position: fixed;
     &:first-of-type {
       left: 16px;
+      cursor: default;
+      pointer-events: none;
     }
     &:last-of-type {
       right: 16px;
