@@ -5,9 +5,9 @@ import "swiper/css";
 import "swiper/css/mousewheel";
 import "swiper/css/free-mode";
 import "swiper/css/controller";
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref } from "vue";
 import { projects } from "../assets/data/projects";
-import ProjectDetails from "@/components/ProjectDetails.vue";
+import ProjectPopUp from "@/components/ProjectPopUp.vue";
 
 const firstSwiper = ref(null);
 const secondSwiper = ref(null);
@@ -53,14 +53,14 @@ let projectsQuantity = ref(projects.length);
   >
     <swiper-slide
       class="slider__item"
-      v-for="{ title, demo, code, id, background } in projects.slice(
+      v-for="{ title, demo, code, id, image } in projects.slice(
         0,
         Math.floor(projectsQuantity * 0.25)
       )"
     >
       <div
         class="slider__img"
-        :style="background"
+        :style="`background-image: url(${image})`"
         :key="id"
         :id="id"
         @click="clickOnButton"
@@ -95,14 +95,14 @@ let projectsQuantity = ref(projects.length);
   >
     <swiper-slide
       class="slider__item"
-      v-for="{ title, demo, code, id, background } in projects.slice(
+      v-for="{ title, demo, code, id, image } in projects.slice(
         Math.floor(projectsQuantity * 0.25),
         Math.floor(projectsQuantity * 0.5)
       )"
     >
       <div
         class="slider__img"
-        :style="background"
+        :style="`background-image: url(${image})`"
         :key="id"
         :id="id"
         @click="clickOnButton"
@@ -137,14 +137,14 @@ let projectsQuantity = ref(projects.length);
   >
     <swiper-slide
       class="slider__item"
-      v-for="{ title, demo, code, id, background } in projects.slice(
+      v-for="{ title, demo, code, id, image } in projects.slice(
         Math.floor(projectsQuantity * 0.5),
         Math.floor(projectsQuantity * 0.75)
       )"
     >
       <div
         class="slider__img"
-        :style="background"
+        :style="`background-image: url(${image})`"
         :key="id"
         :id="id"
         @click="clickOnButton"
@@ -179,14 +179,14 @@ let projectsQuantity = ref(projects.length);
   >
     <swiper-slide
       class="slider__item"
-      v-for="{ title, demo, code, id, background } in projects.slice(
+      v-for="{ title, demo, code, id, image } in projects.slice(
         Math.floor(projectsQuantity * 0.75),
         projectsQuantity
       )"
     >
       <div
         class="slider__img"
-        :style="background"
+        :style="`background-image: url(${image})`"
         :key="id"
         :id="id"
         @click="clickOnButton"
@@ -209,7 +209,7 @@ let projectsQuantity = ref(projects.length);
   </swiper>
 
   <teleport to="body">
-    <ProjectDetails
+    <ProjectPopUp
       v-if="isProjectOpen"
       :title="projects[selectedProject - 1].title"
       :info="projects[selectedProject - 1].info"
@@ -255,7 +255,8 @@ let projectsQuantity = ref(projects.length);
       }
     }
     @media screen and (max-width: 1023px) {
-      width: 42vw;
+      margin-bottom: calc(var(--index) * 1.3);
+      width: 47vw;
     }
   }
   &__img {
