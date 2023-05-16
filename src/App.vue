@@ -5,7 +5,7 @@ import { RouterLink, RouterView } from "vue-router";
 <template>
   <header class="header">
     <nav>
-      <RouterLink to="/" tabindex="1">Alena G</RouterLink>
+      <RouterLink to="/" tabindex="1">Alena G.</RouterLink>
       <RouterLink to="/contact" tabindex="2">Contact me</RouterLink>
     </nav>
   </header>
@@ -134,8 +134,5 @@ import { RouterLink, RouterView } from "vue-router";
   gap: var(--index);
   background-size: cover;
   background-position: center;
-  @media screen and (max-width: 1023px) {
-    gap: 0;
-  }
 }
 </style>

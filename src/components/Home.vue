@@ -45,8 +45,10 @@ let projectsQuantity = ref(projects.length);
     :freeMode="true"
     :centeredSlides="true"
     :direction="'vertical'"
-    :slidesPerView="1.75"
-    :slidesOffsetBefore="-125"
+    :breakpoints="{
+      1023: { slidesPerView: 1.75, slidesOffsetBefore: -125 },
+      320: { slidesPerView: 2.75, slidesOffsetBefore: -75 },
+    }"
     :modules="[Mousewheel, FreeMode, Controller]"
     :controller="{ control: [secondSwiper, thirdSwiper, fourthSwiper] }"
     @swiper="setFirstSwiper"
@@ -87,8 +89,10 @@ let projectsQuantity = ref(projects.length);
     :freeMode="true"
     :centeredSlides="true"
     :direction="'vertical'"
-    :slidesPerView="1.75"
-    :slidesOffsetBefore="-125"
+    :breakpoints="{
+      1023: { slidesPerView: 1.75, slidesOffsetBefore: -125 },
+      320: { slidesPerView: 2.75, slidesOffsetBefore: -75 },
+    }"
     :modules="[Mousewheel, FreeMode, Controller]"
     :controller="{ control: firstSwiper }"
     @swiper="setSecondSwiper"
@@ -129,8 +133,10 @@ let projectsQuantity = ref(projects.length);
     :freeMode="true"
     :centeredSlides="true"
     :direction="'vertical'"
-    :slidesPerView="1.75"
-    :slidesOffsetBefore="-125"
+    :breakpoints="{
+      1023: { slidesPerView: 1.75, slidesOffsetBefore: -125 },
+      320: { slidesPerView: 2.75, slidesOffsetBefore: -75 },
+    }"
     :modules="[Mousewheel, FreeMode, Controller]"
     :controller="{ control: firstSwiper }"
     @swiper="setThirdSwiper"
@@ -171,8 +177,10 @@ let projectsQuantity = ref(projects.length);
     :freeMode="true"
     :centeredSlides="true"
     :direction="'vertical'"
-    :slidesPerView="1.75"
-    :slidesOffsetBefore="-125"
+    :breakpoints="{
+      1023: { slidesPerView: 1.75, slidesOffsetBefore: -125 },
+      320: { slidesPerView: 2.75, slidesOffsetBefore: -75 },
+    }"
     :modules="[Mousewheel, FreeMode, Controller]"
     :controller="{ control: firstSwiper }"
     @swiper="setFourthSwiper"
@@ -255,8 +263,7 @@ let projectsQuantity = ref(projects.length);
       }
     }
     @media screen and (max-width: 1023px) {
-      margin-bottom: calc(var(--index) * 1.3);
-      width: 47vw;
+      width: 44vw;
     }
   }
   &__img {
