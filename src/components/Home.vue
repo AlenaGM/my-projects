@@ -234,7 +234,7 @@ let projectsQuantity = ref(projects.length);
 .slider {
   transform: rotate(12.5deg);
   overflow: visible;
-  @media screen and (max-width: 1023px) {
+  @media screen and (max-width: 1024px) and (orientation: portrait) {
     &:nth-child(3),
     &:nth-child(4) {
       display: none;
@@ -262,7 +262,7 @@ let projectsQuantity = ref(projects.length);
         color: var(--color-hover);
       }
     }
-    @media screen and (max-width: 1023px) {
+    @media screen and (max-width: 1024px) and (orientation: portrait) {
       width: 44vw;
     }
   }
