@@ -15,6 +15,7 @@ const thirdSwiper = ref(null);
 const fourthSwiper = ref(null);
 
 const isProjectOpen = ref(false);
+const projectsQuantity = ref(projects.length);
 let selectedProject = ref(null);
 
 const setFirstSwiper = (swiper) => {
@@ -30,12 +31,10 @@ const setFourthSwiper = (swiper) => {
   fourthSwiper.value = swiper;
 };
 
-const clickOnButton = (e) => {
+const clickOnProject = (e) => {
   isProjectOpen.value = true;
   selectedProject.value = e.target.id;
 };
-
-let projectsQuantity = ref(projects.length);
 </script>
 
 <template>
@@ -65,7 +64,7 @@ let projectsQuantity = ref(projects.length);
         :style="`background-image: url(${image})`"
         :key="id"
         :id="id"
-        @click="clickOnButton"
+        @click="clickOnProject"
       >
         <div class="slider__img_title">
           <a :href="demo" target="_blank" rel="noreferrer noopener">
@@ -109,7 +108,7 @@ let projectsQuantity = ref(projects.length);
         :style="`background-image: url(${image})`"
         :key="id"
         :id="id"
-        @click="clickOnButton"
+        @click="clickOnProject"
       >
         <div class="slider__img_title">
           <a :href="demo" target="_blank" rel="noreferrer noopener">
@@ -153,7 +152,7 @@ let projectsQuantity = ref(projects.length);
         :style="`background-image: url(${image})`"
         :key="id"
         :id="id"
-        @click="clickOnButton"
+        @click="clickOnProject"
       >
         <div class="slider__img_title">
           <a :href="demo" target="_blank" rel="noreferrer noopener">
@@ -197,7 +196,7 @@ let projectsQuantity = ref(projects.length);
         :style="`background-image: url(${image})`"
         :key="id"
         :id="id"
-        @click="clickOnButton"
+        @click="clickOnProject"
       >
         <div class="slider__img_title">
           <a :href="demo" target="_blank" rel="noreferrer noopener">
