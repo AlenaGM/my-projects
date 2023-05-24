@@ -1,12 +1,19 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
+import { ref } from "vue";
+import ContactPopUp from "@/components/ContactPopUp.vue";
+
+const isContactOpen = ref(false);
+const clickOnContact = () => {
+  isContactOpen.value = true;
+};
 </script>
 
 <template>
   <header class="header">
     <nav>
       <RouterLink to="/" tabindex="1">Alena G.</RouterLink>
-      <RouterLink to="/contact" tabindex="2">Contact me</RouterLink>
+      <a tabindex="2" @click="clickOnContact">Contact</a>
     </nav>
   </header>
   <RouterView />
@@ -47,6 +54,9 @@ import { RouterLink, RouterView } from "vue-router";
       </a>
     </div>
   </footer>
+  <teleport to="body">
+    <ContactPopUp v-if="isContactOpen" @click="isContactOpen = false" />
+  </teleport>
 </template>
 
 <style lang="scss" scoped>
