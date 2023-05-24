@@ -56,7 +56,7 @@ const clickOnProject = (e) => {
       class="slider__item"
       v-for="{ title, demo, code, id, image } in projects.slice(
         0,
-        Math.round(projectsQuantity * 0.25)
+        Math.round(projectsQuantity * 0.5)
       )"
     >
       <div
@@ -99,8 +99,8 @@ const clickOnProject = (e) => {
     <swiper-slide
       class="slider__item"
       v-for="{ title, demo, code, id, image } in projects.slice(
-        Math.round(projectsQuantity * 0.25),
-        Math.round(projectsQuantity * 0.5)
+        Math.round(projectsQuantity * 0.5),
+        projectsQuantity
       )"
     >
       <div
@@ -142,10 +142,9 @@ const clickOnProject = (e) => {
   >
     <swiper-slide
       class="slider__item"
-      v-for="{ title, demo, code, id, image } in projects.slice(
-        Math.round(projectsQuantity * 0.5),
-        Math.round(projectsQuantity * 0.75)
-      )"
+      v-for="{ title, demo, code, id, image } in projects
+        .slice(0, Math.round(projectsQuantity * 0.5))
+        .reverse()"
     >
       <div
         class="slider__img"
@@ -186,10 +185,9 @@ const clickOnProject = (e) => {
   >
     <swiper-slide
       class="slider__item"
-      v-for="{ title, demo, code, id, image } in projects.slice(
-        Math.round(projectsQuantity * 0.75),
-        projectsQuantity
-      )"
+      v-for="{ title, demo, code, id, image } in projects
+        .slice(Math.round(projectsQuantity * 0.5), projectsQuantity)
+        .reverse()"
     >
       <div
         class="slider__img"
