@@ -16,54 +16,55 @@ const closeProject = () => {
 </script>
 
 <template>
-  <div class="modal" @click="closeProject">
-    <div class="modal__dialog">
-      <div class="modal__content">
-        <a
-          :href="demo"
-          target="_blank"
-          rel="noreferrer noopener"
-          class="modal__image"
-        >
-          <img :src="image" :alt="title" />
-        </a>
+  <div class="modal">
+    <div class="modal__content" v-click-away="closeProject">
+      <a
+        :href="demo"
+        target="_blank"
+        rel="noreferrer noopener"
+        class="modal__image"
+        @click="closeProject"
+      >
+        <img :src="image" :alt="title" />
+      </a>
 
-        <div class="modal__info">
-          <div class="modal__info_close" @click="closeProject">
-            <font-awesome-icon icon="fa-solid fa-xmark" />
-          </div>
+      <div class="modal__info">
+        <div class="modal__info_close" @click="closeProject">
+          <font-awesome-icon icon="fa-solid fa-xmark" />
+        </div>
 
-          <div>
-            <a
-              :href="demo"
-              target="_blank"
-              rel="noreferrer noopener"
-              class="modal__info_title"
-              @click="closeProject"
-            >
-              <h2>{{ title }}</h2>
-            </a>
-            <p class="modal__info_text">
-              {{ info }}
-            </p>
-            <p class="modal__info_tech"><span>Tech stack: </span>{{ tech }}</p>
-          </div>
-          <div class="modal__info_links">
-            <a
-              :href="demo"
-              target="_blank"
-              rel="noreferrer noopener"
-              @click="closeProject"
-              >View project: <font-awesome-icon icon="fa-solid fa-cat"
-            /></a>
-            <a
-              :href="code"
-              target="_blank"
-              rel="noreferrer noopener"
-              @click="closeProject"
-              >View code: <font-awesome-icon icon="fa-brands fa-github" />
-            </a>
-          </div>
+        <div>
+          <a
+            :href="demo"
+            target="_blank"
+            rel="noreferrer noopener"
+            class="modal__info_title"
+            @click="closeProject"
+          >
+            {{ title }}
+          </a>
+          <p class="modal__info_text">
+            {{ info }}
+          </p>
+          <p class="modal__info_tech"><span>Tech stack: </span>{{ tech }}</p>
+        </div>
+        <div class="modal__info_links">
+          <a
+            :href="demo"
+            target="_blank"
+            rel="noreferrer noopener"
+            @click="closeProject"
+          >
+            View project: <font-awesome-icon icon="fa-solid fa-cat" />
+          </a>
+          <a
+            :href="code"
+            target="_blank"
+            rel="noreferrer noopener"
+            @click="closeProject"
+          >
+            View code: <font-awesome-icon icon="fa-brands fa-github" />
+          </a>
         </div>
       </div>
     </div>
@@ -81,14 +82,11 @@ const closeProject = () => {
   z-index: 20;
   display: flex;
   align-items: center;
-  &__dialog {
+  &__content {
+    position: relative;
     width: 80vw;
     max-width: 800px;
     margin: 0 auto;
-  }
-  &__content {
-    position: relative;
-    width: 100%;
     height: 65vh;
     overflow-y: auto;
     font-family: "Space Grotesk";
@@ -128,9 +126,10 @@ const closeProject = () => {
     align-content: space-between;
     justify-items: end;
     &_title {
-      font-size: 1.125rem;
-      cursor: pointer;
+      font-size: 1.75rem;
+      font-weight: bold;
       text-transform: capitalize;
+      cursor: pointer;
       &:hover {
         color: var(--color-hover);
       }

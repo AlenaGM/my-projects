@@ -225,7 +225,7 @@ const clickOnProject = (e) => {
       :image="image"
       :demo="demo"
       :code="code"
-      @click="isProjectOpen = false"
+      @close="isProjectOpen = false"
     />
   </teleport>
 </template>

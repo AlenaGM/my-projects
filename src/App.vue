@@ -12,7 +12,9 @@ const clickOnContact = () => {
 <template>
   <header class="header">
     <nav>
-      <RouterLink to="/" tabindex="1">Alena G.</RouterLink>
+      <!--<RouterLink to="/" tabindex="1">Alena G.</RouterLink>-->
+      <!--<RouterLink to="/contact" tabindex="2">Contact</RouterLink>-->
+      <a tabindex="1">Alena G.</a>
       <a tabindex="2" @click="clickOnContact">Contact</a>
     </nav>
   </header>
@@ -55,7 +57,7 @@ const clickOnContact = () => {
     </div>
   </footer>
   <teleport to="body">
-    <ContactPopUp v-if="isContactOpen" @click="isContactOpen = false" />
+    <ContactPopUp v-if="isContactOpen" @close="isContactOpen = false" />
   </teleport>
 </template>
 

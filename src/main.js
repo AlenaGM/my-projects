@@ -3,6 +3,7 @@ import "./assets/styles/main.scss";
 import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
+import VueClickAway from "vue3-click-away";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
@@ -18,5 +19,6 @@ library.add(faCat, faEnvelope, faXmark, faGithub, faLinkedinIn, faTelegram);
 const app = createApp(App);
 
 app.use(router);
+app.use(VueClickAway);
 app.component("font-awesome-icon", FontAwesomeIcon);
 app.mount("#app");
