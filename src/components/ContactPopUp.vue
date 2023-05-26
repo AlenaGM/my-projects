@@ -6,7 +6,7 @@ const closeContact = () => {
 </script>
 
 <template>
-  <div class="modal" @click="closeContact">
+  <div class="modal">
     <div class="modal__content" v-click-away="closeContact">
       <div class="modal__content_close" @click="closeContact">
         <font-awesome-icon icon="fa-solid fa-xmark" />
