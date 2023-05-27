@@ -46,7 +46,7 @@ const clickOnProject = (e) => {
     :direction="'vertical'"
     :breakpoints="{
       1023: { slidesPerView: 1.75, slidesOffsetBefore: -125 },
-      320: { slidesPerView: 2.25, slidesOffsetBefore: -75 },
+      320: { slidesPerView: 2.5, slidesOffsetBefore: -75 },
     }"
     :modules="[Mousewheel, FreeMode, Controller]"
     :controller="{ control: [secondSwiper, thirdSwiper, fourthSwiper] }"
@@ -90,7 +90,7 @@ const clickOnProject = (e) => {
     :direction="'vertical'"
     :breakpoints="{
       1023: { slidesPerView: 1.75, slidesOffsetBefore: -125 },
-      320: { slidesPerView: 2.25, slidesOffsetBefore: -75 },
+      320: { slidesPerView: 2.5, slidesOffsetBefore: -75 },
     }"
     :modules="[Mousewheel, FreeMode, Controller]"
     :controller="{ control: firstSwiper }"
@@ -134,7 +134,7 @@ const clickOnProject = (e) => {
     :direction="'vertical'"
     :breakpoints="{
       1023: { slidesPerView: 1.75, slidesOffsetBefore: -125 },
-      320: { slidesPerView: 2.25, slidesOffsetBefore: -75 },
+      320: { slidesPerView: 2.5, slidesOffsetBefore: -75 },
     }"
     :modules="[Mousewheel, FreeMode, Controller]"
     :controller="{ control: firstSwiper }"
@@ -177,7 +177,7 @@ const clickOnProject = (e) => {
     :direction="'vertical'"
     :breakpoints="{
       1023: { slidesPerView: 1.75, slidesOffsetBefore: -125 },
-      320: { slidesPerView: 2.25, slidesOffsetBefore: -75 },
+      320: { slidesPerView: 2.5, slidesOffsetBefore: -75 },
     }"
     :modules="[Mousewheel, FreeMode, Controller]"
     :controller="{ control: firstSwiper }"
