@@ -19,31 +19,29 @@ const closeContact = () => {
         </p>
       </div>
       <div class="modal__content_form">
-        <form>
-          <div>
-            <input
-              type="text"
-              v-model="name"
-              name="name"
-              placeholder="Your Name"
-            />
-            <input
-              type="email"
-              v-model="email"
-              name="email"
-              placeholder="Your Email"
-            />
-          </div>
-          <div>
-            <textarea
-              name="message"
-              v-model="message"
-              cols="30"
-              rows="5"
-              placeholder="Message"
-            >
-            </textarea>
-          </div>
+        <form ref="form" @submit.prevent="sendEmail">
+          <label>Name</label>
+          <input
+            type="text"
+            name="name"
+            v-model.trim="name"
+            placeholder="Your Name"
+          />
+          <label>Email</label>
+          <input
+            type="email"
+            v-model.trim="email"
+            name="email"
+            placeholder="Your Email"
+          />
+          <label>Message</label>
+          <textarea
+            name="message"
+            v-model="message"
+            cols="30"
+            rows="5"
+            placeholder="Message"
+          ></textarea>
           <input type="submit" value="Send" />
         </form>
       </div>
