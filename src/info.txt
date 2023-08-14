@@ -1,0 +1,10 @@
+Font Awesome Icons
+
+<font-awesome-icon :icon="['fas', 'cat']" />
+<font-awesome-icon :icon="['fas', 'bars']" />
+<font-awesome-icon :icon="['fas', 'xmark']" />
+
+<font-awesome-icon :icon="['fab', 'linkedin-in']" />
+<font-awesome-icon :icon="['fab', 'github']" />
+<font-awesome-icon :icon="['fab', 'telegram']" />
+<font-awesome-icon :icon="['fab', 'instagram']" />

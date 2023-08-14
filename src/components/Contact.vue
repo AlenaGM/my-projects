@@ -103,7 +103,7 @@ const isButtonDisabled = computed(() => {
           target="_blank"
           rel="noreferrer noopener"
         >
-          linkedin
+          <font-awesome-icon :icon="['fab', 'linkedin-in']" />
         </a>
         <a
           href="https://github.com/AlenaGM"
@@ -111,7 +111,7 @@ const isButtonDisabled = computed(() => {
           target="_blank"
           rel="noreferrer noopener"
         >
-          github
+          <font-awesome-icon :icon="['fab', 'github']" />
         </a>
         <a
           href="https://t.me/alenagm"
@@ -119,7 +119,7 @@ const isButtonDisabled = computed(() => {
           target="“_blank”"
           rel="noreferrer noopener"
         >
-          telegram
+          <font-awesome-icon :icon="['fab', 'telegram']" />
         </a>
         <a
           href="https://www.instagram.com/del.velorum/"
@@ -127,7 +127,7 @@ const isButtonDisabled = computed(() => {
           target="“_blank”"
           rel="noreferrer noopener"
         >
-          instagram
+          <font-awesome-icon :icon="['fab', 'instagram']" />
         </a>
       </div>
     </div>
