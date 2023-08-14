@@ -1,4 +1,4 @@
-import './assets/styles/main.scss'
+import './assets/main.css'
 
 import { createApp } from 'vue'
 
@@ -10,10 +10,10 @@ import V3ScrollLock from 'v3-scroll-lock'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faCat, faXmark } from '@fortawesome/free-solid-svg-icons'
+import { faCat } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedinIn, faTelegram, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
-library.add(faCat, faXmark, faGithub, faLinkedinIn, faTelegram, faInstagram)
+library.add(faCat, faGithub, faLinkedinIn, faTelegram, faInstagram)
 
 const app = createApp(App)
 
