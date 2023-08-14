@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Red+Hat+Mono:wght@400;600&display=swap');
+
+:root {
+  --color-white: #ffffff;
+  --color-light-gray: #f5f5f5;
+  --color-dark-gray: #333;
+  --color-black: #1f1f1f;
+
+  --color-red: #e82a2a;
+  --color-light-red: #f45757;
+  --color-coral-pink: #f88f8f;
+  --color-ballerina-pink: #f8b7b7;
+  --color-misty-rose: #fcd4d2;
+
+  --color-lavender: #f4e9f1;
+  --color-orange: #fd6a00;
+  --color-yellow: #ffe6b5;
+
+  --color-success: #53c182;
+  --color-error: var(--color-light-red);
+  --color-warning: #ffb069;
+  --color-info: #4c90eb;
+
+  --color-hover: var(--color-red);
+
+  --box-shadow: 0 0 9.8px 0.2px rgba(0, 0, 0, 0.1);
+
+  --section-gap: 120px;
+  --section-gap-mobile: 60px;
+
+  --font-title: 'Poppins', sans-serif;
+  --font-text: 'Poppins', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 320px;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.6;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#app {
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template: minmax(80px, auto) 1fr minmax(80px, auto) / 1fr;
+}
+
+.about,
+.contact,
+.project,
+.work {
+  grid-column: 2;
+}
+
+h1 {
+  font-family: var(--font-title);
+  font-weight: 700;
+  color: var(--color-black);
+  font-size: 60px;
+  line-height: 1.26em;
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 1.18em;
+  letter-spacing: -0.04em;
+  margin-bottom: 1.125rem;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 0.5rem;
+  }
+}
+
+h3 {
+  font-family: var(--font-title);
+  font-weight: 700;
+  color: var(--color-black);
+  font-size: 32px;
+  line-height: 1.2em;
+  letter-spacing: -0.04em;
+}
+
+.subtitle {
+  font-family: var(--font-title);
+  font-weight: 600;
+  color: var(--color-black);
+  font-size: 16px;
+  line-height: 1em;
+  letter-spacing: 0;
+}
+
+a {
+  font-family: var(--font-title);
+  font-weight: 700;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit /*13px*/;
+  text-transform: capitalize;
+  transition: 0.2s;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+    color: var(--color-hover);
+  }
+}
+
+.navlink {
+  color: var(--color-black);
+  font-size: 18px;
+}
+
+p {
+  font-family: var(--font-text);
+  font-weight: 400;
+  color: var(--color-dark-gray);
+  font-size: 16px;
+  &:not(:last-of-type) {
+    margin: 0 0 18px;
+  }
+}
+
+.tech-text {
+  font-family: 'Red Hat Mono', monospace;
+  font-size: 0.75rem;
+  margin: 0.5rem 0;
+  span {
+    font-weight: 600;
+  }
+}
+
+.button {
+  color: var(--color-white);
+  background-color: var(--color-black);
+  border: 2px solid var(--color-black);
+  padding: 15px 40px;
+  opacity: 1;
+  font-family: var(--font-text);
+  font-size: 13px;
+  line-height: 2em;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  transition:
+    color 0.2s ease-in-out,
+    background-color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    color: var(--color-red);
+    border: 2px solid var(--color-red);
+    background-color: transparent;
+  }
+}
+
+.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
