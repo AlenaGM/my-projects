@@ -3,7 +3,7 @@
 
 <template>
   <footer class="footer">
-    <div class="footer__inner">
+    <div class="footer__content">
       <div>I'm footer</div>
       <div>Right</div>
     </div>
@@ -12,15 +12,15 @@
 
 <style lang="scss" scoped>
 .footer {
-  display: grid;
-  grid-template-columns:
-    minmax(1.5rem, 1fr) minmax(auto, 1280px)
-    minmax(1.5rem, 1fr);
-  background-color: var(--color-black);
-  color: var(--color-white);
-  padding: 1rem 0 1.5rem;
-  &__inner {
+  &__content {
     grid-column: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: var(--color-white);
+    padding: 1.5rem 0;
+    @media screen and (max-width: 1023px) {
+      grid-template-columns: 1fr;
+    }
   }
 }
 </style>

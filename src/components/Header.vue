@@ -69,14 +69,13 @@ const menu = [
 <style lang="scss" scoped>
 .header {
   display: grid;
-  grid-template-columns:
-    minmax(1.5rem, 1fr) minmax(160px, auto) minmax(auto, 1120px)
-    minmax(1.5rem, 1fr);
-  padding: 1.5rem 0 1rem;
+  grid-template-columns: minmax(1.5rem, 1fr) minmax(160px, auto) minmax(auto, 1120px) minmax(
+      1.5rem,
+      1fr
+    );
+  padding: 1.5rem 0;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--color-misty-rose);
-  background-color: transparent;
   margin-bottom: -1px;
   z-index: 3;
   &__logo {
@@ -84,15 +83,15 @@ const menu = [
     a {
       display: flex;
       align-items: center;
-      //font-family: var(--font-title);
+      font-family: var(--font-title);
       font-weight: 700;
       font-size: 1.75rem;
-      //color: var(--color-black);
+      color: var(--color-black);
       letter-spacing: -0.04em;
       cursor: pointer;
       &:hover {
         text-decoration: none;
-        //color: var(--color-hover);
+        color: var(--color-hover);
       }
       img {
         display: block;
@@ -116,7 +115,7 @@ const menu = [
         display: none;
       }
       .router-link-exact-active {
-        //color: var(--color-red);
+        color: var(--color-red);
       }
     }
     &_open,
@@ -132,10 +131,10 @@ const menu = [
       }
     }
     &_open {
-      //background-color: var(--color-black);
+      background-color: var(--color-black);
     }
     &_close {
-      //background-color: var(--color-white);
+      background-color: var(--color-white);
     }
   }
   &__dropdown {
@@ -149,7 +148,7 @@ const menu = [
       width: 80vw;
       font-size: 18px;
       background-color: var(--color-black);
-      //color: var(--color-white);
+      color: var(--color-white);
       padding: 1.5rem 1.5rem 1.5rem 4.5rem;
       flex-direction: column;
       align-items: flex-end;

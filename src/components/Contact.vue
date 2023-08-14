@@ -186,20 +186,14 @@ const isButtonDisabled = computed(() => {
 <style lang="scss" scoped>
 .contact {
   display: grid;
-  grid-template-columns:
-    minmax(1.5rem, 1fr) minmax(auto, 640px) minmax(auto, 640px)
-    minmax(1.5rem, 1fr);
+  grid-template-columns: minmax(auto, 640px) minmax(auto, 640px);
   background-color: var(--color-coral-pink);
   color: var(--color-white);
-  padding: var(--section-gap) 0;
   @media screen and (max-width: 1023px) {
-    grid-template-columns:
-      minmax(1.5rem, 1fr) minmax(auto, 975px)
-      minmax(1.5rem, 1fr);
-    padding: var(--section-gap-mobile) 0;
+    grid-template-columns: 1fr;
   }
   &__info {
-    grid-column: 2;
+    grid-column: 1;
     padding-right: 5rem;
     @media screen and (max-width: 1023px) {
       padding-right: 0;
@@ -221,7 +215,7 @@ const isButtonDisabled = computed(() => {
     }
   }
   &__form {
-    grid-column: 3;
+    grid-column: 2;
     display: flex;
     flex-direction: column;
     @media screen and (max-width: 1023px) {
