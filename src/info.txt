@@ -8,3 +8,8 @@ Font Awesome Icons
 <font-awesome-icon :icon="['fab', 'github']" />
 <font-awesome-icon :icon="['fab', 'telegram']" />
 <font-awesome-icon :icon="['fab', 'instagram']" />
+
+TO DO:
+Contact
+1/ success/fail message in pop-up
+2/ reate a separate button component
