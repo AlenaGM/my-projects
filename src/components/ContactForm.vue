@@ -4,6 +4,8 @@ import { useVuelidate } from '@vuelidate/core'
 import { helpers, minLength, maxLength, required, email } from '@vuelidate/validators'
 import emailjs from '@emailjs/browser'
 
+import Button from './Button.vue'
+
 const nameField = ref('')
 const emailField = ref('')
 const messageField = ref('')
@@ -132,7 +134,7 @@ const isButtonDisabled = computed(() => {
     </div>
 
     <div class="contact__form_buttons">
-      <button class="button" :class="{ disabled: isButtonDisabled }" type="submit">Send</button>
+      <Button :disabled="isButtonDisabled" type="submit">Send</Button>
     </div>
   </form>
 </template>
@@ -184,8 +186,7 @@ const isButtonDisabled = computed(() => {
       resize: vertical;
     }
   }
-  &_input,
-  .button {
+  &_input .btn {
     &:not(:last-of-type) {
       margin: 0 1.5rem 0 0;
       @media screen and (max-width: 767px) {
