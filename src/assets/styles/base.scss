@@ -216,35 +216,6 @@ p {
   }
 }
 
-.button {
-  color: var(--color-white);
-  background-color: var(--color-black);
-  border: 2px solid var(--color-black);
-  padding: 15px 40px;
-  opacity: 1;
-  font-family: var(--font-text);
-  font-size: 13px;
-  line-height: 2em;
-  font-weight: 700;
-  text-decoration: none;
-  letter-spacing: -0.01em;
-  transition:
-    color 0.2s ease-in-out,
-    background-color 0.2s ease-in-out,
-    border-color 0.2s ease-in-out;
-  cursor: pointer;
-  &:hover {
-    color: var(--color-red);
-    border: 2px solid var(--color-red);
-    background-color: transparent;
-  }
-}
-
-.disabled {
-  opacity: 0.6;
-  pointer-events: none;
-}
-
 .v-enter-active,
 .v-leave-active {
   transition: opacity 0.5s ease;
