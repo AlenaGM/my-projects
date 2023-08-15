@@ -34,7 +34,6 @@ import ProjectCard from '@/components/ProjectCard.vue'
 <style lang="scss" scoped>
 .work {
   display: grid;
-  background-color: lightpink;
   &__gallery,
   &__github-link {
     margin-top: var(--section-gap-mobile);
@@ -46,8 +45,7 @@ import ProjectCard from '@/components/ProjectCard.vue'
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-auto-rows: 1fr;
-    column-gap: 2.5rem;
-    row-gap: 1.75rem;
+    gap: 2.5rem;
     justify-items: center;
   }
 }

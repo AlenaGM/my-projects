@@ -1,4 +1,5 @@
 <script setup>
+// eslint-disable-next-line no-unused-vars
 const props = defineProps({
   projects: {
     required: true
@@ -9,23 +10,28 @@ const props = defineProps({
 <template>
   <article
     class="work__gallery_card card"
-    v-for="{ id, title, info, tech, image, demo, code } in projects"
+    v-for="{ id, title, info, tech, image, demo, code, bgColor } in projects"
     :key="id"
+    :style="{ backgroundColor: bgColor }"
   >
     <a :href="demo" target="_blank" rel="noreferrer" class="card_image">
       <img :src="image" :alt="title" />
     </a>
     <div class="card_content">
-      <h3 class="card_title">
-        <a :href="demo" :alt="title" target="_blank" rel="noreferrer">
+      <div>
+        <a class="card_title" :href="demo" :alt="title" target="_blank" rel="noreferrer">
           {{ title }}
         </a>
-      </h3>
-      <p class="card_tech tech-text"><span class="tech-text">Stack:</span>{{ tech }}</p>
-      <p class="pcard_text">{{ info }}</p>
+        <p class="card_tech tech-text"><span class="tech-text">Stack: </span>{{ tech }}</p>
+      </div>
+      <div class="card_text">{{ info }}</div>
       <div class="card_links">
-        <a :href="demo" target="_blank" rel="noreferrer" class="card_link"> View Project: CAT </a>
-        <a :href="code" target="_blank" rel="noreferrer" class="card_link"> View Code: GITHUB </a>
+        <a :href="demo" target="_blank" rel="noreferrer" class="card_link tech-text">
+          View Project: <font-awesome-icon :icon="['fas', 'cat']" />
+        </a>
+        <a :href="code" target="_blank" rel="noreferrer" class="card_link tech-text">
+          View Code: <font-awesome-icon :icon="['fab', 'github']" />
+        </a>
       </div>
     </div>
   </article>
@@ -40,30 +46,28 @@ const props = defineProps({
   width: 100%;
   text-align: center;
   align-items: stretch;
-  padding: 1rem;
-  //background-color: $color-bg-card-dark;
-  //color: $color-text-light;
-  //border: 1px solid hsla(0, 0%, 100%, 0.18);
-  //border-radius: 0.25rem;
+  background-color: var(--color-yellow);
+  box-shadow: var(--box-shadow);
+  border-radius: 8px;
   cursor: pointer;
-  transition: all 0.3s ease;
-
   &_image {
     margin: 0 0 8px;
-    padding: 0 0 70%;
+    padding: 0 0 60%;
     position: relative;
-    //border-radius: 0.25rem;
+    overflow: hidden;
+    cursor: pointer;
+    height: 240px;
+    border-radius: 8px 8px 0 0;
     img {
-      //border-radius: 0.25rem;
-      height: 100%;
-      left: 0;
       object-fit: cover;
-      opacity: 0.85;
-      position: absolute;
-      top: 0;
       width: 100%;
+      transform: translateY(0);
+      transition: 6s ease-out;
       &:hover {
-        opacity: 1;
+        object-fit: cover;
+        width: 100%;
+        transform: translateY(calc(-100% + 240px));
+        transition: 6s ease-out;
       }
     }
   }
@@ -73,47 +77,40 @@ const props = defineProps({
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem;
+    padding: 1rem;
     width: 100%;
   }
   &_title {
-    margin: 0.5rem 0;
+    font-size: larger;
+    margin: 0.5rem 0 0 0;
     &:hover {
-      //color: $color-hover;
+      color: var(--color-hover);
     }
   }
   &_text {
-    margin: 0.5rem 0;
-    font-size: 20px;
+    padding-top: 0.5rem;
     font-weight: 400;
     line-height: 1.4;
   }
-  &_tags {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    padding: 0.5rem 1rem;
-    border-radius: 10px;
-    //background-color: $color-bg-card-dark;
-    top: -45px;
-  }
   &_links {
     display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
   }
   &_link {
-    //color: $color-text-light;
     display: flex;
-    font-family: 'Red Hat Mono', monospace;
-    font-size: 0.85rem;
-    padding-top: 0.5rem;
     position: relative;
+    align-items: center;
     svg {
+      font-size: 1.25rem;
       margin-left: 0.25rem;
     }
   }
   &_link:not(:last-of-type) {
-    padding-right: 1.5rem;
+    margin-right: 1.5rem;
+    svg:last-of-type {
+      font-size: 1.125rem;
+    }
   }
 }
 </style>

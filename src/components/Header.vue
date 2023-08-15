@@ -32,7 +32,7 @@ const menu = [
 <template>
   <header class="header">
     <div class="header__logo">
-      <RouterLink to="/"> Alëna G. </RouterLink>
+      <RouterLink to="/"><img src="@/assets/images/logo.png" alt="logo" /> Alëna G. </RouterLink>
     </div>
     <nav class="header__menu">
       <ul class="header__menu_links">
@@ -85,7 +85,7 @@ const menu = [
       align-items: center;
       font-family: var(--font-title);
       font-weight: 700;
-      font-size: 1.75rem;
+      font-size: 1.5rem;
       color: var(--color-black);
       letter-spacing: -0.04em;
       cursor: pointer;
@@ -97,7 +97,7 @@ const menu = [
         display: block;
         height: 32px;
         max-width: 100%;
-        margin-left: 0.5rem;
+        margin-right: 0.5rem;
       }
     }
   }
