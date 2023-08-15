@@ -6,9 +6,9 @@
     :class="[
       'btn',
       {
-        'btn_dark-primary': color === 'dark-primary',
+        btn_darkprimary: color === 'dark-primary',
         btn_secondary: color === 'secondary',
-        'btn_light-gray': color === 'light-gray',
+        btn_lightgray: color === 'light-gray',
         btn_white: color === 'white',
         btn_fullwidth: mobileFullWidth,
         btn_disabled: disabled
@@ -17,16 +17,15 @@
   >
     <slot />
   </button>
-  <router-link
+  <a
     v-else
-    :to="to"
     class="btn"
     :class="[
       'btn',
       {
-        'btn_dark-primary': color === 'dark-primary',
+        btn_darkprimary: color === 'dark-primary',
         btn_secondary: color === 'secondary',
-        'btn_light-gray': color === 'light-gray',
+        btn_lightgray: color === 'light-gray',
         btn_white: color === 'white',
         btn_fullwidth: mobileFullWidth,
         btn_disabled: disabled
@@ -34,7 +33,7 @@
     ]"
   >
     <slot />
-  </router-link>
+  </a>
 </template>
 
 <script setup>
@@ -96,7 +95,7 @@ const props = defineProps({
     border: 2px solid var(--color-red);
     background-color: transparent;
   }
-  &_dark-primary {
+  &_darkprimary {
     color: var(--color-white);
     background: var(--color-black);
     border: 2px solid var(--color-black);
@@ -106,7 +105,7 @@ const props = defineProps({
     background: var(--color-red);
     border: 2px solid var(--color-red);
   }
-  &_light-gray {
+  &_lightgray {
     color: var(--color-dark-gray);
     background: var(--color-light-gray);
     border: 2px solid var(--color-light-gray);

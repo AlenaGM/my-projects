@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
-import Button from './Button.vue'
+import uiButton from './Button.vue'
 </script>
 
 <template>
@@ -13,16 +13,16 @@ import Button from './Button.vue'
     </p>
     <div class="work__gallery">Gallery</div>
     <div class="work__github-link">
-      <Button type="link">
+      <ui-button type="link" mobileFullWidth="true">
         <a
           href="https://github.com/AlenaGM"
           aria-label="github"
           target="_blank"
           rel="noreferrer noopener"
         >
-          View more projects on github
+          More projects on github
         </a>
-      </Button>
+      </ui-button>
     </div>
   </section>
 </template>

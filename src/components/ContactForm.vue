@@ -4,7 +4,7 @@ import { useVuelidate } from '@vuelidate/core'
 import { helpers, minLength, maxLength, required, email } from '@vuelidate/validators'
 import emailjs from '@emailjs/browser'
 
-import Button from './Button.vue'
+import uiButton from './Button.vue'
 
 const nameField = ref('')
 const emailField = ref('')
@@ -135,7 +135,7 @@ const isButtonDisabled = computed(() => {
     </div>
 
     <div class="form__buttons">
-      <Button :disabled="isButtonDisabled" type="submit">Send</Button>
+      <ui-button :disabled="isButtonDisabled" type="submit" mobileFullWidth="true">Send</ui-button>
     </div>
   </form>
 </template>
