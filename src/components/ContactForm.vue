@@ -135,7 +135,7 @@ const isButtonDisabled = computed(() => {
     </div>
 
     <div class="form__buttons">
-      <ui-button :disabled="isButtonDisabled" type="submit" mobileFullWidth="true">Send</ui-button>
+      <ui-button :disabled="isButtonDisabled" type="submit" mobileFullWidth>Send</ui-button>
     </div>
   </form>
 </template>

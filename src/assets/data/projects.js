@@ -4,7 +4,7 @@ const projects = [
     title: 'Point Office Spaces',
     info: 'Landing page for coworking spaces',
     tech: 'JavaScript, GSAP',
-    image: '/my-projects/img/point.jpeg',
+    image: '/img/point.jpeg',
     demo: 'https://point-office-spaces.netlify.app/',
     code: 'https://github.com/AlenaGM/office-spaces'
   },
@@ -13,7 +13,7 @@ const projects = [
     title: 'Marvel',
     info: 'Marvel characters information portal',
     tech: 'React, Functional Components, Custom Hooks, SASS, Fetch API, React Router, React Context, MobX',
-    image: '/my-projects/img/marvel.jpeg',
+    image: '/img/marvel.jpeg',
     demo: 'https://alena-marvel.netlify.app/',
     code: 'https://github.com/AlenaGM/marvel/'
   },
@@ -22,7 +22,7 @@ const projects = [
     title: 'Contact Form',
     info: 'Minimalist sign-up form with JavaScript validation',
     tech: 'HTML5, CSS3, JavaScript, Form validation, POST-requests',
-    image: '/my-projects/img/regform.jpeg',
+    image: '/img/regform.jpeg',
     demo: 'https://alenagm.github.io/Registration-Form/',
     code: 'https://github.com/AlenaGM/Registration-Form/'
   },
@@ -31,7 +31,7 @@ const projects = [
     title: 'Pineapple Movies',
     info: 'Single Page Application built with Vue 3 and Pinia that serves to organize film lists',
     tech: 'Vue.js, Pinia, Getters, Synchronous and asynchronous actions, Composition API, LocalStorage',
-    image: '/my-projects/img/pineapple.jpeg',
+    image: '/img/pineapple.jpeg',
     demo: 'https://alenagm.github.io/pineapple-movies/',
     code: 'https://github.com/AlenaGM/pineapple-movies/'
   },
@@ -40,7 +40,7 @@ const projects = [
     title: 'Date Format Exercise',
     info: 'Function that formats date and time.',
     tech: 'HTML5, CSS3, JavaScript',
-    image: '/my-projects/img/dateformat.jpeg',
+    image: '/img/dateformat.jpeg',
     demo: 'https://alenagm.github.io/Date-Format-Exercise/',
     code: 'https://github.com/AlenaGM/Date-Format-Exercise/'
   },
@@ -49,7 +49,7 @@ const projects = [
     title: 'Mogu-Travel Agency web-site',
     info: 'Website to search for day trips, visits and sightseeing in France',
     tech: 'HTML5, CSS3, JavaScript',
-    image: '/my-projects/img/mogutravel.jpeg',
+    image: '/img/mogutravel.jpeg',
     demo: 'https://alenagm.github.io/Mogu-Travel/',
     code: 'https://github.com/AlenaGM/Mogu-Travel/'
   },
@@ -58,7 +58,7 @@ const projects = [
     title: 'Project #7',
     info: 'Calculator that helps to estimate car resale value depending on model, year, mileage and additional options the car is equipped with.',
     tech: 'HTML5, CSS3, JavaScript',
-    image: '/my-projects/img/carcalculator.jpeg',
+    image: '/img/carcalculator.jpeg',
     demo: 'https://alenagm.github.io/Car-Value-Estimator/',
     code: 'https://github.com/AlenaGM/Car-Value-Estimator/'
   },
@@ -67,7 +67,7 @@ const projects = [
     title: 'Tours by Locals',
     info: 'Landing for company offering platform that connects to local guides.',
     tech: 'Vue3, Vite, Composition API, SASS',
-    image: '/my-projects/img/tipster.jpeg',
+    image: '/img/tipster.jpeg',
     demo: 'https://alenagm.github.io/tours-by-locals/',
     code: 'https://github.com/AlenaGM/tours-by-locals/'
   },
@@ -76,7 +76,7 @@ const projects = [
     title: 'Naïve Art Shop and Gallery',
     info: 'Art gallery and shop website built with VueJS 3 and Pinia.',
     tech: 'Vue3, Vite, Composition API, SASS, Vue Router 4, Stoplight 4, Axios, Pinia',
-    image: '/my-projects/img/naive.jpeg',
+    image: '/img/naive.jpeg',
     demo: 'https://alenagm.github.io/naive/',
     code: 'https://github.com/AlenaGM/naive/'
   },
@@ -85,7 +85,7 @@ const projects = [
     title: 'WORDY - English Flashcards',
     info: 'SPA built with React that serves to memorize new English words with help of vocabulary-flashcards.',
     tech: 'React, Functional Components, Custom Hooks, SASS, Fetch API, Get and Post requests, React Router, React Context, Mobx',
-    image: '/my-projects/img/wordy.jpeg',
+    image: '/img/wordy.jpeg',
     demo: 'https://alenas-flashcards-app.netlify.app/',
     code: 'https://github.com/AlenaGM/flashcards-app'
   },
@@ -94,7 +94,7 @@ const projects = [
     title: 'Comment Form',
     info: 'React Comment-Form component ',
     tech: 'React, HTML5, CSS3',
-    image: '/my-projects/img/addcomments.jpeg',
+    image: '/img/addcomments.jpeg',
     demo: 'https://alenagm.github.io/react-comments-form/',
     code: 'https://github.com/AlenaGM/react-comments-form/'
   },
@@ -103,7 +103,7 @@ const projects = [
     title: 'Biblio',
     info: 'CRUD Application built with React for organizing reading list.',
     tech: 'React, HTML5, CSS3',
-    image: '/my-projects/img/biblio.jpeg',
+    image: '/img/biblio.jpeg',
     demo: 'https://alenagm.github.io/biblio/',
     code: 'https://github.com/AlenaGM/biblio'
   }
