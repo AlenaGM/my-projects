@@ -6,13 +6,13 @@ import ContactForm from './ContactForm.vue'
 
 <template>
   <section class="contact">
-    <div class="contact__info">
+    <div>
       <h2>Contact</h2>
-      <div>
+      <p>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia magnam veniam, ipsa sunt
         delectus reiciendis, exercitationem esse ad minima quibusdam aliquid aut facere non sint
         culpa blanditiis animi, velit consequatur.
-      </div>
+      </p>
       <SocialMedia />
     </div>
     <ContactForm />
@@ -23,7 +23,6 @@ import ContactForm from './ContactForm.vue'
 .contact {
   display: grid;
   grid-template-columns: repeat(2, minmax(auto, 610px));
-  //background-color: var(--color-coral-pink);
   gap: var(--section-gap-mobile);
   @media screen and (max-width: 1023px) {
     display: flex;

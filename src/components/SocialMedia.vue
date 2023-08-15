@@ -1,5 +1,5 @@
 <template>
-  <div class="contact__info_social">
+  <div class="contact__social-media social-media">
     <a
       href="https://www.linkedin.com/in/alena-guillaume/"
       aria-label="linkedin"
@@ -36,7 +36,7 @@
 </template>
 
 <style lang="scss" scoped>
-.contact__info_social {
+.social-media {
   margin-top: 2.25rem;
   @media screen and (max-width: 1023px) {
     margin-top: 1.125rem;

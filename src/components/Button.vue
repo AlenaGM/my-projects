@@ -6,12 +6,12 @@
     :class="[
       'btn',
       {
-        'btn--dark-primary': color === 'dark-primary',
-        'btn--secondary': color === 'secondary',
-        'btn--light-gray': color === 'light-gray',
-        'btn--white': color === 'white',
-        'btn--fullwidth': mobileFullWidth,
-        'btn--disabled': disabled
+        'btn_dark-primary': color === 'dark-primary',
+        btn_secondary: color === 'secondary',
+        'btn_light-gray': color === 'light-gray',
+        btn_white: color === 'white',
+        btn_fullwidth: mobileFullWidth,
+        btn_disabled: disabled
       }
     ]"
   >
@@ -24,12 +24,12 @@
     :class="[
       'btn',
       {
-        'btn--dark-primary': color === 'dark-primary',
-        'btn--secondary': color === 'secondary',
-        'btn--light-gray': color === 'light-gray',
-        'btn--white': color === 'white',
-        'btn--fullwidth': mobileFullWidth,
-        'btn--disabled': disabled
+        'btn_dark-primary': color === 'dark-primary',
+        btn_secondary: color === 'secondary',
+        'btn_light-gray': color === 'light-gray',
+        btn_white: color === 'white',
+        btn_fullwidth: mobileFullWidth,
+        btn_disabled: disabled
       }
     ]"
   >
@@ -96,32 +96,32 @@ const props = defineProps({
     border: 2px solid var(--color-red);
     background-color: transparent;
   }
-  &--dark-primary {
+  &_dark-primary {
     color: var(--color-white);
     background: var(--color-black);
     border: 2px solid var(--color-black);
   }
-  &--secondary {
+  &_secondary {
     color: var(--color-white);
     background: var(--color-red);
     border: 2px solid var(--color-red);
   }
-  &--light-gray {
+  &_light-gray {
     color: var(--color-dark-gray);
     background: var(--color-light-gray);
     border: 2px solid var(--color-light-gray);
   }
-  &--white {
+  &_white {
     color: var(--color-dark-gray);
     background: var(--color-white);
     border: 2px solid var(--color-dark-gray);
   }
-  &--fullwidth {
+  &_fullwidth {
     @media screen and (max-width: 767px) {
       width: 100%;
     }
   }
-  &--disabled {
+  &_disabled {
     opacity: 0.6;
     pointer-events: none;
   }

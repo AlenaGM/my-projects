@@ -89,9 +89,9 @@ const isButtonDisabled = computed(() => {
 </script>
 
 <template>
-  <form class="contact__form" ref="formRef" @submit.prevent="submitForm">
+  <form class="contact__form form" ref="formRef" @submit.prevent="submitForm">
     <div>
-      <div class="contact__form_input">
+      <div class="form__input">
         <input
           type="text"
           name="user_name"
@@ -100,12 +100,12 @@ const isButtonDisabled = computed(() => {
           @input="updateValue"
         />
         <Transition v-if="valid.nameField.$error">
-          <span class="contact__form_error">
+          <span class="form__error">
             {{ valid.nameField.$errors[0].$message }}
           </span>
         </Transition>
       </div>
-      <div class="contact__form_input">
+      <div class="form__input">
         <input
           type="email"
           name="user_email"
@@ -114,11 +114,12 @@ const isButtonDisabled = computed(() => {
           @input="updateValue"
         />
         <Transition v-if="valid.emailField.$error">
-          <span class="contact__form_error">{{ valid.emailField.$errors[0].$message }}</span>
+          <span class="form__error">{{ valid.emailField.$errors[0].$message }}</span>
         </Transition>
       </div>
     </div>
-    <div class="contact__form_textarea">
+
+    <div class="form__textarea">
       <textarea
         name="message"
         placeholder="Write me a message"
@@ -126,26 +127,23 @@ const isButtonDisabled = computed(() => {
         @input="updateValue"
       />
       <Transition v-if="valid.messageField.$error">
-        <span class="contact__form_error">{{ valid.messageField.$errors[0].$message }}</span>
+        <span class="form__error">{{ valid.messageField.$errors[0].$message }}</span>
       </Transition>
       <Transition v-if="successMessage">
-        <span class="contact__form_success">{{ successMessage }}</span>
+        <span class="form__success">{{ successMessage }}</span>
       </Transition>
     </div>
 
-    <div class="contact__form_buttons">
+    <div class="form__buttons">
       <Button :disabled="isButtonDisabled" type="submit">Send</Button>
     </div>
   </form>
 </template>
 
 <style lang="scss" scoped>
-.contact__form {
+.form {
   display: flex;
   flex-direction: column;
-  @media screen and (max-width: 1023px) {
-    grid-column: 2;
-  }
   div {
     display: flex;
     width: 100%;
@@ -153,12 +151,16 @@ const isButtonDisabled = computed(() => {
       flex-direction: column;
     }
   }
-  &_input,
-  &_textarea {
+  &__input,
+  &__textarea {
     display: flex;
     flex-direction: column;
     input,
     textarea {
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: inherit;
+      line-height: 24px;
       color: var(--color-dark-gray);
       background-color: var(--color-light-gray);
       border: solid 1px var(--color-light-gray);
@@ -169,24 +171,20 @@ const isButtonDisabled = computed(() => {
         color 0.2s ease-out,
         background-color 0.2s ease-out,
         border-color 0.2s ease-out;
-      font-family: inherit;
-      font-size: 1rem;
-      font-weight: inherit;
-      line-height: 24px;
       :focus {
         border: 1px solid var(--color-red);
         box-shadow: var(--box-shadow);
       }
     }
   }
-  &_textarea {
+  &__textarea {
     margin: 1.5rem 0 4.5rem;
     textarea {
       min-height: 160px;
       resize: vertical;
     }
   }
-  &_input .btn {
+  &__input {
     &:not(:last-of-type) {
       margin: 0 1.5rem 0 0;
       @media screen and (max-width: 767px) {
@@ -197,12 +195,12 @@ const isButtonDisabled = computed(() => {
       width: 100%;
     }
   }
-  &_error {
+  &__error {
     margin-top: 4px;
     font-size: 0.8125rem;
     color: var(--color-light-red);
   }
-  &_success {
+  &__success {
     margin-top: 4px;
     font-size: inherit;
     color: var(--color-success);
