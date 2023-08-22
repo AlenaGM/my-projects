@@ -89,12 +89,11 @@ li {
 
 .header {
   grid-area: header;
-  background-color: violet;
 }
 
 .footer {
   grid-area: footer;
-  background-color: orange;
+  background-color: var(--color-dark-gray);
 }
 
 .main {

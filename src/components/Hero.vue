@@ -3,15 +3,27 @@
 
 <template>
   <section class="hero">
-    <div>I'm Hero</div>
+    <div>Alena Guillaume</div>
+    <h1>Frontend Developer</h1>
   </section>
 </template>
 
 <style lang="scss" scoped>
 .hero {
-  display: grid;
-  grid-column: 2;
+  display: flex;
+  flex-direction: column;
   min-height: calc(100vh - 84px);
-  background-color: yellow;
+  align-items: center;
+  justify-content: center;
+  div {
+    font-size: 24px;
+    font-style: italic;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 4.5rem;
+  }
+  h1 {
+    font-size: 48px;
+    font-family: 'Poppins', sans-serif;
+  }
 }
 </style>

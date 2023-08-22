@@ -4,8 +4,8 @@
 <template>
   <footer class="footer">
     <div class="footer__content">
-      <div>I'm footer</div>
-      <div>Right</div>
+      <div>©️ Alena G., 2023</div>
+      <a href="#">Up ⬆️</a>
     </div>
   </footer>
 </template>
@@ -18,8 +18,12 @@
     grid-template-columns: repeat(2, 1fr);
     color: var(--color-white);
     padding: 1.5rem 0;
+    align-items: center;
     @media screen and (max-width: 1023px) {
       grid-template-columns: 1fr;
+    }
+    a {
+      justify-self: end;
     }
   }
 }

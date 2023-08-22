@@ -94,8 +94,11 @@ const props = defineProps({
   }
   &_links {
     display: flex;
-    flex-wrap: wrap;
     margin-top: 1rem;
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &_link {
     display: flex;
@@ -108,6 +111,9 @@ const props = defineProps({
   }
   &_link:not(:last-of-type) {
     margin-right: 1.5rem;
+    @media screen and (max-width: 767px) {
+      margin-right: 0;
+    }
     svg:last-of-type {
       font-size: 1.125rem;
     }
