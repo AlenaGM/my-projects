@@ -12,3 +12,6 @@ Font Awesome Icons
 TO DO:
 Contact
 1/ success/fail message in pop-up
+
+GENERAL:
+1/ git connection error
