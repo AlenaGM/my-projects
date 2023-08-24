@@ -16,11 +16,12 @@ const rules = computed(() => ({
     minLength: helpers.withMessage(
       `I would like to know your name, if you do not mind`,
       minLength(2)
-    )
+    ),
+    maxLength: helpers.withMessage(`That was long. Any diminutive?`, maxLength(70))
   },
   emailField: {
     required: helpers.withMessage(
-      `Please provide a valid e-mail address, so that I can answer you`,
+      `Please provide a valid e-mail address, so that I can answer you. I will never share your personal details with anyone`,
       required
     ),
     email: helpers.withMessage(
@@ -96,6 +97,7 @@ const isButtonDisabled = computed(() => {
           type="text"
           name="user_name"
           placeholder="Name"
+          maxlength="71"
           v-model="valid.nameField.$model"
           @input="updateValue"
         />
@@ -109,6 +111,7 @@ const isButtonDisabled = computed(() => {
         <input
           type="email"
           name="user_email"
+          maxlength="254"
           placeholder="E-mail"
           v-model="valid.emailField.$model"
           @input="updateValue"
@@ -122,6 +125,7 @@ const isButtonDisabled = computed(() => {
     <div class="form__textarea">
       <textarea
         name="message"
+        maxlength="1001"
         placeholder="Write me a message"
         v-model="valid.messageField.$model"
         @input="updateValue"

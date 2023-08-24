@@ -38,6 +38,7 @@
 <style lang="scss" scoped>
 .social-media {
   a {
+    line-height: 1;
     font-size: 2.5rem;
     @media screen and (max-width: 767px) {
       font-size: 2rem;

@@ -41,9 +41,9 @@ import ContactForm from './ContactForm.vue'
     }
   }
   &__info p:last-of-type {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
     @media screen and (max-width: 767px) {
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
   }
 }
