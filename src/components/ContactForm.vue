@@ -178,7 +178,10 @@ const isButtonDisabled = computed(() => {
     }
   }
   &__textarea {
-    margin: 1.5rem 0 4.5rem;
+    margin: 1.5rem 0 4rem;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 2.5rem;
+    }
     textarea {
       min-height: 160px;
       resize: vertical;

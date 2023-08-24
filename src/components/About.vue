@@ -5,12 +5,22 @@ import uiButton from './Button.vue'
 
 <template>
   <section class="about">
-    <h2 class="about__title">About me</h2>
+    <h2>About me</h2>
     <div class="about__container">
       <div class="about__image">
         <img src="@/assets/images/me.jpg" alt="me" />
       </div>
       <div class="about__info">
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, dolor rerum! Rem
+          inventore beatae dicta nemo vero, dolorum rerum vitae mollitia qui obcaecati facere
+          aperiam sed nulla? Voluptatibus, sapiente consectetur?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, dolor rerum! Rem
+          inventore beatae dicta nemo vero, dolorum rerum vitae mollitia qui obcaecati facere
+          aperiam sed nulla? Voluptatibus, sapiente consectetur?
+        </p>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, dolor rerum! Rem
           inventore beatae dicta nemo vero, dolorum rerum vitae mollitia qui obcaecati facere
@@ -27,7 +37,7 @@ import uiButton from './Button.vue'
   &__container {
     display: grid;
     grid-template-columns: repeat(2, minmax(auto, 610px));
-    gap: 2.5rem;
+    gap: 4rem;
     @media screen and (max-width: 1023px) {
       display: flex;
       flex-direction: column;
@@ -46,8 +56,11 @@ import uiButton from './Button.vue'
       object-fit: cover;
     }
   }
-  &__info p {
-    margin-bottom: 4.5rem;
+  &__info p:last-of-type {
+    margin-bottom: 4rem;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 2.5rem;
+    }
   }
 }
 </style>

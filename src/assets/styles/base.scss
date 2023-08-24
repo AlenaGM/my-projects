@@ -25,8 +25,8 @@
 
   --box-shadow: 0 0 9.8px 0.2px rgba(0, 0, 0, 0.1);
 
-  --section-gap: 160px;
-  --section-gap-mobile: 80px;
+  --section-gap: 200px;
+  --section-gap-mobile: 120px;
 
   --font-title: 'Poppins', sans-serif;
   --font-text: 'Poppins', sans-serif;
@@ -118,16 +118,10 @@ li {
   grid-column: 2;
 }
 
+.hero,
 .about,
 .skills,
 .work,
-.contact {
-  margin-top: var(--section-gap);
-  @media screen and (max-width: 1023px) {
-    margin-top: var(--section-gap-mobile);
-  }
-}
-
 .contact {
   margin-bottom: var(--section-gap);
   @media screen and (max-width: 1023px) {
@@ -152,9 +146,9 @@ h2 {
   font-size: 45px;
   line-height: 1.18em;
   letter-spacing: -0.04em;
-  margin-bottom: 1.125rem;
+  margin-bottom: 1.5rem;
   @media screen and (max-width: 767px) {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -167,15 +161,6 @@ h3 {
   letter-spacing: -0.04em;
 }
 
-.subtitle {
-  font-family: var(--font-title);
-  font-weight: 600;
-  color: var(--color-black);
-  font-size: 16px;
-  line-height: 1em;
-  letter-spacing: 0;
-}
-
 a {
   font-family: var(--font-title);
   font-weight: 700;
@@ -183,7 +168,7 @@ a {
   color: inherit;
   font-size: inherit;
   text-transform: capitalize;
-  transition: 0.2s;
+  transition: color 0.2s;
   cursor: pointer;
   &:hover {
     text-decoration: none;
@@ -200,15 +185,18 @@ p {
   font-family: var(--font-text);
   font-weight: 400;
   color: var(--color-dark-gray);
-  font-size: 16px;
+  font-size: 18px;
   &:not(:last-of-type) {
     margin: 0 0 18px;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 16px;
   }
 }
 
 .tech-text {
   font-family: 'Red Hat Mono', monospace;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   margin: 0.5rem 0;
   span {
     font-weight: 600;

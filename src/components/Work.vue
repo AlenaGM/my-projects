@@ -34,19 +34,17 @@ import ProjectCard from '@/components/ProjectCard.vue'
 <style lang="scss" scoped>
 .work {
   display: grid;
-  &__gallery,
-  &__github-link {
-    margin-top: var(--section-gap-mobile);
-    @media screen and (max-width: 767px) {
-      margin-top: calc(var(--section-gap-mobile) * 0.5);
-    }
-  }
   &__gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-auto-rows: 1fr;
     gap: 2.5rem;
     justify-items: center;
+    margin: 4rem 0;
+    @media screen and (max-width: 767px) {
+      margin: 2.5rem 0;
+      gap: 1.5rem;
+    }
   }
 }
 </style>

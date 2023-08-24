@@ -37,14 +37,16 @@
 
 <style lang="scss" scoped>
 .social-media {
-  margin-top: 2.25rem;
-  @media screen and (max-width: 1023px) {
-    margin-top: 1.125rem;
-  }
   a {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    @media screen and (max-width: 767px) {
+      font-size: 2rem;
+    }
     &:not(:last-of-type) {
-      margin-right: 1rem;
+      margin-right: 1.125rem;
+      @media screen and (max-width: 767px) {
+        margin-right: 1rem;
+      }
     }
   }
 }
