@@ -56,11 +56,5 @@ import uiButton from './Button.vue'
       object-fit: cover;
     }
   }
-  &__info p:last-of-type {
-    margin-bottom: 4rem;
-    @media screen and (max-width: 767px) {
-      margin-bottom: 2.5rem;
-    }
-  }
 }
 </style>

@@ -16,8 +16,7 @@ import ContactForm from './ContactForm.vue'
         </p>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia magnam veniam, ipsa sunt
-          delectus reiciendis, exercitationem esse ad minima quibusdam aliquid aut facere non sint
-          culpa blanditiis animi, velit consequatur.
+          delectus reiciendis.
         </p>
         <SocialMedia />
       </div>

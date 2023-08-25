@@ -40,9 +40,9 @@ import ProjectCard from '@/components/ProjectCard.vue'
     grid-auto-rows: 1fr;
     gap: 2.5rem;
     justify-items: center;
-    margin: 4rem 0;
+    margin-bottom: 4rem;
     @media screen and (max-width: 767px) {
-      margin: 2.5rem 0;
+      margin-bottom: 2.5rem;
       gap: 1.5rem;
     }
   }

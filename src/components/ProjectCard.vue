@@ -10,21 +10,17 @@ const props = defineProps({
 <template>
   <article
     class="work__gallery_card card"
-    v-for="{ id, title, info, tech, image, demo, code, bgColor } in projects"
+    v-for="{ id, title, info, tech, image, demo, code } in projects"
     :key="id"
-    :style="{ backgroundColor: bgColor }"
   >
-    <a :href="demo" target="_blank" rel="noreferrer" class="card_image">
+    <a class="card_image" :href="demo" target="_blank" rel="noreferrer">
       <img :src="image" :alt="title" />
     </a>
     <div class="card_content">
-      <div>
-        <a class="card_title" :href="demo" :alt="title" target="_blank" rel="noreferrer">
-          {{ title }}
-        </a>
-        <p class="card_tech tech-text"><span class="tech-text">Stack: </span>{{ tech }}</p>
-      </div>
-      <div class="card_text">{{ info }}</div>
+      <h3 class="card_title">
+        <a class="card_title" :href="demo" target="_blank" rel="noreferrer">{{ info }}</a>
+      </h3>
+      <div class="card_tech tech-text"><span class="tech-text">Stack: </span>{{ tech }}</div>
       <div class="card_links">
         <a :href="demo" target="_blank" rel="noreferrer" class="card_link tech-text">
           View Project: <font-awesome-icon :icon="['fas', 'cat']" />
@@ -41,60 +37,68 @@ const props = defineProps({
 .card {
   display: grid;
   grid-auto-flow: row;
-  grid-template: auto 1fr/ 1fr;
+  grid-template: auto 1fr/1fr;
   max-width: 400px;
   width: 100%;
-  text-align: center;
-  align-items: stretch;
-  background-color: var(--color-yellow);
+  background-color: var(--color-light-gray);
   box-shadow: var(--box-shadow);
-  border-radius: 8px;
+  border-radius: 0.5rem;
+  text-align: center;
+  padding: 1rem;
+  transition: 6s ease-out;
   cursor: pointer;
   &_image {
-    margin: 0 0 8px;
     padding: 0 0 60%;
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    height: 240px;
-    border-radius: 8px 8px 0 0;
+    height: 200px;
     img {
+      border-radius: 0.5rem;
+      height: 100%;
+      left: 0;
       object-fit: cover;
+      opacity: 0.85;
+      position: absolute;
+      top: 0;
       width: 100%;
       transform: translateY(0);
       transition: 6s ease-out;
       &:hover {
         object-fit: cover;
         width: 100%;
-        transform: translateY(calc(-100% + 240px));
+        transform: translateY(calc(-100% + 200px));
         transition: 6s ease-out;
       }
     }
   }
   &_content {
+    display: grid;
+    align-content: space-between;
+    justify-items: center;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
     width: 100%;
   }
   &_title {
-    font-size: larger;
-    margin: 0.5rem 0 0 0;
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 1.125rem;
+    margin: 1rem 0 0.5rem;
     &:hover {
       color: var(--color-hover);
     }
   }
-  &_text {
-    padding-top: 0.5rem;
-    font-weight: 400;
-    line-height: 1.4;
+  &_tech {
+    text-align: left;
+    margin: 0.5rem 0;
   }
   &_links {
     display: flex;
-    margin-top: 1rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
     @media screen and (max-width: 767px) {
       flex-direction: column;
       align-items: center;
@@ -104,18 +108,20 @@ const props = defineProps({
     display: flex;
     position: relative;
     align-items: center;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    &:not(:last-of-type) {
+      margin-right: 1.5rem;
+      @media screen and (max-width: 767px) {
+        margin-right: 0;
+      }
+    }
     svg {
       font-size: 1.25rem;
       margin-left: 0.25rem;
-    }
-  }
-  &_link:not(:last-of-type) {
-    margin-right: 1.5rem;
-    @media screen and (max-width: 767px) {
-      margin-right: 0;
-    }
-    svg:last-of-type {
-      font-size: 1.125rem;
+      &:last-of-type {
+        font-size: 1.125rem;
+      }
     }
   }
 }

@@ -15,8 +15,10 @@ import { skills } from '@/assets/data/skills'
     </div>
     <div class="skills__list">
       <div class="skills__list_item" v-for="{ order, skill, icon } in skills" :key="order">
-        <img :src="icon" :alt="skill" />
-        <label class="tech-text">{{ skill }}</label>
+        <div>
+          <img :src="icon" :alt="skill" />
+        </div>
+        <p class="tech-text">{{ skill }}</p>
       </div>
     </div>
   </section>
@@ -24,19 +26,15 @@ import { skills } from '@/assets/data/skills'
 
 <style lang="scss" scoped>
 .skills {
-  &__info p:last-of-type {
-    margin-bottom: 4rem;
-    @media screen and (max-width: 767px) {
-      margin-bottom: 2.5rem;
-    }
-  }
   &__list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
     width: 100%;
     gap: 2.5rem;
-    justify-items: start;
+    justify-items: center;
+    @media screen and (max-width: 767px) {
+      gap: 1.5rem;
+    }
     &_item {
       display: flex;
       flex-direction: column;
@@ -46,12 +44,18 @@ import { skills } from '@/assets/data/skills'
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100px;
-        height: 100px;
+        background: var(--color-light-gray);
+        box-shadow: var(--box-shadow);
+        border-radius: 50%;
+        height: 90px;
+        width: 90px;
         img {
           width: 50%;
           height: 50%;
         }
+      }
+      p {
+        margin: 0.5rem 0;
       }
     }
   }

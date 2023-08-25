@@ -186,18 +186,23 @@ p {
   font-weight: 400;
   color: var(--color-dark-gray);
   font-size: 18px;
+  @media screen and (max-width: 767px) {
+    font-size: 16px;
+  }
   &:not(:last-of-type) {
     margin: 0 0 18px;
   }
-  @media screen and (max-width: 767px) {
-    font-size: 16px;
+  &:last-of-type {
+    margin-bottom: 4rem;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 2.5rem;
+    }
   }
 }
 
 .tech-text {
   font-family: 'Red Hat Mono', monospace;
-  font-size: 0.8rem;
-  margin: 0.5rem 0;
+  font-size: 0.75rem;
   span {
     font-weight: 600;
   }
