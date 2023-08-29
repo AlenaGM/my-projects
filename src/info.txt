@@ -19,5 +19,10 @@ TO DO:
 Contact
 1/ success/fail message in pop-up
 
-GENERAL:
-1/ git connection error
+Work
+1/ add filter component
+
+PROJECT CARD:
+1/ Fix anim on scroll
+2/ clear unused css
+3/ return title

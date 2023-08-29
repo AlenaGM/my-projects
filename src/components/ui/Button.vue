@@ -2,16 +2,15 @@
 <template>
   <button
     v-if="type === 'submit'"
-    class="btn"
     :class="[
-      'btn',
+      'button',
       {
-        btn_darkprimary: color === 'dark-primary',
-        btn_secondary: color === 'secondary',
-        btn_lightgray: color === 'light-gray',
-        btn_white: color === 'white',
-        btn_fullwidth: mobileFullWidth,
-        btn_disabled: disabled
+        button_darkprimary: color === 'dark-primary',
+        button_secondary: color === 'secondary',
+        button_lightgray: color === 'light-gray',
+        button_white: color === 'white',
+        button_fullwidth: mobileFullWidth,
+        button_disabled: disabled
       }
     ]"
   >
@@ -20,16 +19,15 @@
   <router-link
     v-else
     :to="to"
-    class="btn"
     :class="[
-      'btn',
+      'button',
       {
-        btn_darkprimary: color === 'dark-primary',
-        btn_secondary: color === 'secondary',
-        btn_lightgray: color === 'light-gray',
-        btn_white: color === 'white',
-        btn_fullwidth: mobileFullWidth,
-        btn_disabled: disabled
+        button_darkprimary: color === 'dark-primary',
+        button_secondary: color === 'secondary',
+        button_lightgray: color === 'light-gray',
+        button_white: color === 'white',
+        button_fullwidth: mobileFullWidth,
+        button_disabled: disabled
       }
     ]"
   >
@@ -68,7 +66,7 @@ const props = defineProps({
 </script>
 
 <style lang="scss" scoped>
-.btn {
+.button {
   padding: 0 40px;
   opacity: 1;
   display: inline-flex;

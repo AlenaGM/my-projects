@@ -138,7 +138,7 @@ const isButtonDisabled = computed(() => {
       </Transition>
     </div>
 
-    <div class="form__buttons">
+    <div>
       <ui-button :disabled="isButtonDisabled" type="submit" mobileFullWidth>Send</ui-button>
     </div>
   </form>

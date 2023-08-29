@@ -9,23 +9,26 @@ const props = defineProps({
 
 <template>
   <article
-    class="work__gallery_card card"
+    class="gallery__card card"
     v-for="{ id, title, info, tech, image, demo, code } in projects"
     :key="id"
   >
-    <a class="card_image" :href="demo" target="_blank" rel="noreferrer">
+    <a class="card__image" :href="demo" target="_blank" rel="noreferrer">
       <img :src="image" :alt="title" />
     </a>
-    <div class="card_content">
-      <h3 class="card_title">
-        <a class="card_title" :href="demo" target="_blank" rel="noreferrer">{{ info }}</a>
-      </h3>
-      <div class="card_tech tech-text"><span class="tech-text">Stack: </span>{{ tech }}</div>
-      <div class="card_links">
-        <a :href="demo" target="_blank" rel="noreferrer" class="card_link tech-text">
+    <div class="card__content">
+      <div>
+        <h3 class="card__title">
+          <a :href="demo" target="_blank" rel="noreferrer">{{ title }}</a>
+        </h3>
+        <p class="card__tech tech-text"><span class="tech-text">Stack: </span>{{ tech }}</p>
+      </div>
+      <div class="card__text">{{ info }}</div>
+      <div class="card__links">
+        <a :href="demo" target="_blank" rel="noreferrer" class="tech-text">
           View Project: <font-awesome-icon :icon="['fas', 'cat']" />
         </a>
-        <a :href="code" target="_blank" rel="noreferrer" class="card_link tech-text">
+        <a :href="code" target="_blank" rel="noreferrer" class="tech-text">
           View Code: <font-awesome-icon :icon="['fab', 'github']" />
         </a>
       </div>
@@ -47,7 +50,7 @@ const props = defineProps({
   padding: 1rem;
   transition: 6s ease-out;
   cursor: pointer;
-  &_image {
+  &__image {
     padding: 0 0 60%;
     position: relative;
     overflow: hidden;
@@ -58,7 +61,6 @@ const props = defineProps({
       height: 100%;
       left: 0;
       object-fit: cover;
-      opacity: 0.85;
       position: absolute;
       top: 0;
       width: 100%;
@@ -72,51 +74,54 @@ const props = defineProps({
       }
     }
   }
-  &_content {
+  &__content {
     display: grid;
     align-content: space-between;
     justify-items: center;
     position: relative;
     width: 100%;
   }
-  &_title {
-    font-weight: 400;
-    line-height: 1.4;
-    font-size: 1.125rem;
+  &__title {
     margin: 1rem 0 0.5rem;
-    &:hover {
-      color: var(--color-hover);
+    a {
+      font-size: inherit;
+      font-weight: inherit;
+      line-height: inherit;
     }
   }
-  &_tech {
+  &__tech {
     text-align: left;
     margin: 0.5rem 0;
   }
-  &_links {
+  &__text {
+    text-align: left;
+    margin: 0.5rem 0;
+  }
+  &__links {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     position: relative;
     justify-content: space-between;
     width: 100%;
-  }
-  &_link {
-    display: flex;
-    position: relative;
-    align-items: center;
-    font-size: 0.85rem;
-    margin-top: 0.5rem;
-    &:not(:last-of-type) {
-      margin-right: 1.5rem;
-      @media screen and (max-width: 767px) {
-        margin-right: 0;
+    a {
+      display: flex;
+      position: relative;
+      align-items: center;
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+      &:not(:last-of-type) {
+        margin-right: 1.5rem;
+        @media screen and (max-width: 767px) {
+          margin-right: 0;
+        }
       }
-    }
-    svg {
-      font-size: 1.25rem;
-      margin-left: 0.25rem;
-      &:last-of-type {
-        font-size: 1.125rem;
+      svg {
+        font-size: 1.25rem;
+        margin-left: 0.25rem;
+        &:last-of-type {
+          font-size: 1.125rem;
+        }
       }
     }
   }

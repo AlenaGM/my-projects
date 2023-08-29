@@ -6,7 +6,7 @@ import { skills } from '@/assets/data/skills'
 <template>
   <section class="skills">
     <h2>My skills</h2>
-    <div class="skills__info">
+    <div>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, dolor rerum! Rem
         inventore beatae dicta nemo vero, dolorum rerum vitae mollitia qui obcaecati facere aperiam

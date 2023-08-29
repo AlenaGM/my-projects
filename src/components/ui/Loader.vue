@@ -1,6 +1,8 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <div class="loader-container"><div class="loader"></div></div>
+  <div>
+    <div class="loader" />
+  </div>
 </template>
 
 <style lang="scss" scoped>

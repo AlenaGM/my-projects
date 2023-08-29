@@ -13,10 +13,10 @@ import ProjectCard from '@/components/ProjectCard.vue'
       delectus reiciendis, exercitationem esse ad minima quibusdam aliquid aut facere non sint culpa
       blanditiis animi, velit consequatur.
     </p>
-    <div class="work__gallery">
+    <div class="work__gallery gallery">
       <ProjectCard :projects="projects" />
     </div>
-    <div class="work__github-link">
+    <div>
       <ui-button
         type="link"
         href="https://github.com/AlenaGM"
@@ -36,16 +36,21 @@ import ProjectCard from '@/components/ProjectCard.vue'
 .work {
   display: grid;
   &__gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-auto-rows: 1fr;
-    gap: 2.5rem;
-    justify-items: center;
     margin-bottom: 4rem;
     @media screen and (max-width: 767px) {
       margin-bottom: 2.5rem;
-      gap: 1.5rem;
     }
+  }
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 2.5rem;
+  justify-items: center;
+  @media screen and (max-width: 767px) {
+    gap: 1.5rem;
   }
 }
 </style>
