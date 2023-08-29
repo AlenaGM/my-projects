@@ -1,9 +1,0 @@
-<script setup>
-import SingleProject from '@/components/SingleProject.vue'
-</script>
-
-<template>
-  <SingleProject />
-</template>
-
-<style lang="scss" scoped></style>
