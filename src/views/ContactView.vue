@@ -1,9 +1,9 @@
 <script setup>
-import SingleProject from '@/components/SingleProject.vue'
+import Contact from '@/components/Contact.vue'
 </script>
 
 <template>
-  <SingleProject />
+  <Contact />
 </template>
 
 <style lang="scss" scoped></style>

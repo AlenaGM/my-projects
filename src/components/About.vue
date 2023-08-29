@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
-import uiButton from './Button.vue'
+import uiButton from './ui/Button.vue'
 </script>
 
 <template>

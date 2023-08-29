@@ -4,7 +4,7 @@ import { useVuelidate } from '@vuelidate/core'
 import { helpers, minLength, maxLength, required, email } from '@vuelidate/validators'
 import emailjs from '@emailjs/browser'
 
-import uiButton from './Button.vue'
+import uiButton from './ui/Button.vue'
 
 const nameField = ref('')
 const emailField = ref('')

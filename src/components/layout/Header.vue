@@ -11,7 +11,7 @@ const onClickAway = () => {
 
 const menu = [
   {
-    name: 'Home',
+    name: 'Work',
     path: '/'
   },
   {
@@ -19,8 +19,8 @@ const menu = [
     path: '/about'
   },
   {
-    name: 'Work',
-    path: '/work'
+    name: 'Blog',
+    path: '/blog'
   },
   {
     name: 'Contact',

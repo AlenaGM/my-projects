@@ -1,9 +1,9 @@
 <script setup>
-import SingleProject from '@/components/SingleProject.vue'
+import BlogPost from '@/components/BlogPost.vue'
 </script>
 
 <template>
-  <SingleProject />
+  <BlogPost />
 </template>
 
 <style lang="scss" scoped></style>

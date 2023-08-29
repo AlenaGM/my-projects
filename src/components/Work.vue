@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
-import uiButton from './Button.vue'
+import uiButton from './ui/Button.vue'
 import { projects } from '@/assets/data/projects'
 import ProjectCard from '@/components/ProjectCard.vue'
 </script>

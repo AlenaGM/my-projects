@@ -1,5 +1,9 @@
+<script setup>
+import Blog from '@/components/Blog.vue'
+</script>
+
 <template>
-  <div class="blog">
-    <h1>Here will be my blog very soon</h1>
-  </div>
+  <Blog />
 </template>
+
+<style lang="scss" scoped></style>
