@@ -167,7 +167,7 @@ const isButtonDisabled = computed(() => {
       line-height: 24px;
       color: var(--color-dark-gray);
       background-color: var(--color-light-gray);
-      border: solid 1px var(--color-light-gray);
+      border: var(--border);
       outline: none;
       width: 100%;
       padding: 1rem 1.5rem;

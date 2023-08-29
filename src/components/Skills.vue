@@ -45,7 +45,7 @@ import { skills } from '@/assets/data/skills'
         justify-content: center;
         align-items: center;
         background: var(--color-light-gray);
-        box-shadow: var(--box-shadow);
+        border: var(--border);
         border-radius: 50%;
         height: 90px;
         width: 90px;

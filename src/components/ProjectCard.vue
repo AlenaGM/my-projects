@@ -41,36 +41,34 @@ const props = defineProps({
   display: grid;
   grid-auto-flow: row;
   grid-template: auto 1fr/1fr;
-  max-width: 400px;
+  max-width: 410px;
   width: 100%;
   background-color: var(--color-light-gray);
-  box-shadow: var(--box-shadow);
-  border-radius: 0.5rem;
+  border: var(--border);
+  //border-radius: 0.5rem;
   text-align: center;
   padding: 1rem;
-  transition: 6s ease-out;
-  cursor: pointer;
   &__image {
     padding: 0 0 60%;
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    height: 200px;
+    height: 226px;
     img {
-      border-radius: 0.5rem;
-      height: 100%;
+      //border-radius: 0.5rem;
+      //height: 100%;
       left: 0;
       object-fit: cover;
-      position: absolute;
+      //position: absolute;
       top: 0;
       width: 100%;
       transform: translateY(0);
-      transition: 6s ease-out;
+      transition: 2s ease-out;
       &:hover {
         object-fit: cover;
         width: 100%;
-        transform: translateY(calc(-100% + 200px));
-        transition: 6s ease-out;
+        transform: translateY(calc(-100% + 226px));
+        transition: 12s ease-out;
       }
     }
   }
@@ -107,21 +105,21 @@ const props = defineProps({
     a {
       display: flex;
       position: relative;
-      align-items: center;
+      align-items: flex-start;
       font-size: 0.85rem;
       margin-top: 0.5rem;
+      svg {
+        font-size: 1.125rem;
+        margin-left: 0.25rem;
+      }
       &:not(:last-of-type) {
         margin-right: 1.5rem;
         @media screen and (max-width: 767px) {
           margin-right: 0;
         }
       }
-      svg {
+      &:last-of-type svg {
         font-size: 1.25rem;
-        margin-left: 0.25rem;
-        &:last-of-type {
-          font-size: 1.125rem;
-        }
       }
     }
   }

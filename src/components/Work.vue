@@ -45,12 +45,9 @@ import ProjectCard from '@/components/ProjectCard.vue'
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
   grid-auto-rows: 1fr;
-  gap: 2.5rem;
+  gap: 1.5rem;
   justify-items: center;
-  @media screen and (max-width: 767px) {
-    gap: 1.5rem;
-  }
 }
 </style>
