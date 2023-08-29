@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <button
-    v-if="type === 'button' || 'submit'"
+    v-if="type === 'submit'"
     class="btn"
     :class="[
       'btn',
@@ -17,8 +17,9 @@
   >
     <slot />
   </button>
-  <a
+  <router-link
     v-else
+    :to="to"
     class="btn"
     :class="[
       'btn',
@@ -33,7 +34,7 @@
     ]"
   >
     <slot />
-  </a>
+  </router-link>
 </template>
 
 <script setup>
@@ -50,6 +51,10 @@ const props = defineProps({
   type: {
     type: String,
     default: 'button'
+  },
+  to: {
+    type: String,
+    required: false
   },
   mobileFullWidth: {
     type: Boolean,

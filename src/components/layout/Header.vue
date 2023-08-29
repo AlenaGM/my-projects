@@ -32,7 +32,10 @@ const menu = [
 <template>
   <header class="header">
     <div class="header__logo">
-      <RouterLink to="/"><img src="@/assets/images/logo.png" alt="logo" /> Alëna G. </RouterLink>
+      <RouterLink to="/"
+        ><!--<img src="@/assets/images/logo.png" alt="logo" />-->
+        Alëna G.
+      </RouterLink>
     </div>
     <nav class="header__menu">
       <ul class="header__menu_links">

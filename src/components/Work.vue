@@ -17,15 +17,16 @@ import ProjectCard from '@/components/ProjectCard.vue'
       <ProjectCard :projects="projects" />
     </div>
     <div class="work__github-link">
-      <ui-button type="link" mobileFullWidth>
-        <a
-          href="https://github.com/AlenaGM"
-          aria-label="github"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          More projects on github
-        </a>
+      <ui-button
+        type="link"
+        href="https://github.com/AlenaGM"
+        to="#"
+        mobileFullWidth
+        aria-label="github"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        More projects on github
       </ui-button>
     </div>
   </section>

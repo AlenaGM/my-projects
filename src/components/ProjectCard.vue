@@ -99,10 +99,6 @@ const props = defineProps({
     position: relative;
     justify-content: space-between;
     width: 100%;
-    @media screen and (max-width: 767px) {
-      flex-direction: column;
-      align-items: center;
-    }
   }
   &_link {
     display: flex;

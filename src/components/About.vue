@@ -26,7 +26,7 @@ import uiButton from './ui/Button.vue'
           inventore beatae dicta nemo vero, dolorum rerum vitae mollitia qui obcaecati facere
           aperiam sed nulla? Voluptatibus, sapiente consectetur?
         </p>
-        <ui-button type="buttom" mobileFullWidth>Download My CV</ui-button>
+        <ui-button type="link" to="#" mobileFullWidth>Download My CV</ui-button>
       </div>
     </div>
   </section>
