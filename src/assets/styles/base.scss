@@ -108,24 +108,17 @@ li {
     minmax(1.5rem, 1fr);
 }
 
-.hero,
-.about,
-.skills,
-.work,
-.contact,
-.project,
-.blog {
+section {
   grid-column: 2;
-}
-
-.hero,
-.about,
-.skills,
-.work,
-.contact {
   margin-bottom: var(--section-gap);
   @media screen and (max-width: 1023px) {
     margin-bottom: var(--section-gap-mobile);
+  }
+  &:first-of-type {
+    margin-top: 4rem;
+    @media screen and (max-width: 1023px) {
+      margin-top: 2.5rem;
+    }
   }
 }
 

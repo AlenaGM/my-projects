@@ -15,6 +15,7 @@
   min-height: calc(100vh - 84px);
   align-items: center;
   justify-content: center;
+  margin-top: 0;
   div {
     font-size: 24px;
     font-style: italic;
