@@ -43,7 +43,7 @@ const props = defineProps({
 .card {
   display: grid;
   grid-auto-flow: row;
-  grid-template: auto minmax(3rem, auto) 1fr/1fr;
+  grid-template: auto minmax(2rem, auto) 1fr/1fr;
   max-width: 400px;
   width: 100%;
   &__image {
@@ -114,7 +114,6 @@ const props = defineProps({
     z-index: 3;
   }
   &__title {
-    align-items: center;
     background-color: var(--color-red);
     color: var(--color-white);
     display: flex;
@@ -123,7 +122,7 @@ const props = defineProps({
     font-size: 13px;
     line-height: 2em;
     font-weight: 700;
-    padding: 13px 40px 26px;
+    padding: 8px 24px;
     letter-spacing: -0.01em;
     margin: 0 auto -1.75rem 1rem;
     z-index: 2;
@@ -184,14 +183,14 @@ const props = defineProps({
     justify-content: flex-end;
     width: 100%;
     @media screen and (max-width: 450px) {
-      flex-direction: column;
-      align-items: flex-end;
+      //flex-direction: column;
+      //align-items: flex-end;
     }
     a {
       display: flex;
       position: relative;
       align-items: flex-start;
-      font-size: 0.85rem;
+      font-size: 14px;
       margin-top: 0.5rem;
       white-space: nowrap;
       svg {
@@ -201,7 +200,7 @@ const props = defineProps({
       &:not(:last-of-type) {
         margin-right: 1.5rem;
         @media screen and (max-width: 450px) {
-          margin-right: 0;
+          //margin-right: 0;
         }
       }
       &:last-of-type svg {

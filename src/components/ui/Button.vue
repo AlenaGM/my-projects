@@ -144,9 +144,9 @@ const props = defineProps({
     }
   }
   &_disabled {
-    color: var(--color-black);
-    background: var(--color-white);
-    border: 2px solid var(--color-black);
+    color: var(--color-dark-gray);
+    background: transparent;
+    border: 1px solid var(--color-dark-gray);
     pointer-events: none;
   }
 }
