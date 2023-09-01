@@ -31,34 +31,30 @@ import { skills } from '@/assets/data/skills'
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 1.125rem;
     grid-auto-rows: 1fr;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 450px) {
+      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
     }
     &_item {
       display: grid;
       grid-auto-flow: row;
-      grid-template: auto minmax(24px, auto) / 1fr;
-      padding: 0.75rem 1rem;
+      grid-template: auto 1fr / 1fr;
+      padding: 0.75rem;
       border: var(--border);
       box-shadow: var(--box-shadow);
       aspect-ratio: 1;
-      align-content: space-between;
       align-items: end;
     }
     &_image {
       position: relative;
-      padding: 0px 0px 80% 0px;
+      padding: 0px 0px 60% 0px;
       img {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        max-height: 70px;
         object-fit: contain;
-        @media screen and (max-width: 767px) {
-          max-height: 50px;
-        }
       }
     }
     label {

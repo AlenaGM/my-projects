@@ -193,6 +193,7 @@ const props = defineProps({
       align-items: flex-start;
       font-size: 0.85rem;
       margin-top: 0.5rem;
+      white-space: nowrap;
       svg {
         font-size: 1.125rem;
         margin-left: 0.25rem;
