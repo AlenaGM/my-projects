@@ -71,7 +71,7 @@ const skills = [
   },
   {
     order: 15,
-    skill: 'tailwind-css',
+    skill: 'tailwind',
     icon: '/icons/tailwind-css.png'
   },
   {

@@ -180,10 +180,13 @@ const props = defineProps({
   &__links {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     position: relative;
     justify-content: flex-end;
     width: 100%;
+    @media screen and (max-width: 450px) {
+      flex-direction: column;
+      align-items: flex-end;
+    }
     a {
       display: flex;
       position: relative;
@@ -196,6 +199,9 @@ const props = defineProps({
       }
       &:not(:last-of-type) {
         margin-right: 1.5rem;
+        @media screen and (max-width: 450px) {
+          margin-right: 0;
+        }
       }
       &:last-of-type svg {
         font-size: 1.25rem;
