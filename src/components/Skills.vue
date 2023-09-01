@@ -15,10 +15,10 @@ import { skills } from '@/assets/data/skills'
     </div>
     <div class="skills__list">
       <div class="skills__list_item" v-for="{ order, skill, icon } in skills" :key="order">
-        <div>
+        <div class="skills__list_image">
           <img :src="icon" :alt="skill" />
         </div>
-        <p class="tech-text">{{ skill }}</p>
+        <label class="tech-text">{{ skill }}</label>
       </div>
     </div>
   </section>
@@ -28,35 +28,35 @@ import { skills } from '@/assets/data/skills'
 .skills {
   &__list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
-    width: 100%;
-    gap: 2.5rem;
-    justify-items: center;
-    @media screen and (max-width: 767px) {
-      gap: 1.5rem;
-    }
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.125rem;
+    grid-auto-rows: 1fr;
     &_item {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: var(--color-light-gray);
-        border: var(--border);
-        border-radius: 50%;
-        height: 90px;
-        width: 90px;
-        img {
-          width: 50%;
-          height: 50%;
-        }
+      display: grid;
+      grid-auto-flow: row;
+      grid-template: auto minmax(18px, auto) / 1fr;
+      padding: 0.75rem 1rem;
+      border: var(--border);
+      box-shadow: var(--box-shadow);
+      aspect-ratio: 1;
+    }
+    &_image {
+      position: relative;
+      padding: 0px 0px 80% 0px;
+      margin: 0px 0px 8px 0px;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        max-height: 65px;
+        object-fit: contain;
       }
-      p {
-        margin: 0.5rem 0;
-      }
+    }
+    label {
+      text-align: center;
     }
   }
 }

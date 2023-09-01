@@ -13,24 +13,27 @@ const props = defineProps({
     v-for="{ id, title, info, tech, image, demo, code } in projects"
     :key="id"
   >
-    <a class="card__image" :href="demo" target="_blank" rel="noreferrer">
-      <img :src="image" :alt="title" />
-    </a>
+    <div class="card__image">
+      <a :href="demo" target="_blank" rel="noreferrer">
+        <img :src="image" :alt="title" />
+      </a>
+      <div class="card__image_deco"></div>
+    </div>
+    <a class="card__title" :href="demo" target="_blank" rel="noreferrer">{{ title }}</a>
     <div class="card__content">
-      <div>
-        <h3 class="card__title">
-          <a :href="demo" target="_blank" rel="noreferrer">{{ title }}</a>
-        </h3>
-        <p class="card__tech tech-text"><span class="tech-text">Stack: </span>{{ tech }}</p>
+      <div class="card__info">
+        {{ info }}
       </div>
-      <div class="card__text">{{ info }}</div>
-      <div class="card__links">
-        <a :href="demo" target="_blank" rel="noreferrer" class="tech-text">
-          View Project: <font-awesome-icon :icon="['fas', 'cat']" />
-        </a>
-        <a :href="code" target="_blank" rel="noreferrer" class="tech-text">
-          View Code: <font-awesome-icon :icon="['fab', 'github']" />
-        </a>
+      <div class="card__tech">
+        <p class="tech-text"><span class="tech-text">Stack: </span>{{ tech }}</p>
+        <div class="card__links">
+          <a :href="demo" target="_blank" rel="noreferrer" class="tech-text">
+            View Project: <font-awesome-icon :icon="['fas', 'cat']" />
+          </a>
+          <a :href="code" target="_blank" rel="noreferrer" class="tech-text">
+            View Code: <font-awesome-icon :icon="['fab', 'github']" />
+          </a>
+        </div>
       </div>
     </div>
   </article>
@@ -40,67 +43,146 @@ const props = defineProps({
 .card {
   display: grid;
   grid-auto-flow: row;
-  grid-template: auto 1fr/1fr;
-  max-width: 410px;
+  grid-template: auto minmax(3rem, auto) 1fr/1fr;
+  max-width: 400px;
   width: 100%;
-  background-color: var(--color-light-gray);
-  border: var(--border);
-  //border-radius: 0.5rem;
-  text-align: center;
-  padding: 1rem;
   &__image {
-    padding: 0 0 60%;
+    padding: 0 0 40%;
     position: relative;
-    overflow: hidden;
+    aspect-ratio: 1;
+    z-index: 1;
+    filter: brightness(0.95);
     cursor: pointer;
-    height: 226px;
+    width: calc(100% - 4rem);
+    //height: fit-content;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: -20%;
+    &_deco {
+      content: '';
+      position: absolute;
+      top: 1.5rem;
+      left: 1rem;
+      border: solid 2px #dbdbdb;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    a {
+      overflow: hidden;
+      box-sizing: border-box;
+      display: block;
+      overflow: hidden;
+      width: initial;
+      height: initial;
+      background: none;
+      opacity: 1;
+      border: 0;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      box-shadow: var(--box-shadow);
+    }
     img {
-      //border-radius: 0.5rem;
-      //height: 100%;
       left: 0;
       object-fit: cover;
-      //position: absolute;
-      top: 0;
-      width: 100%;
       transform: translateY(0);
       transition: 2s ease-out;
+      width: 100%;
       &:hover {
         object-fit: cover;
-        width: 100%;
-        transform: translateY(calc(-100% + 226px));
+        transform: translateY(calc(-100% + 400px));
         transition: 12s ease-out;
       }
     }
   }
   &__content {
     display: grid;
+    grid-template-rows: 1fr minmax(120px, auto);
     align-content: space-between;
-    justify-items: center;
+    justify-items: start;
     position: relative;
     width: 100%;
+    padding: 1rem;
+    background-color: var(--color-white);
+    box-shadow: var(--box-shadow);
+
+    z-index: 3;
   }
   &__title {
-    margin: 1rem 0 0.5rem;
-    a {
-      font-size: inherit;
-      font-weight: inherit;
-      line-height: inherit;
+    align-items: center;
+    background-color: var(--color-red);
+    color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-text);
+    font-size: 13px;
+    line-height: 2em;
+    font-weight: 700;
+    padding: 13px 40px 26px;
+    letter-spacing: -0.01em;
+    margin: 0 auto -1.75rem 1rem;
+    z-index: 2;
+    cursor: pointer;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: solid 2px var(--color-red);
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    &:hover {
+      transform: translate(-8px, -8px);
+      color: var(--color-white);
+      &::after {
+        top: 8px;
+        left: 8px;
+      }
+    }
+    &:active {
+      top: 8px;
+      left: 8px;
+      &::after {
+        top: 0;
+        left: 0;
+      }
     }
   }
   &__tech {
+    border-top: solid 1px var(--color-dark-gray);
     text-align: left;
-    margin: 0.5rem 0;
+    width: 100%;
+    display: grid;
+    align-content: space-between;
+    p {
+      margin: 0.5rem 0 1.5rem;
+    }
   }
-  &__text {
+  &__info {
     text-align: left;
-    margin: 0.5rem 0;
+    margin: 0 0 1.5rem 0;
+    display: grid;
+    p {
+      padding: 0.5rem 0;
+      margin: 0;
+      &:last-of-type {
+        border-top: solid 1px var(--color-dark-gray);
+      }
+    }
   }
   &__links {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     position: relative;
-    justify-content: space-between;
+    justify-content: flex-end;
     width: 100%;
     a {
       display: flex;
@@ -114,12 +196,15 @@ const props = defineProps({
       }
       &:not(:last-of-type) {
         margin-right: 1.5rem;
-        @media screen and (max-width: 767px) {
-          margin-right: 0;
-        }
       }
       &:last-of-type svg {
         font-size: 1.25rem;
+      }
+      &:hover {
+        transform: translateY(-3px);
+      }
+      &:active {
+        top: 3px;
       }
     }
   }

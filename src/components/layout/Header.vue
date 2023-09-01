@@ -11,20 +11,12 @@ const onClickAway = () => {
 
 const menu = [
   {
-    name: 'Work',
+    name: 'Home',
     path: '/'
-  },
-  {
-    name: 'About',
-    path: '/about'
   },
   {
     name: 'Blog',
     path: '/blog'
-  },
-  {
-    name: 'Contact',
-    path: '/contact'
   }
 ]
 </script>

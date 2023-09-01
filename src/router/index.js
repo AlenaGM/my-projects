@@ -7,13 +7,8 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'work',
+      name: 'home',
       component: HomeView
-    },
-    {
-      path: '/about',
-      name: 'about',
-      component: () => import('../views/aboutView.vue')
     },
     {
       path: '/blog',
@@ -24,11 +19,6 @@ const router = createRouter({
       path: '/blog/:blogPostId',
       name: 'blogPost',
       component: () => import('../views/BlogPostView.vue')
-    },
-    {
-      path: '/contact',
-      name: 'contact',
-      component: () => import('../views/ContactView.vue')
     },
     {
       path: '/:pathMatch(.*)*',

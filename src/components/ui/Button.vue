@@ -67,7 +67,7 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 .button {
-  padding: 0 40px;
+  padding: 13px 40px;
   opacity: 1;
   display: inline-flex;
   justify-content: center;
@@ -77,10 +77,11 @@ const props = defineProps({
   font-size: 13px;
   line-height: 2em;
   font-weight: 700;
-  height: 56px;
+  //height: 56px;
   white-space: nowrap;
   text-decoration: none;
   letter-spacing: -0.01em;
+  position: relative;
   transition:
     color 0.2s ease-in-out,
     background-color 0.2s ease-in-out,
@@ -92,11 +93,30 @@ const props = defineProps({
       margin: 0 0 1.5rem 0;
     }
   }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: solid 2px var(--color-black);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
   &:hover {
-    opacity: 0.8;
-    color: var(--color-red);
-    border: 2px solid var(--color-red);
-    background-color: transparent;
+    transform: translate(-8px, -8px);
+    &::after {
+      top: 8px;
+      left: 8px;
+    }
+  }
+  &:active {
+    top: 8px;
+    left: 8px;
+    &::after {
+      top: 0;
+      left: 0;
+    }
   }
   &_darkprimary {
     color: var(--color-white);
@@ -124,7 +144,9 @@ const props = defineProps({
     }
   }
   &_disabled {
-    opacity: 0.6;
+    color: var(--color-black);
+    background: var(--color-white);
+    border: 2px solid var(--color-black);
     pointer-events: none;
   }
 }

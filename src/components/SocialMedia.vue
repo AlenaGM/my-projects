@@ -40,6 +40,7 @@
   a {
     line-height: 1;
     font-size: 2.5rem;
+    transition: all 0.4s;
     @media screen and (max-width: 767px) {
       font-size: 2rem;
     }
@@ -48,6 +49,12 @@
       @media screen and (max-width: 767px) {
         margin-right: 1rem;
       }
+    }
+    &:hover svg {
+      transform: translateY(-3px);
+    }
+    &:active svg {
+      top: 3px;
     }
   }
 }

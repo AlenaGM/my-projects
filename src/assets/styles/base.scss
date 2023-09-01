@@ -23,7 +23,7 @@
 
   --color-hover: var(--color-red);
 
-  --box-shadow: 0 0 9.8px 0.2px rgba(0, 0, 0, 0.1);
+  --box-shadow: 0 2px 4px 0 #00000010;
   --border: solid 1px #eeeeee;
 
   --section-gap: 200px;
@@ -164,7 +164,7 @@ a {
   color: inherit;
   font-size: inherit;
   text-transform: capitalize;
-  transition: color 0.2s;
+  transition: color 0.4s;
   cursor: pointer;
   &:hover {
     text-decoration: none;
