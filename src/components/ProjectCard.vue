@@ -63,7 +63,7 @@ const props = defineProps({
       position: absolute;
       top: 1.5rem;
       left: 1rem;
-      border: solid 2px #dbdbdb;
+      border: var(--border);
       width: 100%;
       height: 100%;
       z-index: -1;
@@ -133,7 +133,7 @@ const props = defineProps({
       position: absolute;
       top: 0;
       left: 0;
-      border: solid 2px var(--color-red);
+      border: solid 1px var(--color-red);
       width: 100%;
       height: 100%;
       z-index: -1;

@@ -98,7 +98,7 @@ const props = defineProps({
     position: absolute;
     top: 0;
     left: 0;
-    border: solid 2px var(--color-black);
+    border: solid 1px var(--color-black);
     width: 100%;
     height: 100%;
     z-index: -1;
