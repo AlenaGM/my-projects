@@ -12,7 +12,7 @@
 .hero {
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 84px);
+  min-height: calc(100vh - 86px);
   align-items: center;
   justify-content: center;
   margin-top: 0;

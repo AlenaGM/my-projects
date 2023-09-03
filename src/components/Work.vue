@@ -7,6 +7,7 @@ import ProjectCard from '@/components/ProjectCard.vue'
 
 <template>
   <section class="work">
+    <i id="work" />
     <h2>Some of my projects</h2>
     <p>
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia magnam veniam, ipsa sunt

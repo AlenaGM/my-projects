@@ -55,16 +55,6 @@ const skills = [
     icon: '/icons/react.png'
   },
   {
-    order: 12,
-    skill: 'redux',
-    icon: '/icons/redux.png'
-  },
-  {
-    order: 13,
-    skill: 'sanity',
-    icon: '/icons/sanity.png'
-  },
-  {
     order: 14,
     skill: 'sass',
     icon: '/icons/sass.png'

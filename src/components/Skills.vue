@@ -5,6 +5,7 @@ import { skills } from '@/assets/data/skills'
 
 <template>
   <section class="skills">
+    <i id="skills" />
     <h2>My skills</h2>
     <div>
       <p>
@@ -29,7 +30,8 @@ import { skills } from '@/assets/data/skills'
   &__list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 1.125rem;
+    row-gap: 1.125rem;
+    column-gap: 1.75rem;
     grid-auto-rows: 1fr;
     @media screen and (max-width: 450px) {
       display: grid;

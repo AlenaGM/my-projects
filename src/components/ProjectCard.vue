@@ -43,7 +43,7 @@ const props = defineProps({
 .card {
   display: grid;
   grid-auto-flow: row;
-  grid-template: auto minmax(2rem, auto) 1fr/1fr;
+  grid-template: auto minmax(32px, auto) 1fr/1fr;
   max-width: 400px;
   width: 100%;
   &__image {
@@ -85,7 +85,6 @@ const props = defineProps({
       left: 0;
       bottom: 0;
       right: 0;
-      box-shadow: var(--box-shadow);
     }
     img {
       left: 0;
@@ -122,36 +121,17 @@ const props = defineProps({
     font-size: 13px;
     line-height: 2em;
     font-weight: 700;
-    padding: 8px 24px;
+    padding: 8px 28px;
     letter-spacing: -0.01em;
     margin: 0 auto -1.75rem 1rem;
     z-index: 2;
     cursor: pointer;
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      border: solid 1px var(--color-red);
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
     &:hover {
-      transform: translate(-8px, -8px);
+      transform: translateY(-8px);
       color: var(--color-white);
-      &::after {
-        top: 8px;
-        left: 8px;
-      }
     }
     &:active {
       top: 8px;
-      left: 8px;
-      &::after {
-        top: 0;
-        left: 0;
-      }
     }
   }
   &__tech {
@@ -182,10 +162,6 @@ const props = defineProps({
     position: relative;
     justify-content: flex-end;
     width: 100%;
-    @media screen and (max-width: 450px) {
-      //flex-direction: column;
-      //align-items: flex-end;
-    }
     a {
       display: flex;
       position: relative;
@@ -199,9 +175,6 @@ const props = defineProps({
       }
       &:not(:last-of-type) {
         margin-right: 1.5rem;
-        @media screen and (max-width: 450px) {
-          //margin-right: 0;
-        }
       }
       &:last-of-type svg {
         font-size: 1.25rem;

@@ -10,13 +10,29 @@ const onClickAway = () => {
 }
 
 const menu = [
+  //  {
+  //    name: 'Home',
+  //    path: '/'
+  //  },
+  //  {
+  //    name: 'Blog',
+  //    path: '/blog'
+  //  },
   {
-    name: 'Home',
-    path: '/'
+    name: 'About',
+    path: '#about'
   },
   {
-    name: 'Blog',
-    path: '/blog'
+    name: 'Skills',
+    path: '#skills'
+  },
+  {
+    name: 'Work',
+    path: '#work'
+  },
+  {
+    name: 'Contact',
+    path: '#contact'
   }
 ]
 </script>
@@ -31,10 +47,14 @@ const menu = [
     </div>
     <nav class="header__menu">
       <ul class="header__menu_links">
-        <li>
+        <li v-for="(element, i) of menu" :key="i">
+          <!--
           <RouterLink v-for="(element, i) of menu" :to="element.path" :key="i">
             {{ element.name }}
-          </RouterLink>
+          </RouterLink>-->
+          <a :href="element.path" @click="isOpenedMobileMenu = false">
+            {{ element.name }}
+          </a>
         </li>
       </ul>
       <div class="header__menu_open" v-if="!isOpenedMobileMenu" @click="isOpenedMobileMenu = true">
@@ -52,9 +72,14 @@ const menu = [
       </div>
       <ul>
         <li v-for="(element, i) of menu" :key="i">
+          <!--
           <RouterLink :to="element.path" @click="isOpenedMobileMenu = false">
             {{ element.name }}
           </RouterLink>
+          -->
+          <a :href="element.path" @click="isOpenedMobileMenu = false">
+            {{ element.name }}
+          </a>
         </li>
       </ul>
     </div>
@@ -98,10 +123,11 @@ const menu = [
   }
   &__menu {
     grid-column: 3;
-    display: inline-flex;
+    display: flex;
     justify-content: flex-end;
-    flex-wrap: wrap;
     &_links {
+      display: flex;
+      flex-wrap: wrap;
       a {
         display: inline-block;
         margin-left: 2.5rem;

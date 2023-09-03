@@ -121,6 +121,12 @@ section {
       margin-top: 2.5rem;
     }
   }
+  &:last-of-type {
+    margin-bottom: calc(var(--section-gap) * 0.5);
+    @media screen and (max-width: 1023px) {
+      margin-bottom: calc(var(--section-gap-mobile) * 0.5);
+    }
+  }
 }
 
 h1 {
@@ -212,4 +218,13 @@ p {
 .v-enter-from,
 .v-leave-to {
   opacity: 0;
+}
+
+i {
+  position: absolute;
+  top: calc(var(--section-gap) * -0.5);
+  opacity: 0;
+  @media screen and (max-width: 1023px) {
+    top: calc(var(--section-gap-mobile) * -0.5);
+  }
 }

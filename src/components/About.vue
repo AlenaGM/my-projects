@@ -5,6 +5,7 @@ import uiButton from './ui/Button.vue'
 
 <template>
   <section class="about">
+    <i id="about" />
     <h2>About me</h2>
     <div class="about__container">
       <div class="about__image">

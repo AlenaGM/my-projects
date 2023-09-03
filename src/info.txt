@@ -31,3 +31,23 @@ Work
 PROJECT CARD:
 1/ Fix anim on scroll - delete anim on scroll
 2/ clear unused css
+
+skills
+1 react
+2 vue
+3 mobx
+4 pinia
+5 js
+6 ts
+7 html
+8 css
+9 git
+10 api
+11 graphql
+12 sass
+13 wordpress
+14 mui
+15 tailwind
+-16 figma
+17 gulp
+18 gsap
