@@ -16,9 +16,9 @@
   >
     <slot />
   </button>
-  <router-link
+  <a
     v-else
-    :to="to"
+    :href="to"
     :class="[
       'button',
       {
@@ -32,7 +32,7 @@
     ]"
   >
     <slot />
-  </router-link>
+  </a>
 </template>
 
 <script setup>

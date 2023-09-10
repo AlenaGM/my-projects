@@ -1,6 +1,5 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
-import { RouterLink } from 'vue-router'
 import { ref } from 'vue'
 
 const isOpenedMobileMenu = ref(false)
@@ -10,14 +9,6 @@ const onClickAway = () => {
 }
 
 const menu = [
-  //  {
-  //    name: 'Home',
-  //    path: '/'
-  //  },
-  //  {
-  //    name: 'Blog',
-  //    path: '/blog'
-  //  },
   {
     name: 'About',
     path: '#about'
@@ -38,20 +29,16 @@ const menu = [
 </script>
 
 <template>
-  <header class="header">
+  <header class="header" id="#header">
     <div class="header__logo">
-      <RouterLink to="/"
-        ><!--<img src="@/assets/images/logo.png" alt="logo" />-->
+      <a href="#">
+        <!--<img src="@/assets/images/logo.png" alt="logo" />-->
         Alëna G.
-      </RouterLink>
+      </a>
     </div>
     <nav class="header__menu">
       <ul class="header__menu_links">
         <li v-for="(element, i) of menu" :key="i">
-          <!--
-          <RouterLink v-for="(element, i) of menu" :to="element.path" :key="i">
-            {{ element.name }}
-          </RouterLink>-->
           <a :href="element.path" @click="isOpenedMobileMenu = false">
             {{ element.name }}
           </a>
@@ -72,11 +59,6 @@ const menu = [
       </div>
       <ul>
         <li v-for="(element, i) of menu" :key="i">
-          <!--
-          <RouterLink :to="element.path" @click="isOpenedMobileMenu = false">
-            {{ element.name }}
-          </RouterLink>
-          -->
           <a :href="element.path" @click="isOpenedMobileMenu = false">
             {{ element.name }}
           </a>
@@ -134,9 +116,6 @@ const menu = [
       }
       @media screen and (max-width: 767px) {
         display: none;
-      }
-      .router-link-exact-active {
-        color: var(--color-red);
       }
     }
     &_open,

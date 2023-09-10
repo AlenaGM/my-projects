@@ -16,23 +16,20 @@ STRUCTURE
 4/ PAGE404
 
 TO DO:
-All:
 1/ clear unused code
 2/ place transitions on interactive elements
 3/ fix colors: dark gray - mid gray - light gray - white
 accent - mi-accent
-
-Contact
-1/ success/fail message in pop-up
-
-Work
-1/ add filter component
-
-PROJECT CARD:
-1/ Fix anim on scroll - delete anim on scroll
-2/ clear unused css
-
-skills
+4/ load optimised images
+5/ make favicon
+6/ update projects info filter
+7/ connect CMS?
+8/ contact: success/fail message in pop-up
+9/ work: add filter component
+10/add studies&experience lines?
+11/ project card: fix anim on scroll - delete anim on scroll
+12/ check css - clear unused, comment for others
+13/ skills - review which skills to add
 1 react
 2 vue
 3 mobx
@@ -51,3 +48,12 @@ skills
 -16 figma
 17 gulp
 18 gsap
+
+14/ fix mobile menu bug - screen lock upon screen size extend
+15/ add social media widget
+16/ fixed header on scroll
+17 animation: plan -> realisation
+18/ about: add good photo
+19/ about: add description
+20/ header: smooth scroll
+21/ footer: up arrow

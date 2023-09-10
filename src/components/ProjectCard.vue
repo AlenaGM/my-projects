@@ -54,7 +54,6 @@ const props = defineProps({
     filter: brightness(0.95);
     cursor: pointer;
     width: calc(100% - 4rem);
-    //height: fit-content;
     margin-left: 2rem;
     margin-right: 2rem;
     margin-bottom: -20%;
@@ -87,16 +86,12 @@ const props = defineProps({
       right: 0;
     }
     img {
+      position: absolute;
+      top: 0;
       left: 0;
       object-fit: cover;
-      transform: translateY(0);
-      transition: 2s ease-out;
+      height: 100%;
       width: 100%;
-      &:hover {
-        object-fit: cover;
-        transform: translateY(calc(-100% + 400px));
-        transition: 12s ease-out;
-      }
     }
   }
   &__content {

@@ -9,7 +9,7 @@
       target="_blank"
       rel="noreferrer noopener"
     >
-      linkedin
+      <font-awesome-icon :icon="['fab', 'github']" />
     </a>
     <a
       href="https://www.linkedin.com/in/alena-guillaume/"
@@ -17,7 +17,7 @@
       target="_blank"
       rel="noreferrer noopener"
     >
-      linkedin
+      <font-awesome-icon :icon="['fab', 'linkedin-in']" />
     </a>
   </div>
 </template>
@@ -28,7 +28,7 @@
   display: flex;
   flex-direction: column;
   right: 0.5rem;
-  top: 30vh;
+  top: 25vh;
   z-index: 2;
   align-items: flex-end;
   a {
