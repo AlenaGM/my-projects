@@ -5,9 +5,8 @@
     :class="[
       'button',
       {
-        button_darkprimary: color === 'dark-primary',
-        button_secondary: color === 'secondary',
-        button_lightgray: color === 'light-gray',
+        button_black: color === 'black',
+        button_primary: color === 'primary',
         button_white: color === 'white',
         button_fullwidth: mobileFullWidth,
         button_disabled: disabled
@@ -22,9 +21,8 @@
     :class="[
       'button',
       {
-        button_darkprimary: color === 'dark-primary',
-        button_secondary: color === 'secondary',
-        button_lightgray: color === 'light-gray',
+        button_black: color === 'black',
+        button_primary: color === 'primary',
         button_white: color === 'white',
         button_fullwidth: mobileFullWidth,
         button_disabled: disabled
@@ -44,7 +42,7 @@ const props = defineProps({
   },
   color: {
     type: String,
-    default: 'dark-primary'
+    default: 'black'
   },
   type: {
     type: String,
@@ -118,25 +116,20 @@ const props = defineProps({
       left: 0;
     }
   }
-  &_darkprimary {
+  &_black {
     color: var(--color-white);
     background: var(--color-black);
     border: 2px solid var(--color-black);
   }
-  &_secondary {
+  &_primary {
     color: var(--color-white);
-    background: var(--color-red);
-    border: 2px solid var(--color-red);
-  }
-  &_lightgray {
-    color: var(--color-dark-gray);
-    background: var(--color-light-gray);
-    border: 2px solid var(--color-light-gray);
+    background: var(--color-primary);
+    border: 2px solid var(--color-primary);
   }
   &_white {
-    color: var(--color-dark-gray);
+    color: var(--color-black);
     background: var(--color-white);
-    border: 2px solid var(--color-dark-gray);
+    border: 2px solid var(--color-black);
   }
   &_fullwidth {
     @media screen and (max-width: 767px) {
@@ -144,9 +137,9 @@ const props = defineProps({
     }
   }
   &_disabled {
-    color: var(--color-dark-gray);
+    color: var(--color-gray);
     background: transparent;
-    border: 1px solid var(--color-dark-gray);
+    border: 1px solid var(--color-gray);
     pointer-events: none;
   }
 }

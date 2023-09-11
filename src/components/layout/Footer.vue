@@ -41,7 +41,7 @@
       display: flex;
       width: 40px;
       transform: rotate(270deg);
-      color: var(--color-black);
+      color: var(--color-text);
       white-space: nowrap;
       padding-bottom: 10px;
       font-size: 13px;
@@ -59,7 +59,7 @@
       &::before,
       &::after {
         content: '';
-        background-color: var(--color-black);
+        background-color: var(--color-text);
         width: 2px;
         height: 50%;
         position: absolute;

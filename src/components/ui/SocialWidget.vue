@@ -43,7 +43,7 @@
     height: 40px;
     box-shadow: var(--box-shadow);
     color: var(--color-white);
-    background-color: var(--color-red);
+    background-color: var(--color-primary);
     transition:
       inline-size 0.4s ease,
       color 0.4s ease-in-out;
@@ -62,7 +62,7 @@
       }
     }
     &:hover {
-      color: var(--color-red);
+      color: var(--color-primary);
       background-color: var(--color-white);
       inline-size: 148px;
     }

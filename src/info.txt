@@ -57,3 +57,14 @@ accent - mi-accent
 19/ about: add description
 20/ header: smooth scroll
 21/ footer: up arrow
+
+Monochromatic Color Scheme:
+- Shade 1: #F55758 (Red)
+- Shade 2: #FCD4D1 (Blush Pink)
+- Shade 3: #FFE6B5 (Peach)
+- Shade 4: #F7F7F7 (Light Gray)
+- Shade 5: #FFFFFF (White)
+- Shade 7: #1F1F1F (Black)
+
+font-family: 'Poppins', sans-serif;
+font-family: 'Red Hat Mono', monospace;

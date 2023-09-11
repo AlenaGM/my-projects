@@ -88,7 +88,7 @@ const menu = [
       font-family: var(--font-title);
       font-weight: 700;
       font-size: 1.5rem;
-      color: var(--color-black);
+      color: var(--color-text);
       letter-spacing: -0.04em;
       cursor: pointer;
       &:hover {

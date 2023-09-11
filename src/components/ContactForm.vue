@@ -165,7 +165,7 @@ const isButtonDisabled = computed(() => {
       font-size: 1rem;
       font-weight: inherit;
       line-height: 24px;
-      color: var(--color-dark-gray);
+      color: var(--color-gray);
       background-color: var(--color-light-gray);
       border: var(--border);
       outline: none;
@@ -176,7 +176,7 @@ const isButtonDisabled = computed(() => {
         background-color 0.2s ease-out,
         border-color 0.2s ease-out;
       :focus {
-        border: 1px solid var(--color-red);
+        border: 1px solid var(--color-primary);
         box-shadow: var(--box-shadow);
       }
     }
@@ -205,7 +205,7 @@ const isButtonDisabled = computed(() => {
   &__error {
     margin-top: 4px;
     font-size: 0.8125rem;
-    color: var(--color-light-red);
+    color: var(--color-error);
   }
   &__success {
     margin-top: 4px;

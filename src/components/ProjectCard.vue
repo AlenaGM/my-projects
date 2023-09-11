@@ -108,7 +108,7 @@ const props = defineProps({
     z-index: 3;
   }
   &__title {
-    background-color: var(--color-red);
+    background-color: var(--color-primary);
     color: var(--color-white);
     display: flex;
     justify-content: center;
@@ -130,7 +130,7 @@ const props = defineProps({
     }
   }
   &__tech {
-    border-top: solid 1px var(--color-dark-gray);
+    border-top: solid 1px var(--color-text);
     text-align: left;
     width: 100%;
     display: grid;
@@ -147,7 +147,7 @@ const props = defineProps({
       padding: 0.5rem 0;
       margin: 0;
       &:last-of-type {
-        border-top: solid 1px var(--color-dark-gray);
+        border-top: solid 1px var(--color-text);
       }
     }
   }
