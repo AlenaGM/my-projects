@@ -110,12 +110,6 @@ section {
   @media screen and (max-width: 1023px) {
     margin-bottom: var(--section-gap-mobile);
   }
-  &:first-of-type {
-    margin-top: 4rem;
-    @media screen and (max-width: 1023px) {
-      margin-top: 2.5rem;
-    }
-  }
   &:last-of-type {
     margin-bottom: calc(var(--section-gap) * 0.5);
     @media screen and (max-width: 1023px) {
