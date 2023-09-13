@@ -36,15 +36,14 @@
   margin: 0;
   padding: 0;
   font-weight: normal;
+  scroll-behavior: smooth;
 }
 
 body {
   min-height: 100vh;
   min-width: 320px;
   color: var(--color-text);
-  transition:
-    color 0.5s,
-    background-color 0.5s;
+  background-color: var(--color-white);
   line-height: 1.6;
   font-family: var(--font-text);
   font-size: 16px;
@@ -52,6 +51,9 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition:
+    color 0.4s,
+    background-color 0.4s;
 }
 
 img {
@@ -73,10 +75,9 @@ li {
 }
 
 #app {
-  min-height: 100vh;
   width: 100%;
   display: grid;
-  grid-template: minmax(80px, auto) 1fr minmax(80px, auto) / 1fr;
+  grid-template: auto 1fr auto / 1fr;
   grid-template-areas:
     'header'
     'main'
@@ -85,17 +86,30 @@ li {
 
 .header {
   grid-area: header;
+  margin-bottom: var(--section-gap);
+  @media screen and (max-width: 1023px) {
+    margin-bottom: var(--section-gap-mobile);
+  }
 }
 
 .footer {
   grid-area: footer;
-  background-color: var(--color-white);
+  margin-top: calc(var(--section-gap) * 0.5);
+  @media screen and (max-width: 1023px) {
+    margin-top: calc(var(--section-gap-mobile) * 0.5);
+  }
+}
+
+.header,
+.footer {
+  min-height: 100vh;
 }
 
 .main {
   grid-area: main;
 }
 
+.header,
 .main,
 .footer {
   display: grid;
@@ -122,9 +136,15 @@ h1 {
   font-family: var(--font-title);
   font-weight: 700;
   color: var(--color-title);
-  font-size: 60px;
+  font-size: 48px;
   line-height: 1.26em;
   letter-spacing: -0.04em;
+  @media screen and (max-width: 767px) {
+    font-size: 32px;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 24px;
+  }
 }
 
 h2 {
@@ -164,6 +184,7 @@ a {
   &:hover {
     text-decoration: none;
     color: var(--color-hover);
+    transition: color 0.4s;
   }
 }
 

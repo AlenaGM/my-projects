@@ -5,7 +5,7 @@ import ContactForm from './ContactForm.vue'
 </script>
 
 <template>
-  <section class="contact">
+  <div class="contact">
     <i id="contact" />
     <h2>Contact</h2>
     <div class="contact__container">
@@ -23,11 +23,15 @@ import ContactForm from './ContactForm.vue'
       </div>
       <ContactForm />
     </div>
-  </section>
+  </div>
 </template>
 
 <style lang="scss" scoped>
 .contact {
+  margin-bottom: calc(var(--section-gap) * 0.5);
+  @media screen and (max-width: 1023px) {
+    margin-bottom: calc(var(--section-gap-mobile) * 0.5);
+  }
   &__container {
     display: grid;
     grid-template-columns: repeat(2, minmax(auto, 610px));

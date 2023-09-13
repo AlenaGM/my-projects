@@ -29,32 +29,32 @@ const menu = [
 </script>
 
 <template>
-  <header class="header" id="#header">
-    <div class="header__logo">
+  <div class="header__navbar navbar">
+    <div class="navbar__logo">
       <a href="#">
         <!--<img src="@/assets/images/logo.png" alt="logo" />-->
         Alëna G.
       </a>
     </div>
-    <nav class="header__menu">
-      <ul class="header__menu_links">
+    <nav class="navbar__menu">
+      <ul class="navbar__menu_links">
         <li v-for="(element, i) of menu" :key="i">
           <a :href="element.path" @click="isOpenedMobileMenu = false">
             {{ element.name }}
           </a>
         </li>
       </ul>
-      <div class="header__menu_open" v-if="!isOpenedMobileMenu" @click="isOpenedMobileMenu = true">
+      <div class="navbar__menu_open" v-if="!isOpenedMobileMenu" @click="isOpenedMobileMenu = true">
         <img src="@/assets/images/open.svg" alt="menu opening icon" />
       </div>
     </nav>
     <div
-      class="header__dropdown"
+      class="navbar__dropdown"
       v-if="isOpenedMobileMenu"
       v-click-away="onClickAway"
       v-scroll-lock="isOpenedMobileMenu"
     >
-      <div class="header__menu_close" @click="isOpenedMobileMenu = false">
+      <div class="navbar__menu_close" @click="isOpenedMobileMenu = false">
         <img src="@/assets/images/close.svg" alt="menu closing icon" />
       </div>
       <ul>
@@ -65,30 +65,24 @@ const menu = [
         </li>
       </ul>
     </div>
-  </header>
+  </div>
 </template>
 
 <style lang="scss" scoped>
-.header {
+.navbar {
   display: grid;
-  grid-template-columns: minmax(1.5rem, 1fr) minmax(160px, auto) minmax(auto, 1120px) minmax(
-      1.5rem,
-      1fr
-    );
-  padding: 1.5rem 0;
-  justify-content: space-between;
+  grid-column: 2;
+  grid-template-columns: minmax(160px, auto) minmax(auto, 1120px);
+  gap: 2.5rem;
   align-items: center;
+  padding: 1.5rem 0;
   margin-bottom: -1px;
-  z-index: 3;
   &__logo {
-    grid-column: 2;
+    grid-column: 1;
     a {
       display: flex;
       align-items: center;
-      font-family: var(--font-title);
-      font-weight: 700;
       font-size: 1.5rem;
-      color: var(--color-text);
       letter-spacing: -0.04em;
       cursor: pointer;
       &:hover {
@@ -104,15 +98,37 @@ const menu = [
     }
   }
   &__menu {
-    grid-column: 3;
+    grid-column: 2;
     display: flex;
     justify-content: flex-end;
     &_links {
       display: flex;
       flex-wrap: wrap;
-      a {
+      li {
         display: inline-block;
-        margin-left: 2.5rem;
+        &:not(:last-of-type) {
+          margin-right: 2.5rem;
+        }
+        &::after {
+          content: '';
+          background: var(--color-black);
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          height: 2px;
+          width: 0;
+          transition: width 0.3s ease;
+        }
+        &:hover {
+          cursor: pointer;
+          &::after {
+            width: 100%;
+            transition: width 0.3s ease;
+          }
+        }
+        a:hover {
+          color: inherit;
+        }
       }
       @media screen and (max-width: 767px) {
         display: none;

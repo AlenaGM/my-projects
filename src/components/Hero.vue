@@ -2,18 +2,30 @@
 <script setup></script>
 
 <template>
-  <section class="hero">
-    <div class="hero__info">
-      <div>Alena Guillaume</div>
+  <div class="header__hero hero">
+    <div class="hero__title">
+      <span>Alena Guillaume</span>
       <h1>Frontend Developer</h1>
     </div>
-    <div class="hero__image"><img src="@/assets/images/illustration.png" alt="illustration" /></div>
-  </section>
+    <div class="hero__image">
+      <picture>
+        <source
+          srcset="@/assets/images/illustration.webp, @/assets/images/illustration@2x.webp 2x"
+          type="image/webp"
+        />
+        <img
+          src="@/assets/images/illustration.png"
+          srcset="i@/assets/images/illustration.png, @/assets/images/illustration@2x.png 2x"
+          alt="girl web-developer"
+        />
+      </picture>
+    </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
 .hero {
-  min-height: calc(100vh - 86px);
+  grid-column: 2;
   display: grid;
   grid-template-columns: 1fr minmax(auto, 610px);
   gap: 4rem;
@@ -21,25 +33,27 @@
   align-items: end;
   @media screen and (max-width: 1023px) {
     grid-template-columns: 1fr;
+    gap: 0;
     align-items: start;
-    gap: 2rem;
+    justify-items: center;
   }
-  border-bottom: solid 4px green;
-  &__info {
-    h1 {
-      font-size: 48px;
-      @media screen and (max-width: 1023px) {
-        font-size: 32px;
-      }
+  &__title {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 25%;
+    @media screen and (max-width: 1023px) {
+      padding: 1rem 0 0;
+      text-align: center;
     }
-    div {
+    span {
       font-size: 24px;
       font-style: italic;
-      font-family: 'Poppins', sans-serif;
-      margin: 8rem 0 1.5rem;
-      @media screen and (max-width: 1023px) {
-        margin: 1rem 0;
+      font-family: var(--font-title);
+      @media screen and (max-width: 767px) {
         font-size: 18px;
+      }
+      @media screen and (max-width: 500px) {
+        font-size: 16px;
       }
     }
   }

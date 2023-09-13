@@ -1,15 +1,20 @@
 <!-- eslint-disable vue/multi-word-component-names -->
-<script setup></script>
+<script setup>
+import Contact from '@/components/Contact.vue'
+</script>
 
 <template>
   <footer class="footer">
     <div class="footer__content">
-      <div>©️ Alena G., 2023</div>
-      <div class="footer__to-top">
-        <a href="#">
-          back to top
-          <span class="footer__to-top_lines"></span>
-        </a>
+      <Contact />
+      <div class="footer__down">
+        <div>©️ Alena G., 2023</div>
+        <div class="footer__to-top">
+          <a href="#">
+            back to top
+            <span class="footer__to-top_lines"></span>
+          </a>
+        </div>
       </div>
     </div>
   </footer>
@@ -20,6 +25,9 @@
   &__content {
     grid-column: 2;
     display: grid;
+  }
+
+  &__down {
     grid-template-columns: repeat(2, 1fr);
     color: var(--color-white);
     padding: 1.5rem 0;
