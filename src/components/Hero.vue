@@ -15,7 +15,7 @@
         />
         <img
           src="@/assets/images/illustration.png"
-          srcset="i@/assets/images/illustration.png, @/assets/images/illustration@2x.png 2x"
+          srcset="@/assets/images/illustration.png, @/assets/images/illustration@2x.png 2x"
           alt="girl web-developer"
         />
       </picture>
@@ -30,6 +30,9 @@
   grid-template-columns: 1fr minmax(auto, 640px);
   align-content: center;
   align-items: end;
+  @media screen and (max-width: 1113px) {
+    align-items: center;
+  }
   @media screen and (max-width: 1023px) {
     grid-template-columns: 1fr;
     align-items: start;
@@ -38,15 +41,18 @@
   &__title {
     display: flex;
     flex-direction: column;
-    padding: 0 0 160px;
+    margin: 110px 0;
     @media screen and (max-width: 1023px) {
-      padding: 0;
+      margin: 0;
       text-align: center;
     }
     span {
       font-size: 36px;
-      line-height: 1.1;
+      line-height: 1.2;
       font-family: var(--font-accent);
+      @media screen and (max-width: 500px) {
+        font-size: 28px;
+      }
     }
   }
 }

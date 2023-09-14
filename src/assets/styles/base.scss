@@ -140,8 +140,13 @@ h1 {
   font-weight: 700;
   color: var(--color-title);
   font-size: calc(2.375rem + 1vw);
-  line-height: 1.1;
+  line-height: 1;
   letter-spacing: -4px;
+  z-index: 1;
+  @media screen and (max-width: 1113px) {
+    font-size: 40px;
+    letter-spacing: -3.9px;
+  }
   @media screen and (max-width: 500px) {
     font-size: 32px;
     letter-spacing: -2px;
