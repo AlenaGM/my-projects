@@ -33,13 +33,13 @@ const menu = [
     <div class="navbar__logo">
       <a href="#">
         <!--<img src="@/assets/images/logo.png" alt="logo" />-->
-        Alëna G.
+        AG.
       </a>
     </div>
     <nav class="navbar__menu">
       <ul class="navbar__menu_links">
         <li v-for="(element, i) of menu" :key="i">
-          <a :href="element.path" @click="isOpenedMobileMenu = false">
+          <a :href="element.path">
             {{ element.name }}
           </a>
         </li>
@@ -77,6 +77,7 @@ const menu = [
   align-items: center;
   padding: 1.5rem 0;
   margin-bottom: -1px;
+  z-index: 100;
   &__logo {
     grid-column: 1;
     a {
@@ -117,13 +118,13 @@ const menu = [
           left: 0;
           height: 2px;
           width: 0;
-          transition: width 0.3s ease;
+          transition: width 0.25s ease;
         }
         &:hover {
           cursor: pointer;
           &::after {
             width: 100%;
-            transition: width 0.3s ease;
+            transition: width 0.25s ease;
           }
         }
         a:hover {
@@ -162,7 +163,7 @@ const menu = [
       right: 0;
       height: 100vh;
       width: 80vw;
-      font-size: 18px;
+      font-size: 1.5rem;
       background-color: var(--color-black);
       color: var(--color-white);
       padding: 1.5rem 1.5rem 1.5rem 4.5rem;
@@ -173,9 +174,11 @@ const menu = [
         width: 100%;
         display: flex;
         flex-direction: column;
-        margin-top: 40%;
-        li:not(:last-of-type) {
-          margin-bottom: 1.5rem;
+        margin-top: 15vh;
+        li {
+          &:not(:last-of-type) {
+            margin-bottom: 1.5rem;
+          }
         }
       }
     }

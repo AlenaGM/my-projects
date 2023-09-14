@@ -28,9 +28,12 @@
   display: flex;
   flex-direction: column;
   right: 0.5rem;
-  top: 25vh;
-  z-index: 2;
+  top: 20%;
+  z-index: 90;
   align-items: flex-end;
+  @media screen and (max-width: 767px) {
+    top: 40%;
+  }
   a {
     font-size: 1.75rem;
     text-align: left;

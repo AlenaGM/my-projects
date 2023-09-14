@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Red+Hat+Mono:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ms+Madi&family=Poppins:wght@400;700&family=Red+Hat+Mono:wght@400;600&display=swap');
+
 :root {
   --color-white: #ffffff;
   --color-light-gray: #f7f7f7;
@@ -26,6 +27,7 @@
 
   --font-title: 'Poppins', sans-serif;
   --font-text: 'Poppins', sans-serif;
+  --font-accent: 'Ms Madi', cursive;
 }
 
 *,
@@ -53,7 +55,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   transition:
     color 0.4s,
-    background-color 0.4s;
+    background-color 0.4s,
+    width 0.25s ease;
 }
 
 img {
@@ -136,14 +139,12 @@ h1 {
   font-family: var(--font-title);
   font-weight: 700;
   color: var(--color-title);
-  font-size: 48px;
-  line-height: 1.26em;
-  letter-spacing: -0.04em;
-  @media screen and (max-width: 767px) {
-    font-size: 32px;
-  }
+  font-size: calc(2.375rem + 1vw);
+  line-height: 1.1;
+  letter-spacing: -4px;
   @media screen and (max-width: 500px) {
-    font-size: 24px;
+    font-size: 32px;
+    letter-spacing: -2px;
   }
 }
 
@@ -188,11 +189,6 @@ a {
   }
 }
 
-.navlink {
-  color: var(--color-text);
-  font-size: 18px;
-}
-
 p {
   font-family: var(--font-text);
   font-weight: 400;
@@ -218,16 +214,6 @@ p {
   span {
     font-weight: 600;
   }
-}
-
-.v-enter-active,
-.v-leave-active {
-  transition: opacity 0.5s ease;
-}
-
-.v-enter-from,
-.v-leave-to {
-  opacity: 0;
 }
 
 i {

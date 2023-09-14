@@ -37,6 +37,7 @@ import Contact from '@/components/Contact.vue'
     }
   }
   &__to-top {
+    display: none;
     position: fixed;
     right: 0.5rem;
     bottom: 1.5rem;

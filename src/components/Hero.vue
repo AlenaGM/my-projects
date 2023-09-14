@@ -4,7 +4,7 @@
 <template>
   <div class="header__hero hero">
     <div class="hero__title">
-      <span>Alena Guillaume</span>
+      <span>Hi! I'm Alëna Guillaume,</span>
       <h1>Frontend Developer</h1>
     </div>
     <div class="hero__image">
@@ -27,34 +27,26 @@
 .hero {
   grid-column: 2;
   display: grid;
-  grid-template-columns: 1fr minmax(auto, 610px);
-  gap: 4rem;
+  grid-template-columns: 1fr minmax(auto, 640px);
   align-content: center;
   align-items: end;
   @media screen and (max-width: 1023px) {
     grid-template-columns: 1fr;
-    gap: 0;
     align-items: start;
     justify-items: center;
   }
   &__title {
     display: flex;
     flex-direction: column;
-    padding: 0 0 25%;
+    padding: 0 0 160px;
     @media screen and (max-width: 1023px) {
-      padding: 1rem 0 0;
+      padding: 0;
       text-align: center;
     }
     span {
-      font-size: 24px;
-      font-style: italic;
-      font-family: var(--font-title);
-      @media screen and (max-width: 767px) {
-        font-size: 18px;
-      }
-      @media screen and (max-width: 500px) {
-        font-size: 16px;
-      }
+      font-size: 36px;
+      line-height: 1.1;
+      font-family: var(--font-accent);
     }
   }
 }
