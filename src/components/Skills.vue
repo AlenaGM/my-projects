@@ -15,9 +15,9 @@ import { skills } from '@/assets/data/skills'
       </p>
     </div>
     <div class="skills__list">
-      <div class="skills__list_item" v-for="{ order, skill, icon } in skills" :key="order">
+      <div class="skills__list_item" v-for="{ order, skill, path } in skills" :key="order">
         <div class="skills__list_image">
-          <img :src="icon" :alt="skill" />
+          <img :src="path" :alt="skill" />
         </div>
         <label class="tech-text">{{ skill }}</label>
       </div>
@@ -30,8 +30,7 @@ import { skills } from '@/assets/data/skills'
   &__list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    row-gap: 1.125rem;
-    column-gap: 1.75rem;
+    gap: 1.125rem;
     grid-auto-rows: 1fr;
     @media screen and (max-width: 450px) {
       display: grid;
@@ -39,28 +38,36 @@ import { skills } from '@/assets/data/skills'
     }
     &_item {
       display: grid;
+      grid-template: 1fr auto / 1fr;
       grid-auto-flow: row;
-      grid-template: auto 1fr / 1fr;
+      justify-items: center;
       padding: 0.75rem;
       border: var(--border);
+      border-radius: 8px;
       box-shadow: var(--box-shadow);
       aspect-ratio: 1;
       align-items: end;
     }
     &_image {
       position: relative;
-      padding: 0px 0px 60% 0px;
+      margin: auto;
+      padding-bottom: 60%;
+      aspect-ratio: 1/1;
+      display: flex;
+      justify-content: center;
       img {
         position: absolute;
         top: 0;
-        left: 0;
-        width: 100%;
         height: 100%;
         object-fit: contain;
       }
     }
     label {
       text-align: center;
+      padding-top: 0.75rem;
+      @media screen and (max-width: 500px) {
+        font-size: 10px;
+      }
     }
   }
 }

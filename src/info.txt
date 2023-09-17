@@ -68,3 +68,8 @@ Monochromatic Color Scheme:
 
 font-family: 'Poppins', sans-serif;
 font-family: 'Red Hat Mono', monospace;
+
+  <!-- <picture class="picture object-fit-cover">
+    <source srcset="img/small2.webp, img/small2@2x.webp 2x" type="image/webp">
+    <img src="img/small2.png" srcset="img/small2.png, img/small2@2x.png 2x" alt="СЛЕСАРНЫЕ РАБОТЫ">
+  </picture> -->

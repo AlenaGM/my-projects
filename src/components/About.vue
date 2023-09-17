@@ -9,7 +9,7 @@ import uiButton from './ui/Button.vue'
     <h2>About me</h2>
     <div class="about__container">
       <div class="about__image">
-        <img src="@/assets/images/me.jpg" alt="me" />
+        <img src="@/assets/images/alena-dev.jpg" alt="me coding" />
       </div>
       <div>
         <p>
@@ -37,7 +37,7 @@ import uiButton from './ui/Button.vue'
 .about {
   &__container {
     display: grid;
-    grid-template-columns: repeat(2, minmax(auto, 610px));
+    grid-template-columns: minmax(auto, 420px) 1fr;
     gap: 4rem;
     @media screen and (max-width: 1023px) {
       display: flex;
@@ -46,7 +46,7 @@ import uiButton from './ui/Button.vue'
   }
   &__image {
     position: relative;
-    min-height: 500px;
+    min-height: 525px;
     box-shadow: var(--box-shadow);
     img {
       position: absolute;

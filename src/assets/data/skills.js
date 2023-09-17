@@ -1,84 +1,125 @@
 const skills = [
   {
     order: 1,
-    skill: 'api',
-    icon: '/icons/api.png'
+    skill: 'React',
+    path: '/icons/react.png'
   },
   {
     order: 2,
-    skill: 'css3',
-    icon: '/icons/css3.png'
+    skill: 'VueJS',
+    path: '/icons/vuejs.png'
   },
   {
     order: 3,
-    skill: 'figma',
-    icon: '/icons/figma.png'
+    skill: 'MobX',
+    path: '/icons/mobx.png'
   },
   {
     order: 4,
-    skill: 'git',
-    icon: '/icons/git.png'
+    skill: 'Pinia',
+    path: '/icons/pinia.png'
   },
   {
     order: 5,
-    skill: 'graphql',
-    icon: '/icons/graphql.png'
+    skill: 'JavaScript',
+    path: '/icons/javascript.png'
   },
   {
     order: 6,
-    skill: 'html5',
-    icon: '/icons/html5.png'
+    skill: 'TypeScript',
+    path: '/icons/typescript.png'
   },
   {
     order: 7,
-    skill: 'javascript',
-    icon: '/icons/javascript.png'
+    skill: 'HTML5',
+    path: '/icons/html5.png'
   },
   {
     order: 8,
-    skill: 'mobx',
-    icon: '/icons/mobx.png'
+    skill: 'CSS3',
+    path: '/icons/css3.png'
   },
   {
     order: 9,
-    skill: 'mui',
-    icon: '/icons/mui.png'
+    skill: 'Sass',
+    path: '/icons/sass.png'
   },
   {
     order: 10,
-    skill: 'pinia',
-    icon: '/icons/pinia.png'
+    skill: 'Firebase',
+    path: '/icons/firebase.png'
   },
   {
     order: 11,
-    skill: 'react',
-    icon: '/icons/react.png'
+    skill: 'NodeJS',
+    path: '/icons/nodejs.png'
+  },
+  {
+    order: 12,
+    skill: 'API',
+    path: '/icons/api.png'
+  },
+  {
+    order: 13,
+    skill: 'GraphQL',
+    path: '/icons/graphql.png'
   },
   {
     order: 14,
-    skill: 'sass',
-    icon: '/icons/sass.png'
+    skill: 'Git',
+    path: '/icons/git.png'
   },
+
   {
     order: 15,
-    skill: 'tailwind',
-    icon: '/icons/tailwind-css.png'
+    skill: 'GSAP',
+    path: '/icons/greensock.png'
   },
   {
     order: 16,
-    skill: 'typescript',
-    icon: '/icons/typescript.png'
+    skill: 'MUI',
+    path: '/icons/mui.png'
   },
   {
     order: 17,
-    skill: 'vuejs',
-    icon: '/icons/vuejs.png'
+    skill: 'TailwindCSS',
+    path: '/icons/tailwindcss.png'
   },
   {
     order: 18,
-    skill: 'wordpress',
-    icon: '/icons/wordpress.png'
+    skill: 'WordPress',
+    path: '/icons/wordpress.png'
   }
+  //{
+  //  order: XXX,
+  //  skill: 'Figma',
+  //  path: '/icons/figma.png'
+  //},
+  //{
+  //  order: XXX,
+  //  skill: 'Gulp',
+  //  path: '/icons/gulp.png'
+  //},
+  //{
+  //  order: XXX,
+  //  skill: 'NextJS',
+  //  path: '/icons/nextjs.png'
+  //},
+  //{
+  //  order: XXX,
+  //  skill: 'Redux',
+  //  path: '/icons/redux.png'
+  //},
+  //{
+  //  order: XXX,
+  //  skill: 'ViteJS',
+  //  path: '/icons/vitejs.png'
+  //},
+  //{
+  //  order: XXX,
+  //  skill: 'Webpack',
+  //  path: '/icons/webpack.png'
+  //},
 ]
 
 export { skills }
