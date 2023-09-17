@@ -56,7 +56,7 @@ const skills = [
   },
   {
     order: 12,
-    skill: 'API',
+    skill: 'Rest API',
     path: '/icons/api.png'
   },
   {
@@ -77,13 +77,13 @@ const skills = [
   },
   {
     order: 16,
-    skill: 'MUI',
-    path: '/icons/mui.png'
+    skill: 'Tailwind CSS',
+    path: '/icons/tailwind.png'
   },
   {
     order: 17,
-    skill: 'TailwindCSS',
-    path: '/icons/tailwindcss.png'
+    skill: 'MUI',
+    path: '/icons/mui.png'
   },
   {
     order: 18,
@@ -120,6 +120,7 @@ const skills = [
   //  skill: 'Webpack',
   //  path: '/icons/webpack.png'
   //},
+  //
 ]
 
 export { skills }
