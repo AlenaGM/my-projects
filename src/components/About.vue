@@ -6,7 +6,7 @@ import uiButton from './ui/Button.vue'
 <template>
   <section class="about">
     <i id="about" />
-    <h2>About me</h2>
+    <h2>Who I Am?</h2>
     <div class="about__container">
       <div class="about__image">
         <img src="@/assets/images/alena-dev.jpg" alt="me coding" />
@@ -35,6 +35,9 @@ import uiButton from './ui/Button.vue'
 
 <style lang="scss" scoped>
 .about {
+  h2::after {
+    background-image: url('@/assets/images/about-black.png');
+  }
   &__container {
     display: grid;
     grid-template-columns: minmax(auto, 420px) 1fr;

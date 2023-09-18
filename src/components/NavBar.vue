@@ -32,8 +32,7 @@ const menu = [
   <div class="header__navbar navbar">
     <div class="navbar__logo">
       <a href="#">
-        <!--<img src="@/assets/images/logo.png" alt="logo" />-->
-        AG.
+        <img src="@/assets/images/logo.png" alt="logo" />
       </a>
     </div>
     <nav class="navbar__menu">
@@ -81,20 +80,14 @@ const menu = [
   &__logo {
     grid-column: 1;
     a {
-      display: flex;
-      align-items: center;
-      font-size: 1.5rem;
-      letter-spacing: -0.04em;
       cursor: pointer;
       &:hover {
-        text-decoration: none;
-        color: var(--color-hover);
+        transform: scale(1.1);
       }
       img {
         display: block;
-        height: 32px;
+        height: 48px;
         max-width: 100%;
-        margin-right: 0.5rem;
       }
     }
   }

@@ -6,7 +6,7 @@ import { skills } from '@/assets/data/skills'
 <template>
   <section class="skills">
     <i id="skills" />
-    <h2>My skills</h2>
+    <h2>My Toolbox & Things I Can Do</h2>
     <div>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, dolor rerum! Rem
@@ -27,6 +27,9 @@ import { skills } from '@/assets/data/skills'
 
 <style lang="scss" scoped>
 .skills {
+  h2::after {
+    background-image: url('@/assets/images/skills-black.png');
+  }
   &__list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -43,7 +46,6 @@ import { skills } from '@/assets/data/skills'
       justify-items: center;
       padding: 0.75rem;
       border: var(--border);
-      border-radius: 8px;
       box-shadow: var(--box-shadow);
       aspect-ratio: 1;
       align-items: end;

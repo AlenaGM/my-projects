@@ -7,7 +7,7 @@ import ContactForm from './ContactForm.vue'
 <template>
   <div class="contact">
     <i id="contact" />
-    <h2>Contact</h2>
+    <h2>Get In Touch</h2>
     <div class="contact__container">
       <div class="contact__info">
         <p>
@@ -28,6 +28,9 @@ import ContactForm from './ContactForm.vue'
 
 <style lang="scss" scoped>
 .contact {
+  h2::after {
+    background-image: url('@/assets/images/contact-black.png');
+  }
   margin-bottom: calc(var(--section-gap) * 0.5);
   @media screen and (max-width: 1023px) {
     margin-bottom: calc(var(--section-gap-mobile) * 0.5);

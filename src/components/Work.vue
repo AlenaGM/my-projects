@@ -8,7 +8,7 @@ import ProjectCard from '@/components/ProjectCard.vue'
 <template>
   <section class="work">
     <i id="work" />
-    <h2>Some of my projects</h2>
+    <h2>A Selection of My Projects</h2>
     <p>
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia magnam veniam, ipsa sunt
       delectus reiciendis, exercitationem esse ad minima quibusdam aliquid aut facere non sint culpa
@@ -35,6 +35,9 @@ import ProjectCard from '@/components/ProjectCard.vue'
 
 <style lang="scss" scoped>
 .work {
+  h2::after {
+    background-image: url('@/assets/images/work-black.png');
+  }
   display: grid;
   &__gallery {
     margin-bottom: 4rem;

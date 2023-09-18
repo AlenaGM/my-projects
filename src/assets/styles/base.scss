@@ -19,7 +19,7 @@
   --color-text: var(--color-black);
   --color-hover: var(--color-primary);
 
-  --box-shadow: 0 2px 4px 0 #00000010;
+  --box-shadow: 0 2px 2px 0 #00000010;
   --border: solid 1px #eeeeee;
 
   --section-gap: 200px;
@@ -161,9 +161,21 @@ h2 {
   font-size: 45px;
   line-height: 1.18em;
   letter-spacing: -0.04em;
+  color: var(--color-light-primary);
+  margin-left: 60px;
   margin-bottom: 1.5rem;
   @media screen and (max-width: 767px) {
     margin-bottom: 1rem;
+  }
+  &::after {
+    content: '';
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: auto 100%;
+    z-index: 2;
+    height: 32px;
+    margin-top: -30px;
+    margin-left: -60px;
   }
 }
 
