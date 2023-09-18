@@ -6,7 +6,7 @@ import uiButton from './ui/Button.vue'
 <template>
   <section class="about">
     <i id="about" />
-    <h2>Who I Am?</h2>
+    <h2>Who I Am</h2>
     <div class="about__container">
       <div class="about__image">
         <img src="@/assets/images/alena-dev.jpg" alt="me coding" />

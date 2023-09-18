@@ -6,7 +6,7 @@ import { skills } from '@/assets/data/skills'
 <template>
   <section class="skills">
     <i id="skills" />
-    <h2>My Toolbox & Things I Can Do</h2>
+    <h2>Things I Can Do</h2>
     <div>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, dolor rerum! Rem
