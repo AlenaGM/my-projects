@@ -29,21 +29,23 @@ import Contact from '@/components/Contact.vue'
 
   &__down {
     grid-template-columns: repeat(2, 1fr);
-    color: var(--color-white);
-    padding: 1.5rem 0;
+    color: var(--color-text);
+    padding: 0.5rem 0;
     align-items: center;
     @media screen and (max-width: 1023px) {
       grid-template-columns: 1fr;
     }
   }
   &__to-top {
-    display: none;
     position: fixed;
     right: 0.5rem;
     bottom: 1.5rem;
     z-index: 10;
     &:hover {
       transform: translateY(-3px);
+    }
+    @media screen and (min-width: 1600px) {
+      right: calc((100vw - 1280px) * 0.5 + 0.5rem);
     }
     a {
       position: relative;

@@ -44,7 +44,7 @@ const menu = [
         </li>
       </ul>
       <div class="navbar__menu_open" v-if="!isOpenedMobileMenu" @click="isOpenedMobileMenu = true">
-        <img src="@/assets/images/open.svg" alt="menu opening icon" />
+        <font-awesome-icon :icon="['fas', 'bars']" />
       </div>
     </nav>
     <div
@@ -54,7 +54,7 @@ const menu = [
       v-scroll-lock="isOpenedMobileMenu"
     >
       <div class="navbar__menu_close" @click="isOpenedMobileMenu = false">
-        <img src="@/assets/images/close.svg" alt="menu closing icon" />
+        <font-awesome-icon :icon="['fas', 'xmark']" />
       </div>
       <ul>
         <li v-for="(element, i) of menu" :key="i">
@@ -73,7 +73,7 @@ const menu = [
   grid-column: 2;
   grid-template-columns: minmax(160px, auto) minmax(auto, 1120px);
   gap: 2.5rem;
-  align-items: center;
+  align-items: start;
   padding: 1.5rem 0;
   margin-bottom: -1px;
   z-index: 100;
@@ -124,32 +124,32 @@ const menu = [
           color: inherit;
         }
       }
-      @media screen and (max-width: 767px) {
+      @media screen and (max-width: 768px) {
         display: none;
       }
     }
     &_open,
     &_close {
       display: none;
-      @media screen and (max-width: 767px) {
+      @media screen and (max-width: 768px) {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
+        justify-content: flex-end;
+        align-items: flex-start;
         min-height: 48px;
         min-width: 48px;
+        font-size: 2rem;
       }
     }
     &_open {
-      background-color: var(--color-black);
+      color: var(--color-black);
     }
     &_close {
-      background-color: var(--color-white);
+      color: var(--color-white);
     }
   }
   &__dropdown {
     display: none;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 768px) {
       display: flex;
       position: fixed;
       top: 0;

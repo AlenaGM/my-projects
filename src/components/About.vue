@@ -11,7 +11,7 @@ import uiButton from './ui/Button.vue'
       <div class="about__image">
         <img src="@/assets/images/alena-dev.jpg" alt="me coding" />
       </div>
-      <div>
+      <div class="about__info">
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, dolor rerum! Rem
           inventore beatae dicta nemo vero, dolorum rerum vitae mollitia qui obcaecati facere
@@ -42,21 +42,18 @@ import uiButton from './ui/Button.vue'
     display: grid;
     grid-template-columns: minmax(auto, 420px) 1fr;
     gap: 4rem;
+    justify-items: center;
     @media screen and (max-width: 1023px) {
-      display: flex;
-      flex-direction: column;
+      grid-template-columns: 1fr;
+      gap: 40px;
     }
   }
   &__image {
-    position: relative;
-    min-height: 525px;
     box-shadow: var(--box-shadow);
+    max-width: 420px;
     img {
-      position: absolute;
       width: 100%;
       height: 100%;
-      top: 0;
-      left: 0;
       object-fit: cover;
     }
   }

@@ -43,13 +43,10 @@ import ContactForm from './ContactForm.vue'
       display: flex;
       flex-direction: column;
     }
-    @media screen and (max-width: 767px) {
-      gap: 2.5rem;
-    }
   }
   &__info p:last-of-type {
     margin-bottom: 2.5rem;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 768px) {
       margin-bottom: 1.5rem;
     }
   }

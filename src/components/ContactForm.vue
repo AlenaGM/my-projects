@@ -151,7 +151,8 @@ const isButtonDisabled = computed(() => {
   div {
     display: flex;
     width: 100%;
-    @media screen and (max-width: 767px) {
+    align-items: flex-start;
+    @media screen and (max-width: 768px) {
       flex-direction: column;
     }
   }
@@ -183,7 +184,7 @@ const isButtonDisabled = computed(() => {
   }
   &__textarea {
     margin: 1.5rem 0 4rem;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 768px) {
       margin-bottom: 2.5rem;
     }
     textarea {
@@ -194,11 +195,11 @@ const isButtonDisabled = computed(() => {
   &__input {
     &:not(:last-of-type) {
       margin: 0 1.5rem 0 0;
-      @media screen and (max-width: 767px) {
+      @media screen and (max-width: 768px) {
         margin: 0 0 1.5rem 0;
       }
     }
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 768px) {
       width: 100%;
     }
   }

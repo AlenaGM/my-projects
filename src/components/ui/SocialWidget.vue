@@ -27,12 +27,15 @@
   position: fixed;
   display: flex;
   flex-direction: column;
-  right: 0.5rem;
+  right: 0;
   top: 26%;
   z-index: 90;
   align-items: flex-end;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
     top: 43%;
+  }
+  @media screen and (min-width: 1600px) {
+    right: calc((100vw - 1280px) * 0.5);
   }
   a {
     font-size: 1.75rem;
@@ -47,9 +50,7 @@
     box-shadow: var(--box-shadow);
     color: var(--color-white);
     background-color: var(--color-primary);
-    transition:
-      inline-size 0.4s ease,
-      color 0.4s ease-in-out;
+    transition: inline-size 0.5s ease;
     &::after {
       content: 'get in touch';
       text-transform: none;
@@ -68,6 +69,7 @@
       color: var(--color-primary);
       background-color: var(--color-white);
       inline-size: 148px;
+      transition: inline-size 0.5s ease;
     }
   }
 }

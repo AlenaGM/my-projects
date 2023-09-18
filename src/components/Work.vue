@@ -41,7 +41,7 @@ import ProjectCard from '@/components/ProjectCard.vue'
   display: grid;
   &__gallery {
     margin-bottom: 4rem;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 768px) {
       margin-bottom: 2.5rem;
     }
   }

@@ -80,14 +80,10 @@ const props = defineProps({
   text-decoration: none;
   letter-spacing: -0.01em;
   position: relative;
-  transition:
-    color 0.2s ease-in-out,
-    background-color 0.2s ease-in-out,
-    border-color 0.2s ease-in-out;
   cursor: pointer;
   &:not(:last-of-type) {
     margin: 0 1.5rem 0 0;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 768px) {
       margin: 0 0 1.5rem 0;
     }
   }
@@ -96,7 +92,7 @@ const props = defineProps({
     position: absolute;
     top: 0;
     left: 0;
-    border: solid 1px var(--color-black);
+    border: solid 1.75px transparent;
     width: 100%;
     height: 100%;
     z-index: -1;
@@ -104,6 +100,7 @@ const props = defineProps({
   &:hover {
     transform: translate(-8px, -8px);
     &::after {
+      border: solid 1.75px var(--color-black);
       top: 8px;
       left: 8px;
     }
@@ -119,27 +116,27 @@ const props = defineProps({
   &_black {
     color: var(--color-white);
     background: var(--color-black);
-    border: 2px solid var(--color-black);
+    border: 1.75px solid var(--color-black);
   }
   &_primary {
     color: var(--color-white);
     background: var(--color-primary);
-    border: 2px solid var(--color-primary);
+    border: 1.75px solid var(--color-primary);
   }
   &_white {
     color: var(--color-black);
     background: var(--color-white);
-    border: 2px solid var(--color-black);
+    border: 1.75px solid var(--color-black);
   }
   &_fullwidth {
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 500px) {
       width: 100%;
     }
   }
   &_disabled {
     color: var(--color-gray);
     background: transparent;
-    border: 1px solid var(--color-gray);
+    border: 1.75px solid var(--color-gray);
     pointer-events: none;
   }
 }

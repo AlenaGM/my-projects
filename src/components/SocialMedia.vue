@@ -40,18 +40,23 @@
   a {
     line-height: 1;
     font-size: 2.5rem;
-    transition: all 0.4s;
-    @media screen and (max-width: 767px) {
+    transition:
+      transform 0.2s,
+      color 0.1s;
+    @media screen and (max-width: 768px) {
       font-size: 2rem;
     }
     &:not(:last-of-type) {
       margin-right: 1.125rem;
-      @media screen and (max-width: 767px) {
+      @media screen and (max-width: 768px) {
         margin-right: 1rem;
       }
     }
     &:hover svg {
       transform: translateY(-3px);
+      transition:
+        transform 0.2s,
+        color 0.1s;
     }
     &:active svg {
       top: 3px;

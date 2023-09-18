@@ -47,7 +47,6 @@ import { skills } from '@/assets/data/skills'
       padding: 0.75rem;
       border: var(--border);
       box-shadow: var(--box-shadow);
-      aspect-ratio: 1;
       align-items: end;
     }
     &_image {
