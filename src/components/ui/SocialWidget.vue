@@ -71,7 +71,8 @@
       inline-size: 148px;
       transition: inline-size 0.5s ease;
     }
-    @media (pointer: fine) {
+    @media screen and (pointer: fine) {
+      background-color: green;
       &:hover {
         color: var(--color-primary);
         background-color: var(--color-white);
