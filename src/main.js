@@ -8,10 +8,19 @@ import V3ScrollLock from 'v3-scroll-lock'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faCat, faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
+import { faCat, faBarsStaggered, faXmark, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import { faInstagram, faTelegram, faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 
-library.add(faCat, faBars, faXmark, faInstagram, faTelegram, faGithub, faLinkedinIn)
+library.add(
+  faCat,
+  faBarsStaggered,
+  faXmark,
+  faChevronUp,
+  faInstagram,
+  faTelegram,
+  faGithub,
+  faLinkedinIn
+)
 
 const app = createApp(App)
 

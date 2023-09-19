@@ -32,7 +32,7 @@ const menu = [
   <div class="header__navbar navbar">
     <div class="navbar__logo">
       <a href="#">
-        <img src="@/assets/images/logo.png" alt="logo" />
+        <img src="@/assets/img/logo.png" alt="logo" />
       </a>
     </div>
     <nav class="navbar__menu">
@@ -44,7 +44,7 @@ const menu = [
         </li>
       </ul>
       <div class="navbar__menu_open" v-if="!isOpenedMobileMenu" @click="isOpenedMobileMenu = true">
-        <font-awesome-icon :icon="['fas', 'bars']" />
+        <font-awesome-icon :icon="['fas', 'bars-staggered']" />
       </div>
     </nav>
     <div

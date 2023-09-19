@@ -10,12 +10,12 @@
     <div class="hero__image">
       <picture>
         <source
-          srcset="@/assets/images/illustration.webp, @/assets/images/illustration@2x.webp 2x"
+          srcset="@/assets/img/illustration.webp, @/assets/img/illustration@2x.webp 2x"
           type="image/webp"
         />
         <img
-          src="@/assets/images/illustration.png"
-          srcset="@/assets/images/illustration.png, @/assets/images/illustration@2x.png 2x"
+          src="@/assets/img/illustration.png"
+          srcset="@/assets/img/illustration.png, @/assets/img/illustration@2x.png 2x"
           alt="girl web-developer"
         />
       </picture>

@@ -9,7 +9,7 @@ import uiButton from './ui/Button.vue'
     <h2>Who I Am</h2>
     <div class="about__container">
       <div class="about__image">
-        <img src="@/assets/images/alena-dev.jpg" alt="me coding" />
+        <img src="@/assets/img/alena-dev.jpg" alt="me coding" />
       </div>
       <div class="about__info">
         <p>
@@ -36,7 +36,7 @@ import uiButton from './ui/Button.vue'
 <style lang="scss" scoped>
 .about {
   h2::after {
-    background-image: url('@/assets/images/about-black.png');
+    background-image: url('@/assets/img/about-black.png');
   }
   &__container {
     display: grid;

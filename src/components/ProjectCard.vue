@@ -104,7 +104,6 @@ const props = defineProps({
     padding: 1rem;
     background-color: var(--color-white);
     box-shadow: var(--box-shadow);
-
     z-index: 3;
   }
   &__title {

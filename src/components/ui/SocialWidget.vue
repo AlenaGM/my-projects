@@ -29,13 +29,10 @@
   flex-direction: column;
   right: 0;
   top: 26%;
-  z-index: 90;
+  z-index: 80;
   align-items: flex-end;
   @media screen and (max-width: 768px) {
     top: 43%;
-  }
-  @media screen and (min-width: 1600px) {
-    right: calc((100vw - 1280px) * 0.5);
   }
   a {
     font-size: 1.75rem;

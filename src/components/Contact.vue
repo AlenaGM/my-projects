@@ -29,7 +29,7 @@ import ContactForm from './ContactForm.vue'
 <style lang="scss" scoped>
 .contact {
   h2::after {
-    background-image: url('@/assets/images/contact-black.png');
+    background-image: url('@/assets/img/contact-black.png');
   }
   margin-bottom: calc(var(--section-gap) * 0.5);
   @media screen and (max-width: 1023px) {
@@ -42,12 +42,13 @@ import ContactForm from './ContactForm.vue'
     @media screen and (max-width: 1023px) {
       display: flex;
       flex-direction: column;
+      gap: 40px;
     }
   }
   &__info p:last-of-type {
-    margin-bottom: 2.5rem;
+    margin-bottom: 4rem;
     @media screen and (max-width: 768px) {
-      margin-bottom: 1.5rem;
+      margin-bottom: 24px;
     }
   }
 }

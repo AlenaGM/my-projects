@@ -20,7 +20,7 @@ TO DO:
 2/ place transitions on interactive elements
 3/ fix colors: dark gray - mid gray - light gray - white
 accent - mi-accent
-4/ load optimised images
+4/ load optimised img
 5/ make favicon
 6/ update projects info filter
 7/ connect CMS?

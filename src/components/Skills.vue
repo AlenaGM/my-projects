@@ -28,7 +28,7 @@ import { skills } from '@/assets/data/skills'
 <style lang="scss" scoped>
 .skills {
   h2::after {
-    background-image: url('@/assets/images/skills-black.png');
+    background-image: url('@/assets/img/skills-black.png');
   }
   &__list {
     display: grid;

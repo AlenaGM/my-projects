@@ -159,6 +159,7 @@ h2 {
   letter-spacing: -4px;
   margin-bottom: 1.5rem;
   margin-left: 48px;
+  z-index: 1;
   @media screen and (max-width: 768px) {
     margin-bottom: 1rem;
     margin-left: 42px;
@@ -195,7 +196,8 @@ h3 {
   word-wrap: break-word;
 }
 
-a {
+a,
+label {
   font-family: var(--font-title);
   font-weight: 700;
   text-decoration: none;
