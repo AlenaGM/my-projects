@@ -71,7 +71,7 @@
       inline-size: 148px;
       transition: inline-size 0.5s ease;
     }
-    @media (hover: hover) {
+    @media (pointer: fine) {
       &:hover {
         color: var(--color-primary);
         background-color: var(--color-white);
