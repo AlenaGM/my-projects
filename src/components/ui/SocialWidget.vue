@@ -65,14 +65,7 @@
         content: 'view profile';
       }
     }
-    &:hover {
-      color: var(--color-primary);
-      background-color: var(--color-white);
-      inline-size: 148px;
-      transition: inline-size 0.5s ease;
-    }
     @media screen and (pointer: fine) and (min-width: 1024px) {
-      background-color: green;
       &:hover {
         color: var(--color-primary);
         background-color: var(--color-white);
