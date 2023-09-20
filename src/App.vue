@@ -5,6 +5,7 @@ import About from '@/components/About.vue'
 import Skills from '@/components/Skills.vue'
 import Work from '@/components/Work.vue'
 import SocialWidget from '@/components/ui/SocialWidget.vue'
+import { skills } from '@/assets/data/skills'
 </script>
 
 <template>
@@ -12,7 +13,7 @@ import SocialWidget from '@/components/ui/SocialWidget.vue'
   <main class="main">
     <SocialWidget />
     <About />
-    <Skills />
+    <Skills :skills="skills" />
     <Work />
   </main>
   <Footer />

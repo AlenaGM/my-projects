@@ -1,6 +1,10 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
-import { skills } from '@/assets/data/skills'
+const props = defineProps({
+  skills: {
+    required: true
+  }
+})
 </script>
 
 <template>
@@ -15,12 +19,7 @@ import { skills } from '@/assets/data/skills'
       </p>
     </div>
     <div class="skills__list">
-      <div
-        class="skills__list_item"
-        v-for="{ order, skill, path } in skills"
-        :key="order"
-        :skills="skills"
-      >
+      <div class="skills__list_item" v-for="{ order, skill, path } in skills" :key="order">
         <div class="skills__list_image">
           <img :src="`/icons/${path}`" :alt="skill" />
         </div>

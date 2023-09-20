@@ -57,7 +57,7 @@ const skills = [
   {
     order: 12,
     skill: 'Rest API',
-    path: 'api.jpg'
+    path: 'api.png'
   },
   {
     order: 13,
