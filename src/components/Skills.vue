@@ -15,7 +15,12 @@ import { skills } from '@/assets/data/skills'
       </p>
     </div>
     <div class="skills__list">
-      <div class="skills__list_item" v-for="{ order, skill, path } in skills" :key="order">
+      <div
+        class="skills__list_item"
+        v-for="{ order, skill, path } in skills"
+        :key="order"
+        :skills="skills"
+      >
         <div class="skills__list_image">
           <img :src="`/icons/${path}`" :alt="skill" />
         </div>
