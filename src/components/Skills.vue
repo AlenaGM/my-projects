@@ -1,11 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
-// eslint-disable-next-line no-unused-vars
-const props = defineProps({
-  skills: {
-    required: true
-  }
-})
+import { skills } from '@/assets/data/skills'
 </script>
 
 <template>
@@ -22,11 +17,12 @@ const props = defineProps({
     <div class="skills__list">
       <div class="skills__list_item" v-for="{ order, skill, path } in skills" :key="order">
         <div class="skills__list_image">
-          <img src="/icons/api.png" :alt="skill" />
+          <img :src="path" :alt="skill" />
         </div>
         <label class="tech-text">{{ skill }}</label>
       </div>
     </div>
+    <img src="/icons/api.png" />
   </section>
 </template>
 

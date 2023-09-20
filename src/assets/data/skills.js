@@ -2,93 +2,93 @@ const skills = [
   {
     order: 1,
     skill: 'React',
-    path: 'react.png'
+    path: '/icons/react.png'
   },
   {
     order: 2,
     skill: 'VueJS',
-    path: 'vuejs.png'
+    path: '/icons/vuejs.png'
   },
   {
     order: 3,
     skill: 'MobX',
-    path: 'mobx.png'
+    path: '/icons/mobx.png'
   },
   {
     order: 4,
     skill: 'Pinia',
-    path: 'pinia.png'
+    path: '/icons/pinia.png'
   },
   {
     order: 5,
     skill: 'JavaScript',
-    path: 'javascript.png'
+    path: '/icons/javascript.png'
   },
   {
     order: 6,
     skill: 'TypeScript',
-    path: 'typescript.png'
+    path: '/icons/typescript.png'
   },
   {
     order: 7,
     skill: 'HTML5',
-    path: 'html5.png'
+    path: '/icons/html5.png'
   },
   {
     order: 8,
     skill: 'CSS3',
-    path: 'css3.png'
+    path: '/icons/css3.png'
   },
   {
     order: 9,
     skill: 'Sass',
-    path: 'sass.png'
+    path: '/icons/sass.png'
   },
   {
     order: 10,
     skill: 'Firebase',
-    path: 'firebase.png'
+    path: '/icons/firebase.png'
   },
   {
     order: 11,
     skill: 'NodeJS',
-    path: 'nodejs.png'
+    path: '/icons/nodejs.png'
   },
   {
     order: 12,
     skill: 'Rest API',
-    path: 'api.png'
+    path: '/icons/api.png'
   },
   {
     order: 13,
     skill: 'GraphQL',
-    path: 'graphql.png'
+    path: '/icons/graphql.png'
   },
   {
     order: 14,
     skill: 'Git',
-    path: 'git.png'
+    path: '/icons/git.png'
   },
 
   {
     order: 15,
     skill: 'GSAP',
-    path: 'greensock.png'
+    path: '/icons/greensock.png'
   },
   {
     order: 16,
     skill: 'TailwindCSS',
-    path: 'tailwind.png'
+    path: '/icons/tailwind.png'
   },
   {
     order: 17,
     skill: 'MUI',
-    path: 'mui.png'
+    path: '/icons/mui.png'
   },
   {
     order: 18,
     skill: 'WordPress',
-    path: 'wordpress.png'
+    path: '/icons/wordpress.png'
   }
   //{
   //  order: XXX,
