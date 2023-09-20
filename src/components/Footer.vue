@@ -57,7 +57,7 @@ import Contact from '@/components/Contact.vue'
     }
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1025px) {
     &__to-top {
       position: fixed;
       right: 0.5rem;
@@ -122,7 +122,7 @@ import Contact from '@/components/Contact.vue'
       }
     }
   }
-  @media screen and (pointer: coarse) and (max-width: 1023px) {
+  @media screen and (pointer: coarse) and (max-width: 1024px) {
     &__to-top {
       position: fixed;
       right: 0.75rem;
