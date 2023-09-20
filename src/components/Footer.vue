@@ -57,71 +57,72 @@ import Contact from '@/components/Contact.vue'
     }
   }
 
-  &__to-top {
-    position: fixed;
-    right: 0.5rem;
-    bottom: 1.5rem;
-    z-index: 80;
-    &:hover {
-      transform: translateY(-3px);
-    }
-    a {
-      position: relative;
-      display: flex;
-      width: 40px;
-      transform: rotate(270deg);
-      color: var(--color-text);
-      white-space: nowrap;
-      padding-bottom: 10px;
-      font-size: 13px;
+  @media screen and (min-width: 1024px) {
+    &__to-top {
+      position: fixed;
+      right: 0.5rem;
+      bottom: 1.5rem;
+      z-index: 80;
       &:hover {
-        color: var(--color-hover);
+        transform: translateY(-3px);
       }
-    }
-    &_icon {
-      display: none;
-    }
-    &_lines {
-      display: block;
-      width: 14px;
-      height: 40px;
-      position: absolute;
-      left: 80px;
-      bottom: 0;
-      &::before,
-      &::after {
-        content: '';
-        background-color: var(--color-text);
-        width: 2px;
-        height: 50%;
+      a {
+        position: relative;
+        display: flex;
+        width: 40px;
+        transform: rotate(270deg);
+        color: var(--color-text);
+        white-space: nowrap;
+        padding-bottom: 10px;
+        font-size: 13px;
+        &:hover {
+          color: var(--color-hover);
+        }
+      }
+      &_icon {
+        display: none;
+      }
+      &_lines {
+        display: block;
+        width: 14px;
+        height: 40px;
         position: absolute;
-        right: 0;
-        transition: 0.2s cubic-bezier(0.23, 0.24, 0, 0.99);
-      }
-      &::before {
-        top: 0;
-      }
-      &::after {
+        left: 80px;
         bottom: 0;
-      }
-    }
-    &:hover {
-      .footer__to-top_lines {
+        &::before,
+        &::after {
+          content: '';
+          background-color: var(--color-text);
+          width: 2px;
+          height: 50%;
+          position: absolute;
+          right: 0;
+          transition: 0.2s cubic-bezier(0.23, 0.24, 0, 0.99);
+        }
         &::before {
-          height: 23.5px;
-          transform: rotate(-43deg);
-          background-color: var(--color-hover);
+          top: 0;
         }
         &::after {
-          height: 23.5px;
-          transform: rotate(43deg);
-          background-color: var(--color-hover);
+          bottom: 0;
+        }
+      }
+      &:hover {
+        .footer__to-top_lines {
+          &::before {
+            height: 23.5px;
+            transform: rotate(-43deg);
+            background-color: var(--color-hover);
+          }
+          &::after {
+            height: 23.5px;
+            transform: rotate(43deg);
+            background-color: var(--color-hover);
+          }
         }
       }
     }
   }
-
-  @media screen and (pointer: coarse) and (max-width: 1024px) {
+  @media screen and (pointer: coarse) and (max-width: 1023px) {
     &__to-top {
       position: fixed;
       right: 0.75rem;
