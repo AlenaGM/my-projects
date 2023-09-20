@@ -27,7 +27,7 @@ const skills = [
   {
     order: 6,
     skill: 'TypeScript',
-    path: 'icons/typescript.png'
+    path: 'typescript.png'
   },
   {
     order: 7,
