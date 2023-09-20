@@ -17,7 +17,7 @@ import { skills } from '@/assets/data/skills'
     <div class="skills__list">
       <div class="skills__list_item" v-for="{ order, skill, path } in skills" :key="order">
         <div class="skills__list_image">
-          <img :src="'/src/assets/icons/' + path" :alt="skill" />
+          <img :src="'/assets/icons/' + path" :alt="skill" />
         </div>
         <label class="tech-text">{{ skill }}</label>
       </div>
