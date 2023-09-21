@@ -2,7 +2,7 @@ const skills = [
   {
     order: 1,
     skill: 'React',
-    path: '/img/react.png'
+    path: '/img/icons/react.png'
   },
   {
     order: 2,
