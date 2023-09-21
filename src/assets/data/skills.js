@@ -7,118 +7,118 @@ const skills = [
   {
     order: 2,
     skill: 'VueJS',
-    path: '/img/vuejs.png'
+    path: '/img/icons/vuejs.png'
   },
   {
     order: 3,
     skill: 'MobX',
-    path: '/icons/mobx.png'
+    path: '/img/icons/mobx.png'
   },
   {
     order: 4,
     skill: 'Pinia',
-    path: '/icons/pinia.png'
+    path: '/img/icons/pinia.png'
   },
   {
     order: 5,
     skill: 'JavaScript',
-    path: '/icons/javascript.png'
+    path: '/img/icons/javascript.png'
   },
   {
     order: 6,
     skill: 'TypeScript',
-    path: '/icons/typescript.png'
+    path: '/img/icons/typescript.png'
   },
   {
     order: 7,
     skill: 'HTML5',
-    path: '/icons/html5.png'
+    path: '/img/icons/html5.png'
   },
   {
     order: 8,
     skill: 'CSS3',
-    path: '/icons/css3.png'
+    path: '/img/icons/css3.png'
   },
   {
     order: 9,
     skill: 'Sass',
-    path: '/icons/sass.png'
+    path: '/img/icons/sass.png'
   },
   {
     order: 10,
     skill: 'Firebase',
-    path: '/icons/firebase.png'
+    path: '/img/icons/firebase.png'
   },
   {
     order: 11,
     skill: 'NodeJS',
-    path: '/icons/nodejs.png'
+    path: '/img/icons/nodejs.png'
   },
   {
     order: 12,
     skill: 'Rest API',
-    path: '/icons/api.png'
+    path: '/img/icons/api.png'
   },
   {
     order: 13,
     skill: 'GraphQL',
-    path: '/icons/graphql.png'
+    path: '/img/icons/graphql.png'
   },
   {
     order: 14,
     skill: 'Git',
-    path: '/icons/git.png'
+    path: '/img/icons/git.png'
   },
 
   {
     order: 15,
     skill: 'GSAP',
-    path: '/icons/greensock.png'
+    path: '/img/icons/greensock.png'
   },
   {
     order: 16,
     skill: 'TailwindCSS',
-    path: '/icons/tailwind.png'
+    path: '/img/icons/tailwind.png'
   },
   {
     order: 17,
     skill: 'MUI',
-    path: '/icons/mui.png'
+    path: '/img/icons/mui.png'
   },
   {
     order: 18,
     skill: 'WordPress',
-    path: '/icons/wordpress.png'
+    path: '/img/icons/wordpress.png'
   }
   //{
   //  order: XXX,
   //  skill: 'Figma',
-  //  path: '/icons/figma.png'
+  //  path: '/img/icons/figma.png'
   //},
   //{
   //  order: XXX,
   //  skill: 'Gulp',
-  //  path: '/icons/gulp.png'
+  //  path: '/img/icons/gulp.png'
   //},
   //{
   //  order: XXX,
   //  skill: 'NextJS',
-  //  path: '/icons/nextjs.png'
+  //  path: '/img/icons/nextjs.png'
   //},
   //{
   //  order: XXX,
   //  skill: 'Redux',
-  //  path: '/icons/redux.png'
+  //  path: '/img/icons/redux.png'
   //},
   //{
   //  order: XXX,
   //  skill: 'ViteJS',
-  //  path: '/icons/vitejs.png'
+  //  path: '/img/icons/vitejs.png'
   //},
   //{
   //  order: XXX,
   //  skill: 'Webpack',
-  //  path: '/icons/webpack.png'
+  //  path: '/img/icons/webpack.png'
   //},
   //
 ]

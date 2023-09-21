@@ -1,75 +1,13 @@
-Font Awesome Icons
-
-<font-awesome-icon :icon="['fas', 'cat']" />
-<font-awesome-icon :icon="['fas', 'bars']" />
-<font-awesome-icon :icon="['fas', 'xmark']" />
-
-<font-awesome-icon :icon="['fab', 'linkedin-in']" />
-<font-awesome-icon :icon="['fab', 'github']" />
-<font-awesome-icon :icon="['fab', 'telegram']" />
-<font-awesome-icon :icon="['fab', 'instagram']" />
-
-STRUCTURE
-1/ (home)/WORK [hero - all works - contact]/ -> single PROGECT
-2/ ABOUT [about - skills - studies - work experience] -> contact
-3/ BLOG -> single BLOG POST [comments]
-4/ PAGE404
-
 TO DO:
 1/ clear unused code
-2/ place transitions on interactive elements
-3/ fix colors: dark gray - mid gray - light gray - white
-accent - mi-accent
 4/ load optimised img
-5/ make favicon
-6/ update projects info filter
-7/ connect CMS?
 8/ contact: success/fail message in pop-up
-9/ work: add filter component
-10/add studies&experience lines?
-11/ project card: fix anim on scroll - delete anim on scroll
-12/ check css - clear unused, comment for others
-13/ skills - review which skills to add
-1 react
-2 vue
-3 mobx
-4 pinia
-5 js
-6 ts
-7 html
-8 css
-9 git
-10 api
-11 graphql
-12 sass
-13 wordpress
-14 mui
-15 tailwind
--16 figma
-17 gulp
-18 gsap
-
-14/ fix mobile menu bug - screen lock upon screen size extend
-15/ add social media widget
+9/ work: add filter component?
 16/ fixed header on scroll
-17 animation: plan -> realisation
-18/ about: add good photo
-19/ about: add description
-20/ header: smooth scroll
-21/ footer: up arrow
+21/ footer: up arrow - check
 
-Monochromatic Color Scheme:
-- Shade 1: #F55758 (Red)
-- Shade 2: #FCD4D1 (Blush Pink)
-- Shade 3: #FFE6B5 (Peach)
-- Shade 4: #F7F7F7 (Light Gray)
-- Shade 5: #FFFFFF (White)
-- Shade 7: #1F1F1F (Black)
-
-font-family: 'Poppins', sans-serif;
-font-family: 'Red Hat Mono', monospace;
 
   <!-- <picture class="picture object-fit-cover">
     <source srcset="img/small2.webp, img/small2@2x.webp 2x" type="image/webp">
-    <img src="img/small2.png" srcset="img/small2.png, img/small2@2x.png 2x" alt="СЛЕСАРНЫЕ РАБОТЫ">
+    <img src="img/small2.png" srcset="img/small2.png, img/small2@2x.png 2x" alt="xxxx">
   </picture> -->
