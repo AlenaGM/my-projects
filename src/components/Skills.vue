@@ -1,22 +1,25 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
-import { skills } from '@/assets/data/skills'
-
-// eslint-disable-next-line no-unused-vars
-const props = defineProps({
-  order: {
-    type: String,
-    required: true
-  },
-  path: {
-    type: String,
-    required: true
-  },
-  skill: {
-    type: String,
-    required: true
-  }
-})
+const skills = [
+  'React',
+  'VueJS',
+  'MobX',
+  'Pinia',
+  'JavaScript',
+  'TypeScript',
+  'HTML5',
+  'CSS3',
+  'Sass',
+  'Firebase',
+  'NodeJS',
+  'Rest API',
+  'GraphQL',
+  'Git',
+  'GSAP',
+  'TailwindCSS',
+  'MUI',
+  'WordPress'
+]
 </script>
 
 <template>
@@ -31,9 +34,9 @@ const props = defineProps({
       </p>
     </div>
     <div class="skills__list">
-      <div class="skills__list_item" v-for="{ order, skill, path } in skills" :key="order">
+      <div class="skills__list_item" v-for="(skill, i) in skills" :key="i">
         <div class="skills__list_image">
-          <img :src="`${path}.png`" :alt="skill" />
+          <img :src="`/img/icons/${skill}.png`" :alt="skill" />
         </div>
         <label class="tech-text">{{ skill }}</label>
       </div>
