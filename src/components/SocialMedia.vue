@@ -52,14 +52,16 @@
         margin-right: 1rem;
       }
     }
-    &:hover svg {
-      transform: translateY(-3px);
-      transition:
-        transform 0.2s,
-        color 0.1s;
-    }
-    &:active svg {
-      top: 3px;
+    @media (hover: hover) {
+      &:hover svg {
+        transform: translateY(-3px);
+        transition:
+          transform 0.2s,
+          color 0.1s;
+      }
+      &:active svg {
+        top: 3px;
+      }
     }
   }
 }

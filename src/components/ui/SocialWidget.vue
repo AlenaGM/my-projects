@@ -62,7 +62,7 @@
         content: 'view profile';
       }
     }
-    @media screen and (pointer: fine) and (min-width: 1024px) {
+    @media (hover: hover) {
       &:hover {
         color: var(--color-primary);
         background-color: var(--color-white);

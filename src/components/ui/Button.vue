@@ -97,20 +97,23 @@ const props = defineProps({
     height: 100%;
     z-index: -1;
   }
-  &:hover {
-    transform: translate(-8px, -8px);
-    &::after {
-      border: solid 1.75px var(--color-black);
+  @media (hover: hover) {
+    &:hover {
+      transform: translate(-8px, -8px);
+      &::after {
+        border: solid 1.75px var(--color-black);
+        top: 8px;
+        left: 8px;
+      }
+    }
+
+    &:active {
       top: 8px;
       left: 8px;
-    }
-  }
-  &:active {
-    top: 8px;
-    left: 8px;
-    &::after {
-      top: 0;
-      left: 0;
+      &::after {
+        top: 0;
+        left: 0;
+      }
     }
   }
   &_black {

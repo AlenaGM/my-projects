@@ -121,13 +121,12 @@ const props = defineProps({
     z-index: 2;
     transition: transform 0.25s ease;
     cursor: pointer;
-    &:hover {
-      transition: transform 0.25s ease;
-      transform: translateY(-8px);
-      color: var(--color-white);
-    }
-    &:active {
-      top: 8px;
+    @media (hover: hover) {
+      &:hover {
+        transition: transform 0.25s ease;
+        transform: translateY(-8px);
+        color: var(--color-white);
+      }
     }
   }
   &__tech {
