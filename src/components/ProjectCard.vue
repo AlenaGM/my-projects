@@ -17,7 +17,7 @@ const props = defineProps({
       <a :href="demo" target="_blank" rel="noreferrer">
         <picture>
           <source :srcset="`${image}.webp`" type="image/webp" />
-          <img :src="`${image}.png`" :alt="title" />
+          <img :src="`${image}.png`" :srcset="`${image}.png`" :alt="title" />
         </picture>
       </a>
       <div class="card__image_deco"></div>
