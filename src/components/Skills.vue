@@ -17,7 +17,8 @@ import { skills } from '@/assets/data/skills'
     <div class="skills__list">
       <div class="skills__list_item" v-for="{ order, skill, path } in skills" :key="order">
         <div class="skills__list_image">
-          <img :src="path" :alt="skill" />
+          <source :srcset="`${path}.webp`" type="image/webp" />
+          <img :src="`${path}.png`" :alt="skill" />
         </div>
         <label class="tech-text">{{ skill }}</label>
       </div>
@@ -28,7 +29,7 @@ import { skills } from '@/assets/data/skills'
 <style lang="scss" scoped>
 .skills {
   h2::after {
-    background-image: url('@/assets/img/skills-black.png');
+    background-image: url('@/assets/img/subtitles/skills.png');
   }
   &__list {
     display: grid;

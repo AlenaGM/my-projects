@@ -9,7 +9,17 @@ import uiButton from './ui/Button.vue'
     <h2>Who I Am</h2>
     <div class="about__container">
       <div class="about__image">
-        <img src="@/assets/img/alena-dev.jpg" alt="me coding" />
+        <picture class="picture object-fit-cover">
+          <source
+            srcset="@/assets/img/alena-dev.webp, @/assets/img/alena-dev@2x.webp 2x"
+            type="image/webp"
+          />
+          <img
+            src="@/assets/img/alena-dev.png"
+            srcset="@/assets/img/alena-dev.png, @/assets/img/alena-dev@2x.png 2x"
+            alt="me coding"
+          />
+        </picture>
       </div>
       <div class="about__info">
         <p>
@@ -36,7 +46,7 @@ import uiButton from './ui/Button.vue'
 <style lang="scss" scoped>
 .about {
   h2::after {
-    background-image: url('@/assets/img/about-black.png');
+    background-image: url('@/assets/img/subtitles/about.png');
   }
   &__container {
     display: grid;
