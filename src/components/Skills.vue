@@ -1,6 +1,22 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
 import { skills } from '@/assets/data/skills'
+
+// eslint-disable-next-line no-unused-vars
+const props = defineProps({
+  order: {
+    type: String,
+    required: true
+  },
+  path: {
+    type: String,
+    required: true
+  },
+  skill: {
+    type: String,
+    required: true
+  }
+})
 </script>
 
 <template>
