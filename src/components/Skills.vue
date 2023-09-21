@@ -22,7 +22,6 @@ import { skills } from '@/assets/data/skills'
         <label class="tech-text">{{ skill }}</label>
       </div>
     </div>
-    <img src="/icons/api.png" />
   </section>
 </template>
 
