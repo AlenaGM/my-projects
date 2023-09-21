@@ -204,6 +204,9 @@ label {
   color: inherit;
   font-size: inherit;
   text-transform: capitalize;
+}
+
+a {
   transition: color 0.4s;
   cursor: pointer;
   &:hover {

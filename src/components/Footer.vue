@@ -57,7 +57,7 @@ import Contact from '@/components/Contact.vue'
     }
   }
 
-  @media screen and (min-width: 1025px) {
+  @media only screen {
     &__to-top {
       position: fixed;
       right: 0.5rem;
@@ -106,23 +106,25 @@ import Contact from '@/components/Contact.vue'
           bottom: 0;
         }
       }
-      &:hover {
-        .footer__to-top_lines {
-          &::before {
-            height: 23.5px;
-            transform: rotate(-43deg);
-            background-color: var(--color-hover);
-          }
-          &::after {
-            height: 23.5px;
-            transform: rotate(43deg);
-            background-color: var(--color-hover);
+      @media (hover: hover) {
+        &:hover {
+          .footer__to-top_lines {
+            &::before {
+              height: 23.5px;
+              transform: rotate(-43deg);
+              background-color: var(--color-hover);
+            }
+            &::after {
+              height: 23.5px;
+              transform: rotate(43deg);
+              background-color: var(--color-hover);
+            }
           }
         }
       }
     }
   }
-  @media screen and (pointer: coarse) and (max-width: 1024px) {
+  @media (any-pointer: coarse) {
     &__to-top {
       position: fixed;
       right: 0.75rem;
@@ -130,21 +132,21 @@ import Contact from '@/components/Contact.vue'
       z-index: 80;
       height: 40px;
       width: 40px;
-      background-color: var(--color-white);
       border-radius: 100px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background-color: var(--color-white);
       box-shadow: var(--box-shadow);
       a {
-        position: relative;
+        padding: 0;
+        margin: 0;
         display: flex;
-
-        font-size: 1.75rem;
-        color: var(--color-primary);
+        align-items: center;
+        justify-content: flex-start;
       }
       &_icon {
         display: block;
+        transform: rotate(-270deg);
+        font-size: 2rem;
+        color: var(--color-primary);
       }
       &_lines,
       label {
