@@ -36,7 +36,7 @@ const skills = [
     <div class="skills__list">
       <div class="skills__list_item" v-for="(skill, i) in skills" :key="i">
         <div class="skills__list_image">
-          <img :src="`/img/icons/${skill}.png`" :alt="skill" />
+          <img :src="`/img/${skill}.png`" :alt="skill" />
         </div>
         <label class="tech-text">{{ skill }}</label>
       </div>
