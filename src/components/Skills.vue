@@ -67,12 +67,13 @@ const skills = [
       box-shadow: var(--box-shadow);
       img {
         object-fit: contain;
-        max-height: 86px;
-        max-width: 86px;
+        aspect-ratio: 1;
+
+        width: 84%;
       }
       div {
         text-align: center;
-        padding-top: 0.75rem;
+        padding-top: 0.5rem;
         @media screen and (max-width: 500px) {
           font-size: 10px;
         }
