@@ -81,7 +81,7 @@
       </div>
       <div class="skills__list_item">
         <div class="skills__list_image">
-          <img src="@/assets/img/icons/Rest API.png" alt="Rest API" />
+          <img src="@/assets/img/icons/API.png" alt="Rest API" />
         </div>
         <label class="tech-text">Rest API</label>
       </div>
