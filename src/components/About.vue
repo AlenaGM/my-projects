@@ -54,7 +54,7 @@ import uiButton from './ui/Button.vue'
 <style lang="scss" scoped>
 .about {
   h2::after {
-    background-image: url('@/assets/img/subtitles/about.png') type('image/png');
+    background: url('@/assets/img/subtitles/about.png');
   }
   &__container {
     display: grid;

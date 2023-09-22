@@ -3,7 +3,6 @@ import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 import About from '@/components/About.vue'
 import Skills from '@/components/Skills.vue'
-import SkillsTest from '@/components/SkillsTest.vue'
 import Work from '@/components/Work.vue'
 import SocialWidget from '@/components/ui/SocialWidget.vue'
 </script>
@@ -14,7 +13,6 @@ import SocialWidget from '@/components/ui/SocialWidget.vue'
     <SocialWidget />
     <About />
     <Skills />
-    <SkillsTest />
     <Work />
   </main>
   <Footer />

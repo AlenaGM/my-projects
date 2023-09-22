@@ -47,7 +47,7 @@ const skills = [
 <style lang="scss" scoped>
 .skills {
   h2::after {
-    background-image: url('@/assets/img/subtitles/skills.png') type('image/png');
+    background: url('@/assets/img/subtitles/skills.png');
   }
   &__list {
     display: grid;
@@ -65,7 +65,6 @@ const skills = [
       justify-items: center;
       align-items: end;
       padding: 0.75rem;
-      background: var(--color-white);
       border: var(--border);
       box-shadow: var(--box-shadow);
     }
@@ -81,7 +80,6 @@ const skills = [
         top: 0;
         height: 100%;
         object-fit: contain;
-        z-index: 2;
       }
     }
     label {
