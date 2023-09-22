@@ -15,109 +15,109 @@
     <div class="skills__list">
       <div class="skills__list_item">
         <div class="skills__list_image">
-          <img src="/icons/React.png" alt="React" />
+          <img src="@/assets/img/icons/React.png" alt="React" />
         </div>
         <label class="tech-text">React</label>
       </div>
       <div class="skills__list_item">
         <div class="skills__list_image">
-          <img src="/icons/VueJS.png" alt="VueJS" />
+          <img src="@/assets/img/icons/VueJS.png" alt="VueJS" />
         </div>
         <label class="tech-text">VueJS</label>
       </div>
       <div class="skills__list_item">
         <div class="skills__list_image">
-          <img src="/icons/MobX.png" alt="MobX" />
+          <img src="@/assets/img/icons/MobX.png" alt="MobX" />
         </div>
         <label class="tech-text">MobX</label>
       </div>
       <div class="skills__list_item">
         <div class="skills__list_image">
-          <img src="/icons/Pinia.png" alt="Pinia" />
+          <img src="@/assets/img/icons/Pinia.png" alt="Pinia" />
         </div>
         <label class="tech-text">Pinia</label>
       </div>
       <div class="skills__list_item">
         <div class="skills__list_image">
-          <img src="/icons/JavaScript.png" alt="JavaScript" />
+          <img src="@/assets/img/icons/JavaScript.png" alt="JavaScript" />
         </div>
         <label class="tech-text">JavaScript</label>
       </div>
       <div class="skills__list_item">
         <div class="skills__list_image">
-          <img src="/icons/TypeScript.png" alt="TypeScript" />
+          <img src="@/assets/img/icons/TypeScript.png" alt="TypeScript" />
         </div>
         <label class="tech-text">TypeScript</label>
       </div>
       <div class="skills__list_item">
         <div class="skills__list_image">
-          <img src="/icons/HTML5.png" alt="HTML5" />
+          <img src="@/assets/img/icons/HTML5.png" alt="HTML5" />
         </div>
         <label class="tech-text">HTML5</label>
       </div>
       <div class="skills__list_item">
         <div class="skills__list_image">
-          <img src="/icons/CSS3.png" alt="CSS3" />
+          <img src="@/assets/img/icons/CSS3.png" alt="CSS3" />
         </div>
         <label class="tech-text">CSS3</label>
       </div>
       <div class="skills__list_item">
         <div class="skills__list_image">
-          <img src="/icons/Sass.png" alt="Sass" />
+          <img src="@/assets/img/icons/Sass.png" alt="Sass" />
         </div>
         <label class="tech-text">Sass</label>
       </div>
       <div class="skills__list_item">
         <div class="skills__list_image">
-          <img src="/icons/Firebase.png" alt="Firebase" />
+          <img src="@/assets/img/icons/Firebase.png" alt="Firebase" />
         </div>
         <label class="tech-text">Firebase</label>
       </div>
       <div class="skills__list_item">
         <div class="skills__list_image">
-          <img src="/icons/NodeJS.png" alt="NodeJS" />
+          <img src="@/assets/img/icons/NodeJS.png" alt="NodeJS" />
         </div>
         <label class="tech-text">NodeJS</label>
       </div>
       <div class="skills__list_item">
         <div class="skills__list_image">
-          <img src="/icons/Rest API.png" alt="Rest API" />
+          <img src="@/assets/img/icons/Rest API.png" alt="Rest API" />
         </div>
         <label class="tech-text">Rest API</label>
       </div>
       <div class="skills__list_item">
         <div class="skills__list_image">
-          <img src="/icons/GraphQL.png" alt="GraphQL" />
+          <img src="@/assets/img/icons/GraphQL.png" alt="GraphQL" />
         </div>
         <label class="tech-text">GraphQL</label>
       </div>
       <div class="skills__list_item">
         <div class="skills__list_image">
-          <img src="/icons/Git.png" alt="Git" />
+          <img src="@/assets/img/icons/Git.png" alt="Git" />
         </div>
         <label class="tech-text">Git</label>
       </div>
       <div class="skills__list_item">
         <div class="skills__list_image">
-          <img src="/icons/GSAP.png" alt="GSAP" />
+          <img src="@/assets/img/icons/GSAP.png" alt="GSAP" />
         </div>
         <label class="tech-text">GSAP</label>
       </div>
       <div class="skills__list_item">
         <div class="skills__list_image">
-          <img src="/icons/TailwindCSS.png" alt="TailwindCSS" />
+          <img src="@/assets/img/icons/TailwindCSS.png" alt="TailwindCSS" />
         </div>
         <label class="tech-text">TailwindCSS</label>
       </div>
       <div class="skills__list_item">
         <div class="skills__list_image">
-          <img src="/icons/MUI.png" alt="MUI" />
+          <img src="@/assets/img/icons/MUI.png" alt="MUI" />
         </div>
         <label class="tech-text">MUI</label>
       </div>
       <div class="skills__list_item">
         <div class="skills__list_image">
-          <img src="/icons/WordPress.png" alt="WordPress" />
+          <img src="@/assets/img/icons/WordPress.png" alt="WordPress" />
         </div>
         <label class="tech-text">WordPress</label>
       </div>
