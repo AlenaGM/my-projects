@@ -35,7 +35,7 @@ import ProjectCard from '@/components/ProjectCard.vue'
 <style lang="scss" scoped>
 .work {
   h2::after {
-    background: url('@/assets/img/subtitles/work.png');
+    background-image: url('@/assets/img/subtitles/work.png');
   }
   display: grid;
   &__gallery {

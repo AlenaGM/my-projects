@@ -47,7 +47,7 @@ const skills = [
 <style lang="scss" scoped>
 .skills {
   h2::after {
-    background: url('@/assets/img/subtitles/skills.png');
+    background-image: url('@/assets/img/subtitles/skills.png');
   }
   &__list {
     display: grid;
