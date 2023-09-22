@@ -1,7 +1,5 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
-import SkillItem from '@/components/skillItem.vue'
-
 const skills = [
   'React',
   'VueJS',
@@ -36,7 +34,12 @@ const skills = [
       </p>
     </div>
     <div class="skills__list">
-      <SkillItem :skills="skills" />
+      <div class="skills__list_item" v-for="(skill, i) in skills" :key="i">
+        <div class="skills__list_image">
+          <img :src="`/icons/${skill}.png`" :alt="skill" />
+        </div>
+        <label class="tech-text">{{ skill }}</label>
+      </div>
     </div>
   </section>
 </template>
@@ -44,7 +47,10 @@ const skills = [
 <style lang="scss" scoped>
 .skills {
   h2::after {
-    background-image: url('@/assets/img/subtitles/skills.png');
+    background-image: image-set(
+      url('@/assets/img/subtitles/skills.webp') type('image/webp'),
+      url('@/assets/img/subtitles/skills.png') type('image/png')
+    );
   }
   &__list {
     display: grid;
@@ -54,6 +60,39 @@ const skills = [
     @media screen and (max-width: 450px) {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    }
+    &_item {
+      display: grid;
+      grid-template: 1fr auto / 1fr;
+      grid-auto-flow: row;
+      justify-items: center;
+      align-items: end;
+      padding: 0.75rem;
+      background: var(--color-white);
+      border: var(--border);
+      box-shadow: var(--box-shadow);
+    }
+    &_image {
+      position: relative;
+      margin: auto;
+      padding-bottom: 60%;
+      aspect-ratio: 1/1;
+      display: flex;
+      justify-content: center;
+      img {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        object-fit: contain;
+        z-index: 2;
+      }
+    }
+    label {
+      text-align: center;
+      padding-top: 0.75rem;
+      @media screen and (max-width: 500px) {
+        font-size: 10px;
+      }
     }
   }
 }

@@ -59,17 +59,24 @@ const formRef = ref(null)
 const successMessage = ref('')
 
 const sendEmail = () => {
-  emailjs.sendForm('contact_service', 'template_1guu3ga', formRef.value, '0bqDQvGCW5ceicJh6').then(
-    (result) => {
-      console.log(result.text)
-      successMessage.value =
-        'You message has been sent. Thank you! I will try to answer within 2 hours'
-    },
-    (error) => {
-      console.log(error.text)
-      successMessage.value = 'An error occurred. Please try again later.'
-    }
-  )
+  emailjs
+    .sendForm('contact_service', 'template_1guu3ga', formRef.value, '0bqDQvGCW5ceicJh6')
+    .then(
+      (result) => {
+        console.log(result.text)
+        successMessage.value =
+          'You message has been sent. Thank you! I will try to answer within 2 hours'
+      },
+      (error) => {
+        console.log(error.text)
+        successMessage.value = 'An error occurred. Please try again later.'
+      }
+    )
+    .then(
+      setTimeout(() => {
+        successMessage.value = ''
+      }, '10000')
+    )
 }
 
 const resetForm = () => {
@@ -147,11 +154,9 @@ const isButtonDisabled = computed(() => {
 <style lang="scss" scoped>
 .form {
   display: grid;
-  align-content: space-evenly;
   div {
     display: flex;
     width: 100%;
-    align-items: flex-start;
     @media screen and (max-width: 768px) {
       flex-direction: column;
     }

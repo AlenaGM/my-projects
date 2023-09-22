@@ -20,8 +20,7 @@ import ProjectCard from '@/components/ProjectCard.vue'
     <div>
       <ui-button
         type="link"
-        href="https://github.com/AlenaGM"
-        to="#"
+        to="https://github.com/AlenaGM"
         mobileFullWidth
         aria-label="github"
         target="_blank"
@@ -36,7 +35,10 @@ import ProjectCard from '@/components/ProjectCard.vue'
 <style lang="scss" scoped>
 .work {
   h2::after {
-    background-image: url('@/assets/img/subtitles/work.png');
+    background-image: image-set(
+      url('@/assets/img/subtitles/work.webp') type('image/webp'),
+      url('@/assets/img/subtitles/work.png') type('image/png')
+    );
   }
   display: grid;
   &__gallery {
@@ -46,7 +48,6 @@ import ProjectCard from '@/components/ProjectCard.vue'
     }
   }
 }
-
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

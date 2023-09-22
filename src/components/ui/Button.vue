@@ -6,7 +6,6 @@
       'button',
       {
         button_black: color === 'black',
-        button_primary: color === 'primary',
         button_white: color === 'white',
         button_fullwidth: mobileFullWidth,
         button_disabled: disabled
@@ -22,7 +21,6 @@
       'button',
       {
         button_black: color === 'black',
-        button_primary: color === 'primary',
         button_white: color === 'white',
         button_fullwidth: mobileFullWidth,
         button_disabled: disabled
@@ -36,10 +34,6 @@
 <script setup>
 // eslint-disable-next-line no-unused-vars
 const props = defineProps({
-  background: {
-    type: String,
-    required: false
-  },
   color: {
     type: String,
     default: 'black'
@@ -65,21 +59,19 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 .button {
-  padding: 13px 40px;
-  opacity: 1;
   display: inline-flex;
+  padding: 13px 40px;
   justify-content: center;
   align-items: center;
-  text-decoration: none;
+  position: relative;
   font-family: var(--font-text);
   font-size: 13px;
-  line-height: 2em;
   font-weight: 700;
-  //height: 56px;
-  white-space: nowrap;
   text-decoration: none;
+  line-height: 2em;
+  white-space: nowrap;
   letter-spacing: -0.01em;
-  position: relative;
+  transition: all 0.2s ease-in-out;
   cursor: pointer;
   &:not(:last-of-type) {
     margin: 0 1.5rem 0 0;
@@ -101,18 +93,18 @@ const props = defineProps({
     &:hover {
       transform: translate(-8px, -8px);
       &::after {
-        border: solid 1.75px var(--color-black);
+        border: solid 1.75px;
+        border-color: inherit;
         top: 8px;
         left: 8px;
       }
     }
-
     &:active {
       top: 8px;
       left: 8px;
       &::after {
-        top: 0;
-        left: 0;
+        top: 0px;
+        left: 0px;
       }
     }
   }
@@ -121,15 +113,10 @@ const props = defineProps({
     background: var(--color-black);
     border: 1.75px solid var(--color-black);
   }
-  &_primary {
-    color: var(--color-white);
-    background: var(--color-primary);
-    border: 1.75px solid var(--color-primary);
-  }
   &_white {
     color: var(--color-black);
     background: var(--color-white);
-    border: 1.75px solid var(--color-black);
+    border: 1.75px solid var(--color-white);
   }
   &_fullwidth {
     @media screen and (max-width: 500px) {

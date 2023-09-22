@@ -7,11 +7,11 @@ import Contact from '@/components/Contact.vue'
   <footer class="footer">
     <div class="footer__content">
       <Contact />
-      <div class="footer__down">
+      <div class="footer__bottom">
         <div class="tech-text">
           ©️ 2023 Alena G.,
           <a
-            class="tech-text footer__down_link"
+            class="tech-text footer__bottom_link"
             href="https://github.com/AlenaGM/my-projects"
             aria-label="github"
             target="_blank"
@@ -38,16 +38,10 @@ import Contact from '@/components/Contact.vue'
     grid-column: 2;
     display: grid;
   }
-
-  &__down {
+  &__bottom {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    color: var(--color-text);
-    padding: 0.5rem 0;
+    padding: 0 0 0.5rem;
     align-items: center;
-    @media screen and (max-width: 1023px) {
-      grid-template-columns: 1fr;
-    }
     &_link {
       font-weight: normal;
       text-transform: none;
@@ -56,7 +50,6 @@ import Contact from '@/components/Contact.vue'
       justify-items: center;
     }
   }
-
   @media only screen {
     &__to-top {
       position: fixed;
@@ -71,16 +64,16 @@ import Contact from '@/components/Contact.vue'
         display: flex;
         width: 40px;
         transform: rotate(270deg);
-        color: var(--color-text);
-        white-space: nowrap;
         padding-bottom: 10px;
-        font-size: 13px;
+        color: var(--color-text);
         &:hover {
           color: var(--color-hover);
         }
-      }
-      &_icon {
-        display: none;
+        label {
+          cursor: pointer;
+          font-size: 13px;
+          white-space: nowrap;
+        }
       }
       &_lines {
         display: block;
@@ -105,6 +98,9 @@ import Contact from '@/components/Contact.vue'
         &::after {
           bottom: 0;
         }
+      }
+      &_icon {
+        display: none;
       }
       @media (hover: hover) {
         &:hover {
@@ -142,15 +138,15 @@ import Contact from '@/components/Contact.vue'
         align-items: center;
         justify-content: flex-start;
       }
-      &_icon {
-        display: block;
-        transform: rotate(-270deg);
-        font-size: 2rem;
-        color: var(--color-primary);
-      }
       &_lines,
       label {
         display: none;
+      }
+      &_icon {
+        display: block;
+        transform: rotate(-270deg);
+        font-size: 1.75rem;
+        color: var(--color-primary);
       }
     }
   }

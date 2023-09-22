@@ -35,24 +35,28 @@
     top: 43%;
   }
   a {
-    font-size: 1.75rem;
-    text-align: left;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 0.5rem;
+    height: 40px;
     inline-size: 40px;
     overflow: hidden;
-    height: 40px;
     box-shadow: var(--box-shadow);
+    text-align: left;
     color: var(--color-white);
     background-color: var(--color-primary);
-    transition: inline-size 0.5s ease;
+    font-size: 1.75rem;
+    transition:
+      inline-size 0.5s ease,
+      color 0.4s,
+      background-color 0.4s;
+
     &::after {
       content: 'get in touch';
       text-transform: none;
       font-size: 1rem;
-      padding-left: 0.5rem;
+      padding-left: 8px;
       white-space: nowrap;
     }
     &:not(:last-of-type) {
@@ -67,7 +71,10 @@
         color: var(--color-primary);
         background-color: var(--color-white);
         inline-size: 148px;
-        transition: inline-size 0.5s ease;
+        transition:
+          inline-size 0.5s ease,
+          color 0.4s,
+          background-color 0.4s;
       }
     }
   }

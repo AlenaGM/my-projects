@@ -9,7 +9,7 @@ import uiButton from './ui/Button.vue'
     <h2>Who I Am</h2>
     <div class="about__container">
       <div class="about__image">
-        <picture class="picture object-fit-cover">
+        <picture>
           <source
             srcset="@/assets/img/alena-dev.webp, @/assets/img/alena-dev@2x.webp 2x"
             type="image/webp"
@@ -21,7 +21,7 @@ import uiButton from './ui/Button.vue'
           />
         </picture>
       </div>
-      <div class="about__info">
+      <div>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, dolor rerum! Rem
           inventore beatae dicta nemo vero, dolorum rerum vitae mollitia qui obcaecati facere
@@ -37,7 +37,15 @@ import uiButton from './ui/Button.vue'
           inventore beatae dicta nemo vero, dolorum rerum vitae mollitia qui obcaecati facere
           aperiam sed nulla? Voluptatibus, sapiente consectetur?
         </p>
-        <ui-button type="link" to="#" mobileFullWidth>Download My CV</ui-button>
+        <ui-button
+          type="link"
+          to="#"
+          mobileFullWidth
+          aria-label="my resume"
+          target="_blank"
+          rel="noreferrer noopener"
+          >Download My CV</ui-button
+        >
       </div>
     </div>
   </section>
@@ -46,7 +54,10 @@ import uiButton from './ui/Button.vue'
 <style lang="scss" scoped>
 .about {
   h2::after {
-    background-image: url('@/assets/img/subtitles/about.png');
+    background-image: image-set(
+      url('@/assets/img/subtitles/about.webp') type('image/webp'),
+      url('@/assets/img/subtitles/about.png') type('image/png')
+    );
   }
   &__container {
     display: grid;

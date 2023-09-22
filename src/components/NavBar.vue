@@ -32,7 +32,14 @@ const menu = [
   <div class="header__navbar navbar">
     <div class="navbar__logo">
       <a href="#">
-        <img src="@/assets/img/logo.png" alt="logo" />
+        <picture>
+          <source srcset="@/assets/img/logo.webp, @/assets/img/logo@2x.webp 2x" type="image/webp" />
+          <img
+            src="@/assets/img/logo.png"
+            srcset="@/assets/img/logo.png, @/assets/img/logo@2x.png 2x"
+            alt="logo"
+          />
+        </picture>
       </a>
     </div>
     <nav class="navbar__menu">
@@ -73,21 +80,23 @@ const menu = [
   grid-column: 2;
   grid-template-columns: minmax(160px, auto) minmax(auto, 1120px);
   gap: 2.5rem;
-  align-items: start;
+  align-items: center;
   padding: 1.5rem 0;
   margin-bottom: -1px;
   z-index: 100;
   &__logo {
     grid-column: 1;
     a {
-      cursor: pointer;
-      &:hover {
-        transform: scale(1.1);
-      }
       img {
         display: block;
         height: 48px;
         max-width: 100%;
+        &:hover {
+          transform: scale(1.1);
+        }
+        @media screen and (max-width: 768px) {
+          height: 32px;
+        }
       }
     }
   }
@@ -135,8 +144,7 @@ const menu = [
         display: flex;
         justify-content: flex-end;
         align-items: flex-start;
-        min-height: 48px;
-        min-width: 48px;
+        height: 32px;
         font-size: 2rem;
       }
     }
@@ -150,18 +158,18 @@ const menu = [
   &__dropdown {
     display: none;
     @media screen and (max-width: 768px) {
-      display: flex;
       position: fixed;
       top: 0;
       right: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
       height: 100vh;
       width: 80vw;
       font-size: 1.5rem;
       background-color: var(--color-black);
       color: var(--color-white);
       padding: 1.5rem 1.5rem 1.5rem 4.5rem;
-      flex-direction: column;
-      align-items: flex-end;
       ul {
         height: 100%;
         width: 100%;

@@ -16,18 +16,13 @@
     >
       <font-awesome-icon :icon="['fab', 'github']" />
     </a>
-    <a
-      href="https://t.me/alenagm"
-      aria-label="telegram"
-      target="“_blank”"
-      rel="noreferrer noopener"
-    >
+    <a href="https://t.me/alenagm" aria-label="telegram" target="_blank" rel="noreferrer noopener">
       <font-awesome-icon :icon="['fab', 'telegram']" />
     </a>
     <a
       href="https://www.instagram.com/del.velorum/"
       aria-label="instagram"
-      target="“_blank”"
+      target="_blank"
       rel="noreferrer noopener"
     >
       <font-awesome-icon :icon="['fab', 'instagram']" />

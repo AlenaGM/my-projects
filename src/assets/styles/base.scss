@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Ms+Madi&family=Poppins:wght@400;700&family=Red+Hat+Mono:wght@400;600&display=swap');
 
+// variables
 :root {
   --color-white: #ffffff;
   --color-light-gray: #f7f7f7;
-  --color-gray: #798897;
+  --color-gray: #4c4c4c;
   --color-black: #1f1f1f;
 
   --color-primary: #f55758;
@@ -30,6 +31,7 @@
   --font-accent: 'Ms Madi', cursive;
 }
 
+// styles reset & body styles
 *,
 *::before,
 *::after {
@@ -56,7 +58,8 @@ body {
   transition:
     color 0.4s,
     background-color 0.4s,
-    width 0.25s ease;
+    width 0.25s ease,
+    scale 0.25s ease;
 }
 
 img {
@@ -77,6 +80,7 @@ li {
   list-style: none;
 }
 
+// layout
 #app {
   width: 100%;
   display: grid;
@@ -89,10 +93,15 @@ li {
 
 .header {
   grid-area: header;
-  margin-bottom: var(--section-gap);
+  min-height: 100vh;
+  margin-bottom: calc(var(--section-gap) * 0.5);
   @media screen and (max-width: 1023px) {
-    margin-bottom: var(--section-gap-mobile);
+    margin-bottom: calc(var(--section-gap-mobile) * 0.5);
   }
+}
+
+.main {
+  grid-area: main;
 }
 
 .footer {
@@ -101,14 +110,6 @@ li {
   @media screen and (max-width: 1023px) {
     margin-top: calc(var(--section-gap-mobile) * 0.5);
   }
-}
-
-.header {
-  min-height: 100vh;
-}
-
-.main {
-  grid-area: main;
 }
 
 .header,
@@ -126,6 +127,12 @@ section {
   @media screen and (max-width: 1023px) {
     margin-bottom: var(--section-gap-mobile);
   }
+  &:first-of-type {
+    margin-top: calc(var(--section-gap) * 0.5);
+    @media screen and (max-width: 1023px) {
+      margin-top: calc(var(--section-gap-mobile) * 0.5);
+    }
+  }
   &:last-of-type {
     margin-bottom: calc(var(--section-gap) * 0.5);
     @media screen and (max-width: 1023px) {
@@ -134,11 +141,12 @@ section {
   }
 }
 
+// styles
 h1 {
   font-family: var(--font-title);
   font-weight: 700;
-  color: var(--color-title);
   font-size: calc(2.375rem + 1vw);
+  color: var(--color-title);
   line-height: 1;
   letter-spacing: -4px;
   z-index: 1;
@@ -153,8 +161,8 @@ h2 {
   flex-direction: column;
   font-family: var(--font-title);
   font-weight: 700;
-  color: var(--color-light-primary);
   font-size: calc(2.375rem + 1vw);
+  color: var(--color-light-primary);
   line-height: 1;
   letter-spacing: -4px;
   margin-bottom: 1.5rem;
@@ -185,17 +193,6 @@ h2 {
   }
 }
 
-h3 {
-  font-family: var(--font-title);
-  font-weight: 700;
-  color: var(--color-title);
-  font-size: 18px;
-  line-height: 1.5em;
-  letter-spacing: -0.02em;
-  -ms-word-wrap: break-word;
-  word-wrap: break-word;
-}
-
 a,
 label {
   font-family: var(--font-title);
@@ -219,8 +216,8 @@ a {
 p {
   font-family: var(--font-text);
   font-weight: 400;
-  color: var(--color-text);
   font-size: 18px;
+  color: var(--color-text);
   @media screen and (max-width: 768px) {
     font-size: 16px;
   }

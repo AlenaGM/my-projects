@@ -49,28 +49,17 @@ const props = defineProps({
   &__image {
     padding: 0 0 40%;
     position: relative;
-    aspect-ratio: 1;
-    z-index: 1;
-    filter: brightness(0.95);
-    cursor: pointer;
     width: calc(100% - 4rem);
+    aspect-ratio: 1;
     margin-left: 2rem;
     margin-right: 2rem;
     margin-bottom: -20%;
-    &_deco {
-      content: '';
-      position: absolute;
-      top: 1.5rem;
-      left: 1rem;
-      border: var(--border);
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
+    filter: brightness(0.95);
+    z-index: 1;
+    cursor: pointer;
     a {
-      overflow: hidden;
-      box-sizing: border-box;
       display: block;
+      box-sizing: border-box;
       overflow: hidden;
       width: initial;
       height: initial;
@@ -86,12 +75,42 @@ const props = defineProps({
       right: 0;
     }
     img {
-      position: absolute;
-      top: 0;
-      left: 0;
       object-fit: cover;
       height: 100%;
       width: 100%;
+    }
+    &_deco {
+      content: '';
+      position: absolute;
+      top: 1.5rem;
+      left: 1rem;
+      width: 100%;
+      height: 100%;
+      border: var(--border);
+      z-index: -1;
+    }
+  }
+  &__title {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    margin: 0 auto -1.75rem 1rem;
+    padding: 8px 28px;
+    font-family: var(--font-text);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 2em;
+    letter-spacing: -0.01em;
+    transition: transform 0.25s ease;
+    z-index: 2;
+    cursor: pointer;
+    @media (hover: hover) {
+      &:hover {
+        color: var(--color-white);
+        transform: translateY(-8px);
+        transition: transform 0.25s ease;
+      }
     }
   }
   &__content {
@@ -99,50 +118,16 @@ const props = defineProps({
     grid-template-rows: 1fr minmax(120px, auto);
     align-content: space-between;
     justify-items: start;
-    position: relative;
-    width: 100%;
     padding: 1rem;
+    width: 100%;
     background-color: var(--color-white);
     box-shadow: var(--box-shadow);
     z-index: 3;
   }
-  &__title {
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    display: flex;
-    justify-content: center;
-    font-family: var(--font-text);
-    font-size: 13px;
-    line-height: 2em;
-    font-weight: 700;
-    padding: 8px 28px;
-    letter-spacing: -0.01em;
-    margin: 0 auto -1.75rem 1rem;
-    z-index: 2;
-    transition: transform 0.25s ease;
-    cursor: pointer;
-    @media (hover: hover) {
-      &:hover {
-        transition: transform 0.25s ease;
-        transform: translateY(-8px);
-        color: var(--color-white);
-      }
-    }
-  }
-  &__tech {
-    border-top: solid 1px var(--color-text);
-    text-align: left;
-    width: 100%;
-    display: grid;
-    align-content: space-between;
-    p {
-      margin: 0.5rem 0 1.5rem;
-    }
-  }
   &__info {
+    display: grid;
     text-align: left;
     margin: 0 0 1.5rem 0;
-    display: grid;
     p {
       padding: 0.5rem 0;
       margin: 0;
@@ -151,18 +136,26 @@ const props = defineProps({
       }
     }
   }
+  &__tech {
+    display: grid;
+    align-content: space-between;
+    text-align: left;
+    width: 100%;
+    border-top: solid 1px var(--color-text);
+    p {
+      margin: 0.5rem 0 1.5rem;
+    }
+  }
   &__links {
     display: flex;
     flex-direction: row;
-    position: relative;
     justify-content: flex-end;
     width: 100%;
     a {
       display: flex;
-      position: relative;
       align-items: flex-start;
-      font-size: 14px;
       margin-top: 0.5rem;
+      font-size: 14px;
       white-space: nowrap;
       transition:
         transform 0.2s ease,
@@ -177,14 +170,16 @@ const props = defineProps({
       &:last-of-type svg {
         font-size: 1.25rem;
       }
-      &:hover {
-        transform: translateY(-3px);
-        transition:
-          transform 0.2s ease,
-          color 0.2s ease;
-      }
-      &:active {
-        top: 3px;
+      @media (hover: hover) {
+        &:hover {
+          transform: translateY(-3px);
+          transition:
+            transform 0.2s ease,
+            color 0.2s ease;
+        }
+        &:active {
+          top: 3px;
+        }
       }
     }
   }

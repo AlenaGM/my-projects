@@ -7,7 +7,7 @@
       <span>Hi! I'm Alëna Guillaume,</span>
       <h1>Frontend Developer</h1>
     </div>
-    <div class="hero__image">
+    <div>
       <picture>
         <source
           srcset="@/assets/img/illustration.webp, @/assets/img/illustration@2x.webp 2x"
@@ -35,7 +35,6 @@
   }
   @media screen and (max-width: 1023px) {
     grid-template-columns: 1fr;
-    align-items: start;
     justify-items: center;
   }
   &__title {
