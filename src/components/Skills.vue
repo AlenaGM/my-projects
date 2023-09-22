@@ -41,6 +41,9 @@ const skills = [
         <label class="tech-text">{{ skill }}</label>
       </div>
     </div>
+    <div class="skills__list_item" v-for="(item, i) in skills" :key="i">
+      <img :src="`/icons/${item}.png`" :alt="item" />
+    </div>
   </section>
 </template>
 
