@@ -35,14 +35,9 @@ const skills = [
     </div>
     <div class="skills__list">
       <div class="skills__list_item" v-for="(skill, i) in skills" :key="i">
-        <div class="skills__list_image">
-          <img :src="`/icons/${skill}.png`" :alt="skill" />
-        </div>
-        <label class="tech-text">{{ skill }}</label>
+        <img class="skills__list_image" :src="`/icons/${skill}.png`" :alt="skill" />
+        <div class="tech-text">{{ skill }}</div>
       </div>
-    </div>
-    <div class="skills__list_item" v-for="(item, i) in skills" :key="i">
-      <img :src="`/icons/${item}.png`" :alt="item" />
     </div>
   </section>
 </template>
@@ -70,26 +65,17 @@ const skills = [
       padding: 0.75rem;
       border: var(--border);
       box-shadow: var(--box-shadow);
-    }
-    &_image {
-      position: relative;
-      margin: auto;
-      padding-bottom: 60%;
-      aspect-ratio: 1/1;
-      display: flex;
-      justify-content: center;
       img {
-        position: absolute;
-        top: 0;
-        height: 100%;
         object-fit: contain;
+        max-height: 86px;
+        max-width: 86px;
       }
-    }
-    label {
-      text-align: center;
-      padding-top: 0.75rem;
-      @media screen and (max-width: 500px) {
-        font-size: 10px;
+      div {
+        text-align: center;
+        padding-top: 0.75rem;
+        @media screen and (max-width: 500px) {
+          font-size: 10px;
+        }
       }
     }
   }
