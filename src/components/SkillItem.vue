@@ -14,6 +14,62 @@ const props = defineProps({
     </div>
     <label class="tech-text">{{ skill }}</label>
   </div>
+
+  <!--TEST-->
+  <div class="skills__list_item">
+    <div class="skills__list_image">
+      <img src="@/assets/img/React.png" alt="React" />
+    </div>
+    <label class="tech-text">React</label>
+  </div>
+  <div class="skills__list_item">
+    <div class="skills__list_image">
+      <img src="@/assets/img/VueJS.png" alt="VueJS" />
+    </div>
+    <label class="tech-text">VueJS</label>
+  </div>
+  <div class="skills__list_item">
+    <div class="skills__list_image">
+      <img src="@/assets/img/MobX.png" alt="MobX" />
+    </div>
+    <label class="tech-text">MobX</label>
+  </div>
+  <div class="skills__list_item">
+    <div class="skills__list_image">
+      <img src="@/assets/img/Pinia.png" alt="Pinia" />
+    </div>
+    <label class="tech-text">Pinia</label>
+  </div>
+  <div class="skills__list_item">
+    <div class="skills__list_image">
+      <img src="@/assets/img/JavaScript.png" alt="JavaScript" />
+    </div>
+    <label class="tech-text">JavaScript</label>
+  </div>
+  <div class="skills__list_item">
+    <div class="skills__list_image">
+      <img src="@/assets/img/TypeScript.png" alt="TypeScript" />
+    </div>
+    <label class="tech-text">TypeScript</label>
+  </div>
+  <div class="skills__list_item">
+    <div class="skills__list_image">
+      <img src="@/assets/img/HTML5.png" alt="HTML5" />
+    </div>
+    <label class="tech-text">HTML5</label>
+  </div>
+  <div class="skills__list_item">
+    <div class="skills__list_image">
+      <img src="@/assets/img/CSS3.png" alt="CSS3" />
+    </div>
+    <label class="tech-text">CSS3</label>
+  </div>
+  <div class="skills__list_item">
+    <div class="skills__list_image">
+      <img src="@/assets/img/Sass.png" alt="Sass" />
+    </div>
+    <label class="tech-text">Sass</label>
+  </div>
 </template>
 
 <style lang="scss" scoped>
