@@ -47,10 +47,7 @@ const skills = [
 <style lang="scss" scoped>
 .skills {
   h2::after {
-    background-image: image-set(
-      url('@/assets/img/subtitles/skills.webp') type('image/webp'),
-      url('@/assets/img/subtitles/skills.png') type('image/png')
-    );
+    background-image: url('@/assets/img/subtitles/skills.png') type('image/png');
   }
   &__list {
     display: grid;

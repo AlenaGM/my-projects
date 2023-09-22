@@ -29,10 +29,7 @@ import ContactForm from './ContactForm.vue'
 <style lang="scss" scoped>
 .contact {
   h2::after {
-    background-image: image-set(
-      url('@/assets/img/subtitles/contact.webp') type('image/webp'),
-      url('@/assets/img/subtitles/contact.png') type('image/png')
-    );
+    background-image: url('@/assets/img/subtitles/contact.png') type('image/png');
   }
   margin-bottom: calc(var(--section-gap) * 0.5);
   @media screen and (max-width: 1023px) {

@@ -206,10 +206,12 @@ label {
 a {
   transition: color 0.4s;
   cursor: pointer;
-  &:hover {
-    text-decoration: none;
-    color: var(--color-hover);
-    transition: color 0.4s;
+  @media (hover: hover) {
+    &:hover {
+      text-decoration: none;
+      color: var(--color-hover);
+      transition: color 0.4s;
+    }
   }
 }
 
