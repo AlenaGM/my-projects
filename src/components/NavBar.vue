@@ -168,11 +168,10 @@ const menu = [
       position: fixed;
       right: 0;
       top: 0;
-      bottom: 0;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      height: 100vh;
+      min-height: 100vh;
       width: 80vw;
       font-size: 1.5rem;
       background-color: var(--color-black);

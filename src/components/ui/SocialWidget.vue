@@ -29,7 +29,7 @@
   flex-direction: column;
   right: 0;
   top: 26%;
-  z-index: 80;
+  z-index: 90;
   align-items: flex-end;
   @media screen and (max-width: 768px) {
     top: 43%;

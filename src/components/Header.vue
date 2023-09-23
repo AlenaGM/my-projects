@@ -14,7 +14,7 @@ import Hero from './Hero.vue'
 <style lang="scss" scoped>
 .header {
   grid-template-rows: minmax(80px, auto) 1fr;
-  z-index: 90;
+  z-index: 80;
   background-color: var(--color-white);
 }
 </style>

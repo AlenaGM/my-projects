@@ -63,7 +63,7 @@ import Contact from '@/components/Contact.vue'
       position: fixed;
       right: 0.5rem;
       bottom: 1.5rem;
-      z-index: 80;
+      z-index: 60;
       transition: transform 0.25s cubic-bezier(0.23, 0.24, 0, 0.99);
       &:hover {
         transform: translateY(-3px);
@@ -137,7 +137,7 @@ import Contact from '@/components/Contact.vue'
       position: fixed;
       right: 0.75rem;
       bottom: 0.75rem;
-      z-index: 80;
+      z-index: 60;
       height: 40px;
       width: 40px;
       border-radius: 100px;
