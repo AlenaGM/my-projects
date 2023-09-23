@@ -71,7 +71,7 @@ const props = defineProps({
   line-height: 2em;
   white-space: nowrap;
   letter-spacing: -0.01em;
-  transition: all 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out;
   cursor: pointer;
   &:not(:last-of-type) {
     margin: 0 1.5rem 0 0;
@@ -88,22 +88,27 @@ const props = defineProps({
     width: 100%;
     height: 100%;
     z-index: -1;
+    transition: all 0.25s ease-in-out;
   }
   @media (hover: hover) {
     &:hover,
     &:focus {
       transform: translate(-8px, -8px);
+      transition: transform all 0.25s ease-in-out;
       &::after {
         border: solid 1.75px;
         border-color: inherit;
         top: 8px;
         left: 8px;
+        transition: all 0.25s ease-in-out;
       }
     }
     &:active {
+      transition: transform 0.25s ease-in-out;
       top: 8px;
       left: 8px;
       &::after {
+        transition: all 0.25s ease-in-out;
         top: 0px;
         left: 0px;
       }
