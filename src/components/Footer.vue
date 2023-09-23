@@ -14,7 +14,7 @@ import Contact from '@/components/Contact.vue'
             class="tech-text footer__bottom_link"
             href="https://github.com/AlenaGM/my-projects"
             role="link"
-            aria-label="link to this portfolio on github"
+            aria-label="open source"
             target="_blank"
             rel="noreferrer noopener"
           >
@@ -22,7 +22,7 @@ import Contact from '@/components/Contact.vue'
           >
         </div>
         <div class="footer__to-top">
-          <a href="#">
+          <a href="#" aria-label="#">
             <label>back to top</label>
             <span class="footer__to-top_lines"></span>
             <font-awesome-icon :icon="['fas', 'chevron-up']" class="footer__to-top_icon" />

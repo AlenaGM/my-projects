@@ -42,7 +42,7 @@ import uiButton from './ui/Button.vue'
           to="#"
           mobileFullWidth
           role="link"
-          aria-label="link to my resume"
+          aria-label="download my cv"
           target="_blank"
           rel="noreferrer noopener"
           >Download My CV</ui-button

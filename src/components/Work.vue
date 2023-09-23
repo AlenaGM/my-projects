@@ -22,7 +22,7 @@ import ProjectCard from '@/components/ProjectCard.vue'
         type="link"
         to="https://github.com/AlenaGM"
         mobileFullWidth
-        aria-label="link to my github"
+        aria-label="More projects on github"
         role="link"
         target="_blank"
         rel="noreferrer noopener"
