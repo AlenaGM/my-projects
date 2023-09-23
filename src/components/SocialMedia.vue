@@ -5,7 +5,6 @@
       aria-label="linkedin"
       target="_blank"
       rel="noreferrer noopener"
-      tabindex="5"
     >
       <font-awesome-icon :icon="['fab', 'linkedin-in']" />
     </a>
@@ -14,17 +13,10 @@
       aria-label="github"
       target="_blank"
       rel="noreferrer noopener"
-      tabindex="6"
     >
       <font-awesome-icon :icon="['fab', 'github']" />
     </a>
-    <a
-      href="https://t.me/alenagm"
-      aria-label="telegram"
-      target="_blank"
-      rel="noreferrer noopener"
-      tabindex="7"
-    >
+    <a href="https://t.me/alenagm" aria-label="telegram" target="_blank" rel="noreferrer noopener">
       <font-awesome-icon :icon="['fab', 'telegram']" />
     </a>
     <a
@@ -32,7 +24,6 @@
       aria-label="instagram"
       target="_blank"
       rel="noreferrer noopener"
-      tabindex="8"
     >
       <font-awesome-icon :icon="['fab', 'instagram']" />
     </a>

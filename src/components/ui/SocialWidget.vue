@@ -8,7 +8,6 @@
       aria-label="github"
       target="_blank"
       rel="noreferrer noopener"
-      tabindex="14"
     >
       <font-awesome-icon :icon="['fab', 'github']" />
     </a>
@@ -17,7 +16,6 @@
       aria-label="linkedin"
       target="_blank"
       rel="noreferrer noopener"
-      tabindex="15"
     >
       <font-awesome-icon :icon="['fab', 'linkedin-in']" />
     </a>

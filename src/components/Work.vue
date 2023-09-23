@@ -22,10 +22,10 @@ import ProjectCard from '@/components/ProjectCard.vue'
         type="link"
         to="https://github.com/AlenaGM"
         mobileFullWidth
-        aria-label="github"
+        aria-label="link to my github"
+        role="link"
         target="_blank"
         rel="noreferrer noopener"
-        tabindex="4"
       >
         More projects on github
       </ui-button>
@@ -36,7 +36,7 @@ import ProjectCard from '@/components/ProjectCard.vue'
 <style lang="scss" scoped>
 .work {
   h2::after {
-    background-image: url('@/assets/img/subtitles/work.png');
+    background-image: url('@/assets/img/subtitles/work.webp');
   }
   display: grid;
   &__gallery {

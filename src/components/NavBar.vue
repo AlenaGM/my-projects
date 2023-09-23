@@ -45,7 +45,7 @@ const menu = [
     <nav class="navbar__menu">
       <ul class="navbar__menu_links">
         <li v-for="(element, i) of menu" :key="i">
-          <a :href="element.path" tabindex="1">
+          <a :href="element.path">
             {{ element.name }}
           </a>
         </li>
@@ -90,6 +90,7 @@ const menu = [
       img {
         display: block;
         height: 48px;
+        width: auto;
         max-width: 100%;
         transition: transform 0.25s ease;
         &:hover {

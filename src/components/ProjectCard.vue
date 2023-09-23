@@ -15,7 +15,7 @@ const props = defineProps({
   >
     <div class="card__image">
       <a :href="demo" target="_blank" rel="noreferrer" tabindex="-1">
-        <img :src="`${image}.png`" :alt="title" />
+        <img :src="`${image}.webp`" :alt="title" />
       </a>
       <div class="card__image_deco"></div>
     </div>
@@ -29,10 +29,10 @@ const props = defineProps({
       <div class="card__tech">
         <p class="tech-text"><span class="tech-text">Stack: </span>{{ tech }}</p>
         <div class="card__links">
-          <a :href="demo" target="_blank" rel="noreferrer" class="tech-text" tabindex="3">
+          <a :href="demo" target="_blank" rel="noreferrer" class="tech-text">
             View Project: <font-awesome-icon :icon="['fas', 'cat']" />
           </a>
-          <a :href="code" target="_blank" rel="noreferrer" class="tech-text" tabindex="3">
+          <a :href="code" target="_blank" rel="noreferrer" class="tech-text">
             View Code: <font-awesome-icon :icon="['fab', 'github']" />
           </a>
         </div>

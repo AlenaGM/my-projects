@@ -13,16 +13,16 @@ import Contact from '@/components/Contact.vue'
           <a
             class="tech-text footer__bottom_link"
             href="https://github.com/AlenaGM/my-projects"
-            aria-label="github"
+            role="link"
+            aria-label="link to this portfolio on github"
             target="_blank"
             rel="noreferrer noopener"
-            tabindex="13"
           >
             open source</a
           >
         </div>
         <div class="footer__to-top">
-          <a href="#" tabindex="16">
+          <a href="#">
             <label>back to top</label>
             <span class="footer__to-top_lines"></span>
             <font-awesome-icon :icon="['fas', 'chevron-up']" class="footer__to-top_icon" />

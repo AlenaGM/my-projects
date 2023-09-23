@@ -41,10 +41,10 @@ import uiButton from './ui/Button.vue'
           type="link"
           to="#"
           mobileFullWidth
-          aria-label="my resume"
+          role="link"
+          aria-label="link to my resume"
           target="_blank"
           rel="noreferrer noopener"
-          tabindex="2"
           >Download My CV</ui-button
         >
       </div>
@@ -55,7 +55,7 @@ import uiButton from './ui/Button.vue'
 <style lang="scss" scoped>
 .about {
   h2::after {
-    background-image: url('@/assets/img/subtitles/about.png');
+    background-image: url('@/assets/img/subtitles/about.webp');
   }
   &__container {
     display: grid;

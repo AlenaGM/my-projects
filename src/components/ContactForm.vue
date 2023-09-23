@@ -105,7 +105,6 @@ const isButtonDisabled = computed(() => {
           name="user_name"
           placeholder="Name"
           maxlength="71"
-          tabindex="9"
           v-model="valid.nameField.$model"
           @input="updateValue"
         />
@@ -121,7 +120,6 @@ const isButtonDisabled = computed(() => {
           name="user_email"
           maxlength="254"
           placeholder="E-mail"
-          tabindex="10"
           v-model="valid.emailField.$model"
           @input="updateValue"
         />
@@ -136,7 +134,6 @@ const isButtonDisabled = computed(() => {
         name="message"
         maxlength="1001"
         placeholder="Write me a message"
-        tabindex="11"
         v-model="valid.messageField.$model"
         @input="updateValue"
       />
@@ -149,9 +146,7 @@ const isButtonDisabled = computed(() => {
     </div>
 
     <div>
-      <ui-button :disabled="isButtonDisabled" type="submit" mobileFullWidth tabindex="12"
-        >Send</ui-button
-      >
+      <ui-button :disabled="isButtonDisabled" type="submit" mobileFullWidth>Send</ui-button>
     </div>
   </form>
 </template>
