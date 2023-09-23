@@ -44,6 +44,7 @@ import uiButton from './ui/Button.vue'
           aria-label="my resume"
           target="_blank"
           rel="noreferrer noopener"
+          tabindex="2"
           >Download My CV</ui-button
         >
       </div>

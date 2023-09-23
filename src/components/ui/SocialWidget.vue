@@ -8,6 +8,7 @@
       aria-label="github"
       target="_blank"
       rel="noreferrer noopener"
+      tabindex="14"
     >
       <font-awesome-icon :icon="['fab', 'github']" />
     </a>
@@ -16,6 +17,7 @@
       aria-label="linkedin"
       target="_blank"
       rel="noreferrer noopener"
+      tabindex="15"
     >
       <font-awesome-icon :icon="['fab', 'linkedin-in']" />
     </a>
@@ -75,6 +77,10 @@
           inline-size 0.5s ease,
           color 0.4s,
           background-color 0.4s;
+      }
+      &:focus {
+        outline: none;
+        border: solid 2px var(--color-secondary);
       }
     }
   }

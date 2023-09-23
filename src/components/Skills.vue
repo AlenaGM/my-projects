@@ -69,7 +69,7 @@ const skills = [
         object-fit: contain;
         aspect-ratio: 1;
 
-        width: 84%;
+        width: 80%;
       }
       div {
         text-align: center;

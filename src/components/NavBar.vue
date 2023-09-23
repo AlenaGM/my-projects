@@ -31,7 +31,7 @@ const menu = [
 <template>
   <div class="header__navbar navbar">
     <div class="navbar__logo">
-      <a href="#">
+      <a href="#" tabindex="-1">
         <picture>
           <source srcset="@/assets/img/logo.webp, @/assets/img/logo@2x.webp 2x" type="image/webp" />
           <img
@@ -45,7 +45,7 @@ const menu = [
     <nav class="navbar__menu">
       <ul class="navbar__menu_links">
         <li v-for="(element, i) of menu" :key="i">
-          <a :href="element.path">
+          <a :href="element.path" tabindex="1">
             {{ element.name }}
           </a>
         </li>
@@ -129,8 +129,11 @@ const menu = [
             transition: width 0.25s ease;
           }
         }
-        a:hover {
-          color: inherit;
+
+        a {
+          &:hover {
+            color: inherit;
+          }
         }
       }
       @media screen and (max-width: 768px) {

@@ -14,12 +14,14 @@ const props = defineProps({
     :key="id"
   >
     <div class="card__image">
-      <a :href="demo" target="_blank" rel="noreferrer">
+      <a :href="demo" target="_blank" rel="noreferrer" tabindex="-1">
         <img :src="`${image}.png`" :alt="title" />
       </a>
       <div class="card__image_deco"></div>
     </div>
-    <a class="card__title" :href="demo" target="_blank" rel="noreferrer">{{ title }}</a>
+    <a class="card__title" :href="demo" target="_blank" rel="noreferrer" tabindex="-1">{{
+      title
+    }}</a>
     <div class="card__content">
       <div class="card__info">
         {{ info }}
@@ -27,10 +29,10 @@ const props = defineProps({
       <div class="card__tech">
         <p class="tech-text"><span class="tech-text">Stack: </span>{{ tech }}</p>
         <div class="card__links">
-          <a :href="demo" target="_blank" rel="noreferrer" class="tech-text">
+          <a :href="demo" target="_blank" rel="noreferrer" class="tech-text" tabindex="3">
             View Project: <font-awesome-icon :icon="['fas', 'cat']" />
           </a>
-          <a :href="code" target="_blank" rel="noreferrer" class="tech-text">
+          <a :href="code" target="_blank" rel="noreferrer" class="tech-text" tabindex="3">
             View Code: <font-awesome-icon :icon="['fab', 'github']" />
           </a>
         </div>

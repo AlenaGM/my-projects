@@ -208,9 +208,12 @@ a {
   cursor: pointer;
   @media (hover: hover) {
     &:hover {
-      text-decoration: none;
       color: var(--color-hover);
       transition: color 0.4s;
+    }
+    &:focus {
+      color: var(--color-primary);
+      outline: none;
     }
   }
 }

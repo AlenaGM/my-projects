@@ -9,19 +9,20 @@ import Contact from '@/components/Contact.vue'
       <Contact />
       <div class="footer__bottom">
         <div class="tech-text">
-          ©️ 2023 Alena G.,
+          ©️ 2023 Alena G., My portfolio is
           <a
             class="tech-text footer__bottom_link"
             href="https://github.com/AlenaGM/my-projects"
             aria-label="github"
             target="_blank"
             rel="noreferrer noopener"
+            tabindex="13"
           >
-            My portfolio is open source</a
+            open source</a
           >
         </div>
         <div class="footer__to-top">
-          <a href="#">
+          <a href="#" tabindex="16">
             <label>back to top</label>
             <span class="footer__to-top_lines"></span>
             <font-awesome-icon :icon="['fas', 'chevron-up']" class="footer__to-top_icon" />
@@ -49,6 +50,13 @@ import Contact from '@/components/Contact.vue'
     @media screen and (max-width: 768px) {
       justify-items: center;
     }
+    .tech-text a {
+      text-decoration: underline;
+      &:focus {
+        color: var(--color-primary);
+        outline: none;
+      }
+    }
   }
   @media only screen {
     &__to-top {
@@ -66,8 +74,23 @@ import Contact from '@/components/Contact.vue'
         transform: rotate(270deg);
         padding-bottom: 10px;
         color: var(--color-text);
-        &:hover {
-          color: var(--color-hover);
+        @media (hover: hover) {
+          &:hover,
+          &:focus {
+            color: var(--color-hover);
+            .footer__to-top_lines {
+              &::before {
+                height: 23.5px;
+                transform: rotate(-43deg);
+                background-color: var(--color-hover);
+              }
+              &::after {
+                height: 23.5px;
+                transform: rotate(43deg);
+                background-color: var(--color-hover);
+              }
+            }
+          }
         }
         label {
           cursor: pointer;
@@ -101,22 +124,6 @@ import Contact from '@/components/Contact.vue'
       }
       &_icon {
         display: none;
-      }
-      @media (hover: hover) {
-        &:hover {
-          .footer__to-top_lines {
-            &::before {
-              height: 23.5px;
-              transform: rotate(-43deg);
-              background-color: var(--color-hover);
-            }
-            &::after {
-              height: 23.5px;
-              transform: rotate(43deg);
-              background-color: var(--color-hover);
-            }
-          }
-        }
       }
     }
   }

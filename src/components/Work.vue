@@ -25,6 +25,7 @@ import ProjectCard from '@/components/ProjectCard.vue'
         aria-label="github"
         target="_blank"
         rel="noreferrer noopener"
+        tabindex="4"
       >
         More projects on github
       </ui-button>

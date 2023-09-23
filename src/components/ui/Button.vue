@@ -107,6 +107,10 @@ const props = defineProps({
         left: 0px;
       }
     }
+    &:focus {
+      border: solid 2px var(--color-primary);
+      outline: none;
+    }
   }
   &_black {
     color: var(--color-white);
@@ -128,6 +132,10 @@ const props = defineProps({
     background: transparent;
     border: 1.75px solid var(--color-gray);
     pointer-events: none;
+    &:focus {
+      border: 1.75px solid var(--color-gray);
+      outline: none;
+    }
   }
 }
 </style>
