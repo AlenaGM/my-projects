@@ -86,11 +86,12 @@ const menu = [
   z-index: 100;
   &__logo {
     grid-column: 1;
+
     a {
       img {
         display: block;
         height: 48px;
-        width: auto;
+        aspect-ratio: auto 48 / 125;
         max-width: 100%;
         transition: transform 0.25s ease;
         &:hover {
