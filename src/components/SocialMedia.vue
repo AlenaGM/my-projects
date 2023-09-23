@@ -44,9 +44,7 @@
   a {
     line-height: 1;
     font-size: 2.5rem;
-    transition:
-      transform 0.2s,
-      color 0.1s;
+    transition: color 0.25s ease;
     @media screen and (max-width: 768px) {
       font-size: 2rem;
     }
@@ -56,12 +54,13 @@
         margin-right: 1rem;
       }
     }
+    svg {
+      transition: transform 0.25s ease;
+    }
     @media (hover: hover) {
       &:hover svg {
         transform: translateY(-3px);
-        transition:
-          transform 0.2s,
-          color 0.1s;
+        transition: transform 0.25s ease;
       }
       &:active svg {
         top: 3px;

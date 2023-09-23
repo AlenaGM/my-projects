@@ -64,8 +64,10 @@ import Contact from '@/components/Contact.vue'
       right: 0.5rem;
       bottom: 1.5rem;
       z-index: 80;
+      transition: transform 0.25s cubic-bezier(0.23, 0.24, 0, 0.99);
       &:hover {
         transform: translateY(-3px);
+        transition: transform 0.25s cubic-bezier(0.23, 0.24, 0, 0.99);
       }
       a {
         position: relative;
@@ -74,6 +76,7 @@ import Contact from '@/components/Contact.vue'
         transform: rotate(270deg);
         padding-bottom: 10px;
         color: var(--color-text);
+        transition: 0.25s cubic-bezier(0.23, 0.24, 0, 0.99);
         @media (hover: hover) {
           &:hover,
           &:focus {
@@ -83,11 +86,13 @@ import Contact from '@/components/Contact.vue'
                 height: 23.5px;
                 transform: rotate(-43deg);
                 background-color: var(--color-hover);
+                transition: 0.25s cubic-bezier(0.23, 0.24, 0, 0.99);
               }
               &::after {
                 height: 23.5px;
                 transform: rotate(43deg);
                 background-color: var(--color-hover);
+                transition: 0.25s cubic-bezier(0.23, 0.24, 0, 0.99);
               }
             }
           }
@@ -113,7 +118,7 @@ import Contact from '@/components/Contact.vue'
           height: 50%;
           position: absolute;
           right: 0;
-          transition: 0.2s cubic-bezier(0.23, 0.24, 0, 0.99);
+          transition: 0.25s cubic-bezier(0.23, 0.24, 0, 0.99);
         }
         &::before {
           top: 0;

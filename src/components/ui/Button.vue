@@ -71,7 +71,7 @@ const props = defineProps({
   line-height: 2em;
   white-space: nowrap;
   letter-spacing: -0.01em;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.25s ease-in-out;
   cursor: pointer;
   &:not(:last-of-type) {
     margin: 0 1.5rem 0 0;

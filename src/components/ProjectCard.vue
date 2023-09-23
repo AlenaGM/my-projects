@@ -160,8 +160,8 @@ const props = defineProps({
       font-size: 14px;
       white-space: nowrap;
       transition:
-        transform 0.2s ease,
-        color 0.2s ease;
+        transform 0.25s ease,
+        color 0.25s ease;
       svg {
         font-size: 1.125rem;
         margin-left: 0.25rem;
@@ -176,8 +176,8 @@ const props = defineProps({
         &:hover {
           transform: translateY(-3px);
           transition:
-            transform 0.2s ease,
-            color 0.2s ease;
+            transform 0.25s ease,
+            color 0.25s ease;
         }
         &:active {
           top: 3px;

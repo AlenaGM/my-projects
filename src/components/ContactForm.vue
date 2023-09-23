@@ -182,13 +182,11 @@ const isButtonDisabled = computed(() => {
       outline: none;
       width: 100%;
       padding: 1rem 1.5rem;
-      transition:
-        color 0.2s ease-out,
-        background-color 0.2s ease-out,
-        border-color 0.2s ease-out;
+      transition: border 0.1s ease;
       &:focus {
         border: 2px solid var(--color-primary);
         outline: none;
+        transition: border 0.1s ease;
       }
     }
   }

@@ -51,8 +51,8 @@
     font-size: 1.75rem;
     transition:
       inline-size 0.5s ease,
-      color 0.4s,
-      background-color 0.4s;
+      color 0.25s ease,
+      background-color 0.25s ease;
 
     &::after {
       content: 'get in touch';
@@ -76,8 +76,8 @@
         inline-size: 148px;
         transition:
           inline-size 0.5s ease,
-          color 0.4s,
-          background-color 0.4s;
+          color 0.25s ease,
+          background-color 0.25s ease;
       }
       &:focus {
         outline: none;

@@ -91,8 +91,10 @@ const menu = [
         display: block;
         height: 48px;
         max-width: 100%;
+        transition: transform 0.25s ease;
         &:hover {
           transform: scale(1.1);
+          transition: transform 0.25s ease;
         }
         @media screen and (max-width: 768px) {
           height: 32px;
