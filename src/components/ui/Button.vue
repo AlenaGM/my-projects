@@ -90,7 +90,8 @@ const props = defineProps({
     z-index: -1;
   }
   @media (hover: hover) {
-    &:hover {
+    &:hover,
+    &:focus {
       transform: translate(-8px, -8px);
       &::after {
         border: solid 1.75px;
@@ -108,7 +109,6 @@ const props = defineProps({
       }
     }
     &:focus {
-      border: solid 2px var(--color-primary);
       outline: none;
     }
   }
@@ -135,6 +135,13 @@ const props = defineProps({
     &:focus {
       border: 1.75px solid var(--color-gray);
       outline: none;
+      transform: none;
+      &::after {
+        border: none;
+        border-color: inherit;
+        top: 0;
+        left: 0;
+      }
     }
   }
 }

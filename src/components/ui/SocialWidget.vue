@@ -69,7 +69,8 @@
       }
     }
     @media (hover: hover) {
-      &:hover {
+      &:hover,
+      &:focus {
         color: var(--color-primary);
         background-color: var(--color-white);
         inline-size: 148px;
@@ -80,7 +81,6 @@
       }
       &:focus {
         outline: none;
-        border: solid 2px var(--color-secondary);
       }
     }
   }
