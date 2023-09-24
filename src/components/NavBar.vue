@@ -86,7 +86,6 @@ const menu = [
   z-index: 100;
   &__logo {
     grid-column: 1;
-
     a {
       img {
         display: block;
@@ -95,7 +94,7 @@ const menu = [
         max-width: 100%;
         transition: transform 0.25s ease;
         &:hover {
-          transform: scale(1.1);
+          transform: scale(1.05);
           transition: transform 0.25s ease;
         }
         @media screen and (max-width: 768px) {

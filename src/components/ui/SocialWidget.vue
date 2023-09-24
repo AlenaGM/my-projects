@@ -48,10 +48,9 @@
     background-color: var(--color-primary);
     font-size: 1.75rem;
     transition:
-      inline-size 0.5s ease,
-      color 0.25s ease,
-      background-color 0.25s ease;
-
+      inline-size 1s ease,
+      color 0.5s ease,
+      background-color 0.5s ease;
     &::after {
       content: 'get in touch';
       text-transform: none;
@@ -73,9 +72,9 @@
         background-color: var(--color-white);
         inline-size: 148px;
         transition:
-          inline-size 0.5s ease,
-          color 0.25s ease,
-          background-color 0.25s ease;
+          inline-size 1s ease,
+          color 0.5s ease,
+          background-color 0.5s ease;
       }
       &:focus {
         outline: none;

@@ -9,12 +9,9 @@
 
   --color-primary: #f55758;
   --color-light-primary: #fcd4d1;
-  --color-secondary: #82555b;
 
   --color-success: #00aa69;
   --color-error: #f55758;
-  --color-warning: #f5a557;
-  --color-info: #74b2df;
 
   --color-title: var(--color-black);
   --color-text: var(--color-black);
@@ -29,6 +26,7 @@
   --font-title: 'Poppins', sans-serif;
   --font-text: 'Poppins', sans-serif;
   --font-accent: 'Ms Madi', cursive;
+  --font-tech: 'Red Hat Mono', monospace;
 }
 
 // styles reset & body styles
@@ -237,7 +235,7 @@ p {
 }
 
 .tech-text {
-  font-family: 'Red Hat Mono', monospace;
+  font-family: var(--font-tech);
   font-size: 0.75rem;
   span {
     font-weight: 600;
