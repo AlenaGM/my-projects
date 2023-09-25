@@ -179,7 +179,7 @@ const isButtonDisabled = computed(() => {
       padding: 1rem 1.5rem;
       transition: border 0.1s ease;
       &:focus {
-        border: 2px solid var(--color-primary);
+        border: 2px solid var(--color-light-primary);
         outline: none;
         transition: border 0.1s ease;
       }
