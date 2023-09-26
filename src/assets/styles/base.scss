@@ -4,11 +4,11 @@
 :root {
   --color-white: #ffffff;
   --color-light-gray: #f7f7f7;
-  --color-gray: #4c4c4c;
+  --color-gray: #43464b;
   --color-black: #1f1f1f;
 
   --color-primary: #f55758;
-  --color-light-primary: #fcd4d1;
+  --color-secondary: #fcd4d1;
 
   --color-success: #00aa69;
   --color-error: #f55758;
@@ -158,7 +158,7 @@ h2 {
   font-family: var(--font-title);
   font-weight: 700;
   font-size: calc(2.375rem + 1vw);
-  color: var(--color-light-primary);
+  color: var(--color-secondary);
   line-height: 1;
   letter-spacing: -4px;
   margin-bottom: 1.5rem;

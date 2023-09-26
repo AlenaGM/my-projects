@@ -7,6 +7,7 @@
       {
         button_black: color === 'black',
         button_white: color === 'white',
+        button_red: color === 'red',
         button_fullwidth: mobileFullWidth,
         button_disabled: disabled
       }
@@ -22,6 +23,7 @@
       {
         button_black: color === 'black',
         button_white: color === 'white',
+        button_red: color === 'red',
         button_fullwidth: mobileFullWidth,
         button_disabled: disabled
       }
@@ -126,6 +128,11 @@ const props = defineProps({
     color: var(--color-black);
     background: var(--color-white);
     border: 1.75px solid var(--color-white);
+  }
+  &_red {
+    color: var(--color-white);
+    background: var(--color-primary);
+    border: 1.75px solid var(--color-primary);
   }
   &_fullwidth {
     @media screen and (max-width: 500px) {
