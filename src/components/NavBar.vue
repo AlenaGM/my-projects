@@ -176,6 +176,7 @@ const menu = [
       background-color: var(--color-black);
       color: var(--color-white);
       padding: 1.5rem 1.5rem 1.5rem 4.5rem;
+      overflow: auto;
       ul {
         height: 100%;
         width: 100%;
