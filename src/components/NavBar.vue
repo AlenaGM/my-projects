@@ -24,38 +24,6 @@ const menu = [
   {
     name: 'Contact',
     path: '#contact'
-  },
-  {
-    name: 'About',
-    path: '#about'
-  },
-  {
-    name: 'Skills',
-    path: '#skills'
-  },
-  {
-    name: 'Work',
-    path: '#work'
-  },
-  {
-    name: 'Contact',
-    path: '#contact'
-  },
-  {
-    name: 'About',
-    path: '#about'
-  },
-  {
-    name: 'Skills',
-    path: '#skills'
-  },
-  {
-    name: 'Work',
-    path: '#work'
-  },
-  {
-    name: 'Contact',
-    path: '#contact'
   }
 ]
 </script>
@@ -116,7 +84,6 @@ const menu = [
   padding: 1.5rem 0;
   margin-bottom: -1px;
   z-index: 100;
-  overflow-x: auto;
   &__logo {
     grid-column: 1;
     a {
@@ -165,7 +132,6 @@ const menu = [
             transition: width 0.25s ease;
           }
         }
-
         a {
           &:hover {
             color: inherit;
@@ -198,12 +164,12 @@ const menu = [
     display: none;
     @media screen and (max-width: 768px) {
       position: fixed;
-      overflow-x: auto;
       right: 0;
       top: 0;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
+      height: 100%;
       min-height: 100vh;
       width: 80vw;
       font-size: 1.5rem;
@@ -213,10 +179,10 @@ const menu = [
       ul {
         height: 100%;
         width: 100%;
+        overflow: auto;
         display: flex;
         flex-direction: column;
         margin-top: 15vh;
-        overflow-x: auto;
         li {
           &:not(:last-of-type) {
             margin-bottom: 1.5rem;
