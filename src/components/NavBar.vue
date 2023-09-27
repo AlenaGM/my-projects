@@ -24,6 +24,38 @@ const menu = [
   {
     name: 'Contact',
     path: '#contact'
+  },
+  {
+    name: 'About',
+    path: '#about'
+  },
+  {
+    name: 'Skills',
+    path: '#skills'
+  },
+  {
+    name: 'Work',
+    path: '#work'
+  },
+  {
+    name: 'Contact',
+    path: '#contact'
+  },
+  {
+    name: 'About',
+    path: '#about'
+  },
+  {
+    name: 'Skills',
+    path: '#skills'
+  },
+  {
+    name: 'Work',
+    path: '#work'
+  },
+  {
+    name: 'Contact',
+    path: '#contact'
   }
 ]
 </script>
@@ -176,13 +208,13 @@ const menu = [
       background-color: var(--color-black);
       color: var(--color-white);
       padding: 1.5rem 1.5rem 1.5rem 4.5rem;
-      overflow: auto;
       ul {
         height: 100%;
         width: 100%;
         display: flex;
         flex-direction: column;
         margin-top: 15vh;
+        overflow: auto;
         li {
           &:not(:last-of-type) {
             margin-bottom: 1.5rem;
