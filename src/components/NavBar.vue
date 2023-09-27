@@ -116,6 +116,7 @@ const menu = [
   padding: 1.5rem 0;
   margin-bottom: -1px;
   z-index: 100;
+  overflow-x: auto;
   &__logo {
     grid-column: 1;
     a {
@@ -197,6 +198,7 @@ const menu = [
     display: none;
     @media screen and (max-width: 768px) {
       position: fixed;
+      overflow-x: auto;
       right: 0;
       top: 0;
       display: flex;
@@ -214,7 +216,7 @@ const menu = [
         display: flex;
         flex-direction: column;
         margin-top: 15vh;
-        overflow: auto;
+        overflow-x: auto;
         li {
           &:not(:last-of-type) {
             margin-bottom: 1.5rem;
