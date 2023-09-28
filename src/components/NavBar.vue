@@ -31,7 +31,7 @@ const menu = [
 <template>
   <div class="header__navbar navbar">
     <div class="navbar__logo">
-      <a href="#" tabindex="-1">
+      <a href="#">
         <picture>
           <source srcset="@/assets/img/logo.webp, @/assets/img/logo@2x.webp 2x" type="image/webp" />
           <img
@@ -100,6 +100,10 @@ const menu = [
         @media screen and (max-width: 768px) {
           height: 32px;
         }
+      }
+      &:focus img {
+        transform: scale(1.05);
+        transition: transform 0.25s ease;
       }
     }
   }
