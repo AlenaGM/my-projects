@@ -32,7 +32,7 @@
   z-index: 90;
   align-items: flex-end;
   @media screen and (max-width: 768px) {
-    top: 43vh;
+    top: 44vh;
   }
   a {
     display: flex;
