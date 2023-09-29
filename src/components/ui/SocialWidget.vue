@@ -28,11 +28,11 @@
   display: flex;
   flex-direction: column;
   right: 0;
-  top: 26%;
+  top: 26vh;
   z-index: 90;
   align-items: flex-end;
   @media screen and (max-width: 768px) {
-    top: 43%;
+    top: 43vh;
   }
   a {
     display: flex;
