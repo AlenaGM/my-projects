@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <button
-    v-if="type === 'submit'"
+    v-if="type === 'submit' || type === 'button'"
     :class="[
       'button',
       {
@@ -98,21 +98,17 @@ const props = defineProps({
       transform: translate(-8px, -8px);
       transition: transform all 0.25s ease-in-out;
       &::after {
-        border: solid 1.75px;
         border-color: inherit;
-        top: 8px;
-        left: 8px;
+        transform: translate(8px, 8px);
         transition: all 0.25s ease-in-out;
       }
     }
     &:active {
       transition: transform 0.25s ease-in-out;
-      top: 8px;
-      left: 8px;
+      transform: translate(8px, 8px);
       &::after {
         transition: all 0.25s ease-in-out;
-        top: 0px;
-        left: 0px;
+        transform: translate(-8px, -8px);
       }
     }
     &:focus {
