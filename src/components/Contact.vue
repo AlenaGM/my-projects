@@ -5,9 +5,9 @@ import ContactForm from './ContactForm.vue'
 </script>
 
 <template>
-  <div class="contact">
+  <section class="contact">
     <i id="contact" />
-    <h2>Get In Touch</h2>
+    <h2>Get In Touch <span>Contact</span></h2>
     <div class="contact__container">
       <div class="contact__info">
         <p>
@@ -23,14 +23,11 @@ import ContactForm from './ContactForm.vue'
       </div>
       <ContactForm />
     </div>
-  </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>
 .contact {
-  h2::after {
-    background-image: url('@/assets/img/subtitles/contact.webp');
-  }
   margin-bottom: calc(var(--section-gap) * 0.5);
   @media screen and (max-width: 1023px) {
     margin-bottom: calc(var(--section-gap-mobile) * 0.5);

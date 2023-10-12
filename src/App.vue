@@ -5,6 +5,7 @@
     <About />
     <Skills />
     <Work />
+    <Contact />
   </main>
   <Footer />
 </template>
@@ -15,6 +16,7 @@ import Footer from '@/components/Footer.vue'
 import About from '@/components/About.vue'
 import Skills from '@/components/Skills.vue'
 import Work from '@/components/Work.vue'
+import Contact from '@/components/Contact.vue'
 import SocialWidget from '@/components/ui/SocialWidget.vue'
 
 import { onMounted } from 'vue'
@@ -24,57 +26,57 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 onMounted(() => {
-  //Work section background color change
-  const tlWorkBg = gsap.timeline({
-    scrollTrigger: {
-      trigger: '.work',
-      start: 'top center',
-      end: 'bottom center',
-      duration: 0.7,
-      toggleActions: 'play reverse play reverse',
-      markers: true
-    }
+  //H2 titles animation
+  const titles = document.querySelectorAll('h2')
+  const subtitles = document.querySelectorAll('h2 span')
+
+  titles.forEach((item) => {
+    gsap.from(item, {
+      duration: 1,
+      autoAlpha: 0,
+      yPercent: 50,
+      scrollTrigger: {
+        trigger: item,
+        start: 'top 80%',
+        end: 'top 20%',
+        toggleActions: 'play none none reverse'
+      }
+    })
   })
 
-  tlWorkBg
-    .to('body', {
-      backgroundColor: 'var(--color-dark-gray)'
-    })
-    .to(
-      '.work p',
+  subtitles.forEach((item) => {
+    gsap.from(
+      item,
       {
-        color: 'var(--color-white)'
+        duration: 0.7,
+        autoAlpha: 0,
+        yPercent: 50,
+        scrollTrigger: {
+          trigger: item,
+          start: 'top 80%',
+          end: 'top 20%',
+          toggleActions: 'play none none reverse'
+        }
       },
-      '<'
+      '-=0.7'
     )
-    .to(
-      '.contact__info p',
-      {
-        color: 'var(--color-white)'
-      },
-      '<'
-    )
-    .to(
-      '.skills__list_item div',
-      {
-        color: 'var(--color-white)'
-      },
-      '<'
-    )
-    .to(
-      '.work__link a',
-      {
-        backgroundColor: 'var(--color-primary)',
-        border: '1.75px solid var(--color-primary)'
-      },
-      '<'
-    )
-    .to(
-      '.work__link a::after',
-      {
-        borderColor: 'inherit'
-      },
-      '<'
-    )
+  })
+
+  //About img animation
+  gsap.set('.about__image img', {
+    scale: 1.1,
+    yPercent: 5
+  })
+
+  gsap.to('.about__image img', {
+    yPercent: -5,
+    autoAlpha: 1,
+    scrollTrigger: {
+      trigger: '.about h2 span',
+      start: 'top 80%',
+      end: 'bottom 20%',
+      scrub: 1
+    }
+  })
 })
 </script>

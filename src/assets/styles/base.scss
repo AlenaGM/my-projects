@@ -54,9 +54,9 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition:
-    color 0.25s ease,
-    background-color 0.25s ease;
+  //transition:
+  //  color 0.25s ease,
+  //  background-color 0.25s ease;
 }
 
 img {
@@ -103,10 +103,6 @@ li {
 
 .footer {
   grid-area: footer;
-  margin-top: calc(var(--section-gap) * 0.5);
-  @media screen and (max-width: 1023px) {
-    margin-top: calc(var(--section-gap-mobile) * 0.5);
-  }
 }
 
 .header,
@@ -120,20 +116,20 @@ li {
 
 section {
   grid-column: 2;
-  padding-bottom: var(--section-gap);
+  margin-bottom: var(--section-gap);
   @media screen and (max-width: 1023px) {
-    padding-bottom: var(--section-gap-mobile);
+    margin-bottom: var(--section-gap-mobile);
   }
   &:first-of-type {
-    padding-top: calc(var(--section-gap) * 0.5);
+    margin-top: calc(var(--section-gap) * 0.5);
     @media screen and (max-width: 1023px) {
-      padding-top: calc(var(--section-gap-mobile) * 0.5);
+      margin-top: calc(var(--section-gap-mobile) * 0.5);
     }
   }
   &:last-of-type {
-    padding-bottom: calc(var(--section-gap) * 0.5);
+    margin-bottom: calc(var(--section-gap) * 0.5);
     @media screen and (max-width: 1023px) {
-      padding-bottom: calc(var(--section-gap-mobile) * 0.5);
+      margin-bottom: calc(var(--section-gap-mobile) * 0.5);
     }
   }
 }
@@ -163,29 +159,29 @@ h2 {
   line-height: 1;
   letter-spacing: -4px;
   margin-bottom: 1.5rem;
-  margin-left: 48px;
+  margin-left: 24px;
   z-index: 1;
-  @media screen and (max-width: 768px) {
-    margin-bottom: 1rem;
-    margin-left: 42px;
-  }
+  visibility: hidden;
   @media screen and (max-width: 500px) {
+    margin-bottom: 1rem;
+    margin-left: 18px;
     font-size: 32px;
     letter-spacing: -2px;
   }
-  &::after {
-    content: '';
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: auto 100%;
+  span {
+    font-family: var(--font-accent);
+    font-size: 36px;
+    color: var(--color-text);
+    letter-spacing: normal;
+    line-height: 1.2;
+    margin-top: -24px;
+    margin-left: -24px;
     z-index: 2;
-    height: 32px;
-    margin-top: -26px;
-    margin-left: -48px;
-    @media screen and (max-width: 768px) {
-      height: 24px;
-      margin-top: -14px;
-      margin-left: -42px;
+    visibility: hidden;
+    @media screen and (max-width: 500px) {
+      font-size: 28px;
+      margin-top: -18px;
+      margin-left: -18px;
     }
   }
 }

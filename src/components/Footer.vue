@@ -1,33 +1,28 @@
 <!-- eslint-disable vue/multi-word-component-names -->
-<script setup>
-import Contact from '@/components/Contact.vue'
-</script>
+<script setup></script>
 
 <template>
   <footer class="footer">
     <div class="footer__content">
-      <Contact />
-      <div class="footer__bottom">
-        <div class="tech-text">
-          ©️ 2023 Alena G., My portfolio is
-          <a
-            class="tech-text footer__bottom_link"
-            href="https://github.com/AlenaGM/my-projects"
-            role="link"
-            aria-label="open source"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            open source</a
-          >
-        </div>
-        <div class="footer__to-top">
-          <a href="#" aria-label="#">
-            <label>back to top</label>
-            <span class="footer__to-top_lines"></span>
-            <font-awesome-icon :icon="['fas', 'chevron-up']" class="footer__to-top_icon" />
-          </a>
-        </div>
+      <div class="tech-text">
+        ©️ 2023 Alena G., My portfolio is
+        <a
+          class="tech-text footer__content_link"
+          href="https://github.com/AlenaGM/my-projects"
+          role="link"
+          aria-label="open source"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          open source</a
+        >
+      </div>
+      <div class="footer__to-top">
+        <a href="#" aria-label="#">
+          <label>back to top</label>
+          <span class="footer__to-top_lines"></span>
+          <font-awesome-icon :icon="['fas', 'chevron-up']" class="footer__to-top_icon" />
+        </a>
       </div>
     </div>
   </footer>
@@ -35,15 +30,11 @@ import Contact from '@/components/Contact.vue'
 
 <style lang="scss" scoped>
 .footer {
-  bottom: 0;
   &__content {
     grid-column: 2;
     display: grid;
-  }
-  &__bottom {
-    display: grid;
-    padding: 0 0 0.5rem;
     align-items: center;
+    padding: 1.5rem 0;
     &_link {
       font-weight: normal;
       text-transform: none;
@@ -133,7 +124,7 @@ import Contact from '@/components/Contact.vue'
       }
     }
   }
-  @media (any-pointer: coarse) {
+  @media (any-pointer: coarse), (max-width: 1024px) {
     &__to-top {
       position: fixed;
       right: 0.75rem;

@@ -6,7 +6,7 @@ import uiButton from './ui/Button.vue'
 <template>
   <section class="about">
     <i id="about" />
-    <h2>Who I Am</h2>
+    <h2>Who I Am <span>About me</span></h2>
     <div class="about__container">
       <div class="about__image">
         <picture>
@@ -54,9 +54,6 @@ import uiButton from './ui/Button.vue'
 
 <style lang="scss" scoped>
 .about {
-  h2::after {
-    background-image: url('@/assets/img/subtitles/about.webp');
-  }
   &__container {
     display: grid;
     grid-template-columns: minmax(auto, 420px) 1fr;
@@ -70,6 +67,7 @@ import uiButton from './ui/Button.vue'
   &__image {
     box-shadow: var(--box-shadow);
     max-width: 420px;
+    overflow: hidden;
     img {
       width: 100%;
       height: 100%;
