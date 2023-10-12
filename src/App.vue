@@ -24,47 +24,22 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 onMounted(() => {
-  //Work section: background color change
-  gsap.set('.work', {
-    background: 'var(--color-white)'
-  })
-
-  gsap.set('.work h2', {
-    color: 'var(--color-secondary)'
-  })
-
-  const tlBg = gsap.timeline({
+  //Work section background color change
+  const tlWorkBg = gsap.timeline({
     scrollTrigger: {
       trigger: '.work',
-      start: 'top 50%',
-      end: 'bottom 50%',
-      duration: 0.2,
-      toggleActions: 'play reverse play reverse'
+      start: 'top center',
+      end: 'bottom center',
+      duration: 0.7,
+      toggleActions: 'play reverse play reverse',
+      markers: true
     }
   })
 
-  tlBg
-    .to(
-      'body',
-      {
-        background: 'var(--color-gray)'
-      },
-      '<'
-    )
-    .to(
-      '.work h2',
-      {
-        color: 'var(--color-primary)'
-      },
-      '<'
-    )
-    .to(
-      '.work',
-      {
-        backgroundColor: 'transparent'
-      },
-      '<'
-    )
+  tlWorkBg
+    .to('body', {
+      backgroundColor: 'var(--color-dark-gray)'
+    })
     .to(
       '.work p',
       {
@@ -73,9 +48,31 @@ onMounted(() => {
       '<'
     )
     .to(
-      '.contact h2',
+      '.contact__info p',
       {
-        color: 'var(--color-primary)'
+        color: 'var(--color-white)'
+      },
+      '<'
+    )
+    .to(
+      '.skills__list_item div',
+      {
+        color: 'var(--color-white)'
+      },
+      '<'
+    )
+    .to(
+      '.work__link a',
+      {
+        backgroundColor: 'var(--color-primary)',
+        border: '1.75px solid var(--color-primary)'
+      },
+      '<'
+    )
+    .to(
+      '.work__link a::after',
+      {
+        borderColor: 'inherit'
       },
       '<'
     )

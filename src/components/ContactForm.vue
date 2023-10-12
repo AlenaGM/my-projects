@@ -154,6 +154,7 @@ const isButtonDisabled = computed(() => {
 <style lang="scss" scoped>
 .form {
   display: grid;
+  position: relative;
   div {
     display: flex;
     width: 100%;

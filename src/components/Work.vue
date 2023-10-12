@@ -17,7 +17,7 @@ import ProjectCard from '@/components/ProjectCard.vue'
     <div class="work__gallery gallery">
       <ProjectCard :projects="projects" />
     </div>
-    <div>
+    <div class="work__link">
       <ui-button
         type="link"
         to="https://github.com/AlenaGM"
@@ -35,6 +35,7 @@ import ProjectCard from '@/components/ProjectCard.vue'
 
 <style lang="scss" scoped>
 .work {
+  z-index: 50;
   h2::after {
     background-image: url('@/assets/img/subtitles/work.webp');
   }

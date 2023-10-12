@@ -35,6 +35,7 @@ import Contact from '@/components/Contact.vue'
 
 <style lang="scss" scoped>
 .footer {
+  bottom: 0;
   &__content {
     grid-column: 2;
     display: grid;
