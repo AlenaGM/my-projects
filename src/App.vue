@@ -51,18 +51,30 @@ onMounted(() => {
   })
 
   tlAbout
-    .from('.about__title span', {
-      autoAlpha: 0,
-      opacity: 0,
-      y: '40px'
-    })
-    .from('.about__image', {
-      y: '40px'
-    })
-    .from('.about__image img', {
-      autoAlpha: 0,
-      opacity: 0
-    })
+    .from(
+      '.about__title span',
+      {
+        autoAlpha: 0,
+        opacity: 0,
+        y: '40px'
+      },
+      '<'
+    )
+    .from(
+      '.about__image',
+      {
+        y: '40px'
+      },
+      '<'
+    )
+    .from(
+      '.about__image img',
+      {
+        autoAlpha: 0,
+        opacity: 0
+      },
+      '<'
+    )
     .to(
       '.about__image img',
       {
@@ -100,18 +112,26 @@ onMounted(() => {
   })
 
   tlSkills
-    .from('.skills__title span', {
-      autoAlpha: 0,
-      opacity: 0,
-      y: '40px'
-    })
-    .from('.skills__info', {
-      autoAlpha: 0,
-      opacity: 0,
-      y: '40px'
-    })
+    .from(
+      '.skills__title span',
+      {
+        autoAlpha: 0,
+        opacity: 0,
+        y: '40px'
+      },
+      '<'
+    )
+    .from(
+      '.skills__info',
+      {
+        autoAlpha: 0,
+        opacity: 0,
+        y: '40px'
+      },
+      '<'
+    )
 
-  //Work section
+  //Work section - title&intro
   gsap.set('.work__title span', {
     opacity: 1
   })
@@ -131,16 +151,24 @@ onMounted(() => {
   })
 
   tlWork
-    .from('.work__title span', {
-      autoAlpha: 0,
-      opacity: 0,
-      y: '40px'
-    })
-    .from('.work__info', {
-      autoAlpha: 0,
-      opacity: 0,
-      y: '40px'
-    })
+    .from(
+      '.work__title span',
+      {
+        autoAlpha: 0,
+        opacity: 0,
+        y: '40px'
+      },
+      '<'
+    )
+    .from(
+      '.work__info',
+      {
+        autoAlpha: 0,
+        opacity: 0,
+        y: '40px'
+      },
+      '<'
+    )
 
   //Contact section
   gsap.set('.contact__title span', {
@@ -166,16 +194,24 @@ onMounted(() => {
   })
 
   tlContact
-    .from('.contact__title span', {
-      autoAlpha: 0,
-      opacity: 0,
-      y: '40px'
-    })
-    .from('.contact__info', {
-      autoAlpha: 0,
-      opacity: 0,
-      y: '40px'
-    })
+    .from(
+      '.contact__title span',
+      {
+        autoAlpha: 0,
+        opacity: 0,
+        y: '40px'
+      },
+      '<'
+    )
+    .from(
+      '.contact__info',
+      {
+        autoAlpha: 0,
+        opacity: 0,
+        y: '40px'
+      },
+      '<'
+    )
     .from(
       '.contact__form',
       {
