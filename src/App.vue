@@ -11,6 +11,10 @@
 </template>
 
 <script setup>
+import { onMounted } from 'vue'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 import About from '@/components/About.vue'
@@ -19,11 +23,104 @@ import Work from '@/components/Work.vue'
 import Contact from '@/components/Contact.vue'
 import SocialWidget from '@/components/ui/SocialWidget.vue'
 
-import { onMounted } from 'vue'
-
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
-onMounted(() => {})
+onMounted(() => {
+  const titles = document.querySelectorAll('h2')
+  const subtitles = document.querySelectorAll('h2 span')
+  const intros = document.querySelectorAll('.section-intro')
+
+  subtitles.forEach((subtitle) => {
+    gsap.set(subtitle, {
+      opacity: 1
+    })
+
+    const tlSubtitles = gsap.timeline({
+      ease: 'power1.in',
+      scrollTrigger: {
+        trigger: subtitle,
+        start: 'top 80%',
+        end: 'top 30%',
+        scrub: true
+      }
+    })
+
+    tlSubtitles.from(subtitle, {
+      autoAlpha: 0,
+      opacity: 0,
+      y: '40px'
+    })
+  })
+
+  intros.forEach((intro) => {
+    gsap.set(intro, {
+      opacity: 1
+    })
+
+    const tlIntros = gsap.timeline({
+      ease: 'power1.in',
+      scrollTrigger: {
+        trigger: intro,
+        start: 'top 90%',
+        end: 'top 50%',
+        scrub: true
+      }
+    })
+
+    tlIntros.from(intro, {
+      autoAlpha: 0,
+      opacity: 0,
+      y: '40px'
+    })
+  })
+
+  gsap.set('.about__image img', {
+    scale: 1.1,
+    yPercent: 5
+  })
+
+  const tlAboutImg = gsap.timeline({
+    ease: 'power1.in',
+    scrollTrigger: {
+      trigger: '.about__image img',
+      start: 'top 90%',
+      end: 'top 50%',
+      scrub: true
+    }
+  })
+
+  tlAboutImg
+    .to('.about__image img', {
+      yPercent: -5,
+      autoAlpha: 1,
+      opacity: 1
+    })
+    .from(
+      '.about__image',
+      {
+        y: '40px'
+      },
+      '<'
+    )
+
+  const tlForm = gsap.timeline({
+    ease: 'power1.in',
+    scrollTrigger: {
+      trigger: '.form',
+      start: 'top 90%',
+      end: 'top 50%',
+      scrub: true
+    }
+  })
+
+  tlForm.from(
+    '.form',
+    {
+      autoAlpha: 0,
+      opacity: 0,
+      y: '40px'
+    },
+    '<'
+  )
+})
 </script>
