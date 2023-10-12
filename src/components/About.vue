@@ -6,7 +6,7 @@ import uiButton from './ui/Button.vue'
 <template>
   <section class="about">
     <i id="about" />
-    <h2>Who I Am <span>About me</span></h2>
+    <h2 class="about__title">Who I Am <span>About me</span></h2>
     <div class="about__container">
       <div class="about__image">
         <picture>
@@ -21,7 +21,7 @@ import uiButton from './ui/Button.vue'
           />
         </picture>
       </div>
-      <div class="section-intro">
+      <div class="about__info section-intro">
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, dolor rerum! Rem
           inventore beatae dicta nemo vero, dolorum rerum vitae mollitia qui obcaecati facere

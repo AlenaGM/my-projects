@@ -26,52 +26,13 @@ import SocialWidget from '@/components/ui/SocialWidget.vue'
 gsap.registerPlugin(ScrollTrigger)
 
 onMounted(() => {
-  const titles = document.querySelectorAll('h2')
-  const subtitles = document.querySelectorAll('h2 span')
-  const intros = document.querySelectorAll('.section-intro')
-
-  subtitles.forEach((subtitle) => {
-    gsap.set(subtitle, {
-      opacity: 1
-    })
-
-    const tlSubtitles = gsap.timeline({
-      ease: 'power1.in',
-      scrollTrigger: {
-        trigger: subtitle,
-        start: 'top 80%',
-        end: 'top 30%',
-        scrub: true
-      }
-    })
-
-    tlSubtitles.from(subtitle, {
-      autoAlpha: 0,
-      opacity: 0,
-      y: '40px'
-    })
+  //About section
+  gsap.set('.about__title span', {
+    opacity: 1
   })
 
-  intros.forEach((intro) => {
-    gsap.set(intro, {
-      opacity: 1
-    })
-
-    const tlIntros = gsap.timeline({
-      ease: 'power1.in',
-      scrollTrigger: {
-        trigger: intro,
-        start: 'top 90%',
-        end: 'top 50%',
-        scrub: true
-      }
-    })
-
-    tlIntros.from(intro, {
-      autoAlpha: 0,
-      opacity: 0,
-      y: '40px'
-    })
+  gsap.set('.about__info', {
+    opacity: 1
   })
 
   gsap.set('.about__image img', {
@@ -79,48 +40,248 @@ onMounted(() => {
     yPercent: 5
   })
 
-  const tlAboutImg = gsap.timeline({
+  const tlAbout = gsap.timeline({
     ease: 'power1.in',
     scrollTrigger: {
-      trigger: '.about__image img',
-      start: 'top 90%',
-      end: 'top 50%',
-      scrub: true
+      trigger: '.about',
+      start: 'top 80%',
+      end: 'top 30%',
+      scrub: 1
     }
   })
 
-  tlAboutImg
-    .to('.about__image img', {
-      yPercent: -5,
-      autoAlpha: 1,
-      opacity: 1
+  tlAbout
+    .from('.about__title span', {
+      autoAlpha: 0,
+      opacity: 0,
+      y: '40px'
     })
-    .from(
-      '.about__image',
+    .from('.about__image', {
+      y: '40px'
+    })
+    .to(
+      '.about__image img',
       {
+        yPercent: -5,
+        autoAlpha: 1,
+        opacity: 1
+      },
+      '<'
+    )
+    .from(
+      '.about__info',
+      {
+        autoAlpha: 0,
+        opacity: 0,
         y: '40px'
       },
       '<'
     )
 
-  const tlForm = gsap.timeline({
+  //Skills section
+  gsap.set('.skills__title span', {
+    opacity: 1
+  })
+
+  gsap.set('.skills__info', {
+    opacity: 1
+  })
+
+  const tlSkills = gsap.timeline({
     ease: 'power1.in',
     scrollTrigger: {
-      trigger: '.form',
-      start: 'top 90%',
-      end: 'top 50%',
-      scrub: true
+      trigger: '.skills',
+      start: 'top 80%',
+      end: 'top 30%',
+      scrub: 1
     }
   })
 
-  tlForm.from(
-    '.form',
-    {
+  tlSkills
+    .from('.skills__title span', {
+      autoAlpha: 0,
+      opacity: 0,
+      yPercent: '40px'
+    })
+    .from('.skills__info', {
       autoAlpha: 0,
       opacity: 0,
       y: '40px'
-    },
-    '<'
-  )
+    })
+
+  //Work section
+  gsap.set('.work__title span', {
+    opacity: 1
+  })
+
+  gsap.set('.work__info', {
+    opacity: 1
+  })
+
+  const tlWork = gsap.timeline({
+    ease: 'power1.in',
+    scrollTrigger: {
+      trigger: '.work',
+      start: 'top 80%',
+      end: 'top 30%',
+      scrub: 1
+    }
+  })
+
+  tlWork
+    .from('.work__title span', {
+      autoAlpha: 0,
+      opacity: 0,
+      y: '40px'
+    })
+    .from('.work__info', {
+      autoAlpha: 0,
+      opacity: 0,
+      y: '40px'
+    })
+
+  //Contact section
+  gsap.set('.contact__title span', {
+    opacity: 1
+  })
+
+  gsap.set('.contact__info', {
+    opacity: 1
+  })
+
+  gsap.set('.contact__form', {
+    scale: 1.1,
+    yPercent: 5
+  })
+
+  const tlContact = gsap.timeline({
+    ease: 'power1.in',
+    scrollTrigger: {
+      trigger: '.contact',
+      start: 'top 80%',
+      end: 'top 30%',
+      scrub: 1
+    }
+  })
+
+  tlContact
+    .from('.contact__title span', {
+      autoAlpha: 0,
+      opacity: 0,
+      y: '40px'
+    })
+    .from('.contact__info', {
+      autoAlpha: 0,
+      opacity: 0,
+      y: '40px'
+    })
+    .from(
+      '.contact__form',
+      {
+        y: '40px',
+        autoAlpha: 0,
+        opacity: 0
+      },
+      '<'
+    )
 })
+
+//onMounted(() => {
+//  const titles = document.querySelectorAll('h2')
+//  const subtitles = document.querySelectorAll('h2 span')
+//  const intros = document.querySelectorAll('.section-intro')
+//
+//  subtitles.forEach((subtitle) => {
+//    gsap.set(subtitle, {
+//      opacity: 1
+//    })
+//
+//    const tlSubtitles = gsap.timeline({
+//      ease: 'power1.in',
+//      scrollTrigger: {
+//        trigger: subtitle,
+//        start: 'top 80%',
+//        end: 'top 30%',
+//        scrub: true
+//      }
+//    })
+//
+//    tlSubtitles.from(subtitle, {
+//      autoAlpha: 0,
+//      opacity: 0,
+//      y: '40px'
+//    })
+//  })
+//
+//  intros.forEach((intro) => {
+//    gsap.set(intro, {
+//      opacity: 1
+//    })
+//
+//    const tlIntros = gsap.timeline({
+//      ease: 'power1.in',
+//      scrollTrigger: {
+//        trigger: intro,
+//        start: 'top 90%',
+//        end: 'top 50%',
+//        scrub: true
+//      }
+//    })
+//
+//    tlIntros.from(intro, {
+//      autoAlpha: 0,
+//      opacity: 0,
+//      y: '40px'
+//    })
+//  })
+//
+//  gsap.set('.about__image img', {
+//    scale: 1.1,
+//    yPercent: 5
+//  })
+//
+//  const tlAboutImg = gsap.timeline({
+//    ease: 'power1.in',
+//    scrollTrigger: {
+//      trigger: '.about__image img',
+//      start: 'top 90%',
+//      end: 'top 50%',
+//      scrub: true
+//    }
+//  })
+//
+//  tlAboutImg
+//    .to('.about__image img', {
+//      yPercent: -5,
+//      autoAlpha: 1,
+//      opacity: 1
+//    })
+//    .from(
+//      '.about__image',
+//      {
+//        y: '40px'
+//      },
+//      '<'
+//    )
+//
+//  const tlForm = gsap.timeline({
+//    ease: 'power1.in',
+//    scrollTrigger: {
+//      trigger: '.form',
+//      start: 'top 90%',
+//      end: 'top 50%',
+//      scrub: true
+//    }
+//  })
+//
+//  tlForm.from(
+//    '.form',
+//    {
+//      autoAlpha: 0,
+//      opacity: 0,
+//      y: '40px'
+//    },
+//    '<'
+//  )
+//})
 </script>
