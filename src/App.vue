@@ -59,12 +59,14 @@ onMounted(() => {
     .from('.about__image', {
       y: '40px'
     })
+    .from('.about__image img', {
+      autoAlpha: 0,
+      opacity: 0
+    })
     .to(
       '.about__image img',
       {
-        yPercent: -5,
-        autoAlpha: 1,
-        opacity: 1
+        yPercent: -5
       },
       '<'
     )
@@ -101,7 +103,7 @@ onMounted(() => {
     .from('.skills__title span', {
       autoAlpha: 0,
       opacity: 0,
-      yPercent: '40px'
+      y: '40px'
     })
     .from('.skills__info', {
       autoAlpha: 0,
@@ -145,13 +147,12 @@ onMounted(() => {
     opacity: 1
   })
 
-  gsap.set('.contact__info', {
+  gsap.set('.contact__container', {
     opacity: 1
   })
 
   gsap.set('.contact__form', {
-    scale: 1.1,
-    yPercent: 5
+    opacity: 1
   })
 
   const tlContact = gsap.timeline({
@@ -184,6 +185,22 @@ onMounted(() => {
       },
       '<'
     )
+
+  //To top arrow
+  gsap.set('.footer__to-top', {
+    opacity: 1
+  })
+
+  gsap.from('.footer__to-top', {
+    scrollTrigger: {
+      trigger: '.about',
+      start: 'bottom bottom',
+      toggleActions: 'play none play reverse'
+    },
+    ease: 'power1.in',
+    autoAlpha: 0,
+    opacity: 0
+  })
 })
 
 //onMounted(() => {

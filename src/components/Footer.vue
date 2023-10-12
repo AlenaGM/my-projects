@@ -57,6 +57,7 @@
       bottom: 1.5rem;
       z-index: 60;
       transition: transform 0.25s cubic-bezier(0.23, 0.24, 0, 0.99);
+      visibility: hidden;
       &:hover {
         transform: translateY(-3px);
         transition: transform 0.25s cubic-bezier(0.23, 0.24, 0, 0.99);

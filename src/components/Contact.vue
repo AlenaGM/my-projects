@@ -44,6 +44,7 @@ import ContactForm from './ContactForm.vue'
   }
   &__info p:last-of-type {
     margin-bottom: 4rem;
+    visibility: hidden;
     @media screen and (max-width: 768px) {
       margin-bottom: 24px;
     }
