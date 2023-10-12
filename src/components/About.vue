@@ -21,7 +21,7 @@ import uiButton from './ui/Button.vue'
           />
         </picture>
       </div>
-      <div>
+      <div class="section-intro">
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, dolor rerum! Rem
           inventore beatae dicta nemo vero, dolorum rerum vitae mollitia qui obcaecati facere

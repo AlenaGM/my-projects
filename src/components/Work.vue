@@ -9,11 +9,14 @@ import ProjectCard from '@/components/ProjectCard.vue'
   <section class="work">
     <i id="work" />
     <h2>Some of My Projects <span>Work</span></h2>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia magnam veniam, ipsa sunt
-      delectus reiciendis, exercitationem esse ad minima quibusdam aliquid aut facere non sint culpa
-      blanditiis animi, velit consequatur.
-    </p>
+    <div class="section-intro">
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia magnam veniam, ipsa sunt
+        delectus reiciendis, exercitationem esse ad minima quibusdam aliquid aut facere non sint
+        culpa blanditiis animi, velit consequatur.
+      </p>
+    </div>
+
     <div class="work__gallery gallery">
       <ProjectCard :projects="projects" />
     </div>

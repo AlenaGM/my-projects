@@ -7,7 +7,7 @@
       <span>Hi! I'm Alëna Guillaume,</span>
       <h1>Frontend Developer</h1>
     </div>
-    <div>
+    <div class="hero__image">
       <picture>
         <source
           srcset="@/assets/img/illustration.webp, @/assets/img/illustration@2x.webp 2x"
@@ -54,9 +54,12 @@
       }
     }
   }
-  img {
-    width: 100%;
-    height: 100%;
+  &__image {
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 </style>

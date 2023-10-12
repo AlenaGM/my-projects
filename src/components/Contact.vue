@@ -9,7 +9,7 @@ import ContactForm from './ContactForm.vue'
     <i id="contact" />
     <h2>Get In Touch <span>Contact</span></h2>
     <div class="contact__container">
-      <div class="contact__info">
+      <div class="contact__info div section-intro">
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia magnam veniam, ipsa sunt
           delectus reiciendis, exercitationem esse ad minima quibusdam aliquid aut facere non sint

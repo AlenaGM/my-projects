@@ -25,58 +25,5 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
-onMounted(() => {
-  //H2 titles animation
-  const titles = document.querySelectorAll('h2')
-  const subtitles = document.querySelectorAll('h2 span')
-
-  titles.forEach((item) => {
-    gsap.from(item, {
-      duration: 1,
-      autoAlpha: 0,
-      yPercent: 50,
-      scrollTrigger: {
-        trigger: item,
-        start: 'top 80%',
-        end: 'top 20%',
-        toggleActions: 'play none none reverse'
-      }
-    })
-  })
-
-  subtitles.forEach((item) => {
-    gsap.from(
-      item,
-      {
-        duration: 0.7,
-        autoAlpha: 0,
-        yPercent: 50,
-        scrollTrigger: {
-          trigger: item,
-          start: 'top 80%',
-          end: 'top 20%',
-          toggleActions: 'play none none reverse'
-        }
-      },
-      '-=0.7'
-    )
-  })
-
-  //About img animation
-  gsap.set('.about__image img', {
-    scale: 1.1,
-    yPercent: 5
-  })
-
-  gsap.to('.about__image img', {
-    yPercent: -5,
-    autoAlpha: 1,
-    scrollTrigger: {
-      trigger: '.about h2 span',
-      start: 'top 80%',
-      end: 'bottom 20%',
-      scrub: 1
-    }
-  })
-})
+onMounted(() => {})
 </script>
