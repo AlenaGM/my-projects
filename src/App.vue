@@ -149,6 +149,26 @@ onMounted(() => {
       '<'
     )
 
+  //Skills section - items
+  gsap.from(
+    '.skills__list_item',
+    {
+      opacity: 0,
+      yPercent: 20,
+      stagger: {
+        from: 'center',
+        each: 0.1
+      },
+      scrollTrigger: {
+        trigger: '.skills__list',
+        start: 'top 85%',
+        end: 'top 40%',
+        scrub: true
+      }
+    },
+    '<'
+  )
+
   //Work section - title&intro
   gsap.set('.work__title', {
     opacity: 1
@@ -206,13 +226,13 @@ onMounted(() => {
     })
 
     gsap.from(card, {
-      yPercent: 25,
+      yPercent: 15,
+      ease: 'power1.in',
       scrollTrigger: {
         trigger: card,
         start: 'top bottom',
-        end: 'bottom 80%',
-        scrub: 1,
-        markers: true
+        end: 'top 70%',
+        scrub: 1
       }
     })
   })
