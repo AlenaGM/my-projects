@@ -65,10 +65,8 @@ import uiButton from './ui/Button.vue'
     }
   }
   &__image {
-    box-shadow: var(--box-shadow);
     max-width: 420px;
     overflow: hidden;
-
     img {
       width: 100%;
       height: 100%;

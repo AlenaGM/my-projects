@@ -48,6 +48,7 @@ const props = defineProps({
   grid-template: auto minmax(32px, auto) 1fr/1fr;
   max-width: 400px;
   width: 100%;
+
   &__image {
     padding: 0 0 40%;
     position: relative;
@@ -97,8 +98,8 @@ const props = defineProps({
     justify-content: center;
     background-color: var(--color-primary);
     color: var(--color-white);
-    margin: 0 auto -1.75rem 1rem;
-    padding: 8px 28px;
+    margin: 0 auto -4rem 1rem;
+    padding: 8px 28px 64px;
     font-family: var(--font-text);
     font-size: 13px;
     font-weight: 700;

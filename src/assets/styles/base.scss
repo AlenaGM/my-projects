@@ -18,7 +18,7 @@
   --color-text: var(--color-black);
   --color-hover: var(--color-primary);
 
-  --box-shadow: 0 2px 2px 0 #00000010;
+  --box-shadow: 0 4px 5px -2px #00000040;
   --border: solid 1.5px #eeeeee;
 
   --section-gap: 200px;
@@ -161,6 +161,7 @@ h2 {
   margin-bottom: 1.5rem;
   margin-left: 24px;
   z-index: 1;
+  visibility: hidden;
   @media screen and (max-width: 500px) {
     margin-bottom: 1rem;
     margin-left: 18px;

@@ -27,6 +27,10 @@ gsap.registerPlugin(ScrollTrigger)
 
 onMounted(() => {
   //About section
+  gsap.set('.about__title', {
+    opacity: 1
+  })
+
   gsap.set('.about__title span', {
     opacity: 1
   })
@@ -44,13 +48,18 @@ onMounted(() => {
     ease: 'power1.in',
     scrollTrigger: {
       trigger: '.about',
-      start: 'top 80%',
-      end: 'top 30%',
+      start: 'top 75%',
+      end: 'top 45%',
       scrub: 1
     }
   })
 
   tlAbout
+    .from('.about__title', {
+      autoAlpha: 0,
+      opacity: 0,
+      y: '40px'
+    })
     .from(
       '.about__title span',
       {
@@ -58,7 +67,7 @@ onMounted(() => {
         opacity: 0,
         y: '40px'
       },
-      '<'
+      '+=0.2'
     )
     .from(
       '.about__image',
@@ -93,6 +102,10 @@ onMounted(() => {
     )
 
   //Skills section
+  gsap.set('.skills__title', {
+    opacity: 1
+  })
+
   gsap.set('.skills__title span', {
     opacity: 1
   })
@@ -105,13 +118,18 @@ onMounted(() => {
     ease: 'power1.in',
     scrollTrigger: {
       trigger: '.skills',
-      start: 'top 80%',
-      end: 'top 30%',
+      start: 'top 75%',
+      end: 'top 45%',
       scrub: 1
     }
   })
 
   tlSkills
+    .from('.skills__title', {
+      autoAlpha: 0,
+      opacity: 0,
+      y: '40px'
+    })
     .from(
       '.skills__title span',
       {
@@ -119,7 +137,7 @@ onMounted(() => {
         opacity: 0,
         y: '40px'
       },
-      '<'
+      '+=0.2'
     )
     .from(
       '.skills__info',
@@ -132,6 +150,10 @@ onMounted(() => {
     )
 
   //Work section - title&intro
+  gsap.set('.work__title', {
+    opacity: 1
+  })
+
   gsap.set('.work__title span', {
     opacity: 1
   })
@@ -144,13 +166,18 @@ onMounted(() => {
     ease: 'power1.in',
     scrollTrigger: {
       trigger: '.work',
-      start: 'top 80%',
-      end: 'top 30%',
+      start: 'top 75%',
+      end: 'top 45%',
       scrub: 1
     }
   })
 
   tlWork
+    .from('.work__title', {
+      autoAlpha: 0,
+      opacity: 0,
+      y: '40px'
+    })
     .from(
       '.work__title span',
       {
@@ -158,7 +185,7 @@ onMounted(() => {
         opacity: 0,
         y: '40px'
       },
-      '<'
+      '+=0.2'
     )
     .from(
       '.work__info',
@@ -170,7 +197,31 @@ onMounted(() => {
       '<'
     )
 
+  // Work section - cards
+  const cards = document.querySelectorAll('.card__content')
+
+  cards.forEach((card) => {
+    gsap.set('.card__content', {
+      yPercent: 0
+    })
+
+    gsap.from(card, {
+      yPercent: 25,
+      scrollTrigger: {
+        trigger: card,
+        start: 'top bottom',
+        end: 'bottom 80%',
+        scrub: 1,
+        markers: true
+      }
+    })
+  })
+
   //Contact section
+  gsap.set('.contact__title', {
+    opacity: 1
+  })
+
   gsap.set('.contact__title span', {
     opacity: 1
   })
@@ -187,13 +238,18 @@ onMounted(() => {
     ease: 'power1.in',
     scrollTrigger: {
       trigger: '.contact',
-      start: 'top 80%',
-      end: 'top 30%',
+      start: 'top 75%',
+      end: 'top 45%',
       scrub: 1
     }
   })
 
   tlContact
+    .from('.contact__title', {
+      autoAlpha: 0,
+      opacity: 0,
+      y: '40px'
+    })
     .from(
       '.contact__title span',
       {
@@ -201,7 +257,7 @@ onMounted(() => {
         opacity: 0,
         y: '40px'
       },
-      '<'
+      '+=0.2'
     )
     .from(
       '.contact__info',
