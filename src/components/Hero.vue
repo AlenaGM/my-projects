@@ -1,12 +1,57 @@
 <!-- eslint-disable vue/multi-word-component-names -->
-<script setup></script>
+<script setup>
+import { onMounted, onUnmounted } from 'vue'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
+
+const tlHero = gsap.timeline({})
+
+onMounted(() => {
+  tlHero
+    .to('.hero__title span:first-child', {
+      duration: 1.3,
+      x: 0,
+      ease: 'back.out(1.1)'
+    })
+    .to(
+      '.hero__title span:last-child',
+      {
+        duration: 1.3,
+        x: 0,
+        ease: 'back.out(1.1)'
+      },
+      '<'
+    )
+    .from('.hero__image', {
+      autoAlpha: 0,
+      yPercent: 25,
+      duration: 1,
+      ease: 'back.out(2.5)'
+    })
+    .from(
+      '.social a',
+      {
+        stagger: 0.3,
+        autoAlpha: 0,
+        xPercent: 100
+      },
+      '+=0.3'
+    )
+})
+
+onUnmounted(() => {
+  tlHero.revert()
+})
+</script>
 
 <template>
   <div class="header__hero hero">
-    <div class="hero__title">
+    <h1 class="hero__title">
       <span>Hi! I'm Alëna Guillaume,</span>
-      <h1>Frontend Developer</h1>
-    </div>
+      <span>Frontend Developer</span>
+    </h1>
     <div class="hero__image">
       <picture>
         <source
@@ -38,24 +83,27 @@
     justify-items: center;
   }
   &__title {
-    display: flex;
-    flex-direction: column;
     margin: 110px 0;
     @media screen and (max-width: 1023px) {
       margin: 0;
       text-align: center;
     }
     span {
-      font-size: 36px;
-      line-height: 1.2;
-      font-family: var(--font-accent);
-      @media screen and (max-width: 500px) {
-        font-size: 28px;
+      &:first-child {
+        display: inline-block;
+        transform: translateX(200%);
+        overflow: hidden;
+      }
+      &:last-child {
+        display: block;
+        transform: translateX(-200%);
+        text-overflow: initial;
       }
     }
   }
   &__image {
     overflow: hidden;
+    visibility: hidden;
     img {
       width: 100%;
       height: 100%;

@@ -9,7 +9,7 @@ import ContactForm from './ContactForm.vue'
     <i id="contact" />
     <h2 class="contact__title">Get In Touch <span>Contact</span></h2>
     <div class="contact__container">
-      <div class="contact__info div section-intro">
+      <div class="contact__info div">
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia magnam veniam, ipsa sunt
           delectus reiciendis, exercitationem esse ad minima quibusdam aliquid aut facere non sint
@@ -44,7 +44,7 @@ import ContactForm from './ContactForm.vue'
   }
   &__info p:last-of-type {
     margin-bottom: 4rem;
-    visibility: hidden;
+    //visibility: hidden;
     @media screen and (max-width: 768px) {
       margin-bottom: 24px;
     }

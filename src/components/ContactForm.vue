@@ -155,7 +155,7 @@ const isButtonDisabled = computed(() => {
 .form {
   display: grid;
   position: relative;
-  visibility: hidden;
+  //visibility: hidden;
   div {
     display: flex;
     width: 100%;

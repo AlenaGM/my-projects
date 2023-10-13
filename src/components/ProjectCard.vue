@@ -5,6 +5,46 @@ const props = defineProps({
     required: true
   }
 })
+
+import { onMounted } from 'vue'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
+
+onMounted(() => {
+  gsap.set('.card__image img', {
+    scale: 1.2,
+    yPercent: 10
+  })
+
+  const cards = document.querySelectorAll('.card')
+
+  cards.forEach((card) => {
+    const img = card.querySelector('img')
+    const content = card.querySelector('.card__content')
+
+    const tlCard = gsap.timeline({
+      scrollTrigger: {
+        trigger: card,
+        start: 'top 80%',
+        end: 'top top',
+        scrub: 1
+      }
+    })
+
+    tlCard
+      .to(
+        img,
+        {
+          yPercent: -10,
+          autoAlpha: 1
+        },
+        '<'
+      )
+      .from(content, { yPercent: 15 }, '<')
+  })
+})
 </script>
 
 <template>
@@ -15,7 +55,7 @@ const props = defineProps({
   >
     <div class="card__image">
       <a :href="demo" target="_blank" rel="noreferrer" tabindex="-1">
-        <img :src="`${image}.webp`" :alt="title" />
+        <img :src="`${image}.webp`" :alt="title" class="parallax" />
       </a>
       <div class="card__image_deco"></div>
     </div>

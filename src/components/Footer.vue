@@ -1,5 +1,49 @@
 <!-- eslint-disable vue/multi-word-component-names -->
-<script setup></script>
+<script setup>
+import { onMounted, onUnmounted } from 'vue'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
+
+const tlFooter = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.contact',
+    start: 'top 50%',
+    end: 'bottom 80%',
+    scrub: 1
+  }
+})
+
+onMounted(() => {
+  tlFooter.to('.social a', {
+    stagger: 0.3,
+    autoAlpha: 0,
+    xPercent: 100
+  })
+
+  gsap.set('.footer__to-top', {
+    opacity: 1
+  })
+
+  gsap.from('.footer__to-top', {
+    scrollTrigger: {
+      trigger: '.about',
+      start: 'bottom bottom',
+      toggleActions: 'play none play reverse'
+    },
+    autoAlpha: 0,
+    opacity: 0,
+    y: '160px',
+    duration: 1,
+    ease: 'back.out(2.5)'
+  })
+})
+
+onUnmounted(() => {
+  tlFooter.revert()
+})
+</script>
 
 <template>
   <footer class="footer">
@@ -57,7 +101,6 @@
       bottom: 1.5rem;
       z-index: 60;
       transition: transform 0.25s cubic-bezier(0.23, 0.24, 0, 0.99);
-      visibility: hidden;
       &:hover {
         transform: translateY(-3px);
         transition: transform 0.25s cubic-bezier(0.23, 0.24, 0, 0.99);

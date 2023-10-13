@@ -47,6 +47,7 @@
     color: var(--color-white);
     background-color: var(--color-primary);
     font-size: 1.75rem;
+    visibility: hidden;
     transition:
       inline-size 0.5s ease,
       color 0.05s ease,
