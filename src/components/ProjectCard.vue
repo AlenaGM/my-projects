@@ -23,6 +23,7 @@ onMounted(() => {
   cards.forEach((card) => {
     const img = card.querySelector('img')
     const content = card.querySelector('.card__content')
+    const deco = card.querySelector('.card__image_deco')
 
     const tlCard = gsap.timeline({
       scrollTrigger: {
@@ -43,6 +44,7 @@ onMounted(() => {
         '<'
       )
       .from(content, { yPercent: 15 }, '<')
+      .from(deco, { yPercent: 15 }, '<')
   })
 })
 </script>

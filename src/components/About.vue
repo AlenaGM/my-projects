@@ -35,7 +35,7 @@ onUnmounted(() => {
 <template>
   <section class="about">
     <i id="about" />
-    <h2 class="about__title">Who I Am <span>About me</span></h2>
+    <h2 class="about__title"><span>Who I Am</span><span>About me</span></h2>
     <div class="about__container">
       <div class="about__image">
         <picture>

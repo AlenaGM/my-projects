@@ -20,12 +20,33 @@ const skills = [
   'WordPress',
   'MUI'
 ]
+
+import { onMounted } from 'vue'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
+
+onMounted(() => {
+  gsap.from('.skills__list_item', {
+    stagger: 0.2,
+    opacity: 0,
+    yPercent: 100,
+    scrollTrigger: {
+      trigger: '.skills',
+      start: 'top 100px',
+      end: 'bottom+=100%',
+      toggleActions: 'play none none reverse',
+      pin: true
+    }
+  })
+})
 </script>
 
 <template>
   <section class="skills">
     <i id="skills" />
-    <h2 class="skills__title">Things I Can Do <span>Skills & Tools</span></h2>
+    <h2 class="skills__title"><span>Things I Can Do</span><span>Skills & Tools</span></h2>
     <div div class="skills__info">
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, dolor rerum! Rem
@@ -62,6 +83,7 @@ const skills = [
       padding: 0.75rem;
       border: var(--border);
       box-shadow: var(--box-shadow);
+      background-color: var(--color-white);
       img {
         object-fit: contain;
         aspect-ratio: 1;

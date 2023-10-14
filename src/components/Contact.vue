@@ -7,7 +7,7 @@ import ContactForm from './ContactForm.vue'
 <template>
   <section class="contact">
     <i id="contact" />
-    <h2 class="contact__title">Get In Touch <span>Contact</span></h2>
+    <h2 class="contact__title"><span>Get In Touch</span><span>Contact</span></h2>
     <div class="contact__container">
       <div class="contact__info div">
         <p>
