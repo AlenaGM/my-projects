@@ -33,7 +33,7 @@ onMounted(() => {
     gsap.from('.skills__list_item', {
       stagger: 0.2,
       opacity: 0,
-      yPercent: 100,
+      xPercent: 100,
       scrollTrigger: {
         trigger: '.skills',
         start: 'top 100px',
