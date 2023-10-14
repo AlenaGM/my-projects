@@ -86,6 +86,10 @@ onUnmounted(() => {
     @media screen and (max-width: 768px) {
       justify-items: center;
     }
+    @media screen and (max-width: 500px) {
+      justify-items: left;
+      margin-right: 40px;
+    }
     .tech-text a {
       text-decoration: underline;
       &:focus {

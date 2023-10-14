@@ -26,19 +26,22 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
+const mediaAnimation = gsap.matchMedia()
 
 onMounted(() => {
-  gsap.from('.skills__list_item', {
-    stagger: 0.2,
-    opacity: 0,
-    yPercent: 100,
-    scrollTrigger: {
-      trigger: '.skills',
-      start: 'top 100px',
-      end: 'bottom+=100%',
-      toggleActions: 'play none none reverse',
-      pin: true
-    }
+  mediaAnimation.add('(min-width: 1025px)', () => {
+    gsap.from('.skills__list_item', {
+      stagger: 0.2,
+      opacity: 0,
+      yPercent: 100,
+      scrollTrigger: {
+        trigger: '.skills',
+        start: 'top 100px',
+        end: 'bottom+=100%',
+        toggleActions: 'play none none reverse',
+        pin: true
+      }
+    })
   })
 })
 </script>
