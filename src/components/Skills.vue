@@ -20,31 +20,6 @@ const skills = [
   'WordPress',
   'MUI'
 ]
-
-import { onMounted } from 'vue'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-
-gsap.registerPlugin(ScrollTrigger)
-const mediaAnimation = gsap.matchMedia()
-
-onMounted(() => {
-  mediaAnimation.add('(min-width: 1025px)', () => {
-    gsap.from('.skills__list_item', {
-      stagger: 0.2,
-      opacity: 0,
-      xPercent: 100,
-      scrollTrigger: {
-        trigger: '.skills',
-        start: 'top 100px',
-        end: 'bottom+=200%',
-        toggleActions: 'play resume none none',
-        pin: true,
-        anticipatePin: 1
-      }
-    })
-  })
-})
 </script>
 
 <template>
