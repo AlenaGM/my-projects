@@ -126,12 +126,11 @@ onMounted(() => {
         width: 40px;
         transform: rotate(270deg);
         padding-bottom: 10px;
-        color: var(--color-text);
+        color: var(--color-hover);
         transition: 0.25s cubic-bezier(0.23, 0.24, 0, 0.99);
         @media (hover: hover) {
           &:hover,
           &:focus {
-            color: var(--color-hover);
             .footer__to-top_lines {
               &::before {
                 height: 23.5px;
@@ -164,7 +163,7 @@ onMounted(() => {
         &::before,
         &::after {
           content: '';
-          background-color: var(--color-text);
+          background-color: var(--color-hover);
           width: 2px;
           height: 50%;
           position: absolute;

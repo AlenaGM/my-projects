@@ -60,8 +60,6 @@ onMounted(() => {
       '<'
     )
     .to('.work__link a', { backgroundColor: '#f55758' }, '<')
-    .to('.footer__to-top label', { color: '#f55758' }, '<')
-    .to('.footer__to-top a', { color: '#f55758' }, '<')
 })
 </script>
 
