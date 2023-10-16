@@ -1,5 +1,84 @@
 <!-- eslint-disable vue/multi-word-component-names -->
-<script setup></script>
+<script setup>
+import { onMounted, onUnmounted } from 'vue'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
+const tlHero = gsap.timeline({})
+let mediaAnimation = gsap.matchMedia()
+
+onMounted(() => {
+  mediaAnimation.add('(min-width: 1025px)', () => {
+    tlHero
+      .to('.hero__title span:first-child', {
+        duration: 1.3,
+        x: 0,
+        ease: 'back.out(1.1)'
+      })
+      .to(
+        '.hero__title span:last-child',
+        {
+          duration: 1.3,
+          x: 0,
+          ease: 'back.out(1.1)'
+        },
+        '<'
+      )
+      .from('.hero__image', {
+        autoAlpha: 0,
+        yPercent: 50,
+        duration: 1,
+        ease: 'back.out(2)'
+      })
+      .from(
+        '.social a',
+        {
+          stagger: 0.3,
+          autoAlpha: 0,
+          xPercent: 100
+        },
+        '+=0.3'
+      )
+  })
+
+  mediaAnimation.add('(max-width: 1024px)', () => {
+    tlHero
+      .to('.hero__title span:first-child', {
+        duration: 1.3,
+        x: 0,
+        ease: 'back.out(1.1)'
+      })
+      .to(
+        '.hero__title span:last-child',
+        {
+          duration: 1.3,
+          x: 0,
+          ease: 'back.out(1.1)'
+        },
+        '<'
+      )
+      .from('.hero__image', {
+        autoAlpha: 0,
+        yPercent: 100,
+        duration: 0.8
+      })
+      .from(
+        '.social a',
+        {
+          stagger: 0.3,
+          autoAlpha: 0,
+          xPercent: 100
+        },
+        '+=0.3'
+      )
+  })
+})
+
+onUnmounted(() => {
+  tlHero.revert()
+})
+</script>
 
 <template>
   <div class="header__hero hero">

@@ -20,6 +20,25 @@ const skills = [
   'WordPress',
   'MUI'
 ]
+
+import { onMounted } from 'vue'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
+
+onMounted(() => {
+  gsap.from('.skills__list_item', {
+    stagger: 0.3,
+    opacity: 0,
+    yPercent: 100,
+    scrollTrigger: {
+      trigger: '.skills',
+      start: 'top 50%',
+      end: 'bottom 90%'
+    }
+  })
+})
 </script>
 
 <template>

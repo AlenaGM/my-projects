@@ -5,6 +5,56 @@ const props = defineProps({
     required: true
   }
 })
+
+import { onMounted } from 'vue'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
+
+let mediaAnimation = gsap.matchMedia()
+
+onMounted(() => {
+  const cards = document.querySelectorAll('.card')
+
+  cards.forEach((card) => {
+    const img = card.querySelector('img')
+    const content = card.querySelector('.card__content')
+    const deco = card.querySelector('.card__image_deco')
+
+    const tlCard = gsap.timeline({
+      scrollTrigger: {
+        trigger: card,
+        start: 'top 80%',
+        end: 'top top',
+        scrub: 1
+      }
+    })
+
+    mediaAnimation.add('(min-width: 1025px)', () => {
+      gsap.set('.card__image img', {
+        scale: 1.1,
+        yPercent: 5
+      })
+
+      tlCard
+        .to(
+          img,
+          {
+            yPercent: -5,
+            autoAlpha: 1
+          },
+          '<'
+        )
+        .from(content, { yPercent: 10 }, '<')
+        .from(deco, { yPercent: 10 }, '<')
+    })
+
+    mediaAnimation.add('(max-width: 1024px)', () => {
+      tlCard.from(content, { yPercent: 10 }, '<').from(deco, { yPercent: 10 }, '<')
+    })
+  })
+})
 </script>
 
 <template>
