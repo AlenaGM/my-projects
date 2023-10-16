@@ -29,14 +29,14 @@ import ContactForm from './ContactForm.vue'
 <style lang="scss" scoped>
 .contact {
   margin-bottom: calc(var(--section-gap) * 0.5);
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1023px) {
     margin-bottom: calc(var(--section-gap-mobile) * 0.5);
   }
   &__container {
     display: grid;
     grid-template-columns: repeat(2, minmax(auto, 610px));
     gap: 4rem;
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1023px) {
       display: flex;
       flex-direction: column;
       gap: 40px;

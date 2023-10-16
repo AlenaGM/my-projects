@@ -113,7 +113,7 @@ onMounted(() => {
       }
     }
   }
-  @media only screen {
+  @media screen and (min-width: 1025px) {
     &__to-top {
       position: fixed;
       right: 0.5rem;
@@ -212,7 +212,7 @@ onMounted(() => {
       }
       &_icon {
         display: block;
-        transform: rotate(-270deg);
+
         font-size: 1.75rem;
         color: var(--color-primary);
       }

@@ -89,13 +89,14 @@ onUnmounted(() => {
     grid-template-columns: minmax(auto, 420px) 1fr;
     gap: 4rem;
     justify-items: center;
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1023px) {
       grid-template-columns: 1fr;
       gap: 40px;
     }
   }
   &__image {
     max-width: 420px;
+    max-height: 540px;
     overflow: hidden;
     img {
       width: 100%;
