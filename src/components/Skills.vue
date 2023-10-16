@@ -37,8 +37,8 @@ onMounted(() => {
       scrollTrigger: {
         trigger: '.skills',
         start: 'top 100px',
-        end: 'bottom+=100%',
-        toggleActions: 'play none none reverse',
+        end: 'bottom+=200%',
+        toggleActions: 'play resume none none',
         pin: true,
         anticipatePin: 1
       }
