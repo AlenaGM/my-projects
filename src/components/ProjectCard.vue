@@ -31,7 +31,7 @@ onMounted(() => {
       }
     })
 
-    mediaAnimation.add('(min-width: 768px)', () => {
+    mediaAnimation.add('(min-width: 1025px)', () => {
       gsap.set('.card__image img', {
         scale: 1.1,
         yPercent: 5
@@ -50,8 +50,8 @@ onMounted(() => {
         .from(deco, { yPercent: 10 }, '<')
     })
 
-    mediaAnimation.add('(max-width: 767px)', () => {
-      tlCard.from(content, { yPercent: 10 }, '<').from(deco, { yPercent: 10 }, '<')
+    mediaAnimation.add('(max-width: 1024px)', () => {
+      tlCard.from(content, { yPercent: 10 })
     })
   })
 })

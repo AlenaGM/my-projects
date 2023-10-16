@@ -98,7 +98,7 @@ const props = defineProps({
       transform: translate(-8px, -8px);
       transition: transform all 0.25s ease-in-out;
       &::after {
-        border-color: inherit;
+        border-color: initial;
         transform: translate(8px, 8px);
         transition: all 0.25s ease-in-out;
       }

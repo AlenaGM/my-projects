@@ -3,12 +3,74 @@
 import { projects } from '@/assets/data/projects'
 import uiButton from './ui/Button.vue'
 import ProjectCard from '@/components/ProjectCard.vue'
+
+import { onMounted } from 'vue'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
+
+onMounted(() => {
+  const tlBg = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.work',
+      start: 'top center',
+      end: 'bottom center',
+      toggleActions: 'play reverse play reverse'
+    }
+  })
+
+  tlBg
+    .to('.main', {
+      backgroundColor: '#2c2e32'
+    })
+    .to(
+      '.skills__list_item',
+      {
+        color: '#fff'
+      },
+      '<'
+    )
+    .to(
+      '.work__info p',
+      {
+        color: '#fff'
+      },
+      '<'
+    )
+    .to(
+      '.contact__info p',
+      {
+        color: '#fff'
+      },
+      '<'
+    )
+    .to(
+      '.title',
+      {
+        color: '#f55758'
+      },
+      '<'
+    )
+    .to(
+      '.subtitle',
+      {
+        color: '#fff'
+      },
+      '<'
+    )
+    .to('.work__link a', { backgroundColor: '#f55758' }, '<')
+    .to('.footer__to-top label', { color: '#f55758' }, '<')
+    .to('.footer__to-top a', { color: '#f55758' }, '<')
+})
 </script>
 
 <template>
   <section class="work">
     <i id="work" />
-    <h2 class="work__title"><span>Some of My Projects</span><span>Work</span></h2>
+    <h2 class="work__title">
+      <span class="title">Some of My Projects</span><span class="subtitle">Work</span>
+    </h2>
     <div class="work__info">
       <p>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia magnam veniam, ipsa sunt

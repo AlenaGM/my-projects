@@ -34,11 +34,13 @@ onMounted(() => {
     gsap.from('.skills__list_item', {
       stagger: 0.3,
       opacity: 0,
-      yPercent: 100,
+      xPercent: 100,
       scrollTrigger: {
         trigger: '.skills',
-        start: 'top 50%',
-        end: 'bottom 90%'
+        start: 'top 100px',
+        end: 'bottom+=150%',
+        toggleActions: 'play resume none none',
+        pin: true
       }
     })
   })
@@ -85,7 +87,7 @@ onMounted(() => {
       padding: 0.75rem;
       border: var(--border);
       box-shadow: var(--box-shadow);
-      background-color: var(--color-white);
+
       img {
         object-fit: contain;
         aspect-ratio: 1;
