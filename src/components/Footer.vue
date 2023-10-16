@@ -17,7 +17,7 @@ onMounted(() => {
       scrollTrigger: {
         trigger: '.about',
         start: 'bottom bottom',
-        toggleActions: 'play none play reverse'
+        toggleActions: 'play none none reverse'
       },
       autoAlpha: 0,
       opacity: 0,
@@ -32,13 +32,13 @@ onMounted(() => {
       scrollTrigger: {
         trigger: '.about',
         start: 'bottom bottom',
-        toggleActions: 'play none play reverse'
+        toggleActions: 'play none none reverse'
       },
       autoAlpha: 0,
       opacity: 0,
       y: '80px',
       duration: 0.4,
-      ease: 'power1.inOut'
+      ease: 'power1.in'
     })
   })
 })

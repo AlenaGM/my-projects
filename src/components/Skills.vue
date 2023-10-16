@@ -39,7 +39,8 @@ onMounted(() => {
         start: 'top 100px',
         end: 'bottom+=100%',
         toggleActions: 'play none none reverse',
-        pin: true
+        pin: true,
+        anticipatePin: 1
       }
     })
   })

@@ -29,7 +29,7 @@ onMounted(() => {
       .from('.hero__image', {
         autoAlpha: 0,
         yPercent: 50,
-        duration: 1.3,
+        duration: 1,
         ease: 'back.out(2)'
       })
       .from(
@@ -62,8 +62,8 @@ onMounted(() => {
       .from('.hero__image', {
         autoAlpha: 0,
         yPercent: 100,
-        duration: 1.3,
-        ease: 'power1.inOut'
+        duration: 0.8,
+        ease: 'power1.in'
       })
       .from(
         '.social a',
