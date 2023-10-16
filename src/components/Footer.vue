@@ -183,7 +183,7 @@ onMounted(() => {
       }
     }
   }
-  @media (any-pointer: coarse), (max-width: 1024px) {
+  @media screen and (any-pointer: coarse) and (max-width: 1024px) {
     &__to-top {
       position: fixed;
       right: 0.75rem;
