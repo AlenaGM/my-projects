@@ -1,22 +1,20 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
-import { onMounted, onUnmounted } from 'vue'
+import { onMounted } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
-
-const tlFooter = gsap.timeline({
-  scrollTrigger: {
-    trigger: '.contact',
-    start: 'top 50%',
-    end: 'bottom 80%',
-    scrub: 1
-  }
-})
+let mediaAnimation = gsap.matchMedia()
 
 onMounted(() => {
-  tlFooter.to('.social a', {
+  gsap.to('.social a', {
+    scrollTrigger: {
+      trigger: '.contact',
+      start: 'top 50%',
+      end: 'bottom 80%',
+      scrub: 1
+    },
     stagger: 0.3,
     autoAlpha: 0,
     xPercent: 100
@@ -26,22 +24,35 @@ onMounted(() => {
     opacity: 1
   })
 
-  gsap.from('.footer__to-top', {
-    scrollTrigger: {
-      trigger: '.about',
-      start: 'bottom bottom',
-      toggleActions: 'play none play reverse'
-    },
-    autoAlpha: 0,
-    opacity: 0,
-    y: '160px',
-    duration: 0.8,
-    ease: 'back.out(2.5)'
+  mediaAnimation.add('(min-width: 1025px)', () => {
+    gsap.from('.footer__to-top', {
+      scrollTrigger: {
+        trigger: '.about',
+        start: 'bottom bottom',
+        toggleActions: 'play none play reverse'
+      },
+      autoAlpha: 0,
+      opacity: 0,
+      y: '160px',
+      duration: 0.8,
+      ease: 'back.out(2.5)'
+    })
   })
-})
 
-onUnmounted(() => {
-  tlFooter.revert()
+  mediaAnimation.add('(max-width: 1024px)', () => {
+    gsap.from('.footer__to-top', {
+      scrollTrigger: {
+        trigger: '.about',
+        start: 'bottom bottom',
+        toggleActions: 'play none play reverse'
+      },
+      autoAlpha: 0,
+      opacity: 0,
+      y: '80px',
+      duration: 0.4,
+      ease: 'power1.inOut'
+    })
+  })
 })
 </script>
 
@@ -191,8 +202,8 @@ onUnmounted(() => {
   @media (any-pointer: coarse), (max-width: 1024px) {
     &__to-top {
       position: fixed;
-      right: 1.5rem;
-      bottom: 1.5rem;
+      right: 0.75rem;
+      bottom: 0.75rem;
       z-index: 60;
       height: 40px;
       width: 40px;

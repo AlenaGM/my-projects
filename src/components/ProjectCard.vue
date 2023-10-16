@@ -11,40 +11,63 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
+const mediaAnimation = gsap.matchMedia()
 
 onMounted(() => {
-  gsap.set('.card__image img', {
-    scale: 1.15,
-    yPercent: 7.5
-  })
-
-  const cards = document.querySelectorAll('.card')
-
-  cards.forEach((card) => {
-    const img = card.querySelector('img')
-    const content = card.querySelector('.card__content')
-    const deco = card.querySelector('.card__image_deco')
-
-    const tlCard = gsap.timeline({
-      scrollTrigger: {
-        trigger: card,
-        start: 'top 80%',
-        end: 'top top',
-        scrub: 1
-      }
+  mediaAnimation.add('(min-width: 1025px)', () => {
+    gsap.set('.card__image img', {
+      scale: 1.15,
+      yPercent: 7.5
     })
 
-    tlCard
-      .to(
-        img,
-        {
-          yPercent: -7.5,
-          autoAlpha: 1
-        },
-        '<'
-      )
-      .from(content, { yPercent: 15 }, '<')
-      .from(deco, { yPercent: 15 }, '<')
+    const cards = document.querySelectorAll('.card')
+
+    cards.forEach((card) => {
+      const img = card.querySelector('img')
+      const content = card.querySelector('.card__content')
+      const deco = card.querySelector('.card__image_deco')
+
+      const tlCard = gsap.timeline({
+        scrollTrigger: {
+          trigger: card,
+          start: 'top 80%',
+          end: 'top top',
+          scrub: 1
+        }
+      })
+
+      tlCard
+        .to(
+          img,
+          {
+            yPercent: -7.5,
+            autoAlpha: 1
+          },
+          '<'
+        )
+        .from(content, { yPercent: 15 }, '<')
+        .from(deco, { yPercent: 15 }, '<')
+    })
+  })
+
+  mediaAnimation.add('(max-width: 1024px)', () => {
+    const cards = document.querySelectorAll('.card')
+
+    cards.forEach((card) => {
+      const content = card.querySelector('.card__content')
+      const deco = card.querySelector('.card__image_deco')
+
+      const tlCard = gsap.timeline({
+        scrollTrigger: {
+          trigger: card,
+          start: 'top 80%',
+          end: 'top top',
+          scrub: 1
+        }
+      })
+
+      tlCard.from(content, { yPercent: 15 }, '<').from(deco, { yPercent: 15 }, '<')
+    })
   })
 })
 </script>

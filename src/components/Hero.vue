@@ -5,40 +5,76 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
+const mediaAnimation = gsap.matchMedia()
 
 const tlHero = gsap.timeline({})
 
 onMounted(() => {
-  tlHero
-    .to('.hero__title span:first-child', {
-      duration: 1.3,
-      x: 0,
-      ease: 'back.out(1.1)'
-    })
-    .to(
-      '.hero__title span:last-child',
-      {
+  mediaAnimation.add('(min-width: 1025px)', () => {
+    tlHero
+      .to('.hero__title span:first-child', {
         duration: 1.3,
         x: 0,
         ease: 'back.out(1.1)'
-      },
-      '<'
-    )
-    .from('.hero__image', {
-      autoAlpha: 0,
-      yPercent: 100,
-      duration: 1.3,
-      ease: 'back.out(2)'
-    })
-    .from(
-      '.social a',
-      {
-        stagger: 0.3,
+      })
+      .to(
+        '.hero__title span:last-child',
+        {
+          duration: 1.3,
+          x: 0,
+          ease: 'back.out(1.1)'
+        },
+        '<'
+      )
+      .from('.hero__image', {
         autoAlpha: 0,
-        xPercent: 100
-      },
-      '+=0.3'
-    )
+        yPercent: 50,
+        duration: 1.3,
+        ease: 'back.out(2)'
+      })
+      .from(
+        '.social a',
+        {
+          stagger: 0.3,
+          autoAlpha: 0,
+          xPercent: 100
+        },
+        '+=0.3'
+      )
+  })
+
+  mediaAnimation.add('(max-width: 1024px)', () => {
+    tlHero
+      .to('.hero__title span:first-child', {
+        duration: 1.3,
+        x: 0,
+        ease: 'back.out(1.1)'
+      })
+      .to(
+        '.hero__title span:last-child',
+        {
+          duration: 1.3,
+          x: 0,
+          ease: 'back.out(1.1)'
+        },
+        '<'
+      )
+      .from('.hero__image', {
+        autoAlpha: 0,
+        yPercent: 100,
+        duration: 1.3,
+        ease: 'power1.inOut'
+      })
+      .from(
+        '.social a',
+        {
+          stagger: 0.3,
+          autoAlpha: 0,
+          xPercent: 100
+        },
+        '+=0.3'
+      )
+  })
 })
 
 onUnmounted(() => {
