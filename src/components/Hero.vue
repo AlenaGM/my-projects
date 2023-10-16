@@ -113,13 +113,13 @@ onUnmounted(() => {
   @media screen and (max-width: 1113px) {
     align-items: center;
   }
-  @media screen and (max-width: 1023px) {
+  @media screen and (max-width: 1024px) {
     grid-template-columns: 1fr;
     justify-items: center;
   }
   &__title {
     margin: 110px 0;
-    @media screen and (max-width: 1023px) {
+    @media screen and (max-width: 1024px) {
       margin: 0;
       text-align: center;
     }

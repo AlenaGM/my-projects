@@ -89,7 +89,7 @@ onUnmounted(() => {
     grid-template-columns: minmax(auto, 420px) 1fr;
     gap: 4rem;
     justify-items: center;
-    @media screen and (max-width: 1023px) {
+    @media screen and (max-width: 1024px) {
       grid-template-columns: 1fr;
       gap: 40px;
     }

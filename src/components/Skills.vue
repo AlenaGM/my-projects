@@ -74,7 +74,7 @@ onMounted(() => {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 1.125rem;
     grid-auto-rows: 1fr;
-    @media screen and (max-width: 450px) {
+    @media screen and (max-width: 500px) {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
     }
