@@ -50,25 +50,25 @@ onMounted(() => {
     })
   })
 
-  mediaAnimation.add('(max-width: 1024px)', () => {
-    const cards = document.querySelectorAll('.card')
-
-    cards.forEach((card) => {
-      const content = card.querySelector('.card__content')
-      const deco = card.querySelector('.card__image_deco')
-
-      const tlCard = gsap.timeline({
-        scrollTrigger: {
-          trigger: card,
-          start: 'top 80%',
-          end: 'top top',
-          scrub: 1
-        }
-      })
-
-      tlCard.from(content, { yPercent: 10 }, '<').from(deco, { yPercent: 10 }, '<')
-    })
-  })
+  //const cards = document.querySelectorAll('.card')
+  //cards.forEach((card) => {
+  //    mediaAnimation.add('(max-width: 1024px)', () => {
+  //  const content = card.querySelector('.card__content')
+  //    const deco = card.querySelector('.card__image_deco')
+  //
+  //    const tlCard = gsap.timeline({
+  //      scrollTrigger: {
+  //
+  //        trigger: card,
+  //        start: 'top 80%',
+  //        end: 'top top',
+  //        scrub: 1
+  //      }
+  //    })
+  //    tlCard.from(content, { yPercent: 10 }, '<').from(deco, { yPercent: 10 }, '<')
+  //  })
+  //
+  //})
 })
 </script>
 
