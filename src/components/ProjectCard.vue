@@ -66,7 +66,7 @@ onMounted(() => {
         }
       })
 
-      tlCard.from(content, { yPercent: 15 }, '<').from(deco, { yPercent: 15 }, '<')
+      tlCard.from(content, { yPercent: 10 }, '<').from(deco, { yPercent: 10 }, '<')
     })
   })
 })

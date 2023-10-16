@@ -8,18 +8,6 @@ gsap.registerPlugin(ScrollTrigger)
 let mediaAnimation = gsap.matchMedia()
 
 onMounted(() => {
-  gsap.to('.social a', {
-    scrollTrigger: {
-      trigger: '.contact',
-      start: 'top 50%',
-      end: 'bottom 80%',
-      scrub: 1
-    },
-    stagger: 0.3,
-    autoAlpha: 0,
-    xPercent: 100
-  })
-
   gsap.set('.footer__to-top', {
     opacity: 1
   })
