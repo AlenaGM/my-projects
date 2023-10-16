@@ -35,7 +35,7 @@ onMounted(() => {
     autoAlpha: 0,
     opacity: 0,
     y: '160px',
-    duration: 1,
+    duration: 0.8,
     ease: 'back.out(2.5)'
   })
 })
@@ -48,18 +48,21 @@ onUnmounted(() => {
 <template>
   <footer class="footer">
     <div class="footer__content">
-      <div class="tech-text">
-        ©️ 2023 Alena G., My portfolio is
-        <a
-          class="tech-text footer__content_link"
-          href="https://github.com/AlenaGM/my-projects"
-          role="link"
-          aria-label="open source"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          open source</a
-        >
+      <div>
+        <p class="tech-text">©️ 2023 Alena G.,</p>
+        <p class="tech-text">
+          My portfolio is
+          <a
+            class="tech-text footer__content_link"
+            href="https://github.com/AlenaGM/my-projects"
+            role="link"
+            aria-label="open source"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            open source</a
+          >
+        </p>
       </div>
       <div class="footer__to-top">
         <a href="#" aria-label="#">
@@ -90,11 +93,24 @@ onUnmounted(() => {
       justify-items: left;
       margin-right: 40px;
     }
-    .tech-text a {
-      text-decoration: underline;
-      &:focus {
-        color: var(--color-primary);
-        outline: none;
+    div {
+      display: inline-flex;
+      @media screen and (max-width: 500px) {
+        display: flex;
+        flex-direction: column;
+      }
+      .tech-text {
+        margin-bottom: 0;
+        &:not(:last-of-type) {
+          padding-right: 0.5rem;
+        }
+        a {
+          text-decoration: underline;
+          &:focus {
+            color: var(--color-primary);
+            outline: none;
+          }
+        }
       }
     }
   }
@@ -175,20 +191,21 @@ onUnmounted(() => {
   @media (any-pointer: coarse), (max-width: 1024px) {
     &__to-top {
       position: fixed;
-      right: 0.75rem;
-      bottom: 0.75rem;
+      right: 1.5rem;
+      bottom: 1.5rem;
       z-index: 60;
       height: 40px;
       width: 40px;
       border-radius: 100px;
       background-color: var(--color-white);
       box-shadow: var(--box-shadow);
+      justify-content: center;
       a {
         padding: 0;
         margin: 0;
         display: flex;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: center;
       }
       &_lines,
       label {

@@ -24,12 +24,13 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
+let mediaAnimation = gsap.matchMedia()
 
 onMounted(() => {
   const titles = document.querySelectorAll('h2 span:first-child')
 
   titles.forEach((title) => {
-    gsap.set(title, { yPercent: 50 })
+    gsap.set(title, { yPercent: 75 })
 
     gsap.to(title, {
       scrollTrigger: {
@@ -39,6 +40,18 @@ onMounted(() => {
         scrub: 1
       },
       yPercent: 0
+    })
+  })
+
+  mediaAnimation.add('(max-width: 1024px)', () => {
+    gsap.to('.progressbar', {
+      width: '100%',
+      scrollTrigger: {
+        trigger: 'body',
+        start: 'top top',
+        end: 'bottom bottom',
+        scrub: true
+      }
     })
   })
 })

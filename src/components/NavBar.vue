@@ -83,7 +83,7 @@ const menu = [
   align-items: center;
   padding: 1.5rem 0;
   margin-bottom: -1px;
-  z-index: 100;
+  z-index: 90;
   &__logo {
     grid-column: 1;
     a {

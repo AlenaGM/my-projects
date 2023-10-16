@@ -14,8 +14,8 @@ gsap.registerPlugin(ScrollTrigger)
 
 onMounted(() => {
   gsap.set('.card__image img', {
-    scale: 1.2,
-    yPercent: 10
+    scale: 1.15,
+    yPercent: 7.5
   })
 
   const cards = document.querySelectorAll('.card')
@@ -38,7 +38,7 @@ onMounted(() => {
       .to(
         img,
         {
-          yPercent: -10,
+          yPercent: -7.5,
           autoAlpha: 1
         },
         '<'
