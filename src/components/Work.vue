@@ -16,6 +16,7 @@ onMounted(() => {
       trigger: '.work',
       start: 'top center',
       end: 'bottom center',
+      ease: 'power1.in',
       toggleActions: 'play reverse play reverse'
     }
   })
