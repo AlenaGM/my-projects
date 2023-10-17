@@ -1,11 +1,13 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
-import uiButton from './ui/Button.vue'
 import { onMounted, onUnmounted } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
+import uiButton from './ui/Button.vue'
+
 gsap.registerPlugin(ScrollTrigger)
+
 const tlAbout = gsap.timeline({})
 
 onMounted(() => {
@@ -34,7 +36,7 @@ onUnmounted(() => {
 <template>
   <section class="about">
     <i id="about" />
-    <h2 class="about__title"><span>Who I Am</span><span>About me</span></h2>
+    <h2><span>Who I Am</span><span>About me</span></h2>
     <div class="about__container">
       <div class="about__image">
         <picture>
@@ -49,7 +51,7 @@ onUnmounted(() => {
           />
         </picture>
       </div>
-      <div class="about__info">
+      <div>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, dolor rerum! Rem
           inventore beatae dicta nemo vero, dolorum rerum vitae mollitia qui obcaecati facere
@@ -89,7 +91,7 @@ onUnmounted(() => {
     justify-items: center;
     @media screen and (max-width: 768px), (orientation: portrait) {
       grid-template-columns: 1fr;
-      gap: 40px;
+      gap: 2.5rem;
     }
   }
   &__image {

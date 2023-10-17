@@ -1,4 +1,8 @@
 <script setup>
+import { onMounted, onUnmounted } from 'vue'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
 // eslint-disable-next-line no-unused-vars
 const props = defineProps({
   projects: {
@@ -6,35 +10,31 @@ const props = defineProps({
   }
 })
 
-import { onMounted } from 'vue'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-
 gsap.registerPlugin(ScrollTrigger)
 
 let mediaAnimation = gsap.matchMedia()
+const tlCard = gsap.timeline({})
 
 onMounted(() => {
-  const cards = document.querySelectorAll('.card')
+  mediaAnimation.add('(min-width: 1025px)', () => {
+    gsap.set('.card__image img', {
+      scale: 1.1,
+      yPercent: 5
+    })
 
-  cards.forEach((card) => {
-    const img = card.querySelector('img')
-    const content = card.querySelector('.card__content')
-    const deco = card.querySelector('.card__image_deco')
+    const cards = document.querySelectorAll('.card')
 
-    const tlCard = gsap.timeline({
-      scrollTrigger: {
+    cards.forEach((card) => {
+      const img = card.querySelector('img')
+      const content = card.querySelector('.card__content')
+      const deco = card.querySelector('.card__image_deco')
+
+      ScrollTrigger.create({
+        animation: tlCard,
         trigger: card,
         start: 'top 80%',
         end: 'top top',
         scrub: 1
-      }
-    })
-
-    mediaAnimation.add('(min-width: 1025px)', () => {
-      gsap.set('.card__image img', {
-        scale: 1.1,
-        yPercent: 5
       })
 
       tlCard
@@ -49,11 +49,11 @@ onMounted(() => {
         .from(content, { yPercent: 10 }, '<')
         .from(deco, { yPercent: 10 }, '<')
     })
-
-    mediaAnimation.add('(max-width: 1024px)', () => {
-      tlCard.from(content, { yPercent: 10 })
-    })
   })
+})
+
+onUnmounted(() => {
+  tlCard.revert()
 })
 </script>
 
@@ -65,7 +65,7 @@ onMounted(() => {
   >
     <div class="card__image">
       <a :href="demo" target="_blank" rel="noreferrer" tabindex="-1">
-        <img :src="`${image}.webp`" :alt="title" class="parallax" />
+        <img :src="`${image}.webp`" :alt="title" />
       </a>
       <div class="card__image_deco"></div>
     </div>
@@ -98,19 +98,23 @@ onMounted(() => {
   grid-template: auto minmax(32px, auto) 1fr/1fr;
   max-width: 400px;
   width: 100%;
-
   &__image {
-    padding: 0 0 40%;
     position: relative;
+    margin: 0 2rem -20%;
     width: calc(100% - 4rem);
+    padding: 0 0 40%;
     aspect-ratio: 1;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    margin-bottom: -20%;
     z-index: 1;
     cursor: pointer;
     a {
       display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
       overflow: hidden;
       width: initial;
@@ -118,13 +122,6 @@ onMounted(() => {
       background: none;
       opacity: 1;
       border: 0;
-      margin: 0;
-      padding: 0;
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
     }
     img {
       object-fit: cover;
@@ -145,10 +142,10 @@ onMounted(() => {
   &__title {
     display: flex;
     justify-content: center;
-    background-color: var(--color-primary);
-    color: var(--color-white);
     margin: 0 auto -4rem 1rem;
     padding: 8px 28px 64px;
+    color: var(--color-white);
+    background-color: var(--color-primary);
     font-family: var(--font-text);
     font-size: 13px;
     font-weight: 700;
@@ -170,23 +167,16 @@ onMounted(() => {
     grid-template-rows: 1fr minmax(120px, auto);
     align-content: space-between;
     justify-items: start;
-    padding: 1rem;
     width: 100%;
-    box-shadow: var(--box-shadow);
+    padding: 1rem;
     background-color: var(--color-white);
+    box-shadow: var(--box-shadow);
     z-index: 3;
   }
   &__info {
     display: grid;
     text-align: left;
     margin: 0 0 1.5rem 0;
-    p {
-      padding: 0.5rem 0;
-      margin: 0;
-      &:last-of-type {
-        border-top: solid 1px var(--color-text);
-      }
-    }
   }
   &__tech {
     display: grid;

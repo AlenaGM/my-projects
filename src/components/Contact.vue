@@ -7,9 +7,7 @@ import ContactForm from './ContactForm.vue'
 <template>
   <section class="contact">
     <i id="contact" />
-    <h2 class="contact__title">
-      <span class="title">Get In Touch</span><span class="subtitle">Contact</span>
-    </h2>
+    <h2><span class="h2-subtitle">Get In Touch</span><span>Contact</span></h2>
     <div class="contact__container">
       <div class="contact__info">
         <p>
@@ -38,10 +36,10 @@ import ContactForm from './ContactForm.vue'
     display: grid;
     grid-template-columns: repeat(2, minmax(auto, 610px));
     gap: 4rem;
-    @media screen and (max-width: 1023px) {
+    @media screen and (max-width: 1023px), (orientation: portrait) {
       display: flex;
       flex-direction: column;
-      gap: 40px;
+      gap: 2.5rem;
     }
   }
   &__info p:last-of-type {

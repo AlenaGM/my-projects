@@ -9,6 +9,8 @@ const tlHero = gsap.timeline({})
 let mediaAnimation = gsap.matchMedia()
 
 onMounted(() => {
+  gsap.set('.hero__image', { opacity: 1 })
+
   mediaAnimation.add('(min-width: 1025px)', () => {
     tlHero
       .to('.hero__title span:first-child', {
@@ -137,7 +139,7 @@ onUnmounted(() => {
   }
   &__image {
     overflow: hidden;
-    visibility: hidden;
+    //visibility: hidden;
     img {
       width: 100%;
       height: 100%;

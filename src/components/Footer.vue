@@ -1,20 +1,24 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
-import { onMounted } from 'vue'
+import { onMounted, onUnmounted } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
+
 let mediaAnimation = gsap.matchMedia()
+const tlToTop = gsap.timeline({})
 
 onMounted(() => {
+  ScrollTrigger.create({
+    animation: tlToTop,
+    trigger: '.about',
+    start: 'bottom bottom',
+    toggleActions: 'play none none reverse'
+  })
+
   mediaAnimation.add('(min-width: 1025px)', () => {
-    gsap.from('.footer__to-top', {
-      scrollTrigger: {
-        trigger: '.about',
-        start: 'bottom bottom',
-        toggleActions: 'play none none reverse'
-      },
+    tlToTop.from('.footer__to-top', {
       autoAlpha: 0,
       opacity: 0,
       y: '160px',
@@ -24,12 +28,7 @@ onMounted(() => {
   })
 
   mediaAnimation.add('(max-width: 1024px)', () => {
-    gsap.from('.footer__to-top', {
-      scrollTrigger: {
-        trigger: '.about',
-        start: 'bottom bottom',
-        toggleActions: 'play none none reverse'
-      },
+    tlToTop.from('.footer__to-top', {
       autoAlpha: 0,
       opacity: 0,
       y: '80px',
@@ -37,6 +36,10 @@ onMounted(() => {
       ease: 'power1.in'
     })
   })
+})
+
+onUnmounted(() => {
+  tlToTop.revert()
 })
 </script>
 
@@ -109,7 +112,7 @@ onMounted(() => {
       }
     }
   }
-  @media screen and (min-width: 1025px) {
+  @media (any-pointer: fine) and (min-width: 1025px) {
     &__to-top {
       position: fixed;
       right: 0.5rem;
@@ -124,9 +127,9 @@ onMounted(() => {
         position: relative;
         display: flex;
         width: 40px;
+        color: var(--color-text);
         transform: rotate(270deg);
         padding-bottom: 10px;
-        color: var(--color-text);
         transition: 0.25s cubic-bezier(0.23, 0.24, 0, 0.99);
         @media (hover: hover) {
           &:hover,
@@ -183,18 +186,18 @@ onMounted(() => {
       }
     }
   }
-  @media screen and (any-pointer: coarse) and (max-width: 1024px) {
+  @media (any-pointer: coarse) {
     &__to-top {
       position: fixed;
       right: 0.75rem;
       bottom: 0.75rem;
-      z-index: 60;
       height: 40px;
       width: 40px;
+      justify-content: center;
       border-radius: 100px;
       background-color: var(--color-white);
       box-shadow: var(--box-shadow);
-      justify-content: center;
+      z-index: 60;
       a {
         padding: 0;
         margin: 0;
@@ -208,7 +211,6 @@ onMounted(() => {
       }
       &_icon {
         display: block;
-
         font-size: 1.75rem;
         color: var(--color-primary);
       }

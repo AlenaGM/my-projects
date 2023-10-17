@@ -1,5 +1,5 @@
 <template>
-  <div class="contact__social-media social-media">
+  <div class="social-media">
     <a
       href="https://www.linkedin.com/in/alena-guillaume/"
       aria-label="linkedin"

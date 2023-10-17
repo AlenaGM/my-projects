@@ -155,7 +155,6 @@ const isButtonDisabled = computed(() => {
 .form {
   display: grid;
   position: relative;
-  //visibility: hidden;
   div {
     display: flex;
     width: 100%;
@@ -174,11 +173,11 @@ const isButtonDisabled = computed(() => {
       font-weight: inherit;
       line-height: 24px;
       color: var(--color-gray);
+      width: 100%;
+      padding: 1rem 1.5rem;
       background-color: var(--color-light-gray);
       border: var(--border);
       outline: none;
-      width: 100%;
-      padding: 1rem 1.5rem;
       transition: border 0.1s ease;
       &:focus {
         border: 2px solid var(--color-secondary);

@@ -25,28 +25,28 @@
 <style lang="scss" scoped>
 .social {
   position: fixed;
-  display: flex;
-  flex-direction: column;
   right: 0;
   top: 26vh;
-  z-index: 80;
+  display: flex;
+  flex-direction: column;
   align-items: flex-end;
-  @media screen and (max-width: 768px) {
+  z-index: 80;
+  @media screen and (max-width: 768px), (orientation: portrait) {
     top: 44vh;
   }
   a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 0.5rem;
+    font-size: 1.75rem;
+    text-align: left;
     height: 40px;
     inline-size: 40px;
+    padding: 0 0.5rem;
     overflow: hidden;
-    box-shadow: var(--box-shadow);
-    text-align: left;
     color: var(--color-white);
     background-color: var(--color-primary);
-    font-size: 1.75rem;
+    box-shadow: var(--box-shadow);
     visibility: hidden;
     transition:
       inline-size 0.5s ease,

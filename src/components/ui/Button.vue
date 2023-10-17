@@ -5,8 +5,6 @@
     :class="[
       'button',
       {
-        button_black: color === 'black',
-        button_red: color === 'red',
         button_fullwidth: mobileFullWidth,
         button_disabled: disabled
       }
@@ -20,8 +18,6 @@
     :class="[
       'button',
       {
-        button_black: color === 'black',
-        button_red: color === 'red',
         button_fullwidth: mobileFullWidth,
         button_disabled: disabled
       }
@@ -34,10 +30,6 @@
 <script setup>
 // eslint-disable-next-line no-unused-vars
 const props = defineProps({
-  color: {
-    type: String,
-    default: 'black'
-  },
   type: {
     type: String,
     default: 'button'
@@ -70,6 +62,9 @@ const props = defineProps({
   line-height: 2em;
   white-space: nowrap;
   letter-spacing: -0.01em;
+  color: var(--color-white);
+  background: var(--color-black);
+  border: 1.75px solid var(--color-black);
   transition: transform 0.25s ease-in-out;
   cursor: pointer;
   &:not(:last-of-type) {
@@ -95,7 +90,7 @@ const props = defineProps({
       transform: translate(-8px, -8px);
       transition: transform all 0.25s ease-in-out;
       &::after {
-        border-color: initial;
+        border-color: var(--color-black);
         transform: translate(8px, 8px);
         transition: all 0.25s ease-in-out;
       }
@@ -112,28 +107,6 @@ const props = defineProps({
       outline: none;
     }
   }
-  &_black {
-    color: var(--color-white);
-    background: var(--color-black);
-    border: 1.75px solid var(--color-black);
-    @media (hover: hover) {
-      &:hover::after,
-      &:focus::after {
-        border-color: var(--color-black);
-      }
-    }
-  }
-  &_red {
-    color: var(--color-white);
-    background: var(--color-primary);
-    border: 1.75px solid var(--color-primary);
-    @media (hover: hover) {
-      &:hover::after,
-      &:focus::after {
-        border-color: var(--color-primary);
-      }
-    }
-  }
   &_fullwidth {
     @media screen and (max-width: 500px) {
       width: 100%;
@@ -146,14 +119,13 @@ const props = defineProps({
     pointer-events: none;
     &:focus {
       border: var(--border);
-      outline: none;
+      pointer-events: none;
       transform: none;
-      &::after {
-        border: none;
-        border-color: inherit;
-        top: 0;
-        left: 0;
-      }
+    }
+    &:focus::after {
+      border: transparent;
+      pointer-events: none;
+      transform: none;
     }
   }
 }

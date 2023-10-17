@@ -1,24 +1,25 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
+import { onMounted, onUnmounted } from 'vue'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
 import { projects } from '@/assets/data/projects'
 import uiButton from './ui/Button.vue'
 import ProjectCard from '@/components/ProjectCard.vue'
 
-import { onMounted } from 'vue'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-
 gsap.registerPlugin(ScrollTrigger)
 
+const tlBg = gsap.timeline({})
+
 onMounted(() => {
-  const tlBg = gsap.timeline({
-    scrollTrigger: {
-      trigger: '.work',
-      start: 'top center',
-      end: 'bottom center',
-      ease: 'power1.in',
-      toggleActions: 'play reverse play reverse'
-    }
+  ScrollTrigger.create({
+    animation: tlBg,
+    trigger: '.work',
+    start: 'top center',
+    end: 'bottom center',
+    ease: 'power1.in',
+    toggleActions: 'play reverse play reverse'
   })
 
   tlBg
@@ -26,22 +27,24 @@ onMounted(() => {
       backgroundColor: 'var(--color-secondary)'
     })
     .to(
-      '.title',
+      '.h2-subtitle',
       {
         color: 'var(--color-primary)'
       },
       '<'
     )
 })
+
+onUnmounted(() => {
+  tlBg.revert()
+})
 </script>
 
 <template>
   <section class="work">
     <i id="work" />
-    <h2 class="work__title">
-      <span class="title">Some of My Projects</span><span class="subtitle">Work</span>
-    </h2>
-    <div class="work__info">
+    <h2><span class="h2-subtitle">Some of My Projects</span><span>Work</span></h2>
+    <div>
       <p>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia magnam veniam, ipsa sunt
         delectus reiciendis, exercitationem esse ad minima quibusdam aliquid aut facere non sint
@@ -52,7 +55,7 @@ onMounted(() => {
     <div class="work__gallery gallery">
       <ProjectCard :projects="projects" />
     </div>
-    <div class="work__link">
+    <div>
       <ui-button
         type="link"
         to="https://github.com/AlenaGM"

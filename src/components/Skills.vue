@@ -1,5 +1,9 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
+import { onMounted, onUnmounted } from 'vue'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
 const skills = [
   'React',
   'VueJS',
@@ -20,10 +24,6 @@ const skills = [
   'WordPress',
   'MUI'
 ]
-
-import { onMounted } from 'vue'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -50,8 +50,8 @@ onMounted(() => {
 <template>
   <section class="skills">
     <i id="skills" />
-    <h2 class="skills__title"><span>Things I Can Do</span><span>Skills & Tools</span></h2>
-    <div div class="skills__info">
+    <h2><span>Things I Can Do</span><span>Skills & Tools</span></h2>
+    <div>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, dolor rerum! Rem
         inventore beatae dicta nemo vero, dolorum rerum vitae mollitia qui obcaecati facere aperiam
@@ -60,7 +60,7 @@ onMounted(() => {
     </div>
     <div class="skills__list">
       <div class="skills__list_item" v-for="(skill, i) in skills" :key="i">
-        <img class="skills__list_image" :src="`/icons/${skill}.png`" :alt="skill" />
+        <img :src="`/icons/${skill}.png`" :alt="skill" />
         <div class="tech-text">{{ skill }}</div>
       </div>
     </div>
@@ -87,11 +87,9 @@ onMounted(() => {
       padding: 0.75rem;
       background-color: var(--color-white);
       box-shadow: var(--box-shadow);
-
       img {
         object-fit: contain;
         aspect-ratio: 1;
-
         width: 80%;
       }
       div {
