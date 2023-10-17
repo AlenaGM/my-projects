@@ -6,7 +6,6 @@
       'button',
       {
         button_black: color === 'black',
-        button_white: color === 'white',
         button_red: color === 'red',
         button_fullwidth: mobileFullWidth,
         button_disabled: disabled
@@ -22,7 +21,6 @@
       'button',
       {
         button_black: color === 'black',
-        button_white: color === 'white',
         button_red: color === 'red',
         button_fullwidth: mobileFullWidth,
         button_disabled: disabled
@@ -62,10 +60,9 @@ const props = defineProps({
 <style lang="scss" scoped>
 .button {
   display: inline-flex;
-  padding: 13px 40px;
   justify-content: center;
   align-items: center;
-  position: relative;
+  padding: 13px 40px;
   font-family: var(--font-text);
   font-size: 13px;
   font-weight: 700;
@@ -119,16 +116,23 @@ const props = defineProps({
     color: var(--color-white);
     background: var(--color-black);
     border: 1.75px solid var(--color-black);
-  }
-  &_white {
-    color: var(--color-black);
-    background: var(--color-white);
-    border: 1.75px solid var(--color-white);
+    @media (hover: hover) {
+      &:hover::after,
+      &:focus::after {
+        border-color: var(--color-black);
+      }
+    }
   }
   &_red {
     color: var(--color-white);
     background: var(--color-primary);
     border: 1.75px solid var(--color-primary);
+    @media (hover: hover) {
+      &:hover::after,
+      &:focus::after {
+        border-color: var(--color-primary);
+      }
+    }
   }
   &_fullwidth {
     @media screen and (max-width: 500px) {
@@ -138,10 +142,10 @@ const props = defineProps({
   &_disabled {
     color: var(--color-gray);
     background: transparent;
-    border: 1.75px solid var(--color-gray);
+    border: var(--border);
     pointer-events: none;
     &:focus {
-      border: 1.75px solid var(--color-gray);
+      border: var(--border);
       outline: none;
       transform: none;
       &::after {

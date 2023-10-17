@@ -107,7 +107,6 @@ onMounted(() => {
     margin-left: 2rem;
     margin-right: 2rem;
     margin-bottom: -20%;
-    filter: brightness(0.95);
     z-index: 1;
     cursor: pointer;
     a {
@@ -139,7 +138,7 @@ onMounted(() => {
       left: 1rem;
       width: 100%;
       height: 100%;
-      border: var(--border);
+      border: solid 1.5px #fff;
       z-index: -1;
     }
   }
@@ -173,8 +172,8 @@ onMounted(() => {
     justify-items: start;
     padding: 1rem;
     width: 100%;
-    background-color: var(--color-white);
     box-shadow: var(--box-shadow);
+    background-color: var(--color-white);
     z-index: 3;
   }
   &__info {

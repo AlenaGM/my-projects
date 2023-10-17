@@ -22,44 +22,15 @@ onMounted(() => {
 
   tlBg
     .to('.main', {
-      backgroundColor: '#2c2e32'
+      backgroundColor: 'var(--color-secondary)'
     })
-    .to(
-      '.skills__list_item',
-      {
-        color: '#fff'
-      },
-      '<'
-    )
-    .to(
-      '.work__info p',
-      {
-        color: '#fff'
-      },
-      '<'
-    )
-    .to(
-      '.contact__info p',
-      {
-        color: '#fff'
-      },
-      '<'
-    )
     .to(
       '.title',
       {
-        color: '#f55758'
+        color: 'var(--color-primary)'
       },
       '<'
     )
-    .to(
-      '.subtitle',
-      {
-        color: '#fff'
-      },
-      '<'
-    )
-    .to('.work__link a', { backgroundColor: '#f55758' }, '<')
 })
 </script>
 

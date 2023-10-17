@@ -85,7 +85,7 @@ onMounted(() => {
       justify-items: center;
       align-items: end;
       padding: 0.75rem;
-      border: var(--border);
+      background-color: var(--color-white);
       box-shadow: var(--box-shadow);
 
       img {
