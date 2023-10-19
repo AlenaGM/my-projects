@@ -1,7 +1,7 @@
 <script setup>
-import { onMounted, onUnmounted } from 'vue'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+//import { onMounted, onUnmounted } from 'vue'
+//import gsap from 'gsap'
+//import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 // eslint-disable-next-line no-unused-vars
 const props = defineProps({
@@ -10,51 +10,35 @@ const props = defineProps({
   }
 })
 
-gsap.registerPlugin(ScrollTrigger)
-
-let mediaAnimation = gsap.matchMedia()
-const tlCard = gsap.timeline({})
-
-onMounted(() => {
-  mediaAnimation.add('(min-width: 1025px)', () => {
-    gsap.set('.card__image img', {
-      scale: 1.1,
-      yPercent: 5
-    })
-
-    const cards = document.querySelectorAll('.card')
-
-    cards.forEach((card) => {
-      const img = card.querySelector('img')
-      const content = card.querySelector('.card__content')
-      const deco = card.querySelector('.card__image_deco')
-
-      ScrollTrigger.create({
-        animation: tlCard,
-        trigger: card,
-        start: 'top 80%',
-        end: 'top top',
-        scrub: 1
-      })
-
-      tlCard
-        .to(
-          img,
-          {
-            yPercent: -5,
-            autoAlpha: 1
-          },
-          '<'
-        )
-        .from(content, { yPercent: 10 }, '<')
-        .from(deco, { yPercent: 10 }, '<')
-    })
-  })
-})
-
-onUnmounted(() => {
-  tlCard.revert()
-})
+//gsap.registerPlugin(ScrollTrigger)
+//
+//onMounted(() => {
+//  gsap.set('.card__image img', {
+//    scale: 1.1,
+//    yPercent: 5
+//  })
+//
+//  const cards = document.querySelectorAll('.card')
+//
+//  cards.forEach((card) => {
+//    const img = card.querySelector('img')
+//
+//    gsap.to(img, {
+//      yPercent: -5,
+//      autoAlpha: 1,
+//      scrollTrigger: {
+//        trigger: card,
+//        start: 'top 80%',
+//        end: 'bottom 20%',
+//        scrub: 1
+//      }
+//    })
+//  })
+//})
+//
+//onUnmounted(() => {
+//  tween.revert() // <- revert your animation when it unmounts
+//})
 </script>
 
 <template>
@@ -135,7 +119,7 @@ onUnmounted(() => {
       left: 1rem;
       width: 100%;
       height: 100%;
-      border: solid 1.5px #fff;
+      border: var(--border);
       z-index: -1;
     }
   }

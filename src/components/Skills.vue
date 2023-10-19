@@ -1,8 +1,8 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
-import { onMounted, onUnmounted } from 'vue'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+//import { onMounted } from 'vue'
+//import gsap from 'gsap'
+//import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const skills = [
   'React',
@@ -25,26 +25,25 @@ const skills = [
   'MUI'
 ]
 
-gsap.registerPlugin(ScrollTrigger)
-
-let mediaAnimation = gsap.matchMedia()
-
-onMounted(() => {
-  mediaAnimation.add('(min-width: 1025px)', () => {
-    gsap.from('.skills__list_item', {
-      stagger: 0.3,
-      opacity: 0,
-      xPercent: 100,
-      scrollTrigger: {
-        trigger: '.skills',
-        start: 'top 100px',
-        end: 'bottom+=150%',
-        toggleActions: 'play resume none none',
-        pin: true
-      }
-    })
-  })
-})
+//gsap.registerPlugin(ScrollTrigger)
+//
+//let mediaAnimation = gsap.matchMedia()
+//
+//onMounted(() => {
+//  mediaAnimation.add('(min-width: 1025px)', () => {
+//    gsap.from('.skills__list_item', {
+//      stagger: 0.3,
+//      opacity: 0,
+//      xPercent: 100,
+//      scrollTrigger: {
+//        trigger: '.skills__list',
+//        start: 'top 90%',
+//        end: 'bottom 50%',
+//        toggleActions: 'play resume none none'
+//      }
+//    })
+//  })
+//})
 </script>
 
 <template>

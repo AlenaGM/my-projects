@@ -1,43 +1,50 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
-import { onMounted, onUnmounted } from 'vue'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+//import { onMounted, onUnmounted } from 'vue'
+//import gsap from 'gsap'
+//import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import { projects } from '@/assets/data/projects'
 import uiButton from './ui/Button.vue'
 import ProjectCard from '@/components/ProjectCard.vue'
 
-gsap.registerPlugin(ScrollTrigger)
+//gsap.registerPlugin(ScrollTrigger)
+//
+//const tlBg = gsap.timeline({})
+//
+//onMounted(() => {
+//  ScrollTrigger.create({
+//    animation: tlBg,
+//    trigger: '.work',
+//    start: 'top center',
+//    end: 'bottom center',
+//    duration: 0.8,
+//    toggleActions: 'play reverse play reverse'
+//  })
+//
+//  tlBg
+//    .to('.main', {
+//      backgroundColor: 'var(--color-secondary)'
+//    })
+//    .to(
+//      '.h2-subtitle',
+//      {
+//        color: 'var(--color-primary)'
+//      },
+//      '<'
+//    )
+//    .to(
+//      '.card__image_deco',
+//      {
+//        borderColor: '#fff'
+//      },
+//      '<'
+//    )
+//})
 
-const tlBg = gsap.timeline({})
-
-onMounted(() => {
-  ScrollTrigger.create({
-    animation: tlBg,
-    trigger: '.work',
-    start: 'top center',
-    end: 'bottom center',
-    ease: 'power1.in',
-    toggleActions: 'play reverse play reverse'
-  })
-
-  tlBg
-    .to('.main', {
-      backgroundColor: 'var(--color-secondary)'
-    })
-    .to(
-      '.h2-subtitle',
-      {
-        color: 'var(--color-primary)'
-      },
-      '<'
-    )
-})
-
-onUnmounted(() => {
-  tlBg.revert()
-})
+//onUnmounted(() => {
+//  tlBg.revert()
+//})
 </script>
 
 <template>
