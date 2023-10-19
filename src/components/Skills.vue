@@ -1,8 +1,8 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
-//import { onMounted } from 'vue'
-//import gsap from 'gsap'
-//import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { onMounted, onUnmounted } from 'vue'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const skills = [
   'React',
@@ -25,25 +25,32 @@ const skills = [
   'MUI'
 ]
 
-//gsap.registerPlugin(ScrollTrigger)
-//
-//let mediaAnimation = gsap.matchMedia()
-//
-//onMounted(() => {
-//  mediaAnimation.add('(min-width: 1025px)', () => {
-//    gsap.from('.skills__list_item', {
-//      stagger: 0.3,
-//      opacity: 0,
-//      xPercent: 100,
-//      scrollTrigger: {
-//        trigger: '.skills__list',
-//        start: 'top 90%',
-//        end: 'bottom 50%',
-//        toggleActions: 'play resume none none'
-//      }
-//    })
-//  })
-//})
+gsap.registerPlugin(ScrollTrigger)
+
+let skillsAnimCtx
+let mediaAnimation = gsap.matchMedia()
+
+onMounted(() => {
+  mediaAnimation.add('(min-width: 1025px)', () => {
+    skillsAnimCtx = gsap.context(() => {
+      gsap.from('.skills__list_item', {
+        stagger: 0.2,
+        opacity: 0,
+        xPercent: 100,
+        scrollTrigger: {
+          trigger: '.skills__list',
+          start: 'top 90%',
+          end: 'bottom 90%',
+          toggleActions: 'play resume none none'
+        }
+      })
+    })
+  })
+})
+
+onUnmounted(() => {
+  skillsAnimCtx.revert()
+})
 </script>
 
 <template>

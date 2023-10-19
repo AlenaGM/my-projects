@@ -1,46 +1,46 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
-//import { onMounted, onUnmounted } from 'vue'
-//import gsap from 'gsap'
-//import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { onMounted, onUnmounted } from 'vue'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-//gsap.registerPlugin(ScrollTrigger)
-//
-//let mediaAnimation = gsap.matchMedia()
-//const tlToTop = gsap.timeline({})
-//
-//onMounted(() => {
-//  ScrollTrigger.create({
-//    animation: tlToTop,
-//    trigger: '.about',
-//    start: 'bottom bottom',
-//    toggleActions: 'play none none reverse'
-//  })
-//
-//  mediaAnimation.add('(min-width: 1025px)', () => {
-//    tlToTop.from('.footer__to-top', {
-//      autoAlpha: 0,
-//      opacity: 0,
-//      y: '160px',
-//      duration: 0.8,
-//      ease: 'back.out(2.5)'
-//    })
-//  })
-//
-//  mediaAnimation.add('(max-width: 1024px)', () => {
-//    tlToTop.from('.footer__to-top', {
-//      autoAlpha: 0,
-//      opacity: 0,
-//      y: '80px',
-//      duration: 0.4,
-//      ease: 'power1.in'
-//    })
-//  })
-//})
+gsap.registerPlugin(ScrollTrigger)
 
-//onUnmounted(() => {
-//  tlToTop.revert()
-//})
+let mediaAnimation = gsap.matchMedia()
+const tlToTop = gsap.timeline({})
+
+onMounted(() => {
+  ScrollTrigger.create({
+    animation: tlToTop,
+    trigger: '.about',
+    start: 'bottom bottom',
+    toggleActions: 'play none none reverse'
+  })
+
+  mediaAnimation.add('(min-width: 1025px)', () => {
+    tlToTop.from('.footer__to-top', {
+      autoAlpha: 0,
+      opacity: 0,
+      y: '160px',
+      duration: 0.8,
+      ease: 'back.out(2.5)'
+    })
+  })
+
+  mediaAnimation.add('(max-width: 1024px)', () => {
+    tlToTop.from('.footer__to-top', {
+      autoAlpha: 0,
+      opacity: 0,
+      y: '80px',
+      duration: 0.4,
+      ease: 'power1.in'
+    })
+  })
+})
+
+onUnmounted(() => {
+  tlToTop.revert()
+})
 </script>
 
 <template>
