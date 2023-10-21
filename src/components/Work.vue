@@ -17,7 +17,7 @@ onMounted(() => {
     animation: tlBg,
     trigger: '.work',
     start: 'top 50%',
-    end: 'bottom 50%',
+    end: 'bottom bottom',
     duration: 0.8,
     toggleActions: 'play reverse play reverse'
   })

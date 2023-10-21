@@ -1,47 +1,5 @@
 <!-- eslint-disable vue/multi-word-component-names -->
-<script setup>
-import { onMounted, onUnmounted } from 'vue'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-
-gsap.registerPlugin(ScrollTrigger)
-
-let mediaAnimation = gsap.matchMedia()
-const tlToTop = gsap.timeline({})
-
-onMounted(() => {
-  ScrollTrigger.create({
-    animation: tlToTop,
-    trigger: '.about',
-    start: 'bottom bottom',
-    toggleActions: 'play none none reverse'
-  })
-
-  mediaAnimation.add('(min-width: 1025px)', () => {
-    tlToTop.from('.footer__to-top', {
-      autoAlpha: 0,
-      opacity: 0,
-      y: '160px',
-      duration: 0.8,
-      ease: 'back.out(2.5)'
-    })
-  })
-
-  mediaAnimation.add('(max-width: 1024px)', () => {
-    tlToTop.from('.footer__to-top', {
-      autoAlpha: 0,
-      opacity: 0,
-      y: '80px',
-      duration: 0.4,
-      ease: 'power1.in'
-    })
-  })
-})
-
-onUnmounted(() => {
-  tlToTop.revert()
-})
-</script>
+<script setup></script>
 
 <template>
   <footer class="footer">
@@ -112,7 +70,7 @@ onUnmounted(() => {
       }
     }
   }
-  @media (any-pointer: fine) and (min-width: 1025px) {
+  @media screen and (min-width: 1025px) {
     &__to-top {
       position: fixed;
       right: 0.5rem;
@@ -186,7 +144,7 @@ onUnmounted(() => {
       }
     }
   }
-  @media (any-pointer: coarse) {
+  @media (any-pointer: coarse), (max-width: 1024px) {
     &__to-top {
       position: fixed;
       right: 0.75rem;

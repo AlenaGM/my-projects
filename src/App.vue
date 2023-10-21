@@ -58,6 +58,36 @@ onMounted(() => {
         yPercent: 0
       })
     })
+
+    mediaAnimation.add('(min-width: 1025px)', () => {
+      gsap.from('.footer__to-top', {
+        scrollTrigger: {
+          trigger: '.about',
+          start: 'bottom bottom',
+          toggleActions: 'play none none reverse'
+        },
+        autoAlpha: 0,
+        opacity: 0,
+        y: '160px',
+        duration: 0.8,
+        ease: 'back.out(2)'
+      })
+    })
+
+    mediaAnimation.add('(max-width: 1024px)', () => {
+      gsap.from('.footer__to-top', {
+        scrollTrigger: {
+          trigger: '.about',
+          start: 'bottom bottom',
+          toggleActions: 'play none none reverse'
+        },
+        autoAlpha: 0,
+        opacity: 0,
+        y: '80px',
+        duration: 0.4,
+        ease: 'power1.in'
+      })
+    })
   })
 })
 
