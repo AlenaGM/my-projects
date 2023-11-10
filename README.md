@@ -1,4 +1,4 @@
-# My Portfolio
+# My Portfolio <img width="45%" alt="devfolio icon" src="../main/screenshots/devicon.png">
 
 _Welcome to my web developer portfolio!_<br><br>
 Here, you'll find a selection of projects that highlight my passion for web development. They include freelance work, study assignments, and personal projects I've worked on during weekends. <br><br>
