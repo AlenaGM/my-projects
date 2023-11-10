@@ -13,6 +13,9 @@ Enjoy!
 
 &nbsp;&nbsp;&nbsp;&nbsp;&check;&nbsp;&nbsp; VueJS<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&check;&nbsp;&nbsp; Vite<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&check;&nbsp;&nbsp; Vuelidate<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&check;&nbsp;&nbsp; EmailJS<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&check;&nbsp;&nbsp; SASS<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&check;&nbsp;&nbsp; GSAP<br>
 
 ## Feedback and Contributions
