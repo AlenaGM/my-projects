@@ -2,7 +2,7 @@
 
 _Welcome to my web developer portfolio!_<br><br>
 Here, you'll find a selection of projects that highlight my passion for web development. They include freelance work, study assignments, and personal projects I've worked on during weekends. <br><br>
-While, technically, the portfolio is complete, I am still working on content to give you a better idea of my skills and expertise.<br><br> 
+While, the portfolio is technically complete, I am still working on adding content to give you a better idea of my skills and expertise.<br><br> 
 Enjoy!<br><br>
 
 ## Demo
@@ -17,22 +17,22 @@ Enjoy!<br><br>
   <img src="https://github.com/AlenaGM/AlenaGM/blob/main/greensock.png" title="GSAP" alt="GSAP" width="40" height="40"/>
 </div> <br>
 
-## Feedback and Contributing
+## Feedback and Contributions
 
 Contributions are always welcome! If you want to contribute:
 
 ```bash
-# Clone repo and create a new branch:
+# Clone the repository and create a new branch:
 $ git checkout https://github.com/AlenaGM/my-projects -b name_for_new_branch
 
 #  Make changes
-#  Submit Pull Request with description of changes
+#  Submit a pull request with a description of the changes
 ```
 
-If you have any suggestions, critics or advice, please contact me via [email] <br><br>
+If you have any suggestions, critiques, or advice, please contact me via [email] <br><br>
 
 ## License
-My Portfolio is open source - feel free to clone, transform and improve it for your purposes
+My Portfolio is open source - feel free to clone, modify, and enhance it for your purposes.
 
 ```bash
 # Clone this repository
@@ -47,7 +47,7 @@ $ npm install
 # Run the app
 $ npm run dev
 
-# Compile and Minify for Production
+# Compile and minify for Production
 $ run build
 ```
 
