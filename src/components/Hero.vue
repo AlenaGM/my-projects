@@ -10,8 +10,6 @@ const tlHero = gsap.timeline({})
 let mediaAnimation = gsap.matchMedia()
 
 onMounted(() => {
-  gsap.set('.hero__image', { opacity: 1 })
-
   mediaAnimation.add('(min-width: 1025px)', () => {
     tlHero
       .to('.hero__title span:first-child', {
@@ -50,14 +48,14 @@ onMounted(() => {
       .to('.hero__title span:first-child', {
         duration: 1.3,
         x: 0,
-        ease: 'back.out(1.1)'
+        ease: 'power3.out'
       })
       .to(
         '.hero__title span:last-child',
         {
           duration: 1.3,
           x: 0,
-          ease: 'back.out(1.1)'
+          ease: 'power3.out'
         },
         '<'
       )
