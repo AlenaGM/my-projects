@@ -26,9 +26,9 @@ onMounted(() => {
         },
         '<'
       )
-      .from('.hero__image', {
-        autoAlpha: 0,
-        yPercent: 50,
+      .to('.hero__image', {
+        opacity: 1,
+        y: 0,
         duration: 1,
         ease: 'back.out(2)'
       })
@@ -46,23 +46,24 @@ onMounted(() => {
   mediaAnimation.add('(max-width: 1024px)', () => {
     tlHero
       .to('.hero__title span:first-child', {
-        duration: 1.3,
+        duration: 1,
         x: 0,
-        ease: 'power3.out'
+        ease: 'power1.inOut'
       })
       .to(
         '.hero__title span:last-child',
         {
-          duration: 1.3,
+          duration: 1,
           x: 0,
-          ease: 'power3.out'
+          ease: 'power1.inOut'
         },
         '<'
       )
-      .from('.hero__image', {
-        autoAlpha: 0,
-        yPercent: 100,
-        duration: 0.8
+      .to('.hero__image', {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: 'power1.inOut'
       })
       .from(
         '.social a',
@@ -138,6 +139,8 @@ onUnmounted(() => {
   }
   &__image {
     overflow: hidden;
+    opacity: 0;
+    transform: translateY(50%);
     img {
       width: 100%;
       height: 100%;

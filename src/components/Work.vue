@@ -17,12 +17,12 @@ onMounted(() => {
     animation: tlBg,
     trigger: '.work',
     start: 'top 30%',
-    end: 'bottom 70%',
+    end: 'bottom bottom',
     toggleActions: 'play reverse play reverse'
   })
 
   tlBg
-    .to('.main', {
+    .to('body', {
       backgroundColor: 'var(--color-secondary)'
     })
     .to(

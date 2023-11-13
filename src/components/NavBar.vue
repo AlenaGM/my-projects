@@ -50,19 +50,28 @@ const menu = [
           </a>
         </li>
       </ul>
-      <div class="navbar__menu_open" v-if="!isOpenedMobileMenu" @click="isOpenedMobileMenu = true">
+      <button
+        class="navbar__menu_open"
+        title="dropdown menu opening"
+        v-if="!isOpenedMobileMenu"
+        @click="isOpenedMobileMenu = true"
+      >
         <font-awesome-icon :icon="['fas', 'bars-staggered']" />
-      </div>
+      </button>
     </nav>
-    <div
+    <nav
       class="navbar__dropdown"
       v-if="isOpenedMobileMenu"
       v-click-away="onClickAway"
       v-scroll-lock="isOpenedMobileMenu"
     >
-      <div class="navbar__menu_close" @click="isOpenedMobileMenu = false">
+      <button
+        class="navbar__menu_close"
+        title="dropdown menu closing"
+        @click="isOpenedMobileMenu = false"
+      >
         <font-awesome-icon :icon="['fas', 'xmark']" />
-      </div>
+      </button>
       <ul>
         <li v-for="(element, i) of menu" :key="i">
           <a :href="element.path" @click="isOpenedMobileMenu = false">
@@ -70,7 +79,7 @@ const menu = [
           </a>
         </li>
       </ul>
-    </div>
+    </nav>
   </div>
 </template>
 
@@ -155,6 +164,8 @@ const menu = [
         align-items: flex-start;
         height: 32px;
         font-size: 2rem;
+        border: none;
+        background-color: transparent;
       }
     }
     &_open {
