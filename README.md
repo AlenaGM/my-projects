@@ -1,21 +1,22 @@
-# My Portfolio <img width="45%" alt="devfolio icon" src="../main/screenshots/devicon.png">
+# My Portfolio  <img src="../main/screenshots/devicon.png" alt="devfolio icon" height="42" width="42">  
 
 _Welcome to my web developer portfolio!_<br><br>
 Here, you'll find a selection of projects that highlight my passion for web development. They include freelance work, study assignments, and personal projects I've worked on during weekends. <br><br>
 While, the portfolio is technically complete, I am still working on adding content to give you a better idea of my skills and expertise.<br><br> 
-Enjoy!<br><br>
+Enjoy!
 
 ## Demo
 
-[My Portfolio] <br><br>
+[My Portfolio]
 
 ## Tech stack
 
-<div>
-  <img src="https://github.com/AlenaGM/AlenaGM/blob/main/VueJS.png" title="VueJS" alt="VueJS" width="42" height="42"/> &nbsp;
-  <img src="https://github.com/AlenaGM/AlenaGM/blob/main/Vite.png" title="Vite" alt="Vite" width="40" height="40"/> &nbsp;
-  <img src="https://github.com/AlenaGM/AlenaGM/blob/main/greensock.png" title="GSAP" alt="GSAP" width="40" height="40"/>
-</div> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&check;&nbsp;&nbsp; VueJS<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&check;&nbsp;&nbsp; Vite<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&check;&nbsp;&nbsp; Vuelidate<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&check;&nbsp;&nbsp; EmailJS<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&check;&nbsp;&nbsp; SASS<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&check;&nbsp;&nbsp; GSAP<br>
 
 ## Feedback and Contributions
 
@@ -29,7 +30,8 @@ $ git checkout https://github.com/AlenaGM/my-projects -b name_for_new_branch
 #  Submit a pull request with a description of the changes
 ```
 
-If you have any suggestions, critiques, or advice, please contact me via [email] <br><br>
+If you have any suggestions, critiques, or advice, please contact me via [email] 
+
 
 ## License
 My Portfolio is open source - feel free to clone, modify, and enhance it for your purposes.
