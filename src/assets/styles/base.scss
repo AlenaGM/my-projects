@@ -40,6 +40,11 @@
   font-weight: normal;
 }
 
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 body {
   min-height: 100vh;
   min-width: 320px;
@@ -52,7 +57,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  scroll-behavior: smooth;
+  overflow-y: scroll;
   overscroll-behavior: none;
 }
 
