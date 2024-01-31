@@ -7,74 +7,38 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 const tlHero = gsap.timeline({})
-let mediaAnimation = gsap.matchMedia()
 
 onMounted(() => {
-  mediaAnimation.add('(min-width: 1025px)', () => {
-    tlHero
-      .to('.hero__title span:first-child', {
+  tlHero
+    .to('.hero__title span:first-child', {
+      duration: 1.3,
+      x: 0,
+      ease: 'back.out(1.1)'
+    })
+    .to(
+      '.hero__title span:last-child',
+      {
         duration: 1.3,
         x: 0,
         ease: 'back.out(1.1)'
-      })
-      .to(
-        '.hero__title span:last-child',
-        {
-          duration: 1.3,
-          x: 0,
-          ease: 'back.out(1.1)'
-        },
-        '<'
-      )
-      .to('.hero__image', {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: 'back.out(2)'
-      })
-      .from(
-        '.social a',
-        {
-          stagger: 0.3,
-          autoAlpha: 0,
-          xPercent: 100
-        },
-        '+=0.3'
-      )
-  })
-
-  mediaAnimation.add('(max-width: 1024px)', () => {
-    tlHero
-      .to('.hero__title span:first-child', {
-        duration: 1.3,
-        x: 0,
-        ease: 'back.out(1.1)'
-      })
-      .to(
-        '.hero__title span:last-child',
-        {
-          duration: 1.3,
-          x: 0,
-          ease: 'back.out(1.1)'
-        },
-        '<'
-      )
-      .to('.hero__image', {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: 'back.out(2)'
-      })
-      .from(
-        '.social a',
-        {
-          stagger: 0.3,
-          autoAlpha: 0,
-          xPercent: 100
-        },
-        '+=0.3'
-      )
-  })
+      },
+      '<'
+    )
+    .to('.hero__image', {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      ease: 'back.out(2)'
+    })
+    .from(
+      '.social a',
+      {
+        stagger: 0.3,
+        autoAlpha: 0,
+        xPercent: 100
+      },
+      '+=0.3'
+    )
 })
 
 onUnmounted(() => {
