@@ -46,16 +46,16 @@ onMounted(() => {
   mediaAnimation.add('(max-width: 1024px)', () => {
     tlHero
       .to('.hero__title span:first-child', {
-        duration: 1,
+        duration: 1.3,
         x: 0,
-        ease: 'power1.inOut'
+        ease: 'back.out(1.1)'
       })
       .to(
         '.hero__title span:last-child',
         {
-          duration: 1,
+          duration: 1.3,
           x: 0,
-          ease: 'power1.inOut'
+          ease: 'back.out(1.1)'
         },
         '<'
       )
@@ -63,7 +63,7 @@ onMounted(() => {
         opacity: 1,
         y: 0,
         duration: 1,
-        ease: 'power1.inOut'
+        ease: 'back.out(2)'
       })
       .from(
         '.social a',
