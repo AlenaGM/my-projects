@@ -1,0 +1,69 @@
+@font-face {
+  font-family: 'Ms Madi';
+  src: url('@/assets/fonts/MsMadi-Regular.eot');
+  src:
+    local('Ms Madi'),
+    url('@/assets/fonts/MsMadi-Regular.eot?#iefix') format('embedded-opentype'),
+    url('@/assets/fonts/MsMadi-Regular.woff2') format('woff2'),
+    url('@/assets/fonts/MsMadi-Regular.woff') format('woff'),
+    url('@/assets/fonts/MsMadi-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('@/assets/fonts/Poppins-Regular.eot');
+  src:
+    local('Poppins'),
+    url('@/assets/fonts/Poppins-Regular.eot?#iefix') format('embedded-opentype'),
+    url('@/assets/fonts/Poppins-Regular.woff2') format('woff2'),
+    url('@/assets/fonts/Poppins-Regular.woff') format('woff'),
+    url('@/assets/fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('@/assets/fonts/Poppins-Bold.eot');
+  src:
+    local('Poppins'),
+    url('@/assets/fonts/Poppins-Bold.eot?#iefix') format('embedded-opentype'),
+    url('@/assets/fonts/Poppins-Bold.woff2') format('woff2'),
+    url('@/assets/fonts/Poppins-Bold.woff') format('woff'),
+    url('@/assets/fonts/Poppins-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Red Hat Mono';
+  src:
+    local('Red Hat Mono'),
+    url('@/assets/fonts/RedHatMono-Regular.woff2') format('woff2'),
+    url('@/assets/fonts/RedHatMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Red Hat Mono';
+  src:
+    local('Red Hat Mono'),
+    url('@/assets/fonts/RedHatMono-Medium.woff2') format('woff2'),
+    url('@/assets/fonts/RedHatMono-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Red Hat Mono';
+  src:
+    local('Red Hat Mono'),
+    url('@/assets/fonts/RedHatMono-Bold.woff2') format('woff2'),
+    url('@/assets/fonts/RedHatMono-Bold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}

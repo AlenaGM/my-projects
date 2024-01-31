@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Ms+Madi&family=Poppins:wght@400;700&family=Red+Hat+Mono:wght@400;600&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Ms+Madi&family=Poppins:wght@400;700&family=Red+Hat+Mono:wght@400;600&display=swap');
+
+@import './fonts.scss';
 
 // variables
 :root {
@@ -210,7 +212,7 @@ h2 {
 a,
 label {
   font-family: var(--font-title);
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
   color: inherit;
   font-size: inherit;
@@ -256,7 +258,7 @@ p {
   font-family: var(--font-tech);
   font-size: 0.75rem;
   span {
-    font-weight: 600;
+    font-weight: 500;
   }
 }
 

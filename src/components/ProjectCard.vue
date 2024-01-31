@@ -186,6 +186,7 @@ onUnmounted(() => {
       align-items: flex-start;
       margin-top: 0.5rem;
       font-size: 14px;
+      font-weight: 500;
       white-space: nowrap;
       transition:
         transform 0.125s ease,
