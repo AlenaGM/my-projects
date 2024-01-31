@@ -6,9 +6,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const skills = [
   'React',
+  'Redux',
   'VueJS',
   'Vite',
-  'MobX',
   'Pinia',
   'HTML5',
   'CSS3',
@@ -17,12 +17,12 @@ const skills = [
   'JavaScript',
   'TypeScript',
   'Git',
+  'Webpack',
   'Rest API',
   'GraphQL',
   'Firebase',
   'GSAP',
-  'WordPress',
-  'MUI'
+  'WordPress'
 ]
 
 gsap.registerPlugin(ScrollTrigger)
@@ -77,7 +77,7 @@ onUnmounted(() => {
 .skills {
   &__list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(112px, 1fr));
     gap: 1.125rem;
     grid-auto-rows: 1fr;
     @media screen and (max-width: 500px) {

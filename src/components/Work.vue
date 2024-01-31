@@ -16,7 +16,7 @@ onMounted(() => {
   ScrollTrigger.create({
     animation: tlBg,
     trigger: '.work',
-    start: 'top 30%',
+    start: 'top center',
     end: 'bottom bottom',
     toggleActions: 'play reverse play reverse'
   })
