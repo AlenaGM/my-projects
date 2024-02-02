@@ -13,28 +13,31 @@ const props = defineProps({
 })
 
 let cardAnimCtx
+let mediaAnimation = gsap.matchMedia()
 
 onMounted(() => {
   cardAnimCtx = gsap.context(() => {
-    gsap.set('.card__image img', {
-      scale: 1.1,
-      yPercent: 5
-    })
+    mediaAnimation.add('(min-width: 1025px)', () => {
+      gsap.set('.card__image img', {
+        scale: 1.1,
+        yPercent: 5
+      })
 
-    const cards = document.querySelectorAll('.card')
+      const cards = document.querySelectorAll('.card')
 
-    cards.forEach((card) => {
-      const img = card.querySelector('img')
+      cards.forEach((card) => {
+        const img = card.querySelector('img')
 
-      gsap.to(img, {
-        yPercent: -5,
-        autoAlpha: 1,
-        scrollTrigger: {
-          trigger: card,
-          start: 'top 80%',
-          end: 'bottom 20%',
-          scrub: 1
-        }
+        gsap.to(img, {
+          yPercent: -5,
+          autoAlpha: 1,
+          scrollTrigger: {
+            trigger: card,
+            start: 'top 80%',
+            end: 'bottom 20%',
+            scrub: 1
+          }
+        })
       })
     })
   })
