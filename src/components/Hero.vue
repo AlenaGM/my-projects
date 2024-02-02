@@ -27,7 +27,7 @@ onMounted(() => {
     .to('.hero__image', {
       opacity: 1,
       y: 0,
-      duration: 1.1,
+      duration: 1.3,
       ease: 'back.out(1.5)'
     })
     .from(

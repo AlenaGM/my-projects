@@ -1,12 +1,26 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
-import { onMounted, onUnmounted } from 'vue'
+import { onMounted, onUnmounted, ref, computed } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import { projects } from '@/assets/data/projects'
-import uiButton from './ui/Button.vue'
+import uiButton from '@/components/ui/Button.vue'
 import ProjectCard from '@/components/ProjectCard.vue'
+
+const filters = ref(['All', 'Vanilla JS', 'VueJS', 'React', 'GSAP'])
+const activeFilter = ref('All')
+
+const setActiveFilter = (filter) => {
+  activeFilter.value = filter
+}
+
+const getProjects = computed(() => {
+  if (activeFilter.value === 'All') {
+    return projects
+  }
+  return projects.filter((project) => project.tags.includes(activeFilter.value))
+})
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -58,8 +72,20 @@ onUnmounted(() => {
       </p>
     </div>
 
+    <div class="work__filters">
+      <ul>
+        <li
+          v-for="(filter, i) of filters"
+          :key="i"
+          @click="setActiveFilter(filter)"
+          :class="{ active: filter === activeFilter }"
+        >
+          {{ filter }}
+        </li>
+      </ul>
+    </div>
     <div class="work__gallery gallery">
-      <ProjectCard :projects="projects" />
+      <ProjectCard :projects="getProjects" />
     </div>
     <div>
       <ui-button
@@ -81,6 +107,28 @@ onUnmounted(() => {
 .work {
   z-index: 50;
   display: grid;
+  &__filters ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+    @media screen and (max-width: 768px) {
+      margin-bottom: 2.5rem;
+    }
+    li {
+      cursor: pointer;
+      transition: color 0.25s ease;
+      &:hover,
+      &:active {
+        color: var(--color-primary);
+        transition: color 0.25s ease;
+      }
+      &:not(last-of-type) {
+        margin-right: 2.5rem;
+      }
+    }
+  }
   &__gallery {
     margin-bottom: 4rem;
     @media screen and (max-width: 768px) {

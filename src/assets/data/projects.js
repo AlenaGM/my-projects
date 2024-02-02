@@ -7,7 +7,7 @@ const projects = [
     image: '/img/point',
     demo: 'https://point-office-spaces.netlify.app/',
     code: 'https://github.com/AlenaGM/office-spaces',
-    tags: 'GSAP'
+    tags: ['Vanilla JS', 'GSAP']
   },
   {
     id: '2',
@@ -17,7 +17,7 @@ const projects = [
     image: '/img/marvel',
     demo: 'https://alena-marvel.netlify.app/',
     code: 'https://github.com/AlenaGM/marvel/',
-    tags: 'React'
+    tags: ['React']
   },
   {
     id: '3',
@@ -27,7 +27,7 @@ const projects = [
     image: '/img/regform',
     demo: 'https://alenagm.github.io/Registration-Form/',
     code: 'https://github.com/AlenaGM/Registration-Form/',
-    tags: 'JavaScript'
+    tags: ['Vanilla JS']
   },
   {
     id: '4',
@@ -37,7 +37,7 @@ const projects = [
     image: '/img/pineapple',
     demo: 'https://alenagm.github.io/pineapple-movies/',
     code: 'https://github.com/AlenaGM/pineapple-movies/',
-    tags: 'Vue'
+    tags: ['VueJS']
   },
   {
     id: '5',
@@ -47,7 +47,7 @@ const projects = [
     image: '/img/dateformat',
     demo: 'https://alenagm.github.io/Date-Format-Exercise/',
     code: 'https://github.com/AlenaGM/Date-Format-Exercise/',
-    tags: 'JavaScript'
+    tags: ['Vanilla JS']
   },
   {
     id: '6',
@@ -57,7 +57,7 @@ const projects = [
     image: '/img/mogutravel',
     demo: 'https://alenagm.github.io/Mogu-Travel/',
     code: 'https://github.com/AlenaGM/Mogu-Travel/',
-    tags: 'JavaScript'
+    tags: ['Vanilla JS']
   },
   {
     id: '7',
@@ -67,7 +67,7 @@ const projects = [
     image: '/img/carcalculator',
     demo: 'https://alenagm.github.io/Car-Value-Estimator/',
     code: 'https://github.com/AlenaGM/Car-Value-Estimator/',
-    tags: 'JavaScript'
+    tags: ['Vanilla JS']
   },
   {
     id: '8',
@@ -77,7 +77,7 @@ const projects = [
     image: '/img/tripster',
     demo: 'https://alenagm.github.io/tours-by-locals/',
     code: 'https://github.com/AlenaGM/tours-by-locals/',
-    tags: 'Vue'
+    tags: ['VueJS']
   },
   {
     id: '9',
@@ -87,7 +87,7 @@ const projects = [
     image: '/img/naive',
     demo: 'https://alenagm.github.io/naive/',
     code: 'https://github.com/AlenaGM/naive/',
-    tags: 'Vue'
+    tags: ['VueJS']
   },
   {
     id: '10',
@@ -97,7 +97,7 @@ const projects = [
     image: '/img/wordy',
     demo: 'https://alenas-flashcards-app.netlify.app/',
     code: 'https://github.com/AlenaGM/flashcards-app',
-    tags: 'React'
+    tags: ['React']
   },
   {
     id: '11',
@@ -107,7 +107,7 @@ const projects = [
     image: '/img/addcomments',
     demo: 'https://alenagm.github.io/react-comments-form/',
     code: 'https://github.com/AlenaGM/react-comments-form/',
-    tags: 'React'
+    tags: ['React']
   },
   {
     id: '12',
@@ -117,7 +117,7 @@ const projects = [
     image: '/img/biblio',
     demo: 'https://alenagm.github.io/biblio/',
     code: 'https://github.com/AlenaGM/biblio',
-    tags: 'React'
+    tags: ['React']
   }
 ]
 
