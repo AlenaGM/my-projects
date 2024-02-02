@@ -31,20 +31,8 @@ let mediaAnimation = gsap.matchMedia()
 
 onMounted(() => {
   ctx = gsap.context(() => {
-    mediaAnimation.add('(max-width: 1024px)', () => {
-      gsap.set('.progressbar', { width: 0 })
-      gsap.to('.progressbar', {
-        width: '100%',
-        scrollTrigger: {
-          trigger: 'body',
-          start: 'top top',
-          end: 'bottom bottom',
-          scrub: true
-        }
-      })
-    })
+    const titles = gsap.utils.toArray('h2 span:first-child')
 
-    const titles = document.querySelectorAll('h2 span:first-child')
     titles.forEach((title) => {
       gsap.set(title, { yPercent: 75 })
 
@@ -75,6 +63,17 @@ onMounted(() => {
     })
 
     mediaAnimation.add('(max-width: 1024px)', () => {
+      gsap.set('.progressbar', { width: 0 })
+      gsap.to('.progressbar', {
+        width: '100%',
+        scrollTrigger: {
+          trigger: 'body',
+          start: 'top top',
+          end: 'bottom bottom',
+          scrub: true
+        }
+      })
+
       gsap.from('.footer__to-top', {
         scrollTrigger: {
           trigger: '.about',

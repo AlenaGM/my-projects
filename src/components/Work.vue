@@ -8,11 +8,19 @@ import { projects } from '@/assets/data/projects'
 import uiButton from '@/components/ui/Button.vue'
 import ProjectCard from '@/components/ProjectCard.vue'
 
+gsap.registerPlugin(ScrollTrigger)
+
 const filters = ref(['All', 'Vanilla JS', 'VueJS', 'React', 'GSAP'])
 const activeFilter = ref('All')
 
 const setActiveFilter = (filter) => {
   activeFilter.value = filter
+  gsap.from('.work__gallery', {
+    y: 150,
+    opacity: 0,
+    duration: 0.5,
+    ease: 'power1.out'
+  })
 }
 
 const getProjects = computed(() => {
@@ -21,8 +29,6 @@ const getProjects = computed(() => {
   }
   return projects.filter((project) => project.tags.includes(activeFilter.value))
 })
-
-gsap.registerPlugin(ScrollTrigger)
 
 const tlBg = gsap.timeline({})
 
@@ -53,6 +59,18 @@ onMounted(() => {
       },
       '<'
     )
+
+  gsap.from('.work__gallery', {
+    y: 150,
+    opacity: 0,
+    scrollTrigger: {
+      trigger: '.work',
+      start: 'top 50%',
+      duration: 0.8,
+      ease: 'power1.out',
+      toggleActions: 'play none none reverse'
+    }
+  })
 })
 
 onUnmounted(() => {
@@ -107,25 +125,26 @@ onUnmounted(() => {
 .work {
   z-index: 50;
   display: grid;
-  &__filters ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 4rem;
-    @media screen and (max-width: 768px) {
-      margin-bottom: 2.5rem;
-    }
-    li {
-      cursor: pointer;
-      transition: color 0.25s ease;
-      &:hover,
-      &:active {
-        color: var(--color-primary);
-        transition: color 0.25s ease;
+  &__filters {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 4rem;
+      @media screen and (max-width: 768px) {
+        margin-bottom: 2.5rem;
       }
-      &:not(last-of-type) {
-        margin-right: 2.5rem;
+      li {
+        cursor: pointer;
+        transition: color 0.25s ease;
+        &:hover {
+          color: var(--color-primary);
+          transition: color 0.25s ease;
+        }
+        &:not(last-of-type) {
+          margin-right: 2.5rem;
+        }
       }
     }
   }
@@ -143,5 +162,9 @@ onUnmounted(() => {
   column-gap: 2.5rem;
   row-gap: 4rem;
   justify-items: center;
+}
+.active {
+  color: var(--color-primary);
+  transition: color 0.25s ease;
 }
 </style>

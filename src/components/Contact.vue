@@ -32,7 +32,6 @@ import ContactForm from './ContactForm.vue'
   min-height: calc(100vh - 367px);
   @media screen and (max-width: 1023px), (orientation: portrait) {
     margin-bottom: calc(var(--section-gap-mobile) * 0.5);
-    //min-height: calc(100vh - 213px);
     min-height: auto;
   }
   &__container {

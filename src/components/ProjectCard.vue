@@ -3,14 +3,14 @@ import { onMounted, onUnmounted } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
+gsap.registerPlugin(ScrollTrigger)
+
 // eslint-disable-next-line no-unused-vars
 const props = defineProps({
   projects: {
     required: true
   }
 })
-
-gsap.registerPlugin(ScrollTrigger)
 
 let cardAnimCtx
 
