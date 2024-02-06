@@ -37,7 +37,7 @@ onMounted(() => {
     animation: tlBg,
     trigger: '.work',
     start: 'top center',
-    end: 'bottom bottom',
+    end: 'bottom center',
     toggleActions: 'play reverse play reverse'
   })
 
@@ -65,8 +65,8 @@ onMounted(() => {
     opacity: 0,
     scrollTrigger: {
       trigger: '.work',
-      start: 'top 50%',
-      duration: 0.8,
+      start: 'top 25%',
+      duration: 1.3,
       ease: 'power1.out',
       toggleActions: 'play none none reverse'
     }
