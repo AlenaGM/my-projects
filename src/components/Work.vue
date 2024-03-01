@@ -61,14 +61,14 @@ onMounted(() => {
     )
 
   gsap.from('.work__gallery', {
-    y: 150,
+    y: '160px',
     opacity: 0,
+    autoAlpha: 0,
     scrollTrigger: {
       trigger: '.work',
-      start: 'top 25%',
-      duration: 1.3,
-      ease: 'power1.out',
-      toggleActions: 'play none none reverse'
+      start: 'top 75%',
+      end: 'top 25%',
+      scrub: 1
     }
   })
 })

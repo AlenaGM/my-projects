@@ -7,22 +7,22 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 const skills = [
+  'HTML5',
+  'CSS3',
+  'JavaScript',
+  'TypeScript',
   'React',
   'Redux',
   'VueJS',
   'Vite',
   'Pinia',
-  'HTML5',
-  'CSS3',
   'Sass',
-  'TailwindCSS',
-  'JavaScript',
-  'TypeScript',
-  'Git',
   'Webpack',
-  'Rest API',
+  'Git',
+  'Rest APIs',
   'GraphQL',
   'Firebase',
+  'TailwindCSS',
   'GSAP',
   'WordPress'
 ]
