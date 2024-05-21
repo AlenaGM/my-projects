@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'Ms Madi';
+  src:
+    local('Ms Madi'),
+    url('@/assets/fonts/MsMadi-Regular.woff2') format('woff2'),
+    url('@/assets/fonts/MsMadi-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src:
+    local('Poppins'),
+    url('@/assets/fonts/Poppins-Regular.woff2') format('woff2'),
+    url('@/assets/fonts/Poppins-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src:
+    local('Poppins'),
+    url('@/assets/fonts/Poppins-Bold.woff2') format('woff2'),
+    url('@/assets/fonts/Poppins-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Red Hat Mono';
+  src:
+    local('Red Hat Mono'),
+    url('@/assets/fonts/RedHatMono-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Red Hat Mono';
+  src:
+    local('Red Hat Mono'),
+    url('@/assets/fonts/RedHatMono-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Red Hat Mono';
+  src:
+    local('Red Hat Mono'),
+    url('@/assets/fonts/RedHatMono-Bold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
