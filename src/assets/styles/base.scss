@@ -48,8 +48,8 @@ body {
   color: var(--color-text);
   background-color: var(--color-white);
   transition:
-    color 0.5s,
-    background-color 0.5s;
+    color 0.35s,
+    background-color 0.35s;
   line-height: 1.6;
   font-family: var(--font-text);
   font-size: 16px;
@@ -96,7 +96,7 @@ h1 {
       font-weight: 400;
       font-size: 36px;
       line-height: 1.2;
-      @media screen and (max-width: 500px) {
+      @media screen and (max-width: 576px) {
         font-size: 28px;
       }
     }
@@ -106,7 +106,7 @@ h1 {
       font-size: calc(2.375rem + 1vw);
       line-height: 1;
       letter-spacing: -4px;
-      @media screen and (max-width: 500px) {
+      @media screen and (max-width: 576px) {
         font-size: 32px;
         letter-spacing: -2px;
       }
@@ -118,7 +118,7 @@ h2 {
   display: flex;
   flex-direction: column;
   margin-bottom: 1.5rem;
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 576px) {
     margin-bottom: 1rem;
   }
   span {
@@ -131,7 +131,7 @@ h2 {
       line-height: 1;
       margin-left: 22px;
       z-index: 1;
-      @media screen and (max-width: 500px) {
+      @media screen and (max-width: 576px) {
         margin-left: 14px;
         font-size: 32px;
         letter-spacing: -2px;
@@ -149,7 +149,7 @@ h2 {
       @media screen and (max-width: 768px), (orientation: portrait) {
         padding-left: 2px;
       }
-      @media screen and (max-width: 500px) {
+      @media screen and (max-width: 576px) {
         font-size: 24px;
         margin-top: -12px;
       }
@@ -168,15 +168,31 @@ label {
 }
 
 a {
-  transition: color 0.5s ease;
   cursor: pointer;
+  transition:
+    color 0.35s ease,
+    transform 0.35s ease;
+  svg {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.35s ease;
+    path {
+      transition: fill 0.35s ease;
+    }
+  }
   @media (any-pointer: fine) {
-    &:hover,
-    &:focus,
-    &:active {
+    &:hover {
       color: var(--color-hover);
-      transition: color 0.5s ease;
+      transition: color 0.35s ease;
       outline: none;
+      svg {
+        transform: translateY(-3px);
+        transition: transform 0.35s ease;
+        path {
+          fill: var(--color-hover);
+          transition: fill 0.35s ease;
+        }
+      }
     }
   }
 }

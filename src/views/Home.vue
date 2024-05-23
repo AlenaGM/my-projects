@@ -3,11 +3,9 @@ import { About, Contact, Hero, Projects, Skills } from '@/components'
 </script>
 
 <template>
-  <main>
-    <Hero />
-    <About />
-    <Skills />
-    <Projects />
-    <Contact />
-  </main>
+  <Hero />
+  <About />
+  <Skills />
+  <Projects />
+  <Contact />
 </template>
