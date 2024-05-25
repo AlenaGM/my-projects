@@ -1,11 +1,13 @@
 <template>
-  <Transition name="modal" :duration="1000">
+  <Transition name="modal" :duration="700">
     <div class="modal_wrapper" v-if="open">
       <div class="modal_overlay" @click="$emit('close')">
         <div class="modal_container" @click.stop v-scroll-lock="open">
           <div class="modal_header">
             <h2 class="modal_header__title">{{ title }}</h2>
-            <div class="modal_header__close" @click="$emit('close')">x</div>
+            <div class="modal_header__close" @click="$emit('close')">
+              <ui-close />
+            </div>
           </div>
           <div class="modal_body">
             <slot></slot>
@@ -23,6 +25,7 @@
 
 <script setup>
 import uiButton from '@/components/ui/Button.vue'
+import uiClose from '@/components/ui/Close.vue'
 
 const props = defineProps({
   open: {
@@ -47,12 +50,13 @@ const props = defineProps({
     left: 0;
     right: 0;
     bottom: 0;
+    margin-left: calc(100vw - 100%);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
-    background: rgba(34, 32, 46, 0.8);
-    z-index: 120;
+    background: rgb(31, 31, 31, 0.8);
+    z-index: 70;
   }
   &_container {
     position: relative;
@@ -65,7 +69,6 @@ const props = defineProps({
     padding: 32px;
     margin: 24px;
     background: var(--color-white);
-    z-index: 130;
     @media screen and (max-width: 768px) {
       width: 100%;
       min-width: auto;
@@ -76,30 +79,44 @@ const props = defineProps({
     display: grid;
     grid-template-columns: 1fr auto;
     width: 100%;
+    align-items: center;
+    margin: 0 0 24px;
+    @media screen and (max-width: 576px) {
+      margin: 0 0 16px;
+    }
     &__title {
       text-align: center;
       padding-left: 18px;
       color: var(--color-primary);
+      margin: 0px;
       @media screen and (max-width: 768px) {
         text-align: left;
         padding-left: 0;
       }
+      @media screen and (max-width: 576px) {
+        font-size: 20px;
+      }
     }
     &__close {
       cursor: pointer;
-      font-size: 24px;
+      width: 24px;
+      height: 24px;
+      @media screen and (max-width: 576px) {
+        width: 20px;
+        height: 20px;
+      }
     }
   }
 }
 
 .modal_container,
 .modal_overlay {
-  transition: all 0.7s ease;
+  transition: all 0.5s ease;
 }
 
 .modal-enter-active .modal_container,
 .modal-leave-active .modal_overlay {
-  transition-delay: 0.3s;
+  transition-delay: 0.2s;
 }
 
 .modal-enter-from .modal_overlay,

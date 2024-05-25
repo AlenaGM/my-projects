@@ -10,9 +10,7 @@
       </a>
       <div class="card__image_deco"></div>
     </div>
-    <a class="card__title" :href="demo" target="_blank" rel="noreferrer" tabindex="-1">{{
-      title
-    }}</a>
+    <a class="card__title" :href="demo" target="_blank" rel="noreferrer">{{ title }}</a>
     <div class="card__content">
       <div class="card__info">
         {{ info }}
@@ -20,8 +18,14 @@
       <div class="card__tech">
         <p class="tech-text"><span class="tech-text">Stack: </span>{{ tech }}</p>
         <div class="card__links">
-          <a :href="demo" target="_blank" rel="noreferrer" class="tech-text"> View Demo: 🐈‍⬛ </a>
-          <a :href="code" target="_blank" rel="noreferrer" class="tech-text"> View Code: ⚛️ </a>
+          <a class="card__link tech-text" :href="demo" target="_blank" rel="noreferrer">
+            View Demo:
+            <ui-demo />
+          </a>
+          <a class="card__link tech-text" :href="code" target="_blank" rel="noreferrer">
+            View Code:
+            <ui-github />
+          </a>
         </div>
       </div>
     </div>
@@ -29,6 +33,9 @@
 </template>
 
 <script setup>
+import uiGithub from '@/components/ui/Github.vue'
+import uiDemo from '@/components/ui/Demo.vue'
+
 const props = defineProps({
   projects: {
     required: true
@@ -72,6 +79,14 @@ const props = defineProps({
       object-fit: cover;
       height: 100%;
       width: 100%;
+      @media (any-pointer: fine) {
+        transform: scale(1.02);
+        transition: transform 0.35s cubic-bezier(0.23, 0.24, 0, 0.99);
+        &:hover {
+          transform: scale(0.98);
+          transition: transform 0.35s cubic-bezier(0.23, 0.24, 0, 0.99);
+        }
+      }
     }
     &_deco {
       content: '';
@@ -96,14 +111,16 @@ const props = defineProps({
     font-weight: 700;
     line-height: 2em;
     letter-spacing: -0.01em;
-    transition: transform 0.35s ease;
+    transition: transform 0.35s cubic-bezier(0.23, 0.24, 0, 0.99);
     z-index: 2;
     cursor: pointer;
     @media (hover: hover) {
-      &:hover {
+      &:hover,
+      &:focus-visible {
         color: var(--color-white);
+        outline: none;
         transform: translateY(-8px);
-        transition: transform 0.35s ease;
+        transition: transform 0.35s cubic-bezier(0.23, 0.24, 0, 0.99);
       }
     }
   }
@@ -139,31 +156,26 @@ const props = defineProps({
     justify-content: flex-end;
     width: 100%;
     a {
-      display: flex;
+      display: inline-flex;
       align-items: flex-start;
       margin-top: 0.5rem;
       font-size: 14px;
       font-weight: 500;
       white-space: nowrap;
-      transition:
-        transform 0.125s ease,
-        color 0.125s ease;
+      transition: transform 0.35s cubic-bezier(0.23, 0.24, 0, 0.99);
       svg {
-        font-size: 1.125rem;
+        width: 20px;
+        height: 20px;
         margin-left: 0.25rem;
+        transform: none;
       }
       &:not(:last-of-type) {
         margin-right: 1.5rem;
       }
-      &:last-of-type svg {
-        font-size: 1.25rem;
-      }
-      @media (hover: hover) {
+      @media (any-pointer: fine) {
         &:hover {
           transform: translateY(-3px);
-          transition:
-            transform 0.125s ease,
-            color 0.125s ease;
+          transition: transform 0.35s cubic-bezier(0.23, 0.24, 0, 0.99);
         }
         &:active {
           top: 3px;

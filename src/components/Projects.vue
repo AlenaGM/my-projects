@@ -12,7 +12,12 @@
 
     <div class="projects__filters">
       <ul>
-        <li v-for="(filter, i) of filters" :key="i" :class="{ active: filter === activeFilter }">
+        <li
+          v-for="(filter, i) of filters"
+          :key="i"
+          @click="setActiveFilter(filter)"
+          :class="['projects__filter filter', { filter_active: filter === activeFilter }]"
+        >
           {{ filter }}
         </li>
       </ul>
@@ -45,6 +50,16 @@ import ProjectCard from '@/components/ProjectCard.vue'
 const filters = ref(['All', 'JavaScript', 'TypeScript', 'VueJS', 'NuxtJS', 'React', 'GSAP'])
 const activeFilter = ref('All')
 
+const setActiveFilter = (filter) => {
+  activeFilter.value = filter
+  //gsap.from('.work__gallery', {
+  //  y: 150,
+  //  opacity: 0,
+  //  duration: 0.5,
+  //  ease: 'power1.out'
+  //})
+}
+
 const getProjects = computed(() => {
   if (activeFilter.value === 'All') {
     return projects
@@ -55,7 +70,7 @@ const getProjects = computed(() => {
 
 <style lang="scss" scoped>
 .projects {
-  z-index: 50;
+  //z-index: 50;
   display: grid;
   &__filters {
     ul {
@@ -69,12 +84,18 @@ const getProjects = computed(() => {
       @media screen and (max-width: 768px) {
         margin-bottom: 2.5rem;
       }
-      li {
+      .filter {
         cursor: pointer;
         transition: color 0.35s ease;
-        &:hover {
+        &_active {
           color: var(--color-primary);
           transition: color 0.35s ease;
+        }
+        @media (any-pointer: fine) {
+          &:hover {
+            color: var(--color-primary);
+            transition: color 0.35s ease;
+          }
         }
       }
     }
@@ -93,9 +114,5 @@ const getProjects = computed(() => {
   column-gap: 2.5rem;
   row-gap: 4rem;
   justify-items: center;
-}
-.active {
-  color: var(--color-primary);
-  transition: color 0.35s ease;
 }
 </style>

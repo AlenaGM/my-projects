@@ -14,10 +14,38 @@
           delectus reiciendis.
         </p>
         <div class="contact__social">
-          <Linkedin />
-          <Github />
-          <Telegram />
-          <Instagram />
+          <a
+            href="https://www.linkedin.com/in/alena-guillaume/"
+            aria-label="linkedin"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <ui-linkedin />
+          </a>
+          <a
+            href="https://github.com/AlenaGM"
+            aria-label="github"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <ui-github
+          /></a>
+          <a
+            href="https://t.me/alenagm"
+            aria-label="telegram"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <ui-telegram />
+          </a>
+          <a
+            href="https://www.instagram.com/alena.guillaume/"
+            aria-label="instagram"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <ui-instagram
+          /></a>
         </div>
       </div>
       <ContactForm />
@@ -27,10 +55,10 @@
 
 <script setup>
 import ContactForm from '@/components/ContactForm.vue'
-import Linkedin from '@/components/ui/Linkedin.vue'
-import Github from '@/components/ui/Github.vue'
-import Instagram from '@/components/ui/Instagram.vue'
-import Telegram from '@/components/ui/Telegram.vue'
+import uiLinkedin from '@/components/ui/Linkedin.vue'
+import uiGithub from '@/components/ui/Github.vue'
+import uiInstagram from '@/components/ui/Instagram.vue'
+import uiTelegram from '@/components/ui/Telegram.vue'
 </script>
 
 <style lang="scss" scoped>
@@ -60,12 +88,11 @@ import Telegram from '@/components/ui/Telegram.vue'
   &__social {
     display: flex;
     flex-wrap: wrap;
-    gap: 18px;
+    gap: 1rem;
     @media screen and (max-width: 768px) {
-      gap: 16px;
+      gap: 0.75rem;
     }
     @media screen and (max-width: 576px) {
-      gap: 16px;
       justify-content: center;
     }
     a {

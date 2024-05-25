@@ -1,7 +1,7 @@
 <template>
   <header class="header" id="#header">
     <div class="header__logo">
-      <a href="#">
+      <RouterLink to="/">
         <picture>
           <source srcset="@/assets/img/logo.webp, @/assets/img/logo@2x.webp 2x" type="image/webp" />
           <img
@@ -10,77 +10,58 @@
             alt="logo"
           />
         </picture>
-      </a>
+      </RouterLink>
     </div>
     <nav class="header__navbar">
       <ul class="header__navbar_links">
         <li v-for="(element, i) of menu" :key="i">
-          <a :href="element.path">
-            {{ element.name }}
+          <a :href="`#${element}`">
+            {{ element }}
           </a>
         </li>
       </ul>
       <button
         class="header__dropdown_open"
         title="dropdown menu opening"
-        v-if="!isOpenedMobileMenu"
-        @click="isOpenedMobileMenu = true"
+        v-if="!isMobileMenuOpen"
+        @click="isMobileMenuOpen = true"
       >
-        <font-awesome-icon :icon="['fas', 'bars-staggered']" />
+        <ui-open />
       </button>
     </nav>
-    <nav
-      class="header__dropdown"
-      v-if="isOpenedMobileMenu"
-      v-click-away="onClickAway"
-      v-scroll-lock="isOpenedMobileMenu"
-    >
-      <button
-        class="header__dropdown_close"
-        title="dropdown menu closing"
-        @click="isOpenedMobileMenu = false"
-      >
-        X
-      </button>
-      <ul>
-        <li v-for="(element, i) of menu" :key="i">
-          <a :href="element.path" @click="isOpenedMobileMenu = false">
-            {{ element.name }}
-          </a>
-        </li>
-      </ul>
-    </nav>
+    <Transition name="dropdown" :duration="700">
+      <div class="header__dropdown_wrapper" v-if="isMobileMenuOpen">
+        <div class="header__dropdown_overlay" @click="isMobileMenuOpen = false">
+          <nav class="header__dropdown" @click.stop v-scroll-lock="isMobileMenuOpen">
+            <button
+              class="header__dropdown_close"
+              title="dropdown menu closing"
+              @click="isMobileMenuOpen = false"
+            >
+              <ui-close color="white" />
+            </button>
+            <ul>
+              <li v-for="(element, i) of menu" :key="i">
+                <a :href="`#${element}`" @click="isMobileMenuOpen = false">
+                  {{ element }}
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </Transition>
   </header>
 </template>
 
 <script setup>
-import { flattenDiagnosticMessageText } from 'typescript'
 import { ref } from 'vue'
+import uiClose from '@/components/ui/Close.vue'
+import uiOpen from '@/components/ui/MenuOpen.vue'
 
-const isOpenedMobileMenu = ref(false)
+const isMobileMenuOpen = ref(false)
 
-//const onClickAway = () => {
-//  isOpenedMobileMenu.value = false
-//}
-
-const menu = [
-  {
-    name: 'About',
-    path: '#about'
-  },
-  {
-    name: 'Skills',
-    path: '#skills'
-  },
-  {
-    name: 'Projects',
-    path: '#projects'
-  },
-  {
-    name: 'Contact',
-    path: '#contact'
-  }
-]
+const menu = ['about', 'skills', 'projects', 'contact']
 </script>
 
 <style lang="scss" scoped>
@@ -88,7 +69,7 @@ const menu = [
   align-items: center;
   padding: 1.5rem 0;
   margin-bottom: -1px;
-  z-index: 90;
+  z-index: 50;
   &__logo {
     grid-column: 2;
     a {
@@ -97,10 +78,12 @@ const menu = [
         height: 48px;
         aspect-ratio: auto 48 / 125;
         max-width: 100%;
-        transition: transform 0.35s ease;
-        &:hover {
-          transform: scale(1.05);
-          transition: transform 0.35s ease;
+        transition: transform 0.35s cubic-bezier(0.23, 0.24, 0, 0.99);
+        @media (any-pointer: fine) {
+          &:hover {
+            transform: scale(1.05);
+            transition: transform 0.35s cubic-bezier(0.23, 0.24, 0, 0.99);
+          }
         }
         @media screen and (max-width: 768px) {
           height: 32px;
@@ -128,18 +111,20 @@ const menu = [
           left: 0;
           height: 2px;
           width: 0;
-          transition: width 0.35s ease;
+          transition: width 0.35s cubic-bezier(0.23, 0.24, 0, 0.99);
         }
-        &:hover {
-          cursor: pointer;
-          &::after {
-            width: 100%;
-            transition: width 0.35s ease;
-          }
-        }
-        a {
+        @media (any-pointer: fine) {
           &:hover {
-            color: inherit;
+            cursor: pointer;
+            &::after {
+              width: 100%;
+              transition: width 0.35s cubic-bezier(0.23, 0.24, 0, 0.99);
+            }
+          }
+          a {
+            &:hover {
+              color: inherit;
+            }
           }
         }
       }
@@ -149,54 +134,83 @@ const menu = [
     }
   }
   &__dropdown {
-    display: none;
-    @media screen and (max-width: 768px) {
-      position: fixed;
-      right: 0;
-      top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 100%;
+    width: 80%;
+    font-size: 1.5rem;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 1.5rem 1.5rem 1.5rem 4.5rem;
+    overflow-y: auto;
+    @media screen and (max-width: 400px) {
+      width: 100%;
+    }
+    ul {
+      height: 100%;
+      width: 100%;
+      overflow: auto;
       display: flex;
       flex-direction: column;
-      align-items: flex-end;
-      height: 100%;
-      min-height: 100vh;
-      width: 80vw;
-      font-size: 1.5rem;
-      background-color: var(--color-black);
-      color: var(--color-white);
-      padding: 1.5rem 1.5rem 1.5rem 4.5rem;
-      ul {
-        height: 100%;
-        width: 100%;
-        overflow: auto;
-        display: flex;
-        flex-direction: column;
-        margin-top: 15vh;
-        li {
-          &:not(:last-of-type) {
-            margin-bottom: 1.5rem;
-          }
+      margin-top: 15vh;
+      li {
+        &:not(:last-of-type) {
+          margin-bottom: 1.5rem;
         }
       }
     }
+    &_overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: flex-end;
+      z-index: 70;
+    }
     &_open,
     &_close {
-      display: none;
-      @media screen and (max-width: 768px) {
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-start;
-        height: 32px;
-        font-size: 2rem;
-        border: none;
-        background-color: transparent;
-      }
+      background: transparent;
+      height: 32px;
+      width: 32px;
+      border: none;
+      cursor: pointer;
     }
     &_open {
-      color: var(--color-black);
+      display: none;
+      @media screen and (max-width: 768px) {
+        display: block;
+      }
     }
     &_close {
-      color: var(--color-white);
+      display: block;
     }
   }
+}
+
+.header__dropdown,
+.header__dropdown_overlay {
+  transition: all 0.5s ease;
+}
+
+.dropdown-enter-active .header__dropdown,
+.dropdown-leave-active .header__dropdown_overlay {
+  transition-delay: 0.2s;
+}
+
+.dropdown-enter-from .header__dropdown_overlay,
+.dropdown-leave-to .header__dropdown_overlay {
+  opacity: 0;
+}
+
+.dropdown-enter-from .header__dropdown,
+.dropdown-leave-to .header__dropdown {
+  -webkit-transform: translateX(100px);
+  transform: translateX(100px);
+  opacity: 0;
 }
 </style>

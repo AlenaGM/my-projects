@@ -12,7 +12,7 @@
   left: 0;
   height: 5px;
   background-color: var(--color-primary);
-  z-index: 100;
+  z-index: 60;
   @media screen and (max-width: 1024px) {
     display: block;
   }

@@ -62,8 +62,8 @@ const props = defineProps({
   letter-spacing: -0.01em;
   color: var(--color-white);
   background: var(--color-black);
-  border: 1.75px solid var(--color-black);
-  transition: transform 0.35s ease-in-out;
+  border: solid 1.75px transparent;
+  transition: transform 0.35s cubic-bezier(0.23, 0.24, 0, 0.99);
   cursor: pointer;
   &:not(:last-of-type) {
     margin: 0 1.5rem 0 0;
@@ -76,32 +76,35 @@ const props = defineProps({
     position: absolute;
     top: 0;
     left: 0;
+    bottom: 0;
+    right: 0;
     border: solid 1.75px transparent;
     width: 100%;
     height: 100%;
     z-index: -1;
-    transition: all 0.35s ease-in-out;
+    transition: all 0.35s cubic-bezier(0.23, 0.24, 0, 0.99);
   }
-  @media (hover: hover) {
-    &:hover,
-    &:focus {
+  &:focus-visible {
+    border: 2px solid var(--color-primary);
+    outline: none;
+    transition: border 0.1s ease;
+  }
+  @media (any-pointer: fine) {
+    &:hover {
       transform: translate(-8px, -8px);
-      transition: transform all 0.35s ease-in-out;
+      transition: transform 0.35s cubic-bezier(0.23, 0.24, 0, 0.99);
       &::after {
         border-color: var(--color-black);
         transform: translate(8px, 8px);
-        transition: all 0.35s ease-in-out;
+        transition: all 0.35s cubic-bezier(0.23, 0.24, 0, 0.99);
       }
     }
-    &:focus {
-      outline: none;
-    }
     &:active {
-      transition: transform 0.35s ease-in-out;
-      transform: translate(8px, 8px);
+      transform: translate(0px, 0px);
+      transition: transform 0.35s cubic-bezier(0.23, 0.24, 0, 0.99);
       &::after {
-        transition: all 0.35s ease-in-out;
-        transform: translate(-8px, -8px);
+        transform: translate(0px, 0px);
+        transition: transform 0.35s cubic-bezier(0.23, 0.24, 0, 0.99);
       }
     }
   }
@@ -113,17 +116,12 @@ const props = defineProps({
   &_disabled {
     color: var(--color-gray);
     background: transparent;
-    border: var(--border);
+    border: solid 1.75px #eeeeee;
     pointer-events: none;
-    &:focus {
-      border: var(--border);
+    &:focus-visible {
+      border: solid 1.75px #eeeeee;
       pointer-events: none;
-      transform: none;
-    }
-    &:focus::after {
-      border: transparent;
-      pointer-events: none;
-      transform: none;
+      outline: none;
     }
   }
 }

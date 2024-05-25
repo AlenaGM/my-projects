@@ -27,7 +27,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  z-index: 80;
+  z-index: 60;
   @media screen and (max-width: 768px), (orientation: portrait) {
     top: 44vh;
   }
@@ -65,7 +65,7 @@
     }
     @media (hover: hover) {
       &:hover,
-      &:focus {
+      &:focus-visible {
         color: var(--color-primary);
         background-color: var(--color-white);
         inline-size: 148px;
@@ -74,7 +74,7 @@
           color 0.05s ease,
           background-color 0.05s ease;
       }
-      &:focus {
+      &:focus-visible {
         outline: none;
       }
     }

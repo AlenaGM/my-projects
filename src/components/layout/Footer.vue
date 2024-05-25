@@ -160,6 +160,14 @@ const year = date.getFullYear() || '2024'
             &::after {
               background-color: var(--color-hover);
             }
+            &::before {
+              height: 23.5px;
+              transform: rotate(-43deg);
+            }
+            &::after {
+              height: 23.5px;
+              transform: rotate(43deg);
+            }
           }
         }
       }

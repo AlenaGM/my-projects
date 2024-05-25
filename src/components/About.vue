@@ -55,7 +55,7 @@ import uiButton from '@/components/ui/Button.vue'
 .about {
   &__container {
     display: grid;
-    grid-template-columns: minmax(auto, 400px) 1fr;
+    grid-template-columns: minmax(auto, 360px) 1fr;
     gap: 4rem;
     justify-items: center;
     @media screen and (max-width: 768px), (orientation: portrait) {
@@ -64,7 +64,7 @@ import uiButton from '@/components/ui/Button.vue'
     }
   }
   &__image {
-    max-height: 520px;
+    max-height: 480px;
     overflow: hidden;
     img {
       width: 100%;

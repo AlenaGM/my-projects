@@ -191,7 +191,7 @@ const resetForm = () => {
       outline: none;
       transition: border 0.1s ease;
       &:focus {
-        border: 2px solid var(--color-secondary);
+        border: 2px solid var(--color-black);
         outline: none;
         transition: border 0.1s ease;
       }
