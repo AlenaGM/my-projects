@@ -24,11 +24,12 @@ const skills = [
   'CSS3',
   'JavaScript',
   'TypeScript',
-  'React',
   'VueJS',
   'Vite',
   'Pinia',
   'NuxtJS',
+  'React',
+  'Webpack',
   'Git',
   'Rest APIs',
   'GraphQL',
@@ -46,24 +47,22 @@ const skills = [
     grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
     grid-auto-rows: 1fr;
     justify-items: center;
-    gap: 2.5rem;
+    gap: 4rem;
     @media screen and (max-width: 576px) {
       grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));
       gap: 1.125rem;
     }
     &_item {
-      max-width: 90px;
       width: 100%;
       display: grid;
       grid-template: 1fr auto / 1fr;
       grid-auto-flow: row;
       justify-items: center;
       align-items: end;
-      border: var(--border);
       img {
         object-fit: contain;
         aspect-ratio: 1;
-        width: 80%;
+        width: 75%;
       }
       div {
         text-align: center;
