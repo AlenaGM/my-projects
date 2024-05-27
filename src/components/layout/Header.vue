@@ -69,7 +69,7 @@ const menu = ['about', 'skills', 'projects', 'contact']
   align-items: center;
   padding: 1.5rem 0;
   margin-bottom: -1px;
-  z-index: 50;
+  z-index: 70;
   &__logo {
     grid-column: 2;
     a {
@@ -170,7 +170,7 @@ const menu = ['about', 'skills', 'projects', 'contact']
       height: 100%;
       display: flex;
       justify-content: flex-end;
-      z-index: 70;
+      z-index: 80;
     }
     &_open,
     &_close {
