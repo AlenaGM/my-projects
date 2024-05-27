@@ -17,15 +17,23 @@ module.exports = {
       'error',
       {
         ignores: [
-          'Header',
           'About',
+          'Button',
           'Contact',
+          'Demo',
+          'Footer',
+          'Github',
+          'Header',
           'Hero',
+          'Hero',
+          'Home',
+          'Instagram',
+          'MenuOpen',
+          'Modal',
+          'ProjectCard',
           'Projects',
           'Skills',
-          'SocialMedia',
-          'Footer',
-          'Home'
+          'Telegram'
         ]
       }
     ]
