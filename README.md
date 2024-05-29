@@ -52,8 +52,6 @@ $ npm run dev
 # Compile and minify for Production
 $ run build
 ```
-
-##
  
 
    [My Portfolio]: <https://alg.netlify.app/>
