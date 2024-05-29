@@ -1,6 +1,5 @@
 <template>
-  <section class="skills">
-    <i id="skills" />
+  <section class="skills" id="skills">
     <h2><span class="h2-subtitle">Things I Can Do</span><span>Skills & Tools</span></h2>
     <div>
       <p>

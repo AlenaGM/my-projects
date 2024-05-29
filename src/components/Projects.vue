@@ -1,6 +1,5 @@
 <template>
-  <section class="projects">
-    <i id="projects" />
+  <section class="projects" id="projects">
     <h2><span class="h2-subtitle">Some of My Projects</span><span>Work</span></h2>
     <div>
       <p>
@@ -32,7 +31,6 @@
         mobileFullWidth
         aria-label="More projects on github"
         role="link"
-        target="_blank"
         rel="noreferrer noopener"
       >
         More projects on github

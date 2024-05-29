@@ -1,5 +1,5 @@
 <template>
-  <section class="hero">
+  <section class="hero" id="hero">
     <h1 class="hero__title">
       <span>Hi! I'm Alëna Guillaume,</span>
       <span>Frontend Developer</span>
@@ -17,10 +17,13 @@
         />
       </picture>
     </div>
+    <SocialWidget />
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+import SocialWidget from './ui/SocialWidget.vue'
+</script>
 
 <style lang="scss" scoped>
 .hero {

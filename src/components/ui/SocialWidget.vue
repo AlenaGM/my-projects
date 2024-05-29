@@ -1,81 +1,81 @@
 <template>
-  <div class="social">
+  <div class="social__links">
     <a
+      class="social__link"
       href="https://github.com/AlenaGM"
       aria-label="github"
-      target="_blank"
       rel="noreferrer noopener"
     >
-      🐈‍⬛
+      <ui-github color="white" /> view profile
     </a>
     <a
+      class="social__link"
       href="https://www.linkedin.com/in/alena-guillaume/"
       aria-label="linkedin"
-      target="_blank"
       rel="noreferrer noopener"
     >
-      🦸
+      <ui-linkedin color="white" /> get in touch
     </a>
   </div>
 </template>
 
+<script setup>
+import uiLinkedin from '@/components/ui/Linkedin.vue'
+import uiGithub from '@/components/ui/Github.vue'
+</script>
+
 <style lang="scss" scoped>
 .social {
-  position: fixed;
-  right: 0;
-  top: 26vh;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  z-index: 60;
-  @media screen and (max-width: 768px), (orientation: portrait) {
-    top: 44vh;
-  }
-  a {
+  &__links {
+    position: fixed;
+    top: 26vh;
+    right: 0;
+    z-index: 60;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 1.75rem;
-    text-align: left;
-    height: 40px;
-    inline-size: 40px;
-    padding: 0 0.5rem;
-    overflow: hidden;
-    color: var(--color-white);
-    background-color: var(--color-primary);
-    box-shadow: var(--box-shadow);
-    visibility: hidden;
-    transition:
-      inline-size 0.35s ease,
-      color 0.05s ease,
-      background-color 0.05s ease;
-    &::after {
-      content: 'get in touch';
-      text-transform: none;
-      font-size: 1rem;
-      padding-left: 8px;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    @media screen and (max-width: 768px), (orientation: portrait) {
+      top: 44vh;
+    }
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 142px;
+      height: 40px;
+      padding: 4px;
+      transform: translateX(100px);
+      font-family: var(--font-title);
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      text-transform: capitalize;
       white-space: nowrap;
-    }
-    &:not(:last-of-type) {
-      margin-bottom: 0.5rem;
-      padding-left: 6px;
-      &::after {
-        content: 'view profile';
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      box-shadow: var(--box-shadow);
+      transition:
+        transform 0.5s cubic-bezier(0.23, 0.24, 0, 0.99),
+        color 0.35s ease,
+        background-color 0.35s ease;
+      svg {
+        width: 32px;
+        height: 32px;
+        margin-right: 0.5rem;
+        transform: none;
       }
-    }
-    @media (hover: hover) {
-      &:hover,
-      &:focus-visible {
-        color: var(--color-primary);
-        background-color: var(--color-white);
-        inline-size: 148px;
-        transition:
-          inline-size 0.35s ease,
-          color 0.05s ease,
-          background-color 0.05s ease;
-      }
-      &:focus-visible {
-        outline: none;
+      @media (any-pointer: fine) {
+        &:hover {
+          background-color: var(--color-white);
+          color: var(--color-primary);
+          transform: translateX(0px);
+          transition:
+            transform 0.5s cubic-bezier(0.23, 0.24, 0, 0.99),
+            color 0.35s ease,
+            background-color 0.35s ease;
+        }
       }
     }
   }

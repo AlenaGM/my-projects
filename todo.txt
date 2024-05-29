@@ -1,13 +1,9 @@
-1/ Component Button er
-'props' is assigned a value but never used.eslint@typescript-eslint/no-unused-vars
-11/ Home view err
-Could not find a declaration file for module '@/components'. 'c:/Users/alena/OneDrive/Documents/IT/IT24Portfolio/alg/src/components/index.js' implicitly has an 'any' type.ts-plugin(7016)
-2/ check button styles
+
 3/
 - check skill cards
 - find skills gap
 - add caroussel
 4/ Nice 404 page
 5/ Check z-indices
-6/ fix card when dropdown opened
+
 

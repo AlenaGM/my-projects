@@ -15,9 +15,9 @@
     <nav class="header__navbar">
       <ul class="header__navbar_links">
         <li v-for="(element, i) of menu" :key="i">
-          <a :href="`#${element}`">
+          <RouterLink :to="`/#${element}`">
             {{ element }}
-          </a>
+          </RouterLink>
         </li>
       </ul>
       <button
@@ -42,9 +42,9 @@
             </button>
             <ul>
               <li v-for="(element, i) of menu" :key="i">
-                <a :href="`#${element}`" @click="isMobileMenuOpen = false">
+                <RouterLink :to="`/#${element}`" @click="isMobileMenuOpen = false">
                   {{ element }}
-                </a>
+                </RouterLink>
               </li>
             </ul>
           </nav>

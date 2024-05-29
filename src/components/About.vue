@@ -1,6 +1,5 @@
 <template>
-  <section class="about">
-    <i id="about" />
+  <section class="about" id="about">
     <h2><span class="h2-subtitle">Who I Am</span><span>About me</span></h2>
     <div class="about__container">
       <div class="about__image">
@@ -38,7 +37,6 @@
           mobileFullWidth
           role="link"
           aria-label="download my cv"
-          target="_blank"
           rel="noreferrer noopener"
           >Download My CV</ui-button
         >

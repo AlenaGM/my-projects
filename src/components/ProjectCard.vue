@@ -5,12 +5,12 @@
     :key="id"
   >
     <div class="card__image">
-      <a :href="demo" target="_blank" rel="noreferrer" tabindex="-1">
+      <a :href="demo" rel="noreferrer noopener" tabindex="-1">
         <img :src="`${image}.webp`" :alt="title" />
       </a>
       <div class="card__image_deco"></div>
     </div>
-    <a class="card__title" :href="demo" target="_blank" rel="noreferrer">{{ title }}</a>
+    <a class="card__title" :href="demo" rel="noreferrer noopener">{{ title }}</a>
     <div class="card__content">
       <div class="card__info">
         {{ info }}
@@ -18,11 +18,11 @@
       <div class="card__tech">
         <p class="tech-text"><span class="tech-text">Stack: </span>{{ tech }}</p>
         <div class="card__links">
-          <a class="card__link tech-text" :href="demo" target="_blank" rel="noreferrer">
+          <a class="card__link tech-text" :href="demo" rel="noreferrer noopener">
             View Demo:
             <ui-demo />
           </a>
-          <a class="card__link tech-text" :href="code" target="_blank" rel="noreferrer">
+          <a class="card__link tech-text" :href="code" rel="noreferrer noopener">
             View Code:
             <ui-github />
           </a>

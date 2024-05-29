@@ -38,10 +38,6 @@
   font-weight: normal;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   min-height: 100vh;
   min-width: 320px;
@@ -90,14 +86,13 @@ h1 {
   display: flex;
   flex-direction: column;
   color: var(--color-title);
-  //z-index: 1;
   span {
     &:first-child {
       font-family: var(--font-accent);
       font-weight: 400;
       font-size: 36px;
       line-height: 1.2;
-      padding-left: 2px;
+      padding-left: 3px;
       @media screen and (max-width: 576px) {
         font-size: 28px;
       }
@@ -218,15 +213,6 @@ p {
   }
 }
 
-i {
-  position: absolute;
-  top: calc(var(--section-gap) * -0.5);
-  opacity: 0;
-  @media screen and (max-width: 1023px), (orientation: portrait) {
-    top: calc(var(--section-gap-mobile) * -0.5);
-  }
-}
-
 .tech-text {
   font-family: var(--font-tech);
   font-size: 0.75rem;
@@ -235,7 +221,8 @@ i {
   }
 }
 
-.card__link {
+.card__link,
+.social__link {
   @media (any-pointer: fine) {
     &:hover {
       svg path {

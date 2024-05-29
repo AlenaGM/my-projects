@@ -21,6 +21,7 @@
         button_disabled: disabled
       }
     ]"
+    rel="noreferrer noopener"
   >
     <slot />
   </a>

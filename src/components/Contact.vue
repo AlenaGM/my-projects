@@ -1,6 +1,5 @@
 <template>
-  <section class="contact">
-    <i id="contact" />
+  <section class="contact" id="contact">
     <h2><span class="h2-subtitle">Get In Touch</span><span>Contact</span></h2>
     <div class="contact__container">
       <div class="contact__info">
@@ -17,31 +16,19 @@
           <a
             href="https://www.linkedin.com/in/alena-guillaume/"
             aria-label="linkedin"
-            target="_blank"
             rel="noreferrer noopener"
           >
             <ui-linkedin />
           </a>
-          <a
-            href="https://github.com/AlenaGM"
-            aria-label="github"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
+          <a href="https://github.com/AlenaGM" aria-label="github" rel="noreferrer noopener">
             <ui-github
           /></a>
-          <a
-            href="https://t.me/alenagm"
-            aria-label="telegram"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
+          <a href="https://t.me/alenagm" aria-label="telegram" rel="noreferrer noopener">
             <ui-telegram />
           </a>
           <a
             href="https://www.instagram.com/alena.guillaume/"
             aria-label="instagram"
-            target="_blank"
             rel="noreferrer noopener"
           >
             <ui-instagram
