@@ -43,21 +43,24 @@ const skills = [
   display: grid;
   &__list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     justify-content: center;
+    column-gap: 2.5rem;
     row-gap: 2.5rem;
     @media screen and (max-width: 1024px) {
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      column-gap: 1.25rem;
     }
     @media screen and (max-width: 576px) {
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(62px, 1fr));
     }
     &_item {
       display: grid;
-      grid-template: 1fr auto / 84px;
+      grid-template: 1fr auto / 1fr;
       grid-auto-flow: row;
       justify-content: center;
       align-items: end;
+      max-width: 86px;
       img {
         object-fit: contain;
         aspect-ratio: 1;
