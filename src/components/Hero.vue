@@ -32,15 +32,15 @@ import SocialWidget from './ui/SocialWidget.vue'
   align-content: center;
   align-items: end;
   min-height: calc(100vh - 96px);
-  @media screen and (max-width: 768px), (orientation: portrait) {
+  @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
     justify-items: center;
     min-height: calc(100vh - 80px);
   }
   &__title {
     margin: 110px 0;
-    @media screen and (max-width: 768), (orientation: portrait) {
-      margin: 0;
+    @media screen and (max-width: 768px) {
+      margin: 0px;
       text-align: center;
     }
     span {

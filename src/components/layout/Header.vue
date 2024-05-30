@@ -144,7 +144,7 @@ const menu = ['about', 'skills', 'projects', 'contact']
     color: var(--color-white);
     padding: 1.5rem 1.5rem 1.5rem 4.5rem;
     overflow-y: auto;
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 576px) {
       width: 100%;
     }
     ul {

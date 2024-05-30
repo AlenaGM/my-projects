@@ -16,7 +16,7 @@ const router = createRouter({
     }
   ],
   scrollBehavior(to, from, savedPosition) {
-    const topValue = window.innerWidth < 1023 ? 60 : 100
+    const topValue = window.innerWidth < 1024 ? 60 : 100
 
     if (savedPosition) {
       return savedPosition

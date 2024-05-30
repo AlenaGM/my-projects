@@ -56,7 +56,7 @@ import uiButton from '@/components/ui/Button.vue'
     grid-template-columns: minmax(auto, 360px) 1fr;
     gap: 4rem;
     justify-items: center;
-    @media screen and (max-width: 768px), (orientation: portrait) {
+    @media screen and (max-width: 768px) {
       grid-template-columns: 1fr;
       gap: 2.5rem;
     }

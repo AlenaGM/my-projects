@@ -52,15 +52,14 @@ import uiTelegram from '@/components/ui/Telegram.vue'
 .contact {
   margin-bottom: calc(var(--section-gap) * 0.5);
   min-height: calc(100vh - 367px);
-  @media screen and (max-width: 1023px), (orientation: portrait) {
-    margin-bottom: calc(var(--section-gap-mobile) * 0.5);
+  @media screen and (max-width: 1024px) {
     min-height: auto;
   }
   &__container {
     display: grid;
     grid-template-columns: repeat(2, minmax(auto, 610px));
     gap: 4rem;
-    @media screen and (max-width: 1023px), (orientation: portrait) {
+    @media screen and (max-width: 1024px) {
       display: flex;
       flex-direction: column;
       gap: 2.5rem;

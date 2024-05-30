@@ -77,7 +77,7 @@ const getProjects = computed(() => {
       justify-content: center;
       align-items: center;
       margin-bottom: 4rem;
-      column-gap: 2.5rem;
+      column-gap: 1.5rem;
       row-gap: 0.5rem;
       @media screen and (max-width: 768px) {
         margin-bottom: 2.5rem;
@@ -105,6 +105,7 @@ const getProjects = computed(() => {
     }
   }
 }
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

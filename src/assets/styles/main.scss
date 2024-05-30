@@ -43,16 +43,10 @@
 section {
   grid-column: 2;
   margin-bottom: var(--section-gap);
-  @media screen and (max-width: 1023px), (orientation: portrait) {
-    margin-bottom: var(--section-gap-mobile);
-  }
   &:first-of-type {
     margin-top: 0;
   }
   &:last-of-type {
     margin-bottom: calc(var(--section-gap) * 0.5);
-    @media screen and (max-width: 1023px), (orientation: portrait) {
-      margin-bottom: calc(var(--section-gap-mobile) * 0.5);
-    }
   }
 }

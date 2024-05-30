@@ -36,7 +36,7 @@ import uiGithub from '@/components/ui/Github.vue'
     align-items: flex-end;
     justify-content: flex-end;
     gap: 0.5rem;
-    @media screen and (max-width: 768px), (orientation: portrait) {
+    @media screen and (max-width: 768px) {
       top: 44vh;
     }
     a {

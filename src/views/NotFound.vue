@@ -40,13 +40,13 @@ import uiButton from '@/components/ui/Button.vue'
   align-content: center;
   align-items: center;
   margin: 0;
-  @media screen and (max-width: 768px), (orientation: portrait) {
+  @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
     justify-items: center;
   }
   &__content {
     display: grid;
-    @media screen and (max-width: 768), (orientation: portrait) {
+    @media screen and (max-width: 768) {
       justify-items: center;
     }
     &_title {
@@ -57,7 +57,7 @@ import uiButton from '@/components/ui/Button.vue'
       line-height: 1;
       letter-spacing: -4px;
       margin: 1.5rem 0;
-      @media screen and (max-width: 768), (orientation: portrait) {
+      @media screen and (max-width: 768) {
         margin: 1rem 0;
         font-size: 32px;
         letter-spacing: -2px;
