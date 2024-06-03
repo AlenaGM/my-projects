@@ -34,8 +34,8 @@ let heroAnimCtx
 
 onMounted(() => {
   heroAnimCtx = gsap.context(() => {
-    gsap.set('.hero__title span:first-child', { xPercent: 200 })
-    gsap.set('.hero__title span:last-child', { xPercent: -150 })
+    gsap.set('.hero__title span:first-child', { xPercent: 220 })
+    gsap.set('.hero__title span:last-child', { xPercent: -180 })
     gsap.set('.social__link', { x: 142, autoAlpha: 0, opacity: 0 })
 
     const tlHero = gsap.timeline({})
