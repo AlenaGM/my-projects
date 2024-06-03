@@ -53,28 +53,27 @@ let mediaAnimation = gsap.matchMedia()
 
 onMounted(() => {
   cardAnimCtx = gsap.context(() => {
-    gsap.set('.card__image img', {
-      scale: 1.1,
-      yPercent: 5
-    })
-
-    gsap.to(
-      '.card__image img',
-      {
-        yPercent: -5,
-        scrollTrigger: {
-          trigger: '.card',
-          start: 'top 80%',
-          end: 'bottom 20%',
-          scrub: 1
-        }
-      },
-      '<'
-    )
-
     mediaAnimation.add('(min-width: 1025px)', () => {
       gsap.set('.card__content', { yPercent: 15 })
       gsap.set('.card__title', { yPercent: 25 })
+      gsap.set('.card__image img', {
+        scale: 1.1,
+        yPercent: 5
+      })
+
+      gsap.to(
+        '.card__image img',
+        {
+          yPercent: -5,
+          scrollTrigger: {
+            trigger: '.card',
+            start: 'top 80%',
+            end: 'bottom 20%',
+            scrub: 1
+          }
+        },
+        '<'
+      )
 
       gsap.to('.card__content', {
         yPercent: 0,

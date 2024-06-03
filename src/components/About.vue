@@ -110,7 +110,6 @@ onUnmounted(() => {
     }
   }
   &__image {
-    //width: 360px;
     max-height: 480px;
     aspect-ratio: 3 / 4;
     overflow: hidden;
