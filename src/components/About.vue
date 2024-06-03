@@ -110,8 +110,8 @@ onUnmounted(() => {
     }
   }
   &__image {
-    max-width: 360px;
-    max-height: 480px;
+    //width: 360px;
+    //height: 480px;
     overflow: hidden;
     img {
       width: 100%;

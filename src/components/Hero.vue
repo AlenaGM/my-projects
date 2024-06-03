@@ -113,12 +113,10 @@ onUnmounted(() => {
     }
   }
   &__image {
-    overflow: hidden;
-    min-width: 640px;
-    min-height: 640px;
     img {
       width: 100%;
       height: 100%;
+      object-fit: cover;
     }
   }
 }
