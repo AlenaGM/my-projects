@@ -2,11 +2,11 @@
   <section class="notfound">
     <div class="notfound__content">
       <h1 class="notfound__content_title">404 Error</h1>
-      <div>
+      <div class="notfound__content_text">
         <p>The page you are looking for does not exist.</p>
         <p>It might have been moved or deleted.</p>
       </div>
-      <RouterLink to="/">
+      <RouterLink to="/" class="notfound__content_button">
         <ui-button type="link" to="#" mobileFullWidth role="link" aria-label="back to home page"
           >Back home</ui-button
         >
@@ -42,13 +42,11 @@ import uiButton from '@/components/ui/Button.vue'
   margin: 0;
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
+    text-align: center;
     justify-items: center;
   }
   &__content {
     display: grid;
-    @media screen and (max-width: 768) {
-      justify-items: center;
-    }
     &_title {
       color: var(--color-primary);
       font-family: var(--font-title);
@@ -71,6 +69,9 @@ import uiButton from '@/components/ui/Button.vue'
     img {
       width: 100%;
       height: 100%;
+    }
+    @media screen and (max-width: 576px) {
+      display: none;
     }
   }
 }
