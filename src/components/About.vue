@@ -46,7 +46,39 @@
 </template>
 
 <script setup>
+import { onMounted, onUnmounted } from 'vue'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
 import uiButton from '@/components/ui/Button.vue'
+
+gsap.registerPlugin(ScrollTrigger)
+
+let aboutAnimCtx
+
+onMounted(() => {
+  aboutAnimCtx = gsap.context(() => {
+    gsap.set('.about__image img', {
+      scale: 1.1,
+      yPercent: 5
+    })
+
+    gsap.to('.about__image img', {
+      yPercent: -5,
+      autoAlpha: 1,
+      scrollTrigger: {
+        trigger: '.about__image',
+        start: 'top 80%',
+        end: 'bottom 20%',
+        scrub: 1
+      }
+    })
+  })
+})
+
+onUnmounted(() => {
+  aboutAnimCtx.revert()
+})
 </script>
 
 <style lang="scss" scoped>

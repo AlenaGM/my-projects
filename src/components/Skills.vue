@@ -18,6 +18,10 @@
 </template>
 
 <script setup>
+import { onMounted, onUnmounted } from 'vue'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
 const skills = [
   'HTML5',
   'CSS3',
@@ -36,6 +40,37 @@ const skills = [
   'Sass',
   'GSAP'
 ]
+
+gsap.registerPlugin(ScrollTrigger)
+
+let skillsAnimCtx
+
+onMounted(() => {
+  skillsAnimCtx = gsap.context(() => {
+    gsap.from('.skills__list_item', {
+      scale: 0.7,
+      opacity: 0,
+      y: 24,
+      ease: 'power2.inOut',
+      stagger: {
+        grid: 'auto',
+        from: 'start',
+        autoAlpha: 0,
+        axis: 'y',
+        amount: 2
+      },
+      scrollTrigger: {
+        trigger: '.skills__list',
+        start: 'top 80%',
+        toggleActions: 'play resume none none'
+      }
+    })
+  })
+})
+
+onUnmounted(() => {
+  skillsAnimCtx.revert()
+})
 </script>
 
 <style lang="scss" scoped>

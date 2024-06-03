@@ -33,13 +33,57 @@
 </template>
 
 <script setup>
+import { onMounted, onUnmounted } from 'vue'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
 import uiGithub from '@/components/ui/Github.vue'
 import uiDemo from '@/components/ui/Demo.vue'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const props = defineProps({
   projects: {
     required: true
   }
+})
+
+let cardAnimCtx
+
+onMounted(() => {
+  console.log('card mounted')
+  cardAnimCtx = gsap.context(() => {
+    gsap.set('.card__content', { yPercent: 15 })
+    gsap.set('.card__image img', {
+      scale: 1.1,
+      yPercent: 5
+    })
+
+    gsap.to('.card__content', {
+      scrollTrigger: {
+        trigger: '.card',
+        start: 'top 50%',
+        end: 'bottom 75%',
+        scrub: 1
+      },
+      yPercent: 0
+    })
+
+    gsap.to('.card__image img', {
+      yPercent: -5,
+      scrollTrigger: {
+        trigger: '.card',
+        start: 'top 80%',
+        end: 'bottom 20%',
+        scrub: 1
+      }
+    })
+  })
+})
+
+onUnmounted(() => {
+  console.log('card unmounted')
+  cardAnimCtx.revert()
 })
 </script>
 
@@ -80,10 +124,9 @@ const props = defineProps({
       height: 100%;
       width: 100%;
       @media (any-pointer: fine) {
-        transform: scale(1.02);
         transition: transform 0.35s cubic-bezier(0.23, 0.24, 0, 0.99);
         &:hover {
-          transform: scale(0.98);
+          transform: scale(1.08) !important;
           transition: transform 0.35s cubic-bezier(0.23, 0.24, 0, 0.99);
         }
       }
@@ -119,7 +162,7 @@ const props = defineProps({
       &:focus-visible {
         color: var(--color-white);
         outline: none;
-        transform: translateY(-8px);
+        transform: translateY(-8px) !important;
         transition: transform 0.35s cubic-bezier(0.23, 0.24, 0, 0.99);
       }
     }
@@ -174,7 +217,7 @@ const props = defineProps({
       }
       @media (any-pointer: fine) {
         &:hover {
-          transform: translateY(-3px);
+          transform: translateY(-3px) !important;
           transition: transform 0.35s cubic-bezier(0.23, 0.24, 0, 0.99);
         }
         &:active {

@@ -40,22 +40,27 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { onMounted, onUnmounted, ref, computed } from 'vue'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
 import { projects } from '@/assets/data/projects'
 import uiButton from '@/components/ui/Button.vue'
 import ProjectCard from '@/components/ProjectCard.vue'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const filters = ref(['All', 'JavaScript', 'TypeScript', 'VueJS', 'NuxtJS', 'React', 'GSAP'])
 const activeFilter = ref('All')
 
 const setActiveFilter = (filter) => {
   activeFilter.value = filter
-  //gsap.from('.work__gallery', {
-  //  y: 150,
-  //  opacity: 0,
-  //  duration: 0.5,
-  //  ease: 'power1.out'
-  //})
+  gsap.from('.projects__gallery', {
+    y: 150,
+    autoAlpha: 0,
+    duration: 0.7,
+    ease: 'power2.out'
+  })
 }
 
 const getProjects = computed(() => {
@@ -63,6 +68,46 @@ const getProjects = computed(() => {
     return projects
   }
   return projects.filter((project) => project.tags.includes(activeFilter.value))
+})
+
+let bgAnimCtx
+
+onMounted(() => {
+  bgAnimCtx = gsap.context(() => {
+    const tlBg = gsap.timeline({})
+
+    ScrollTrigger.create({
+      animation: tlBg,
+      trigger: '.projects',
+      start: 'top center',
+      end: 'bottom bottom',
+      ease: 'power2.inOut',
+      toggleActions: 'play reverse play reverse'
+    })
+
+    tlBg
+      .to('body', {
+        backgroundColor: 'var(--color-secondary)'
+      })
+      .to(
+        '.h2-subtitle',
+        {
+          color: 'var(--color-primary)'
+        },
+        '<'
+      )
+      .to(
+        '.card__image_deco',
+        {
+          border: 'solid 1.5px #ffffff'
+        },
+        '<'
+      )
+  })
+})
+
+onUnmounted(() => {
+  bgAnimCtx.revert()
 })
 </script>
 

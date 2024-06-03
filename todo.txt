@@ -1,9 +1,104 @@
+check favicon
 
-3/
-- check skill cards
-- find skills gap
-- add caroussel
-4/ Nice 404 page
-5/ Check z-indices
+    //projects parallax
+    gsap.utils.toArray('.project__description').forEach((description) => {
+      gsap.set(description, {
+        y: isMobile ? '-10%' : '30%',
+      });
+
+      gsap.to(description, {
+        scrollTrigger: {
+          trigger: description,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: 0.2,
+        },
+        y: isMobile ? '-20%' : '-30%',
+      });
+    });
+    gsap.utils.toArray('.preview__decoration').forEach((decoration) => {
+      gsap.set(decoration, {
+        y: isMobile ? '5%' : '-10%',
+      });
+
+      gsap.to(decoration, {
+        scrollTrigger: {
+          trigger: decoration,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: 0.2,
+        },
+        y: isMobile ? '10%' : '5%',
+      });
+    });
 
 
+
+.card {
+}
+.card__image {
+}
+.card__image_deco {
+}
+.card__title {
+}
+.card__content {
+}
+.card__info {
+}
+.card__tech {
+}
+.tech-text {
+}
+.card__links {
+}
+.card__link {
+}
+
+
+let cardAnimCtx
+
+onMounted(() => {
+  cardAnimCtx = gsap.context(() => {
+    const cards = gsap.utils.toArray('.card')
+
+    cards.forEach((card) => {
+      gsap.set('.card__image', { yPercent: 15 })
+      gsap.set('.card__image_deco', { yPercent: 10 })
+      gsap.set('.card__content', { yPercent: 20 })
+      gsap.set('.card__title', { yPercent: 25 })
+
+      ScrollTrigger.create({
+        animation: card,
+        trigger: card,
+        start: 'top 80%',
+        end: 'bottom 20%',
+        scrub: 1,
+        markers: true
+      })
+
+      card
+        .to('.card__image', { yPercent: 0 })
+        .to('.card__image_deco', { yPercent: 0 }, '<')
+        .to('.card__content', { yPercent: 0 }, '<')
+        .to('.card__title', { yPercent: 0 }, '<')
+    })
+  })
+})
+
+onUnmounted(() => {
+  cardAnimCtx.revert()
+})
+
+ const img = card.querySelector('img')
+
+        gsap.to(img, {
+          yPercent: -5,
+          autoAlpha: 1,
+          scrollTrigger: {
+            trigger: card,
+            start: 'top 80%',
+            end: 'bottom 20%',
+            scrub: 1
+          }
+        })

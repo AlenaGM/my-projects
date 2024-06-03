@@ -22,7 +22,64 @@
 </template>
 
 <script setup>
+import { onMounted, onUnmounted } from 'vue'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
 import SocialWidget from './ui/SocialWidget.vue'
+
+gsap.registerPlugin(ScrollTrigger)
+
+let heroAnimCtx
+
+onMounted(() => {
+  heroAnimCtx = gsap.context(() => {
+    gsap.set('.hero__title span:first-child', { xPercent: 200 })
+    gsap.set('.hero__title span:last-child', { xPercent: -150 })
+    gsap.set('.social__link', { x: 142, autoAlpha: 0, opacity: 0 })
+
+    const tlHero = gsap.timeline({})
+
+    tlHero
+      .to('.hero__title span:first-child', {
+        duration: 1.3,
+        xPercent: 0,
+        ease: 'back.out(1.1)'
+      })
+      .to(
+        '.hero__title span:last-child',
+        {
+          duration: 1.3,
+          xPercent: 0,
+          ease: 'back.out(1.1)'
+        },
+        '<'
+      )
+      .from('.hero__image', {
+        autoAlpha: 0,
+        opacity: 0,
+        yPercent: 50,
+        duration: 1,
+        ease: 'back.out(1.5)'
+      })
+      .to(
+        '.social__link',
+        {
+          stagger: 0.3,
+          x: 100,
+          autoAlpha: 1,
+          opacity: 1,
+          duration: 0.7,
+          ease: 'back.in(3)'
+        },
+        '-=0.3'
+      )
+  })
+})
+
+onUnmounted(() => {
+  heroAnimCtx.revert()
+})
 </script>
 
 <style lang="scss" scoped>
@@ -39,6 +96,7 @@ import SocialWidget from './ui/SocialWidget.vue'
   }
   &__title {
     margin: 110px 0;
+    z-index: 50;
     @media screen and (max-width: 768px) {
       margin: 0px;
       text-align: center;
@@ -46,12 +104,10 @@ import SocialWidget from './ui/SocialWidget.vue'
     span {
       &:first-child {
         display: inline-block;
-        //transform: translateX(200%);
         overflow: hidden;
       }
       &:last-child {
         display: block;
-        //transform: translateX(-200%);
         text-overflow: initial;
       }
     }

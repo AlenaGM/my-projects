@@ -7,6 +7,37 @@
   </div>
 </template>
 
+<script setup>
+import { onMounted, onUnmounted } from 'vue'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
+
+let toTopAnimCtx
+
+onMounted(() => {
+  toTopAnimCtx = gsap.context(() => {
+    gsap.from('.to-top', {
+      scrollTrigger: {
+        trigger: '.about',
+        start: 'bottom bottom',
+        toggleActions: 'play none none reverse'
+      },
+      autoAlpha: 0,
+      opacity: 0,
+      y: '160px',
+      duration: 1,
+      ease: 'back.out(3)'
+    })
+  })
+})
+
+onUnmounted(() => {
+  toTopAnimCtx.revert()
+})
+</script>
+
 <style lang="scss" scoped>
 .to-top {
   position: fixed;
@@ -14,6 +45,9 @@
   bottom: 1.5rem;
   transition: transform 0.35s cubic-bezier(0.23, 0.24, 0, 0.99);
   z-index: 60;
+  &_hover {
+    transform: translateY(-23px);
+  }
   a {
     position: relative;
     display: flex;
@@ -54,7 +88,7 @@
   }
   @media (any-pointer: fine) {
     &:hover {
-      transform: translateY(-3px);
+      transform: translateY(-3px) !important;
       transition: transform 0.35s cubic-bezier(0.23, 0.24, 0, 0.99);
       a {
         span {

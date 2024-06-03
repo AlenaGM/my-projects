@@ -40,13 +40,14 @@ import uiGithub from '@/components/ui/Github.vue'
       top: 44vh;
     }
     a {
+      position: relative;
       display: inline-flex;
       align-items: center;
       justify-content: flex-start;
       width: 142px;
       height: 40px;
       padding: 4px;
-      transform: translateX(100px);
+      //transform: translateX(100px); add if no gsap anim used
       font-family: var(--font-title);
       font-size: 13px;
       font-weight: 600;
@@ -70,7 +71,7 @@ import uiGithub from '@/components/ui/Github.vue'
         &:hover {
           background-color: var(--color-white);
           color: var(--color-primary);
-          transform: translateX(0px);
+          transform: translateX(0px) !important;
           transition:
             transform 0.5s cubic-bezier(0.23, 0.24, 0, 0.99),
             color 0.35s ease,
