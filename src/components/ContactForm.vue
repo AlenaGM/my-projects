@@ -140,7 +140,7 @@ const submitForm = async () => {
 }
 
 const sendEmail = () => {
-  emailjs.sendForm('contact_service', 'template_1guu3ga', formRef.value, myKey).then(
+  emailjs.sendForm('contact_service', 'template_fokmhcv', formRef.value, myKey).then(
     (result) => {
       console.log(result.text)
       isError.value = false
