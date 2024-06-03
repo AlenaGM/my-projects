@@ -111,12 +111,13 @@ onUnmounted(() => {
   }
   &__image {
     //width: 360px;
-    //height: 480px;
+    max-height: 480px;
+    aspect-ratio: 3 / 4;
     overflow: hidden;
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
     }
   }
 }
