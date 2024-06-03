@@ -31,6 +31,21 @@
           inventore beatae dicta nemo vero, dolorum rerum vitae mollitia qui obcaecati facere
           aperiam sed nulla? Voluptatibus, sapiente consectetur?
         </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, dolor rerum! Rem
+          inventore beatae dicta nemo vero, dolorum rerum vitae mollitia qui obcaecati facere
+          aperiam sed nulla? Voluptatibus, sapiente consectetur?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, dolor rerum! Rem
+          inventore beatae dicta nemo vero, dolorum rerum vitae mollitia qui obcaecati facere
+          aperiam sed nulla? Voluptatibus, sapiente consectetur?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, dolor rerum! Rem
+          inventore beatae dicta nemo vero, dolorum rerum vitae mollitia qui obcaecati facere
+          aperiam sed nulla? Voluptatibus, sapiente consectetur?
+        </p>
         <ui-button
           type="link"
           to="#"
@@ -88,12 +103,14 @@ onUnmounted(() => {
     grid-template-columns: minmax(auto, 360px) 1fr;
     gap: 4rem;
     justify-items: center;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) and (orientation: portrait),
+      screen and (max-width: 768px) {
       grid-template-columns: 1fr;
       gap: 2.5rem;
     }
   }
   &__image {
+    max-width: 360px;
     max-height: 480px;
     overflow: hidden;
     img {

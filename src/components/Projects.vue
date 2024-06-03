@@ -57,7 +57,7 @@ const setActiveFilter = (filter) => {
   activeFilter.value = filter
   gsap.from('.projects__gallery', {
     y: 150,
-    autoAlpha: 0,
+    opacity: 0,
     duration: 0.7,
     ease: 'power2.out'
   })
@@ -71,6 +71,7 @@ const getProjects = computed(() => {
 })
 
 let bgAnimCtx
+let mediaAnimation = gsap.matchMedia()
 
 onMounted(() => {
   bgAnimCtx = gsap.context(() => {
@@ -103,6 +104,21 @@ onMounted(() => {
         },
         '<'
       )
+
+    mediaAnimation.add('(max-width: 1024px)', () => {
+      gsap.from('.projects__gallery', {
+        y: '50px',
+        opacity: 0,
+        duration: 0.7,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: '.projects__gallery',
+          start: 'top 80%',
+          end: 'bottom 20%',
+          toggleActions: 'play resume none none'
+        }
+      })
+    })
   })
 })
 

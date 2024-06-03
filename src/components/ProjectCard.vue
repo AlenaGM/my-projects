@@ -49,6 +49,7 @@ const props = defineProps({
 })
 
 let cardAnimCtx
+let mediaAnimation = gsap.matchMedia()
 
 onMounted(() => {
   cardAnimCtx = gsap.context(() => {
@@ -56,8 +57,6 @@ onMounted(() => {
       scale: 1.1,
       yPercent: 5
     })
-    gsap.set('.card__content', { yPercent: 15 })
-    gsap.set('.card__title', { yPercent: 25 })
 
     gsap.to(
       '.card__image img',
@@ -73,38 +72,41 @@ onMounted(() => {
       '<'
     )
 
-    gsap.to('.card__content', {
-      yPercent: 0,
-      stagger: {
-        grid: 'auto',
-        from: 'start',
-        autoAlpha: 0,
-        axis: 'y',
-        each: 0.3
-      },
-      scrollTrigger: {
-        trigger: '.gallery',
-        start: 'top 80%',
-        end: 'bottom 20%',
-        scrub: 1
-      }
-    })
+    mediaAnimation.add('(min-width: 1025px)', () => {
+      gsap.set('.card__content', { yPercent: 15 })
+      gsap.set('.card__title', { yPercent: 25 })
 
-    gsap.to('.card__title', {
-      yPercent: 0,
-      stagger: {
-        grid: 'auto',
-        from: 'start',
-        autoAlpha: 0,
-        axis: 'y',
-        each: 0.3
-      },
-      scrollTrigger: {
-        trigger: '.gallery',
-        start: 'top 80%',
-        end: 'bottom 20%',
-        scrub: 1
-      }
+      gsap.to('.card__content', {
+        yPercent: 0,
+        stagger: {
+          grid: 'auto',
+          from: 'start',
+          axis: 'y',
+          each: 0.3
+        },
+        scrollTrigger: {
+          trigger: '.gallery',
+          start: 'top 80%',
+          end: 'bottom 20%',
+          scrub: 1
+        }
+      })
+
+      gsap.to('.card__title', {
+        yPercent: 0,
+        stagger: {
+          grid: 'auto',
+          from: 'start',
+          axis: 'y',
+          each: 0.3
+        },
+        scrollTrigger: {
+          trigger: '.gallery',
+          start: 'top 80%',
+          end: 'bottom 20%',
+          scrub: 1
+        }
+      })
     })
   })
 })

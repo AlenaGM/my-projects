@@ -56,7 +56,6 @@ onMounted(() => {
         '-=0.9'
       )
       .from('.hero__image', {
-        autoAlpha: 0,
         opacity: 0,
         yPercent: 50,
         duration: 1,
@@ -89,7 +88,7 @@ onUnmounted(() => {
   align-content: center;
   align-items: end;
   min-height: calc(100vh - 96px);
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) and (orientation: portrait), screen and (max-width: 768px) {
     grid-template-columns: 1fr;
     justify-items: center;
     min-height: calc(100vh - 80px);
@@ -97,7 +96,8 @@ onUnmounted(() => {
   &__title {
     margin: 110px 0;
     z-index: 50;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) and (orientation: portrait),
+      screen and (max-width: 768px) {
       margin: 0px;
       text-align: center;
     }
@@ -114,6 +114,8 @@ onUnmounted(() => {
   }
   &__image {
     overflow: hidden;
+    min-width: 640px;
+    min-height: 640px;
     img {
       width: 100%;
       height: 100%;
