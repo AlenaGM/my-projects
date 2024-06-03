@@ -84,7 +84,7 @@ onMounted(() => {
       },
       scrollTrigger: {
         trigger: '.gallery',
-        start: 'top 50%',
+        start: 'top 80%',
         end: 'bottom 20%',
         scrub: 1
       }
@@ -101,7 +101,7 @@ onMounted(() => {
       },
       scrollTrigger: {
         trigger: '.gallery',
-        start: 'top 50%',
+        start: 'top 80%',
         end: 'bottom 20%',
         scrub: 1
       }

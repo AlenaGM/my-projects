@@ -140,7 +140,7 @@ const submitForm = async () => {
 }
 
 const sendEmail = () => {
-  emailjs.sendForm('contact_service', 'template_fokmhcv', formRef.value, myKey).then(
+  emailjs.sendForm('contact_service', 'template_1guu3ga', formRef.value, myKey).then(
     (result) => {
       console.log(result.text)
       isError.value = false
@@ -183,7 +183,7 @@ const resetForm = () => {
       font-size: 1rem;
       font-weight: inherit;
       line-height: 24px;
-      color: var(--color-gray);
+      color: var(--color-text);
       width: 100%;
       padding: 1rem 1.5rem;
       background-color: var(--color-light-gray);
