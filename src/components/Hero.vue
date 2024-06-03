@@ -53,7 +53,7 @@ onMounted(() => {
           xPercent: 0,
           ease: 'back.out(1.1)'
         },
-        '<'
+        '-=0.9'
       )
       .from('.hero__image', {
         autoAlpha: 0,

@@ -113,7 +113,6 @@ onUnmounted(() => {
 
 <style lang="scss" scoped>
 .projects {
-  //z-index: 50;
   display: grid;
   &__filters {
     ul {

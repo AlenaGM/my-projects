@@ -57,11 +57,12 @@ onMounted(() => {
         from: 'start',
         autoAlpha: 0,
         axis: 'y',
-        amount: 2
+        each: 0.3
       },
       scrollTrigger: {
         trigger: '.skills__list',
         start: 'top 80%',
+        end: 'bottom bottom',
         toggleActions: 'play resume none none'
       }
     })
