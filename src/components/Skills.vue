@@ -44,27 +44,30 @@ const skills = [
 gsap.registerPlugin(ScrollTrigger)
 
 let skillsAnimCtx
+let mediaAnimation = gsap.matchMedia()
 
 onMounted(() => {
   skillsAnimCtx = gsap.context(() => {
-    gsap.from('.skills__list_item', {
-      scale: 0.7,
-      opacity: 0,
-      y: 24,
-      ease: 'power2.inOut',
-      stagger: {
-        grid: 'auto',
-        from: 'start',
-        autoAlpha: 0,
-        axis: 'y',
-        amount: 0.7
-      },
-      scrollTrigger: {
-        trigger: '.skills__list',
-        start: 'top 80%',
-        end: 'bottom bottom',
-        toggleActions: 'play resume none none'
-      }
+    mediaAnimation.add('(min-width: 577px)', () => {
+      gsap.from('.skills__list_item', {
+        scale: 0.7,
+        opacity: 0,
+        y: 24,
+        ease: 'power2.inOut',
+        stagger: {
+          grid: 'auto',
+          from: 'start',
+          autoAlpha: 0,
+          axis: 'y',
+          amount: 0.5
+        },
+        scrollTrigger: {
+          trigger: '.skills__list',
+          start: 'top 80%',
+          end: 'bottom bottom',
+          toggleActions: 'play resume none none'
+        }
+      })
     })
   })
 })
