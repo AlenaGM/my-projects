@@ -57,7 +57,7 @@ const setActiveFilter = (filter) => {
   activeFilter.value = filter
   gsap.from('.projects__gallery', {
     y: 150,
-    autoAlpha: 0,
+    //autoAlpha: 0,
     duration: 0.7,
     ease: 'power2.out',
     onComplete: () => {
