@@ -55,15 +55,12 @@ const activeFilter = ref('All')
 
 const setActiveFilter = (filter) => {
   activeFilter.value = filter
-  console.log('action: filter')
-
-  //gsap.set('.card__content', { yPercent: 0 })
-  //gsap.set('.card__title', { yPercent: 0 })
 
   gsap.from('.projects__gallery', {
     y: 150,
+    opacity: 0,
     autoAlpha: 0,
-    duration: 0.7,
+    duration: 1,
     ease: 'power2.out',
     onComplete: () => {
       ScrollTrigger.refresh()
@@ -78,10 +75,10 @@ const getProjects = computed(() => {
   return projects.filter((project) => project.tags.includes(activeFilter.value))
 })
 
-let bgAnimCtx
+let projAnimCtx
 
 onMounted(() => {
-  bgAnimCtx = gsap.context(() => {
+  projAnimCtx = gsap.context(() => {
     const tlBg = gsap.timeline({})
 
     ScrollTrigger.create({
@@ -111,11 +108,23 @@ onMounted(() => {
         },
         '<'
       )
+
+    gsap.from('.projects__gallery', {
+      y: 150,
+      opacity: 0,
+      autoAlpha: 0,
+      scrollTrigger: {
+        trigger: '.projects',
+        start: 'top 75%',
+        end: 'top 25%',
+        scrub: 1
+      }
+    })
   })
 })
 
 onUnmounted(() => {
-  bgAnimCtx.revert()
+  projAnimCtx.revert()
 })
 </script>
 
