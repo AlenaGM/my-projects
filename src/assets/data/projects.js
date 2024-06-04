@@ -20,7 +20,7 @@ const projects = [
     tags: ['VueJS']
   },
   {
-    id: '12',
+    id: '3',
     title: 'Noble Nectars Boutique',
     info: 'Landing page for a boutique wine shop with exquisite wines 🍷🍇. Captivating and seamless GSAP animations',
     tech: 'JavaScript, Sass, Gulp, GSAP',
@@ -30,7 +30,7 @@ const projects = [
     tags: ['JavaScript', 'GSAP']
   },
   {
-    id: '3',
+    id: '4',
     title: 'Point Office Spaces',
     info: 'Landing page for coworking spaces',
     tech: 'JavaScript, GSAP',
@@ -60,7 +60,7 @@ const projects = [
     tags: ['JavaScript']
   },
   {
-    id: '8',
+    id: '7',
     title: 'Tours by Locals',
     info: 'Landing for company offering platform that connects to local guides.',
     tech: 'Vue3, Vite, Composition API, SASS',
@@ -70,7 +70,7 @@ const projects = [
     tags: ['VueJS']
   },
   {
-    id: '10',
+    id: '8',
     title: 'WORDY - English Flashcards',
     info: 'SPA built with React that serves to memorize new English words with help of vocabulary-flashcards.',
     tech: 'React, Functional Components, Custom Hooks, SASS, Fetch API, Get and Post requests, React Router, React Context, Mobx',
@@ -80,7 +80,7 @@ const projects = [
     tags: ['React']
   },
   {
-    id: '12',
+    id: '9',
     title: 'PlanIt',
     info: 'Trello like task board.',
     tech: 'NuxtJs, TypeScript, Vue-draggable',

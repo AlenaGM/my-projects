@@ -69,7 +69,7 @@ onMounted(() => {
             trigger: '.card',
             start: 'top 80%',
             end: 'bottom 20%',
-            scrub: 1
+            scrub: true
           }
         },
         '<'
@@ -77,12 +77,12 @@ onMounted(() => {
 
       gsap.to('.card__content', {
         yPercent: 0,
-        stagger: {
-          grid: 'auto',
-          from: 'start',
-          axis: 'y',
-          each: 0.3
-        },
+        //stagger: {
+        //  grid: 'auto',
+        //  from: 'start',
+        //  axis: 'y',
+        //  each: 0.3
+        //},
         scrollTrigger: {
           trigger: '.gallery',
           start: 'top 80%',
@@ -93,12 +93,12 @@ onMounted(() => {
 
       gsap.to('.card__title', {
         yPercent: 0,
-        stagger: {
-          grid: 'auto',
-          from: 'start',
-          axis: 'y',
-          each: 0.3
-        },
+        //stagger: {
+        //  grid: 'auto',
+        //  from: 'start',
+        //  axis: 'y',
+        //  each: 0.3
+        //},
         scrollTrigger: {
           trigger: '.gallery',
           start: 'top 80%',
