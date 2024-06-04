@@ -55,15 +55,15 @@ const activeFilter = ref('All')
 
 const setActiveFilter = (filter) => {
   activeFilter.value = filter
-  gsap.from('.projects__gallery', {
-    y: 150,
-    //autoAlpha: 0,
-    duration: 0.7,
-    ease: 'power2.out',
-    onComplete: () => {
-      ScrollTrigger.refresh()
-    }
-  })
+  //gsap.from('.projects__gallery', {
+  //  y: 150,
+  //  autoAlpha: 0,
+  //  duration: 0.7,
+  //  ease: 'power2.out',
+  //  onComplete: () => {
+  //    ScrollTrigger.refresh()
+  //  }
+  //})
 }
 
 const getProjects = computed(() => {
