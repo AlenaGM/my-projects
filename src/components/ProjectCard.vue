@@ -107,7 +107,6 @@ onUnmounted(() => {
       width: initial;
       height: initial;
       background: none;
-      opacity: 1;
       border: 0;
     }
     img {
