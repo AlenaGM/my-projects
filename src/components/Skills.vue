@@ -57,7 +57,7 @@ onMounted(() => {
         stagger: {
           grid: 'auto',
           from: 'start',
-          autoAlpha: 0,
+          opacity: 0,
           axis: 'y',
           amount: 0.5
         },

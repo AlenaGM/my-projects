@@ -25,7 +25,6 @@ onMounted(() => {
         toggleActions: 'play none none reverse'
       },
       autoAlpha: 0,
-      opacity: 0,
       y: '160px',
       duration: 1,
       ease: 'back.out(3)'

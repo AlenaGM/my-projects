@@ -80,7 +80,6 @@ onMounted(() => {
 
     gsap.to('.about__image img', {
       yPercent: -5,
-      autoAlpha: 1,
       scrollTrigger: {
         trigger: '.about__image',
         start: 'top 80%',
