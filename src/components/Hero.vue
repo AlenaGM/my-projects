@@ -6,10 +6,6 @@
     </h1>
     <div class="hero__image">
       <picture>
-        <source
-          srcset="@/assets/img/illustration.webp, @/assets/img/illustration@2x.webp 2x"
-          type="image/webp"
-        />
         <img
           src="@/assets/img/illustration.png"
           srcset="@/assets/img/illustration.png, @/assets/img/illustration@2x.png 2x"

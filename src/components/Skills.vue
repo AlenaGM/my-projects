@@ -57,7 +57,7 @@ onMounted(() => {
         from: 'start',
         autoAlpha: 0,
         axis: 'y',
-        each: 0.3
+        amount: 0.7
       },
       scrollTrigger: {
         trigger: '.skills__list',
