@@ -48,7 +48,7 @@ let mediaAnimation = gsap.matchMedia()
 
 onMounted(() => {
   skillsAnimCtx = gsap.context(() => {
-    mediaAnimation.add('(min-width: 577px)', () => {
+    mediaAnimation.add('(min-width: 1025px)', () => {
       gsap.from('.skills__list_item', {
         scale: 0.7,
         opacity: 0,
@@ -66,6 +66,19 @@ onMounted(() => {
           start: 'top 80%',
           end: 'bottom bottom',
           toggleActions: 'play resume none none'
+        }
+      })
+    })
+
+    mediaAnimation.add('(max-width: 1024px)', () => {
+      gsap.from('.skills__list', {
+        y: 150,
+        autoAlpha: 0,
+        scrollTrigger: {
+          trigger: '.skills',
+          start: 'top 75%',
+          end: 'top 25%',
+          scrub: 1
         }
       })
     })
