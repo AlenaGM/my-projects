@@ -59,7 +59,10 @@ const setActiveFilter = (filter) => {
     y: 150,
     opacity: 0,
     duration: 0.7,
-    ease: 'power2.out'
+    ease: 'power2.out',
+    onComplete: () => {
+      ScrollTrigger.refresh()
+    }
   })
 }
 
@@ -71,7 +74,6 @@ const getProjects = computed(() => {
 })
 
 let bgAnimCtx
-let mediaAnimation = gsap.matchMedia()
 
 onMounted(() => {
   bgAnimCtx = gsap.context(() => {
@@ -81,7 +83,7 @@ onMounted(() => {
       animation: tlBg,
       trigger: '.projects',
       start: 'top center',
-      end: 'bottom bottom',
+      end: 'bottom center',
       ease: 'power2.inOut',
       toggleActions: 'play reverse play reverse'
     })
@@ -104,21 +106,6 @@ onMounted(() => {
         },
         '<'
       )
-
-    mediaAnimation.add('(max-width: 1024px)', () => {
-      gsap.from('.projects__gallery', {
-        y: '50px',
-        opacity: 0,
-        duration: 0.7,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: '.projects__gallery',
-          start: 'top 80%',
-          end: 'bottom 20%',
-          toggleActions: 'play resume none none'
-        }
-      })
-    })
   })
 })
 
