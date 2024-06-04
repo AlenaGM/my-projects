@@ -58,7 +58,7 @@ const setActiveFilter = (filter) => {
 
   gsap.from('.projects__gallery', {
     y: 150,
-    opacity: 0,
+    autoAlpha: 0,
     duration: 1,
     ease: 'power2.out',
     onComplete: () => {
@@ -110,7 +110,7 @@ onMounted(() => {
 
     gsap.from('.projects__gallery', {
       y: 150,
-      opacity: 0,
+      autoAlpha: 0,
       scrollTrigger: {
         trigger: '.projects',
         start: 'top 75%',
