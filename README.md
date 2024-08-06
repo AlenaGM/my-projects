@@ -2,7 +2,6 @@
 
 _Welcome to my web developer portfolio!_<br><br>
 Here, you'll find a selection of projects that highlight my interest in web development. They include freelance work, study assignments, and personal projects I've worked on during weekends. <br><br>
-While, the portfolio is technically complete, I am still working on adding content to give you a better idea of my skills and expertise.<br><br> 
 Enjoy!
 
 ## Demo
@@ -37,5 +36,5 @@ If you have any suggestions, critiques, or advice, please contact me via [email]
 My Portfolio is open source - feel free to clone, modify, and enhance it for your purposes.
 
 
-   [My Portfolio]: <https://alenag.netlify.app/>
+   [My Portfolio]: <https://alena-webdev.netlify.app/>
    [email]: <mailto: alena.guillaume@yahoo.com />
