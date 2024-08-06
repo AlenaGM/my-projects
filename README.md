@@ -1,8 +1,8 @@
 # My Portfolio 👩‍🎨
 
-_Welcome to my web developer portfolio!_<br><br>
-Here, you'll find a selection of projects that highlight my interest in web development. They include freelance work, study assignments, and personal projects I've worked on during weekends. <br><br>
-Enjoy!
+_Welcome!_<br><br>
+My portfolio features a mix of school work, freelance projects, and personal projects. <br><br>
+Check it out!
 
 ## Demo
 
