@@ -1,11 +1,17 @@
 <template>
   <section class="projects" id="projects">
-    <h2><span class="h2-subtitle">Some of My Projects</span><span>Work</span></h2>
+    <h2><span class="h2-subtitle">Some of My Projects</span><span>Works</span></h2>
     <div>
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia magnam veniam, ipsa sunt
-        delectus reiciendis, exercitationem esse ad minima quibusdam aliquid aut facere non sint
-        culpa blanditiis animi, velit consequatur.
+        Here are some projects I've put together. They're not work-related, but include personal
+        projects, learning projects, and some freelance work. You can find more of my projects on
+        <a
+          href="https://github.com/AlenaGM"
+          aria-label="g=it girl school website"
+          target="_blank"
+          rel="noreferrer noopener"
+          >GitHub.</a
+        >
       </p>
     </div>
 
@@ -50,7 +56,7 @@ import ProjectCard from '@/components/ProjectCard.vue'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const filters = ref(['All', 'JavaScript', 'TypeScript', 'VueJS', 'NuxtJS', 'React', 'GSAP'])
+const filters = ref(['All', 'JavaScript', 'TypeScript', 'VueJS', /*'NuxtJS', 'React',*/ 'GSAP'])
 const activeFilter = ref('All')
 
 const setActiveFilter = (filter) => {
@@ -69,7 +75,7 @@ const setActiveFilter = (filter) => {
 
 const getProjects = computed(() => {
   if (activeFilter.value === 'All') {
-    return projects
+    return projects.slice(0, 6)
   }
   return projects.filter((project) => project.tags.includes(activeFilter.value))
 })

@@ -4,14 +4,10 @@
     <div class="contact__container">
       <div class="contact__info">
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia magnam veniam, ipsa sunt
-          delectus reiciendis, exercitationem esse ad minima quibusdam aliquid aut facere non sint
-          culpa blanditiis animi, velit consequatur.
+          Let's connect! If you'd like to collaborate, have a question, or just want to chat, please
+          don't hesitate to send a message.
         </p>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia magnam veniam, ipsa sunt
-          delectus reiciendis.
-        </p>
+        <p>Or find me online:</p>
         <div class="contact__social">
           <a
             href="https://www.linkedin.com/in/alena-guillaume/"

@@ -16,36 +16,42 @@
         </picture>
       </div>
       <div>
+        <p>Hi,</p>
+        <p>My name is Alena and I'm a frontend developer.</p>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, dolor rerum! Rem
-          inventore beatae dicta nemo vero, dolorum rerum vitae mollitia qui obcaecati facere
-          aperiam sed nulla? Voluptatibus, sapiente consectetur?
+          Two years ago, I learned frontend development at
+          <a
+            href="https://itgirlschool.com/"
+            aria-label="g=it girl school website"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            ITGirlSchool</a
+          >, and I've been living my best life ever since!
         </p>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, dolor rerum! Rem
-          inventore beatae dicta nemo vero, dolorum rerum vitae mollitia qui obcaecati facere
-          aperiam sed nulla? Voluptatibus, sapiente consectetur?
+          I'm happiest when I'm learning new things and technologies, and I truly enjoy building
+          accessible, visually appealing, and human-centered websites.
         </p>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, dolor rerum! Rem
-          inventore beatae dicta nemo vero, dolorum rerum vitae mollitia qui obcaecati facere
-          aperiam sed nulla? Voluptatibus, sapiente consectetur?
+          Right now, I'm part of a fantastic, small startup where we're building a virtual
+          <a
+            href="https://test.tribual.ru"
+            aria-label="tribe website"
+            target="_blank"
+            rel="noreferrer noopener"
+            >space</a
+          >
+          for people to connect and create amazing experiences and events together. It's incredibly
+          rewarding to see our project come to life, and I love the energy and creativity of the
+          team.
         </p>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, dolor rerum! Rem
-          inventore beatae dicta nemo vero, dolorum rerum vitae mollitia qui obcaecati facere
-          aperiam sed nulla? Voluptatibus, sapiente consectetur?
+          When I'm not coding, I enjoy hiking in the mountains (I'm lucky to live in Haute-Savoie,
+          in the French Alps), getting lost in a good book, or spending time with my family.
         </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, dolor rerum! Rem
-          inventore beatae dicta nemo vero, dolorum rerum vitae mollitia qui obcaecati facere
-          aperiam sed nulla? Voluptatibus, sapiente consectetur?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, dolor rerum! Rem
-          inventore beatae dicta nemo vero, dolorum rerum vitae mollitia qui obcaecati facere
-          aperiam sed nulla? Voluptatibus, sapiente consectetur?
-        </p>
+        <p>It's great to meet you!</p>
+        <!--
         <ui-button
           type="link"
           to="#"
@@ -54,7 +60,7 @@
           aria-label="download my cv"
           rel="noreferrer noopener"
           >Download My CV</ui-button
-        >
+        >-->
       </div>
     </div>
   </section>

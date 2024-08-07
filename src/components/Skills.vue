@@ -2,11 +2,7 @@
   <section class="skills" id="skills">
     <h2><span class="h2-subtitle">Things I Can Do</span><span>Skills & Tools</span></h2>
     <div>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, dolor rerum! Rem
-        inventore beatae dicta nemo vero, dolorum rerum vitae mollitia qui obcaecati facere aperiam
-        sed nulla? Voluptatibus, sapiente consectetur?
-      </p>
+      <p>The skills, tools, and technologies I use to bring my projects to life:</p>
     </div>
     <div class="skills__list">
       <div class="skills__list_item" v-for="(skill, i) in skills" :key="i">
@@ -32,12 +28,12 @@ const skills = [
   'Pinia',
   'NuxtJS',
   'React',
-  'Webpack',
-  'Git',
+  'Redux',
   'Rest APIs',
-  'GraphQL',
-  'Firebase',
+  'Git',
   'Sass',
+  'MUI',
+  'TailwindCSS',
   'GSAP'
 ]
 

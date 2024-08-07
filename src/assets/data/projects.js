@@ -1,14 +1,14 @@
 const projects = [
-  {
-    id: '1',
-    title: 'Interviews',
-    info: 'Interview List',
-    tech: 'Vue 3, Vite, Pinia, TypeScript, PrimeVue',
-    image: '/img/img_yoda',
-    demo: 'https://github.com/AlenaGM',
-    code: 'https://github.com/AlenaGM',
-    tags: ['VueJS', 'TypeScript']
-  },
+  //{
+  //  id: '1',
+  //  title: 'Interviews',
+  //  info: 'Interview List',
+  //  tech: 'Vue 3, Vite, Pinia, TypeScript, PrimeVue',
+  //  image: '/img/img_yoda',
+  //  demo: 'https://github.com/AlenaGM',
+  //  code: 'https://github.com/AlenaGM',
+  //  tags: ['VueJS', 'TypeScript']
+  //},
   {
     id: '2',
     title: 'Avion Furniture shop',
@@ -29,26 +29,26 @@ const projects = [
     code: 'https://github.com/AlenaGM/noble-nectars-boutique',
     tags: ['JavaScript', 'GSAP']
   },
-  {
-    id: '4',
-    title: 'Point Office Spaces',
-    info: 'Landing page for coworking spaces',
-    tech: 'JavaScript, GSAP',
-    image: '/img/img_point',
-    demo: 'https://point-office-spaces.netlify.app/',
-    code: 'https://github.com/AlenaGM/office-spaces',
-    tags: ['JavaScript', 'GSAP']
-  },
-  {
-    id: '5',
-    title: 'Contact Form',
-    info: 'Minimalist sign-up form with JavaScript validation',
-    tech: 'HTML5, CSS3, JavaScript, Form validation, POST-requests',
-    image: '/img/img_regform',
-    demo: 'https://alenagm.github.io/Registration-Form/',
-    code: 'https://github.com/AlenaGM/Registration-Form/',
-    tags: ['JavaScript']
-  },
+  //{
+  //  id: '4',
+  //  title: 'Point Office Spaces',
+  //  info: 'Landing page for coworking spaces',
+  //  tech: 'JavaScript, GSAP',
+  //  image: '/img/img_point',
+  //  demo: 'https://point-office-spaces.netlify.app/',
+  //  code: 'https://github.com/AlenaGM/office-spaces',
+  //  tags: ['JavaScript', 'GSAP']
+  //},
+  //{
+  //  id: '5',
+  //  title: 'Contact Form',
+  //  info: 'Minimalist sign-up form with JavaScript validation',
+  //  tech: 'HTML5, CSS3, JavaScript, Form validation, POST-requests',
+  //  image: '/img/img_regform',
+  //  demo: 'https://alenagm.github.io/Registration-Form/',
+  //  code: 'https://github.com/AlenaGM/Registration-Form/',
+  //  tags: ['JavaScript']
+  //},
   {
     id: '6',
     title: 'Mogu-Travel Agency web-site',
@@ -79,15 +79,25 @@ const projects = [
     code: 'https://github.com/AlenaGM/flashcards-app',
     tags: ['React']
   },
+  //{
+  //  id: '9',
+  //  title: 'PlanIt',
+  //  info: 'Trello like task board.',
+  //  tech: 'NuxtJs, TypeScript, Vue-draggable',
+  //  image: '/img/img_yoda',
+  //  demo: 'https://ts-plan-it.netlify.app/',
+  //  code: 'https://github.com/AlenaGM/plan-it',
+  //  tags: ['VueJS', 'NuxtJS', 'TypeScript']
+  //},
   {
-    id: '9',
-    title: 'PlanIt',
-    info: 'Trello like task board.',
-    tech: 'NuxtJs, TypeScript, Vue-draggable',
-    image: '/img/img_yoda',
-    demo: 'https://ts-plan-it.netlify.app/',
-    code: 'https://github.com/AlenaGM/plan-it',
-    tags: ['VueJS', 'NuxtJS', 'TypeScript']
+    id: '10',
+    title: 'Date Format Exercise',
+    info: 'Function that formats date and time. JavaScript date formatting assignment that was completed in week 17 of learning with',
+    tech: 'JavaScript',
+    image: '/img/img_dateformat',
+    demo: 'alenagm.github.io/date-format-exercise/',
+    code: 'https://github.com/AlenaGM/date-format-exercise',
+    tags: ['JavaScript']
   }
 ]
 
