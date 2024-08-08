@@ -2,7 +2,7 @@ const projects = [
   {
     id: '1',
     title: 'Avion Furniture shop',
-    info: 'This modern e-commerce website is built using VueJS 3 and Pinia, and features a clean, minimalist design with smooth transitions between interactive elements. The layout is meticulously crafted for high responsiveness, ensuring optimal viewing on all devices.',
+    info: 'A modern e-commerce website built using VueJS 3 and Pinia, featuring a clean, aesthetic, minimalist design. I focused on smooth transitions between interactive elements, ensuring an enjoyable user experience.  The carefully crafted layout is highly responsive, guaranteeing optimal viewing across all devices.',
     tech: 'Vue.js, Vite, Composition API, SASS, Axios, Stoplight, Vue-Router, Pinia, Vuelidate, email.js',
     image: '/img/img_avion',
     demo: 'https://avion-furniture.netlify.app/',
@@ -22,7 +22,7 @@ const projects = [
   {
     id: '3',
     title: 'Noble Nectars Boutique',
-    info: 'Landing page for a boutique wine shop with exquisite wines 🍷🍇. Captivating and seamless GSAP animations',
+    info: 'This landing page for an exclusive wine boutique 🍷🍇 stands out thanks to its captivating design and elegant GSAP animations. The project was chosen for its beautiful visuals, creating an engaging experience that elevates it from a basic website to a true visual treat.',
     tech: 'JavaScript, Sass, Gulp, GSAP',
     image: '/img/img_noble',
     demo: 'https://noble-nectars-boutique.netlify.app/',
@@ -32,7 +32,7 @@ const projects = [
   {
     id: '4',
     title: 'Tours by Locals',
-    info: 'Landing for company offering platform that connects to local guides.',
+    info: 'This landing page project was for a company connecting users with local guides. I added it to my portfolio as it was my second freelance project and the first I feel confident sharing. The client emphasized clean layout and precise adherence to their mockup.',
     tech: 'Vue.js, Vite, Composition API, SASS',
     image: '/img/img_tripster',
     demo: 'https://alenagm.github.io/tours-by-locals/',
@@ -42,7 +42,7 @@ const projects = [
   {
     id: '5',
     title: 'Point Office Spaces',
-    info: 'Landing page for coworking spaces',
+    info: 'This co-working space landing page mockup sparked my interest in learning GSAP animation.  Animation transforms simple design into engaging and memorable experiences.',
     tech: 'JavaScript, GSAP',
     image: '/img/img_point',
     demo: 'https://point-office-spaces.netlify.app/',
@@ -52,7 +52,7 @@ const projects = [
   {
     id: '6',
     title: 'Mogu-Travel Agency web-site',
-    info: 'Website to search for day trips, visits and sightseeing in France',
+    info: 'A website designed to help users find day trips, excursions, and sightseeing opportunities was developed as part of a school team project. My responsibilities included implementing client-side filters to enhance the user experience, and I served as the technical lead for a team of five classmates.',
     tech: 'HTML5, CSS3, JavaScript',
     image: '/img/img_mogu',
     demo: 'https://alenagm.github.io/mogu-travel/filter.html',
@@ -62,7 +62,7 @@ const projects = [
   {
     id: '7',
     title: 'Date Format Exercise',
-    info: 'Function that formats date and time. JavaScript date formatting assignment that was completed in week 17 of learning with',
+    info: "This project exists because I believe that work and assignments should be enjoyable, and that we can always do more. It's originally a boring JavaScript date formatting assignment, but to make it more fun, I've added a timer and some 🐈 + 🚌 animation. Enjoy!",
     tech: 'JavaScript',
     image: '/img/img_dateformat',
     demo: 'alenagm.github.io/date-format-exercise/',

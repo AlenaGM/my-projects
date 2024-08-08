@@ -2,7 +2,7 @@
   <section class="skills" id="skills">
     <h2><span class="h2-subtitle">Things I Can Do</span><span>Skills & Tools</span></h2>
     <div>
-      <p>The skills, tools, and technologies I use to bring my projects to life:</p>
+      <p>The essential skills, tools, and technologies I rely on to bring my projects to life:</p>
     </div>
     <div class="skills__list">
       <div class="skills__list_item" v-for="(skill, i) in skills" :key="i">

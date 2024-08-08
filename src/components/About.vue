@@ -19,7 +19,7 @@
         <p>Hi,</p>
         <p>My name is Alena and I'm a frontend developer.</p>
         <p>
-          Two years ago, I learned frontend development at
+          I learned my skills at
           <a
             href="https://itgirlschool.com/"
             aria-label="g=it girl school website"
@@ -27,14 +27,13 @@
             rel="noreferrer noopener"
           >
             ITGirlSchool</a
-          >, and I've been living my best life ever since!
+          >
+          two years ago, and I've been loving it ever since! I'm happiest when I'm learning new
+          things and technologies, and I truly enjoy building accessible, visually appealing, and
+          human-centered websites.
         </p>
         <p>
-          I'm happiest when I'm learning new things and technologies, and I truly enjoy building
-          accessible, visually appealing, and human-centered websites.
-        </p>
-        <p>
-          Right now, I'm part of a fantastic, small startup where we're building a virtual
+          Currently, I'm part of a fantastic, small startup where we're building a virtual
           <a
             href="https://test.tribual.ru"
             aria-label="tribe website"
@@ -42,9 +41,8 @@
             rel="noreferrer noopener"
             >space</a
           >
-          for people to connect and create amazing experiences and events together. It's incredibly
-          rewarding to see our project come to life, and I love the energy and creativity of the
-          team.
+          for people to connect and create experiences and events together. It's incredibly
+          rewarding to see our project grow, and I love the energy and creativity of the team.
         </p>
         <p>
           When I'm not coding, I enjoy hiking in the mountains (I'm lucky to live in Haute-Savoie,
