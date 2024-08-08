@@ -56,7 +56,7 @@ import ProjectCard from '@/components/ProjectCard.vue'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const filters = ref(['All', 'JavaScript', 'TypeScript', 'Vue', /*'Nuxt',*/ 'React', 'GSAP'])
+const filters = ref(['All', 'JavaScript', 'TypeScript', 'Vue', /*'Nuxt', 'React',*/ 'GSAP'])
 const activeFilter = ref('All')
 
 const setActiveFilter = (filter) => {

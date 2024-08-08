@@ -2,7 +2,7 @@ const projects = [
   {
     id: '1',
     title: 'Avion Furniture shop',
-    info: 'E-commerce website built with VueJS 3 and Pinia',
+    info: 'This modern e-commerce website is built using VueJS 3 and Pinia, and features a clean, minimalist design with smooth transitions between interactive elements. The layout is meticulously crafted for high responsiveness, ensuring optimal viewing on all devices.',
     tech: 'Vue.js, Vite, Composition API, SASS, Axios, Stoplight, Vue-Router, Pinia, Vuelidate, email.js',
     image: '/img/img_avion',
     demo: 'https://avion-furniture.netlify.app/',
@@ -12,10 +12,10 @@ const projects = [
   {
     id: '2',
     title: 'Interviews',
-    info: 'Interview List',
+    info: "Every frontend developer portfolio needs a CRUD app. 😸 I built this job interview tracker using Vue 3 and Vite, because, let's face it, Vue is awesome! 🚀 I sprinkled in some TypeScript for extra code clarity and safety. Pinia handles smooth state management, and Firebase provides authentication and data storage.",
     tech: 'Vue.js, Vite, Pinia, Vue-Router, TypeScript, PrimeVue, Firebase, chart.js, dayjs',
     image: '/img/img_interviews',
-    demo: 'https://interviewlist.netlify.app',
+    demo: 'https://interviewlist.netlify.app/',
     code: 'https://github.com/AlenaGM/interviews',
     tags: ['Vue', 'TypeScript']
   },
@@ -27,7 +27,7 @@ const projects = [
     image: '/img/img_noble',
     demo: 'https://noble-nectars-boutique.netlify.app/',
     code: 'https://github.com/AlenaGM/noble-nectars-boutique',
-    tags: ['JavaScript', 'GSAP']
+    tags: ['GSAP']
   },
   {
     id: '4',
@@ -47,7 +47,7 @@ const projects = [
     image: '/img/img_point',
     demo: 'https://point-office-spaces.netlify.app/',
     code: 'https://github.com/AlenaGM/office-spaces',
-    tags: ['JavaScript', 'GSAP']
+    tags: ['GSAP']
   },
   {
     id: '6',
@@ -68,27 +68,27 @@ const projects = [
     demo: 'alenagm.github.io/date-format-exercise/',
     code: 'https://github.com/AlenaGM/date-format-exercise',
     tags: ['JavaScript']
-  },
-  {
-    id: '8',
-    title: 'WORDY - English Flashcards',
-    info: 'SPA built with React that serves to memorize new English words with help of vocabulary-flashcards.',
-    tech: 'React, Functional Components, Custom Hooks, SASS, Fetch API, Get and Post requests, React-Router, React Context, Mobx',
-    image: '/img/img_wordy',
-    demo: 'https://alenas-flashcards-app.netlify.app/',
-    code: 'https://github.com/AlenaGM/flashcards-app',
-    tags: ['React']
-  },
-  {
-    id: '9',
-    title: 'Contact Form',
-    info: 'Minimalist sign-up form with JavaScript validation',
-    tech: 'HTML5, CSS3, JavaScript, form validation, POST-requests',
-    image: '/img/img_regform',
-    demo: 'https://alenagm.github.io/Registration-Form/',
-    code: 'https://github.com/AlenaGM/Registration-Form/',
-    tags: ['JavaScript']
   }
+  //{
+  //  id: '8',
+  //  title: 'WORDY - English Flashcards',
+  //  info: 'SPA built with React that serves to memorize new English words with help of vocabulary-flashcards.',
+  //  tech: 'React, Functional Components, Custom Hooks, SASS, Fetch API, Get and Post requests, React-Router, React Context, Mobx',
+  //  image: '/img/img_wordy',
+  //  demo: 'https://alenas-flashcards-app.netlify.app/',
+  //  code: 'https://github.com/AlenaGM/flashcards-app',
+  //  tags: ['React']
+  //},
+  //{
+  //  id: '9',
+  //  title: 'Contact Form',
+  //  info: 'Minimalist sign-up form with JavaScript validation',
+  //  tech: 'HTML5, CSS3, JavaScript, form validation, POST-requests',
+  //  image: '/img/img_regform',
+  //  demo: 'https://alenagm.github.io/Registration-Form/',
+  //  code: 'https://github.com/AlenaGM/Registration-Form/',
+  //  tags: ['JavaScript']
+  //}
   //{
   //  id: '9',
   //  title: 'PlanIt',
