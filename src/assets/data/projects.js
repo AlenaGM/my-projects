@@ -13,7 +13,7 @@ const projects = [
     id: '2',
     title: 'Interviews',
     info: "Every frontend developer portfolio needs a CRUD app. 😸 I built this job interview tracker using Vue 3 and Vite, because, let's face it, Vue is awesome! 🚀 I sprinkled in some TypeScript for extra code clarity and safety. Pinia handles smooth state management, and Firebase provides authentication and data storage.",
-    tech: 'Vue.js, Vite, Pinia, Vue-Router, TypeScript, PrimeVue, Firebase, chart.js, dayjs',
+    tech: 'Vue.js, Vite, Pinia, Vue-Router, TypeScript, PrimeVue, Firebase, chart.js, vue-i18n',
     image: '/img/img_interviews',
     demo: 'https://interviews-list.netlify.app',
     code: 'https://github.com/AlenaGM/interviews',
